@@ -1,0 +1,116 @@
+{
+  "variance": [
+    {
+      "market": "brent",
+      "model": "ewma",
+      "n": 2793,
+      "qlike": 1.7101311315279584,
+      "variance_proxy_mae": 2.827669149224334
+    },
+    {
+      "market": "brent",
+      "model": "fixed",
+      "n": 2793,
+      "qlike": 2.0154891329858247,
+      "variance_proxy_mae": 2.787023540641918
+    },
+    {
+      "market": "brent",
+      "model": "garch",
+      "n": 2793,
+      "qlike": 1.707408549385903,
+      "variance_proxy_mae": 2.854878637871881
+    },
+    {
+      "market": "brent",
+      "model": "rolling_60",
+      "n": 2793,
+      "qlike": 1.7772611722246094,
+      "variance_proxy_mae": 2.939934278553527
+    },
+    {
+      "market": "wti",
+      "model": "ewma",
+      "n": 2745,
+      "qlike": 1.8585591906113115,
+      "variance_proxy_mae": 6.182174573097435
+    },
+    {
+      "market": "wti",
+      "model": "fixed",
+      "n": 2745,
+      "qlike": 2.6779284561538814,
+      "variance_proxy_mae": 4.779055191353376
+    },
+    {
+      "market": "wti",
+      "model": "garch",
+      "n": 2745,
+      "qlike": 1.853319198980135,
+      "variance_proxy_mae": 6.160260842952229
+    },
+    {
+      "market": "wti",
+      "model": "rolling_60",
+      "n": 2745,
+      "qlike": 1.948014855407335,
+      "variance_proxy_mae": 6.390500986035218
+    }
+  ],
+  "direction": [
+    {
+      "market": "brent",
+      "model": "logistic",
+      "n": 2793,
+      "brier": 0.251431899231562,
+      "accuracy": 0.5094880057286072,
+      "tp": 997,
+      "fp": 929,
+      "tn": 426,
+      "fn": 441
+    },
+    {
+      "market": "brent",
+      "model": "prevalence",
+      "n": 2793,
+      "brier": 0.2497793903258254,
+      "accuracy": 0.5148585750089509,
+      "tp": 1438,
+      "fp": 1355,
+      "tn": 0,
+      "fn": 0
+    },
+    {
+      "market": "wti",
+      "model": "logistic",
+      "n": 2745,
+      "brier": 0.2511239812008148,
+      "accuracy": 0.5136612021857924,
+      "tp": 1219,
+      "fp": 1123,
+      "tn": 191,
+      "fn": 212
+    },
+    {
+      "market": "wti",
+      "model": "prevalence",
+      "n": 2745,
+      "brier": 0.24954583312949594,
+      "accuracy": 0.521311475409836,
+      "tp": 1431,
+      "fp": 1314,
+      "tn": 0,
+      "fn": 0
+    }
+  ],
+  "private_outcomes": {
+    "variance": {
+      "path": "data/processed/oil-evidence/variance-9481986d496c3bc93a281e12f2ac1c86b92d2d7f9259e31124c5e3be24883f8f.csv.gz",
+      "sha256": "9481986d496c3bc93a281e12f2ac1c86b92d2d7f9259e31124c5e3be24883f8f"
+    },
+    "direction": {
+      "path": "data/processed/oil-evidence/direction-74702891ff7cb63822ea1f14ed872cb8c79ff7959a2a1198c8e2075f40e63cb6.csv.gz",
+      "sha256": "74702891ff7cb63822ea1f14ed872cb8c79ff7959a2a1198c8e2075f40e63cb6"
+    }
+  }
+}

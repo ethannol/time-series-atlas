@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-30T21:57:02.457895+00:00",
+  "station": "Aotizhongxin",
+  "start": "2015-03-01 09:00",
+  "duration": 6,
+  "rows": 24,
+  "finite": true,
+  "accuracy_scores_computed": false,
+  "source_sha256": "f553a836e2eae2be550f72a6397a1c7ce2057b6e5f2a45a0a1ae2400c8f8c851",
+  "peer_available_hours": 6,
+  "repeated_because": "Review separated input availability from truth eligibility in coverage reporting"
+}

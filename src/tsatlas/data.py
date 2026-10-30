@@ -148,9 +148,22 @@ def intake(root: Path = ROOT) -> dict:
     return audit
 
 
-def verify_snapshots(root: Path = ROOT) -> dict:
-    audit = json.loads((root / 'reports/intake/audit.json').read_text())
-    for name, entry in audit['snapshots'].items():
-        if digest(root/'data/snapshots'/name) != entry['sha256']:
-            raise ValueError(f'Changed analysis snapshot: {name}')
-    return audit
+def verify_snapshots(root: Path = ROOT, study=None, require_private=False) -> dict:
+    if study in ['co2','electricity','synthetic','spectral']:
+        paths=[root/'reports/intake/audit.json']
+    elif study:
+        paths=[root/'reports/intake'/f'{study}.json']
+    else:
+        paths=sorted((root/'reports/intake').glob('*.json'))
+    combined={'snapshots':{},'not_mirrored':[]}
+    for audit_path in paths:
+        audit=json.loads(audit_path.read_text())
+        for name,entry in audit.get('snapshots',{}).items():
+            path=root/entry.get('path',f'data/snapshots/{name}')
+            if not path.exists() and entry.get('availability')=='fetch-only' and not require_private:
+                combined['not_mirrored'].append(name)
+            elif not path.exists() or digest(path)!=entry['sha256']:
+                raise ValueError(f'Missing or changed analysis snapshot: {name}')
+            combined['snapshots'][name]=entry
+    if not combined['snapshots']:raise ValueError('No declared input snapshots')
+    return combined

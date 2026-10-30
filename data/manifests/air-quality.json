@@ -1,0 +1,12 @@
+{
+  "baseline": "bd85e01cb3e3e9af6be5a3a093a70a71e359ef6e",
+  "fetch_time": "2026-10-30T21:17:43Z",
+  "files": {
+    "air-quality.zip": {
+      "url": "https://archive.ics.uci.edu/static/public/501/beijing%2Bmulti%2Bsite%2Bair%2Bquality%2Bdata.zip",
+      "sha256": "b04da438b2f331ac0ffd45aebdfec0d20d2367feb5f6948c4b1f7ce1191e33c4",
+      "bytes": 8192212,
+      "download_completed_at": "2026-10-30T21:19:52.178661+00:00"
+    }
+  }
+}

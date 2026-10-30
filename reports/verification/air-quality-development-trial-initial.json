@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-30T21:51:24.373488+00:00",
+  "station": "Aotizhongxin",
+  "start": "2015-03-01 09:00",
+  "duration": 6,
+  "rows": 24,
+  "finite": true,
+  "accuracy_scores_computed": false,
+  "source_sha256": "1138c840274f0e5404176336560aa4ac2efbcf405c54bbfce796405d3389c306"
+}

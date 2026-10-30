@@ -2,10 +2,11 @@
 
 **Question:** How should we forecast next week's sales for products that sell only occasionally?
 
-**Data:** [UCI Online Retail II](https://archive.ics.uci.edu/dataset/502/online+retail+ii); timestamped transactions from December 2009 to December 2011, to be aggregated into product sales series.
+**Data:** [UCI Online Retail II](https://archive.ics.uci.edu/dataset/502/online+retail+ii); timestamped transactions from December 2009 to December 2011, aggregated into daily product series and complete weekly targets.
 
-**Status:** design only. This is a record of decisions already made and work still
-to do, not a report of results. Ethan set the direction and requested the critical
+**Current status (2026-10-30):** executed, independently reviewed and reproduced
+from a fresh checkout. Final live publication checks are pending. Earlier dated
+entries preserve what was known at each stage. Ethan set the direction and requested the critical
 review; agents proposed and critiqued the design described below.
 
 ## 2026-10-29 — Choose a question worth investigating
@@ -22,7 +23,7 @@ The target is observed sales, with cancellations treated explicitly. Product sel
 
 Technical evidence and outstanding checks: [R06–R07](../../reviews/01-design-review.md#r06--transactions-tell-us-what-sold-not-everything-customers-wanted).
 
-## Next, not yet done
+## Next at planning time — 2026-10-29
 
 Audit transaction types and product histories, then freeze the target and comparison rules. We have not estimated unmet demand, optimized inventory, or measured forecast performance.
 
@@ -30,3 +31,53 @@ Future entries will summarize actual source intake, benchmarks, implementation
 reviews, results, and revisions in plain language. Detailed evidence stays linked
 from the [review register](../../reviews/README.md).
 
+
+## 2026-10-30 — Discover that the source repeats sales
+
+The workbook's two annual sheets overlap. Independent intake review compared
+the complete rows and found exactly 22,523 transactions repeated in both sheets,
+including their duplicate multiplicities. We used the later sheet for that
+period, preventing double counting. The audit also kept cancellations distinct
+from positive recorded sales and selected products using 2010 information only.
+
+## 2026-10-30 — Check the forecast before looking at its score
+
+We froze the weekly target and five simple comparisons. Review checked that
+future sales could not enter an earlier forecast and that inactivity affected
+the intermittent-sales methods as intended. A small development trial exercised
+the pipeline without comparing accuracy. The signed total error was added
+explicitly so underforecasting would remain visible beside the headline score.
+
+## 2026-10-30 — A zero forecast wins one score and misses every sale
+
+The first full run scored 24 products over 48 complete weeks. Always predicting
+zero had the lowest average normalized absolute error, yet missed all 33,858
+recorded units. The result makes the choice of evaluation question tangible:
+low error alone does not tell a planner what to order. Other methods predict totals much closer to the recorded sales volume. This dataset still cannot reveal unmet demand or an
+optimal purchasing decision. Results and publication review are pending.
+
+[Report](../../reports/results/retail/REPORT.md) ·
+[Independent source/design review](../../reviews/completion/design-implementation.md) ·
+[Pre-run statistical review](../../reviews/completion/retail-implementation-statistical.md).
+
+## 2026-10-30 — Check the decision hidden inside the score
+
+Independent reviewers reproduced the predictions and scores, then asked us to
+make the disagreement between metrics explicit. Zero won normalized absolute
+error; TSB won raw-unit error and its forecast total was much closer to recorded
+sales. Most product-weeks had no sales, so a median-oriented loss could reward
+zero while missing all volume. Neither score establishes what stock to buy.
+
+We revised the explanation and figure labels without changing any numerical
+artifact. [Results review](../../reviews/completion/retail-results-general.md)
+records that interpretation; final fresh-checkout reproduction and publication
+are separate delivery checks.
+
+## 2026-10-30 — Reproduce the complete result from a new checkout
+
+A new locked environment reproduced every published numerical and presentation
+file for this study exactly, compared against the committed reference hashes.
+The full collection also passed forty-one tests. This is a reproduction check,
+not new evidence of operational or scientific generalization.
+
+[Full reproduction record](../../reports/verification/completion-reproduction.json).

@@ -1,0 +1,61 @@
+{
+  "primary": [
+    {
+      "model": "zero",
+      "product_weeks": 1152,
+      "macro_scaled_mae": 0.9860568865153948,
+      "unit_mae": 29.390625,
+      "mean_error_units": -29.390625,
+      "signed_total_error_units": -33858.0,
+      "observed_total_units": 33858.0,
+      "forecast_total_units": 0.0,
+      "underforecast_product_weeks": 483
+    },
+    {
+      "model": "last_week",
+      "product_weeks": 1152,
+      "macro_scaled_mae": 1.164907848581737,
+      "unit_mae": 30.247395833333332,
+      "mean_error_units": -0.3671875,
+      "signed_total_error_units": -423.0,
+      "observed_total_units": 33858.0,
+      "forecast_total_units": 33435.0,
+      "underforecast_product_weeks": 290
+    },
+    {
+      "model": "rolling_28",
+      "product_weeks": 1152,
+      "macro_scaled_mae": 1.0049620101993284,
+      "unit_mae": 26.133680555555557,
+      "mean_error_units": -0.8276909722222222,
+      "signed_total_error_units": -953.5,
+      "observed_total_units": 33858.0,
+      "forecast_total_units": 32904.5,
+      "underforecast_product_weeks": 280
+    },
+    {
+      "model": "croston_sba",
+      "product_weeks": 1152,
+      "macro_scaled_mae": 1.3082069690635347,
+      "unit_mae": 27.260836191048334,
+      "mean_error_units": 1.0044716183021427,
+      "signed_total_error_units": 1157.1513042840684,
+      "observed_total_units": 33858.0,
+      "forecast_total_units": 35015.15130428407,
+      "underforecast_product_weeks": 255
+    },
+    {
+      "model": "tsb",
+      "product_weeks": 1152,
+      "macro_scaled_mae": 0.9993053092454282,
+      "unit_mae": 25.921235359025253,
+      "mean_error_units": -1.679172250591194,
+      "signed_total_error_units": -1934.4064326810553,
+      "observed_total_units": 33858.0,
+      "forecast_total_units": 31923.593567318945,
+      "underforecast_product_weeks": 266
+    }
+  ],
+  "products": 24,
+  "weeks": 48
+}

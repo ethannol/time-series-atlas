@@ -1,87 +1,74 @@
 # Review findings and evidence status
 
-**Verification is scoped to the work actually performed.** The initial design
-review remains preserved. The CO₂, electricity, and synthetic studies now have
-source, design, implementation, results, and reproduction evidence. The other
-five studies remain planned; their remedies are not implemented or verified.
+**Verification is scoped to work actually performed.** All eight investigations
+now have executed evidence (nine run units). The
+[full gate matrix](completion/README.md) links source, design, pre-run,
+results and presentation checks. Final reproduction and publication are separate
+gates; their current state is explicit there. The
+[original critique](01-design-review.md) and [status history](HISTORY.md) remain
+unchanged historical records.
 
-See the [first-release checkpoint record](first-release/README.md) and its original
-review reports. New observed source discrepancies and actual scoring/verification
-defects are distinguished from the initial prospective risks.
+## Original findings, reconciled to actual scope
 
-The [initial review record](01-design-review.md) distinguishes source-confirmed
-facts from prospective risks, proposed changes, and evidence still needed.
-The [review protocol](../docs/REVIEW_PROTOCOL.md) governs future checkpoints.
-The [status history](HISTORY.md) preserves changes instead of overwriting their
-chronology. Documentation fixes have a separate [review response](project/2026-10-29-documentation/response.md);
-they did not close analytical findings R01–R16. Later first-release implementation
-verification is recorded separately below.
+| ID | Finding | Current resolution and evidence | Boundary retained |
+| --- | --- | --- | --- |
+| R01 | Methods preceded questions; scope could sprawl | Every run has a frozen contract; [question/method guide](../docs/METHODS.md) and [gate matrix](completion/README.md) | Conditional advanced methods are not performed or claimed |
+| R02 | CO₂ interpolation and mixed provenance | [Source audit, sensitivity and results](first-release/README.md) | Revised hindcasts; sensitivity does not erase all provenance effects |
+| R03 | Electricity zeros and interval/DST conventions | [Unit/clock/cohort checks](first-release/README.md) | Nominal clock, not verified UTC reconstruction; selected established customers |
+| R04 | Some river attributes summarize the target | [Known-gauge feature audit](completion/river-flow-implementation-data.md) | No full-period outcome signatures; ungauged transfer was not evaluated |
+| R05 | Future observed weather is not available input | [Origin and split audit](completion/river-flow-results-statistical.md) | Past daily weather only; reporting latency assumed, not measured |
+| R06 | Recorded sales are not unconstrained demand | [Target, filters and overlap verification](completion/retail-implementation-data.md) | Gross sales only; no inventory/stockout or unmet-demand inference |
+| R07 | Metrics can hide sparse-series failure or bad intervals | [Retail score audit](completion/retail-results-statistical.md), [CO₂ interval evidence](../reports/results/co2/REPORT.md) | Retail is point forecasting; electricity has no intervals; no universal scoring winner |
+| R08 | Isolated masks do not represent station outages | [Block, coverage and event audit](completion/air-quality-results-data.md) | One station at a time, same-hour peers; no operational uptime claim |
+| R09 | Record splits can mix people | [ECG person/fold and prediction audit](completion/ecg-results-data.md) | Expert-centered classification, so automatic detection tolerance is not applicable |
+| R10 | Artifacts complicate physiological spectral claims | [ECG scope](../reports/results/ecg/REPORT.md), [synthetic sampling audit](completion/spectral-results-statistical.md) | Sampling control completed; no physiological rhythm claim; aliases remain ambiguous |
+| R11 | Oil transformations and relationships need scrutiny | [Negative values, calendars, separate task scores](completion/oil-results-statistical.md) | Dollar changes; direction and variance losses not compared in magnitude; cointegration not performed |
+| R12 | Availability, preprocessing and selection can leak | [Per-study technical gates](completion/README.md), including river origin correction | Final outputs were not used to tune models; different tasks retain different information assumptions |
+| R13 | Hashes cannot recover unavailable inputs | [Source credits and acquisition](../data/README.md); reproduction gate in [matrix](completion/README.md) | Oil is fetch-only with an accepted future archival limitation; no unrestricted third-party reuse claim |
+| R14 | CAMELS versions, paths and size need explicit handling | [Version/member manifest](../data/manifests/river-flow.json) and [source recheck](completion/design2-implementation.md) | CRC/SHA for selected members; full archive checksum not independently verified |
+| R15 | Framework/compute can obscure the study | Bounded sequential execution, locked package, per-run measured resources; [author response](completion/RESPONSE.md) | Specialized dependencies installed together, not optional groups; full-suite measurement remains separately recorded |
+| R16 | Agent agreement and attractive claims are not proof | [Independent results and publication gates](completion/README.md) | Final-scope publication review remains required; AI review is not human validation |
 
-| ID | Applies to | Finding | Current status | Verification requirement |
-| --- | --- | --- | --- | --- |
-| R01 | Project | Methods preceded precise questions and the scope could sprawl | verified for first-release scope; remaining work pending | Independent review of each frozen study contract |
-| R02 | CO₂ | Published values include interpolation and mixed provenance | verified for first-release scope; remaining work pending | Actual input/flag audit and sensitivity analysis |
-| R03 | Electricity | Some zeros and intervals encode activation/DST conventions | verified for first-release scope; remaining work pending | Unit/time audit, quality masks, cohort construction |
-| R04 | River flow | Some attributes are derived from the target | design amended | Feature provenance and leakage rejection checks |
-| R05 | River flow | Observed future weather is not forecast-time information | design amended | Input availability table and timestamp trace |
-| R06 | Retail | Sales are not unconstrained demand; cancellations and entry matter | design amended | Target/cohort audit and claim review |
-| R07 | Retail, forecasting | Some metrics hide sparse-series failure or unhelpful intervals | verified for first-release scope; remaining work pending | Baseline/scoring verification and final comparisons |
-| R08 | Air quality | Isolated hidden points do not represent station outages | design amended | Block masks and no-future-input audit |
-| R09 | ECG | Record separation is not necessarily person separation | design amended | Subject-to-split manifest and disjointness checks |
-| R10 | ECG, synthetic | Recording artifacts complicate physiological spectral claims | design amended | Artifact-aware processing and interpretation review |
-| R11 | Oil | Transformations and presumed relationships require testing | design amended | Nonpositive-value audit and frozen evaluation design |
-| R12 | All studies | Forecasting, reconstruction, detection, and selection can leak information | verified for first-release scope; remaining work pending | Implemented split/preprocessing/tuning audit |
-| R13 | Reproducibility | Hashes identify bytes but cannot recover unavailable snapshots | verified for first-release scope; remaining work pending | Pinned-byte reproduction and redistribution basis |
-| R14 | CAMELS acquisition | Versions, official download resolution, and bundle size need explicit handling | design amended | Exact files/version manifest and measured intake |
-| R15 | Project | A large framework and expensive methods can obscure the investigation | verified for first-release scope; remaining work pending | Bounded runtime evidence and working offline entry point |
-| R16 | Claims and AI | Agent agreement, scenario value, and authored conclusions are not measured proof | verified for first-release publication scope; remaining work pending | Evidence-linked independent interpretation/publication review |
+## What actually went wrong later
 
-Implementation ownership: the primary implementation agent is responsible for
-carrying these remedies into the work; a non-authoring reviewer verifies them.
-This is a workflow assignment, not a claim of Ethan's personal verification.
+Initial risks are not retrospectively labeled as implemented mistakes. These
+observed findings arose during intake, coding, communication or delivery.
 
-## Checkpoint record
+| Type and issue | Response and independent evidence |
+| --- | --- |
+| Source discrepancy: NOAA quality flags and electricity clock-change values differ from descriptions | [Conservative handling and limits](first-release/README.md#source-intake) |
+| Code defects: missing predictions and array broadcasting could distort scores | [Pre-run scoring repairs](first-release/implementation/statistical.md) |
+| Verification defects: changing source or missing expected studies could pass | [Source/output guards](first-release/implementation/implementation.md), [expected-record checks](first-release/results/implementation.md) |
+| Publication defect RI04: links pinned to a commit lacking the new table | [Committed-output rebuild and recheck](first-release/results/implementation.md) |
+| Execution failure: agent stopped after three studies and implied completion | [User correction and explicit full-scope safeguard](../STORY.md), [required final audit](../AGENTS.md) |
+| Scope omission: synthetic frequency control missing from completion checklist | [General critic finding](completion/general.md), [executed control](../reports/results/spectral/REPORT.md) |
+| Source facts: duplicated retail annual overlap, negative WTI level, third-party oil attribution | [Independent source/design checks](completion/design-implementation.md) |
+| Source/audit defects: river weather columns and missing QC handling; ECG exclusion label conflated two causes | [Corrected snapshot and audit reconstruction](completion/design2-implementation.md) |
+| Missed design risk: river calibration outcomes could postdate an early three-day origin | [Author discovery and independent amended-design recheck](completion/design2-statistical.md) |
+| Code defects: oil variance floor in wrong units; failed-run private evidence overwrite | [Verified fixes C-I06/C-I07](completion/oil-implementation-data.md) |
+| Coverage defect: air peer availability initially used only scoreable blocks | [All-schedule denominator correction](completion/air-quality-implementation-data.md) |
+| Event evidence defects: river issue origins and censoring/unknown alert segments | [Event-ledger correction and recheck](completion/river-flow-implementation-data.md) |
+| Design risk: a partial spectral alias grid could invent uniqueness | [Pre-run amendment and numerical verification](completion/spectral-implementation-statistical.md) |
+| Communication defects: weak direct answers, obscured near ties, and stale stories | [Results reviews and author responses](completion/RESPONSE.md); numeric outputs unchanged after presentation fixes |
+| Copy errors: invented electricity intervals and split creator attribution | [Publication copy corrections and independent verification](completion/publication-copy-general.md) |
 
-- **2026-10-29, initial project design review:** three separate agents (general,
-  statistical, data/implementation). Source-documentation and plan review only.
-  See [findings and synthesis](01-design-review.md).
-- **Documentation review:** three separate agents inspected the scaffold and
-  recommended specific improvements. D01–D08 were independently verified as
-  documentation corrections; see the [response and evidence](project/2026-10-29-documentation/response.md).
-  This does not close any analytical remedy R01–R16.
-- **First-release source intake, contracts, implementation, results:** performed
-  and independently reviewed for CO₂, electricity, and the synthetic control.
-  Fresh-checkout reproduction matched every result output. Publication verification
-  is recorded in the [checkpoint record](first-release/README.md).
-- **Remaining studies:** source intake and later gates are not performed; the
-  initial documentation review does not replace them.
+Each linked review retains its initial finding and later verification, including
+cases where the first review missed a problem. Reproduction and deployment are
+not inferred from successful model execution.
 
 ## Decisions about reviewer recommendations
 
-- **Adopted:** one primary question per study, small comparison sets, compact CO₂
-  introduction, recurring reviews, explicit evidence status, retained source bytes,
-  and separation of retrospective and online tasks.
-- **Not adopted:** demoting CO₂ and ECG solely because they lack a direct commercial
-  use case. Ethan clarified that a compelling question natural to the data is
-  sufficient. Both remain core studies.
-- **Not adopted:** replacing the first release with electricity plus retail.
-  Keep the approved concise CO₂/electricity release and move retail next; this
-  balances an accessible scientific example with a deeper operational study.
-- **Deferred:** neural/pretrained models, Bayesian extensions, and hierarchical
-  reconciliation until a core result supplies a question that justifies them.
+Three separate critics—general, statistical, and data/implementation—reviewed
+the initial plan and recurring checkpoints. The author implemented fixes;
+non-authoring reviewers verified them. See [the protocol](../docs/REVIEW_PROTOCOL.md),
+[documentation-only D01–D08](project/2026-10-29-documentation/response.md),
+[first release](first-release/README.md) and [completion matrix](completion/README.md).
 
-Preserve future rejected or disputed suggestions with their rationale. Review is
-not a requirement to accept every criticism.
-
-## Observed issues found during implementation and publication
-
-These occurred after the prospective design critique. Their records distinguish
-source discrepancies, demonstrated code defects, and integration mistakes.
-
-| Observed issue | Response and evidence | Status |
-| --- | --- | --- |
-| NOAA flags differ from the header; DST treatment is not uniform | Conservative quality/calendar handling, [source records](first-release/README.md#source-intake) | Handling verified; source limitations retained |
-| Missing predictions and shape broadcasting could distort scores | Reproduced fixtures, explicit rejection, [statistical implementation review](first-release/implementation/statistical.md) | verified before full runs |
-| Execution evidence did not guard against source mutation | Start/end hashes, clean-source guard, staged outputs, [implementation review](first-release/implementation/implementation.md) | verified |
-| Missing expected study records could pass validation | Require declared studies/maps/names, [publication review](first-release/results/implementation.md) | verified |
-| RI04: early portfolio build pinned links to a commit lacking the new table | Rebuild after the results commit; all pinned paths checked, [resolution](first-release/results/implementation.md) | verified locally; deployment follows |
+We retained scientific and engineering questions when a business framing would
+misrepresent the data, as Ethan requested. One primary question and a small,
+justified comparison set replaced method accumulation. CO₂ remained the accessible
+opening, with electricity and detection as the initial release; that sequencing
+never reduced the agreed full scope. Neural/pretrained models, Bayesian
+extensions, reconciliation and other conditional extensions remain unevaluated.
+The [author response](completion/RESPONSE.md) records accepted limitations and
+implementation choices instead of silently treating every recommendation as done.

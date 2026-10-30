@@ -1,0 +1,18 @@
+{
+  "baseline": "bd85e01cb3e3e9af6be5a3a093a70a71e359ef6e",
+  "fetch_time": "2026-10-30T21:17:43Z",
+  "files": {
+    "wti.xls": {
+      "url": "https://www.eia.gov/dnav/pet/hist_xls/RWTCd.xls",
+      "sha256": "1f4c7c6c80c4ef6eb9e7b6c95e87c8df6439e3fb6ecccea72e9135bb37acf048",
+      "bytes": 471552,
+      "download_completed_at": "2026-10-30T21:19:50.189726+00:00"
+    },
+    "brent.xls": {
+      "url": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEd.xls",
+      "sha256": "c7c1e1eeb321fa5982f74747886963b35bd2df3c2f63960271c353421d5830ca",
+      "bytes": 452608,
+      "download_completed_at": "2026-10-30T21:19:50.719978+00:00"
+    }
+  }
+}

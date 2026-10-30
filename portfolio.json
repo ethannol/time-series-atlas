@@ -2,55 +2,194 @@
   "slug": "time-series-atlas",
   "title": "Time Series Atlas",
   "kind": "study",
-  "status": "first studies complete; collection expanding",
+  "status": "Eight investigations executed and independently reviewed",
   "question": "Which time series methods answer useful questions once source conventions, information timing, and evaluation assumptions are made explicit?",
-  "one_liner": "Forecasting and detection studies with a visible record of the questions, critiques, and corrections behind each result.",
+  "one_liner": "Question-led time series studies with visible critiques, verified corrections and reproducible evidence.",
   "aim": "Demonstrate analytical judgment through reproducible investigations and short process stories, with independent agent reviews before design, execution, and publication.",
-  "scope": "Completed atmospheric carbon dioxide and electricity forecasting studies plus a known-truth change-detection experiment. Retail, oil, river flow, air quality, and ECG studies remain planned.",
-  "conclusion": "Recent-growth forecasts improved the declared carbon dioxide comparison. Sharing electricity-model coefficients generally did not help this panel. Persistent noise broke the detector's calibrated false-alert behavior.",
+  "scope": "Seven real-data investigations—CO₂, electricity, retail, oil, river flow, air quality and ECG—plus synthetic change-detection and sampling controls. Each includes a frozen design, retained results, figures, review evidence and a plain-language process story.",
+  "conclusion": "Useful answers depend on the question and evaluation: zero forecasts can win sparse-sales error while missing volume, high-day river recall can hide missed new rises, and high ECG accuracy can conceal rare-class failure.",
   "summary": {
     "question": "What changes when we challenge the question, measurements, and evaluation before trusting a time series result?",
-    "techniques": ["Seasonal regression", "Rolling-origin evaluation", "Local and pooled ridge regression", "Prediction intervals", "Sequential detection", "Source audits"],
-    "result": "The first studies show why shared information, more history, and fast detection are not automatically improvements."
+    "techniques": [
+      "Rolling-origin forecasting",
+      "Local and pooled regression",
+      "Intermittent-sales forecasting",
+      "Volatility and direction models",
+      "Outage nowcasting",
+      "Waveform classification",
+      "Sequential detection",
+      "Spectral estimation"
+    ],
+    "result": "The collection shows how data provenance, information timing, metric choice and independence assumptions change the answer."
   },
-  "ledger": {"type": "json", "path": "reports/results/electricity/metrics.json"},
+  "ledger": {
+    "type": "json",
+    "path": "reports/results/electricity/metrics.json"
+  },
   "sources": {
-    "co2_recent": {"source": "json_file", "path": "reports/results/co2/metrics.json", "key": "test.linear_120months/36.mae"},
-    "co2_fixed": {"source": "json_file", "path": "reports/results/co2/metrics.json", "key": "test.linear_expanding/36.mae"}
+    "co2_recent": {
+      "source": "json_file",
+      "path": "reports/results/co2/metrics.json",
+      "key": "test.linear_120months/36.mae"
+    },
+    "co2_fixed": {
+      "source": "json_file",
+      "path": "reports/results/co2/metrics.json",
+      "key": "test.linear_expanding/36.mae"
+    },
+    "ecg_forest": {
+      "source": "json_file",
+      "path": "reports/results/ecg/metrics.json",
+      "key": "primary.forest.macro_f1"
+    },
+    "ecg_majority": {
+      "source": "json_file",
+      "path": "reports/results/ecg/metrics.json",
+      "key": "primary.majority.macro_f1"
+    }
   },
   "headline": [
-    {"label": "Customers worsened by pooling", "value": "test.pooled_worse_customers", "fmt": "d"},
-    {"label": "Recent-growth forecast MAE", "value": "co2_recent", "fmt": ".3f", "unit": "ppm"},
-    {"label": "Fixed-growth forecast MAE", "value": "co2_fixed", "fmt": ".3f", "unit": "ppm"}
+    {
+      "label": "Customers worsened by pooling",
+      "value": "test.pooled_worse_customers",
+      "fmt": "d"
+    },
+    {
+      "label": "Three-year December CO₂ MAE, recent growth",
+      "value": "co2_recent",
+      "fmt": ".3f",
+      "unit": "ppm"
+    },
+    {
+      "label": "ECG forest macro F1, four groups",
+      "value": "ecg_forest",
+      "fmt": ".3f"
+    }
   ],
   "finding": [
-    "In the fixed electricity panel, the shared model worsened forecasts for {{test.pooled_worse_customers:d}} customers. Separate models also had the lower aggregate-load error; the few customer gains from sharing were small.",
-    "For three-year December targets, adapting to recent growth reduced carbon dioxide MAE from {{co2_fixed:.3f}} ppm to {{co2_recent:.3f}} ppm. These are revised-data hindcasts, not all-month or causal claims.",
-    "In the synthetic control, persistent noise sharply increased false alerts under a frozen threshold. Conditional detection delay alone hid that failure.",
-    "The process story preserves source/documentation discrepancies, actual scoring defects found before full runs, original agent critiques, and verified corrections. Agent agreement is not independent human validation."
+    "In the fixed electricity panel, the shared model worsened forecasts for {{test.pooled_worse_customers:d}} customers. For three-year December targets, recent-growth CO₂ regression reduced MAE from {{co2_fixed:.3f}} to {{co2_recent:.3f}} ppm; these are revised-data hindcasts.",
+    "An always-zero retail forecast won normalized absolute error while missing every recorded sale. TSB won raw-unit error. Metric weighting and the decision being supported changed the interpretation.",
+    "Adaptive oil variance forecasts beat the fixed baseline on QLIKE while direction forecasts lost to prevalence on Brier. A secondary variance loss reversed the ranking. Same-hour air-quality peers outperformed local persistence under simulated outages, with scoring limited by observed truth.",
+    "River high-day recall did not translate into equally high new-onset recall. Past weather added little at the longer date offset and brought more false-alert episodes; daily information assumptions limit warning claims.",
+    "The ECG forest scored {{ecg_forest:.3f}} macro F1 versus the majority baseline’s {{ecg_majority:.3f}}, yet missed every fusion-group beat. Expert beat locations were supplied and people were kept apart during evaluation.",
+    "Synthetic controls expose two different failures: persistent noise breaks frozen alert calibration, while regular thinning leaves equally strong frequency aliases. A clear peak is not proof of unique identification.",
+    "The process story preserves initial design risks, later source discrepancies, actual code and copy defects, missed review findings, and verified corrections. Agent agreement is not independent human validation."
   ],
   "traps": [
-    {"id": "target-leakage", "how": "Features use only observations available at each declared origin; future-perturbation checks test that earlier predictions remain unchanged."},
-    {"id": "units-definitions", "how": "Power and interval labels are explicit. Provider DST conventions differ from sampled values, so calendar masks and a nominal-clock assumption are recorded."},
-    {"id": "analyst-choices", "how": "Comparison designs were committed before fitting, with no model selection on final scores. Customer differences and sensitivity results remain visible."}
+    {
+      "id": "target-leakage",
+      "how": "Forecasting and nowcasting use declared information cutoffs and training-only transformations. ECG is classification given expert beat centers, including the declared post-center waveform window; people remain separate across training and evaluation."
+    },
+    {
+      "id": "units-definitions",
+      "how": "Power and interval labels are explicit. Provider DST conventions differ from sampled values, so calendar masks and a nominal-clock assumption are recorded."
+    },
+    {
+      "id": "analyst-choices",
+      "how": "Comparison designs were committed before fitting, with no model selection on final scores. Customer differences and sensitivity results remain visible."
+    }
   ],
   "figures": [
-    {"path": "reports/results/electricity/pooling-comparison.png", "caption": "Customer-level gains and losses from sharing regression coefficients, with aggregate error scored after summing the panel."},
-    {"path": "reports/results/co2/forecast-comparison.png", "caption": "December-origin forecast errors and paired differences against the expanding fixed-growth baseline."},
-    {"path": "reports/results/synthetic/detection-comparison.png", "caption": "A frozen detector threshold behaves differently under independent and persistent synthetic noise. Detection rates are conditional on no early alarm."}
+    {
+      "path": "reports/results/retail/weekly-sales.png",
+      "caption": "A zero sales forecast has the lowest normalized absolute error while missing all recorded volume. Raw-unit error gives a different ranking."
+    },
+    {
+      "path": "reports/results/ecg/people-and-classes.png",
+      "caption": "Class-specific recall and variation across held-out people expose failures hidden by pooled accuracy. Per-person denominators include only present classes."
+    },
+    {
+      "path": "reports/results/river-flow/flow-and-onsets.png",
+      "caption": "High-day and eligible-onset recall use different cohorts and weighting. False alerts and misses in the linked report qualify these daily date-offset comparisons."
+    },
+    {
+      "path": "reports/results/spectral/recovery-and-ambiguity.png",
+      "caption": "Frequency recovery and equal-power aliases answer different questions. The regular thinning control remains nonidentifiable under the declared search."
+    }
   ],
-  "not_claimed": ["Universal model rankings, causal attribution, realized savings, or clinical benefit.", "A representative sample of all electricity customers or historical real-time data vintages.", "Completion of the remaining planned studies or independent human validation."],
+  "not_claimed": [
+    "Universal model rankings, causal attribution, latent retail demand, realized savings or clinical benefit.",
+    "Operational reporting latency, an automatic ECG detector, or generalization to unobserved catchments.",
+    "Guaranteed future recovery of unchanged oil inputs; they require explicit free acquisition and are not mirrored.",
+    "Independent human validation or completion of conditional advanced-method extensions."
+  ],
   "documents": [
-    {"title": "The process story", "path": "STORY.md"},
-    {"title": "What the initial critique changed", "path": "reviews/01-design-review.md"},
-    {"title": "First-release review and verification", "path": "reviews/first-release/README.md"},
-    {"title": "Electricity results", "path": "reports/results/electricity/REPORT.md"},
-    {"title": "CO₂ results", "path": "reports/results/co2/REPORT.md"},
-    {"title": "Synthetic detection results", "path": "reports/results/synthetic/REPORT.md"}
+    {
+      "title": "The process story",
+      "path": "STORY.md"
+    },
+    {
+      "title": "Datasets, questions and evaluated methods",
+      "path": "docs/METHODS.md"
+    },
+    {
+      "title": "Initial critique and changes",
+      "path": "reviews/01-design-review.md"
+    },
+    {
+      "title": "Full evidence and review matrix",
+      "path": "reviews/completion/README.md"
+    },
+    {
+      "title": "CO₂ results",
+      "path": "reports/results/co2/REPORT.md"
+    },
+    {
+      "title": "Electricity results",
+      "path": "reports/results/electricity/REPORT.md"
+    },
+    {
+      "title": "Retail results",
+      "path": "reports/results/retail/REPORT.md"
+    },
+    {
+      "title": "Oil results",
+      "path": "reports/results/oil/REPORT.md"
+    },
+    {
+      "title": "River flow results",
+      "path": "reports/results/river-flow/REPORT.md"
+    },
+    {
+      "title": "Air quality results",
+      "path": "reports/results/air-quality/REPORT.md"
+    },
+    {
+      "title": "ECG results",
+      "path": "reports/results/ecg/REPORT.md"
+    },
+    {
+      "title": "Synthetic detection results",
+      "path": "reports/results/synthetic/REPORT.md"
+    },
+    {
+      "title": "Synthetic sampling results",
+      "path": "reports/results/spectral/REPORT.md"
+    }
   ],
-  "verification": {"artifact": "reports/verification/checks.json", "harness": "Offline invariant tests; analysis evidence linked in each report"},
-  "data": ["Pinned NOAA GML monthly carbon dioxide observations", "Attributed UCI electricity customer panel", "Declared known-truth synthetic streams"],
-  "stack": ["Python", "NumPy", "pandas", "scikit-learn", "Matplotlib", "pytest"],
-  "links": {"Repository": "https://github.com/ethannol/time-series-atlas"},
+  "verification": {
+    "artifact": "reports/verification/checks.json",
+    "harness": "Offline invariant tests; analysis evidence linked in each report"
+  },
+  "data": [
+    "NOAA GML monthly CO₂",
+    "UCI electricity and retail panels",
+    "EIA oil series with third-party attribution; fetch-only inputs",
+    "CAMELS-US observed flow and Daymet weather",
+    "UCI Beijing multi-site fine-particle concentrations",
+    "PhysioNet MIT-BIH annotated ECG",
+    "Seeded synthetic changes and sampled sinusoids"
+  ],
+  "stack": [
+    "Python",
+    "NumPy",
+    "pandas",
+    "scikit-learn",
+    "Matplotlib",
+    "pytest"
+  ],
+  "links": {
+    "Repository": "https://github.com/ethannol/time-series-atlas"
+  },
   "strict_numbers": true
 }

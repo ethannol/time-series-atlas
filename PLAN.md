@@ -1,10 +1,38 @@
 # Implementation plan
 
-Status (2026-10-30): sources acquired, first three designs frozen, implementation
-reviewed, and first full runs executed and reproduced. Local results/publication
-reviews passed; initial-release GitHub CI and portfolio deployment passed.
-See reports/verification/rollout.json for the recorded rollout scope.
-The remaining five real-data studies are planned.
+Status (2026-10-30): all eight investigations executed, including both synthetic
+controls. Independent numerical audits passed. Presentation amendments preserve
+numerical outputs. Fresh-checkout reproduction matched all 68 files and 41 tests passed. Final
+publication review, CI, profile integration and live deployment remain gates below.
+
+## Overall completion checklist
+
+Every study must meet the definition of done below: independently reviewed
+design and implementation, executed and reproducible results, evidence and
+figures, reviewed interpretation, a plain-language story, and publication.
+
+- [x] CO₂ — initial release; retain and verify its evidence during final audit.
+- [x] Electricity — initial release; retain and verify its evidence during final audit.
+- [x] Synthetic change detection — initial release; retain and verify its evidence during final audit.
+- [ ] Promised synthetic irregular-sampling frequency-recovery control (R10).
+- [ ] Intermittent retail sales.
+- [ ] Oil prices and volatility.
+- [ ] River-flow warnings.
+- [ ] Air-quality warnings during sensor outages.
+- [ ] ECG recognition across people.
+- [ ] Final collection documentation, dataset credits, and method-coverage status.
+- [ ] Reproduction and CI checks for the final revision.
+- [ ] Portfolio and GitHub profile updated for all completed studies; deployment verified.
+- [ ] Independent general-critic audit of this entire checklist with linked evidence.
+- [ ] Reconcile R01–R16 and later findings against a per-study gate/evidence matrix.
+
+Continue until this agreed scope is complete, unless Ethan stops or changes it,
+or a concrete blocker prevents further progress. Completed milestones belong in
+progress reports. They are not permission to end the overall task early.
+
+Resumption baseline: fetched `origin/main` at 2026-10-30T21:17:43Z,
+`bd85e01cb3e3e9af6be5a3a093a70a71e359ef6e`; new work uses branch
+`feat/complete-atlas`. No analysis instrumentation changes at this checkpoint.
 
 ## Purpose and audience
 
@@ -28,13 +56,13 @@ Keep the [initial findings](reviews/01-design-review.md) visible and maintain th
    release demonstrates more than forecasting. Build only the shared utilities
    these studies need.
 3. **Extend one complete study at a time.** Retail, oil, river flow, air quality,
-   and ECG remain in scope. Each receives the same review and story workflow.
+   and ECG all received the same review and story workflow.
 4. **Question-driven extensions.** Bayesian, neural/pretrained, reconciliation,
    or other advanced methods only when a specific unresolved question justifies
    their dependencies and compute. Keep planned versus evaluated coverage visible.
 5. **Publication and integration.** Publish reviewed work to GitHub and integrate
-   completed-study evidence into Ethan's portfolio and profile. Keep planned
-   studies visibly separate. Follow any PR checks through the final revision.
+   completed-study evidence into Ethan's portfolio and profile. Keep unevaluated conditional
+   extensions visibly separate. Follow any PR checks through the final revision.
 
 ## Study contract, frozen before fitting
 
@@ -73,8 +101,8 @@ is needed to perform routine reviews or repairs within the approved scope.
 - Separate `reproduce` with pinned source bytes from an explicit data refresh.
   Preserve permitted immutable snapshots; document any public reproduction limit
   where source bytes cannot be redistributed.
-- Offer an offline small example and full-study commands. Use optional dependency
-  groups for specialized methods.
+- Offer an offline small example and full-study commands. The locked package installs the bounded specialized
+  dependencies together; optional groups were considered but not implemented.
 - Use offline CI fixtures for meaningful data/split/scoring invariants. Full model
   runs are explicit release checks; live provider access is not a unit test.
 - Execute locally with bounded concurrency. Measure a representative run before

@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-30T22:16:14.848910+00:00",
+  "gauge": "01162500",
+  "horizon": 3,
+  "training_end": "1989-12-31",
+  "calibration_end": "1994-12-31",
+  "trial_end": "1995-01-31",
+  "prediction_rows": 51,
+  "finite": true,
+  "accuracy_scores_computed": false,
+  "source_sha256": "e46cc7ef7f80f0847f858d8e5e1cd4dbb29377a6b5e4907c2180e236b96b2dc3",
+  "split_audit": {
+    "gauge": "01162500",
+    "horizon": 3,
+    "train_rows": 3286,
+    "calibration_rows": 1588,
+    "test_rows": 17,
+    "calibration_boundary_exclusions": 2,
+    "test_boundary_exclusions": 2,
+    "test_invalid_input_rows": 9,
+    "test_invalid_target_rows": 3,
+    "test_scheduled_after_boundary": 29,
+    "test_invalid_both_rows": 0,
+    "test_invalid_union_rows": 12
+  },
+  "repeated_because": "Review repaired event censoring/explicit origins, reconciled masks and rate denominators before any final run"
+}

@@ -71,3 +71,41 @@ strict build before rollout. No analysis computation changed for this correction
 
 [Publication verdicts](first-release/README.md#local-publication-gate) retain exact
 scopes and hashes. Actual GitHub checks and deployment are separate rollout gates.
+
+## 2026-10-30 — Restore the agreed full scope
+
+Ethan challenged the lead agent for ending after the initial release. This was
+an execution failure, not an authorized reduction of scope. The plan and AGENTS
+instructions now require all eight investigations and an independent final audit.
+The general critic also recovered the promised spectral control omitted from
+the checklist. [Scope review](completion/general.md).
+
+## 2026-10-30 — Verify the remaining source, design and implementation gates
+
+R04–R06, R08–R11 and R14 moved beyond amended plans to checked source contracts
+and implementations. The [completion matrix](completion/README.md) links each
+verdict and exact inspected scope. The author response retains source facts,
+design risks and demonstrated code defects as different categories.
+
+The river origin-boundary risk and spectral grid ambiguity were discovered by
+the author after earlier design approval. Independent reviewers acknowledged
+those missed cases and verified the amended contracts before full runs.
+Oil remains an accepted fetch-only archival limitation under R13; it did not
+become an openly redistributable snapshot. R09 applies to person-held-out
+annotation-centered classification, not automatic beat detection. R11 does not
+imply a completed cointegration extension.
+
+## 2026-10-30 — Complete numerical result audits, then revise interpretation
+
+All nine run units executed under committed contracts. Independent critics
+reconstructed scores and, where possible, predictions from saved parameters.
+The new result records cover retail, oil, air quality, river flow, ECG and the
+spectral control. General reviews required direct answers and visible tradeoffs.
+The presentation refresh retained all numerical artifacts byte-for-byte.
+
+R07 now includes retail's metric/volume disagreement, while interval evidence
+remains scoped to CO₂. R10 includes the actual sampling control, with equal-power
+aliases explicitly retained. R12 guards and R16 interpretations were checked per
+study; full-checkout reproduction and final publication remain separate gates.
+Publication copy review additionally caught an invented electricity-interval
+claim and a mistaken creator attribution. Both were corrected and rechecked.

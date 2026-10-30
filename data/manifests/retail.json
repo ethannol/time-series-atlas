@@ -1,0 +1,12 @@
+{
+  "baseline": "bd85e01cb3e3e9af6be5a3a093a70a71e359ef6e",
+  "fetch_time": "2026-10-30T21:17:43Z",
+  "files": {
+    "retail.zip": {
+      "url": "https://archive.ics.uci.edu/static/public/502/online%2Bretail%2Bii.zip",
+      "sha256": "572e36277c2390fbfde10664750731e0a86f55e33470d91919085f0408e67bfb",
+      "bytes": 45622418,
+      "download_completed_at": "2026-10-30T21:20:00.146755+00:00"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-30T21:44:49.434840+00:00",
+  "train_end": "2003-12-31",
+  "trial_period": [
+    "2004-01-01",
+    "2004-01-31"
+  ],
+  "variance_rows": 32,
+  "direction_rows": 16,
+  "finite_positive_variances": true,
+  "valid_probabilities": true,
+  "accuracy_scores_computed": false,
+  "garch_successful_starts": 3,
+  "source_sha256": "c7701a049ffe665792a251f5c3722f294d0ecbe5125f481d17e22f8209453353"
+}

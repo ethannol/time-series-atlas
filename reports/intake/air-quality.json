@@ -1,0 +1,86 @@
+{
+  "stations": {
+    "Aotizhongxin": {
+      "rows": 35064,
+      "missing": 925,
+      "min": 3.0,
+      "max": 898.0
+    },
+    "Changping": {
+      "rows": 35064,
+      "missing": 774,
+      "min": 2.0,
+      "max": 882.0
+    },
+    "Dingling": {
+      "rows": 35064,
+      "missing": 779,
+      "min": 3.0,
+      "max": 881.0
+    },
+    "Dongsi": {
+      "rows": 35064,
+      "missing": 750,
+      "min": 3.0,
+      "max": 737.0
+    },
+    "Guanyuan": {
+      "rows": 35064,
+      "missing": 616,
+      "min": 2.0,
+      "max": 680.0
+    },
+    "Gucheng": {
+      "rows": 35064,
+      "missing": 646,
+      "min": 2.0,
+      "max": 770.0
+    },
+    "Huairou": {
+      "rows": 35064,
+      "missing": 953,
+      "min": 2.0,
+      "max": 762.0
+    },
+    "Nongzhanguan": {
+      "rows": 35064,
+      "missing": 628,
+      "min": 2.0,
+      "max": 844.0
+    },
+    "Shunyi": {
+      "rows": 35064,
+      "missing": 913,
+      "min": 2.0,
+      "max": 941.0
+    },
+    "Tiantan": {
+      "rows": 35064,
+      "missing": 677,
+      "min": 3.0,
+      "max": 821.0
+    },
+    "Wanliu": {
+      "rows": 35064,
+      "missing": 382,
+      "min": 2.0,
+      "max": 957.0
+    },
+    "Wanshouxigong": {
+      "rows": 35064,
+      "missing": 696,
+      "min": 3.0,
+      "max": 999.0
+    }
+  },
+  "time_convention": "Nominal provider hour, no timezone conversion; reporting latency unknown",
+  "snapshots": {
+    "air-quality-hourly.csv.gz": {
+      "sha256": "1728af0edf50039ca234a58803f75bcc5e121c51b0fc9bef2c3d298f19a20fc5",
+      "bytes": 653649
+    }
+  },
+  "source_sha256": {
+    "air-quality.zip": "b04da438b2f331ac0ffd45aebdfec0d20d2367feb5f6948c4b1f7ce1191e33c4"
+  }
+}

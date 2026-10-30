@@ -134,3 +134,77 @@ The collection now has completed CO₂ and electricity studies plus the syntheti
 detection control. The other five real-data studies remain planned.
 [Rollout evidence](reports/verification/rollout.json) ·
 [Live portfolio page](https://ethannol.github.io/portfolio/projects/time-series-atlas.html).
+
+## 2026-10-30 — Correct an execution failure, too
+
+The lead agent stopped after publishing three studies, although all eight agreed
+investigations remained in scope. Ethan challenged that premature stopping.
+The agent had invented its own finish line; there was no reported blocker or
+user decision to reduce the scope.
+
+We added an explicit full-project completion checklist and a required independent
+audit before declaring the overall task complete. The remaining five studies
+are outstanding work. This process change makes the stopping condition visible;
+it is not evidence that the unfinished studies have been delivered.
+
+## 2026-10-30 — Continue the collection and keep discovering source problems
+
+Independent intake review found exact duplicated transactions across retail
+workbook sheets, a negative WTI price, and third-party attribution behind the
+public oil-price files. Each finding changed a concrete choice: overlap handling,
+price transformation, or how inputs are distributed. The continuing review also
+recovered a promised synthetic control that the completion checklist had missed.
+
+The retail study then supplied a useful first result: an always-zero forecast
+won one normalized error score while missing every recorded sale. That result
+is under review. The remaining studies are underway; this is progress within
+the agreed scope, not a completed collection.
+
+## 2026-10-30 — Finish the remaining experiments and challenge their answers
+
+The remaining real-data studies ran under their frozen contracts. Oil's variance
+models improved one appropriate loss while direction prediction did not improve;
+a different variance loss reversed the ranking. Nearby air-quality stations
+preserved useful same-hour indications, but missing local observations limited
+which simulated outages could be scored. River high-day recall hid many missed
+new rises. ECG's high overall accuracy hid an entire missed rare beat group.
+
+Separate agents reconstructed predictions or scores from the retained evidence.
+They asked us to lead with these findings and their limits, not just describe
+how the experiment was organized. We revised the reports and confirmed that the
+numerical artifacts did not change.
+
+## 2026-10-30 — Review can miss a problem, and the next pass still matters
+
+The initial river design review missed a boundary case: a three-day forecast
+could use calibration outcomes that were not yet known at its origin. The lead
+agent later found it; the revised origin guards were independently checked before
+the full run. The spectral control had a similar pre-run lesson: adding only the
+true frequency's alias did not protect other candidate peaks from false certainty.
+Its amended grid preserves sampling ambiguity throughout the search.
+
+The completed synthetic experiment recovers frequency under irregular sampling,
+yet regularly thinned observations retain two equally strong explanations.
+That does not establish a physiological result. It demonstrates why knowing the
+sampling process matters before interpreting a spectrum.
+
+## 2026-10-30 — Audit the explanation as carefully as the computation
+
+Publication review caught an invented electricity-interval capability in the
+method guide and a source creator incorrectly split into two authors. Those
+were actual copy errors, corrected before publication. The dataset guide, source
+credits, per-study stories and full evidence matrix now make the analytical
+process inspectable. Fresh-checkout reproduction and live publication remain the
+next delivery gates; executing every experiment alone does not complete them.
+
+## 2026-10-30 — Reproduce the full collection, including the acquisition exception
+
+A new checkout and locked Python environment reproduced all sixty-eight result
+files exactly across the nine execution units. It started without raw or private
+inputs, fetched oil data independently, and verified the pinned history before
+running. All forty-one tests passed. The full analysis took about a minute on
+this machine. The evidence retains exact revisions, timings and hashes.
+
+That verifies this reproduction, not a promise that future oil source revisions
+will remain recoverable. Publication review and live deployment are the final
+delivery checks. [Reproduction record](reports/verification/completion-reproduction.json).

@@ -1,0 +1,11 @@
+{
+  "baseline": "bd85e01cb3e3e9af6be5a3a093a70a71e359ef6e",
+  "files": {
+    "mitdb.zip": {
+      "url": "https://physionet.org/content/mitdb/get-zip/1.0.0/",
+      "sha256": "47b26926927c11bd9174154d367c811afc1b186f650f8a205931ca8c520f0a87",
+      "bytes": 77030320,
+      "download_completed_at": "2026-10-30T21:25:41.378134+00:00"
+    }
+  }
+}

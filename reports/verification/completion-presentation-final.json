@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-10-30T22:40:25.333153+00:00",
+  "reference_commit": "f14924eb7de588721a0d12021cb35521ec928a2f",
+  "numeric_outputs_identical": [
+    "reports/results/spectral/example-spectra.csv.gz",
+    "reports/results/spectral/inputs.csv.gz",
+    "reports/results/spectral/metrics.json",
+    "reports/results/spectral/replicates.csv.gz",
+    "reports/results/spectral/sampling.csv",
+    "reports/results/river-flow/catchment-groups.csv",
+    "reports/results/river-flow/events.csv.gz",
+    "reports/results/river-flow/gauge-scores.csv",
+    "reports/results/river-flow/group-scores.csv",
+    "reports/results/river-flow/metrics.json",
+    "reports/results/river-flow/parameters.json",
+    "reports/results/river-flow/predictions.csv.gz",
+    "reports/results/river-flow/split-audit.csv"
+  ],
+  "presentation_outputs_changed": [
+    "reports/results/spectral/REPORT.md",
+    "reports/results/spectral/recovery-and-ambiguity.png",
+    "reports/results/river-flow/REPORT.md"
+  ]
+}

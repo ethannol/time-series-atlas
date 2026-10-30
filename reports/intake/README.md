@@ -1,4 +1,4 @@
-# Source intake — 2026-10-30
+# Initial source intake — 2026-10-30
 
 Actual downloads were inspected before model fitting. The [audit](audit.json)
 records source hashes, dimensions, quality flags, selected customers, and snapshot
@@ -25,3 +25,13 @@ provider-clock mean power, not a reconstructed physical energy-settlement series
 
 Source intake does not validate model code. Independent reports are under
 [the source checkpoint](../../reviews/first-release/source/).
+
+## Complete collection
+
+The original audit remains unchanged. Later per-study audits are
+[retail](retail.json), [oil](oil.json), [river flow](river-flow.json),
+[air quality](air-quality.json) and [ECG](ecg.json).
+[Complete source credits](../../data/README.md) and
+[review evidence](../../reviews/completion/README.md) record their distinct
+transformations, licences and acquisition limits. The synthetic controls have
+generated observations, with seeds and inputs retained in result evidence.
