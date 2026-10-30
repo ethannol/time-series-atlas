@@ -1,9 +1,12 @@
 # Implementation plan
 
-Status (2026-10-30): all eight investigations executed, including both synthetic
-controls. Independent numerical audits passed. Presentation amendments preserve
-numerical outputs. Fresh-checkout reproduction matched all 68 files and 41 tests passed. Final
-publication review, CI, profile integration and live deployment remain gates below.
+Status (2026-10-30): all eight investigations executed, reviewed, reproduced and
+published. All 68 outputs matched in a fresh checkout; 41 tests passed. Atlas
+PR2 and profile PR3 merged, main CI passed, and the live portfolio deployment
+was verified. The independent general critic audited every checklist item and
+found no remaining study or publication-content omission. Its
+[closure audit](reviews/completion/completion-audit-general.md) records that exact
+checkpoint; the documentation follow-up is subject to the same CI/deploy rule.
 
 ## Overall completion checklist
 
@@ -14,17 +17,17 @@ figures, reviewed interpretation, a plain-language story, and publication.
 - [x] CO₂ — initial release; retain and verify its evidence during final audit.
 - [x] Electricity — initial release; retain and verify its evidence during final audit.
 - [x] Synthetic change detection — initial release; retain and verify its evidence during final audit.
-- [ ] Promised synthetic irregular-sampling frequency-recovery control (R10).
-- [ ] Intermittent retail sales.
-- [ ] Oil prices and volatility.
-- [ ] River-flow warnings.
-- [ ] Air-quality warnings during sensor outages.
-- [ ] ECG recognition across people.
-- [ ] Final collection documentation, dataset credits, and method-coverage status.
-- [ ] Reproduction and CI checks for the final revision.
-- [ ] Portfolio and GitHub profile updated for all completed studies; deployment verified.
-- [ ] Independent general-critic audit of this entire checklist with linked evidence.
-- [ ] Reconcile R01–R16 and later findings against a per-study gate/evidence matrix.
+- [x] Promised synthetic irregular-sampling frequency-recovery control (R10).
+- [x] Intermittent retail sales.
+- [x] Oil prices and volatility.
+- [x] River-flow warnings.
+- [x] Air-quality warnings during sensor outages.
+- [x] ECG recognition across people.
+- [x] Final collection documentation, dataset credits, and method-coverage status.
+- [x] Reproduction and CI checks for the final revision.
+- [x] Portfolio and GitHub profile updated for all completed studies; deployment verified.
+- [x] Independent general-critic audit of this entire checklist with linked evidence.
+- [x] Reconcile R01–R16 and later findings against a per-study gate/evidence matrix.
 
 Continue until this agreed scope is complete, unless Ethan stops or changes it,
 or a concrete blocker prevents further progress. Completed milestones belong in

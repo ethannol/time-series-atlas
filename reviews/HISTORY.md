@@ -109,3 +109,28 @@ aliases explicitly retained. R12 guards and R16 interpretations were checked per
 study; full-checkout reproduction and final publication remain separate gates.
 Publication copy review additionally caught an invented electricity-interval
 claim and a mistaken creator attribution. Both were corrected and rechecked.
+
+## 2026-10-30 — Full reproduction and live rollout verified
+
+All sixty-eight outputs reproduced exactly in a fresh locked checkout, including
+independent acquisition of the fetch-only oil history. Separate implementation
+review verified the replay's source, input, output and test evidence. The full
+collection and profile PRs merged at their expected non-draft heads; main CI
+and Pages deployment passed. Live report paths, figures, numeric sources and
+profile text matched the published revisions.
+
+R13 is verified within its explicit oil archival limit; R15 has measured full-suite
+resources. R16 publication content and rollout are checked, with the final general
+full-scope audit required separately before the overall completion claim.
+[Reproduction](../reports/verification/completion-reproduction.json) ·
+[Rollout](../reports/verification/completion-rollout.json).
+
+## 2026-10-30 — Independent full-scope closure audit
+
+The general critic independently verified the full checklist against all nine
+run units, the 68 retained/reproduced outputs and merged remote blobs, all 156
+pinned live paths, nine report links, four published figure assets, the profile
+copy, and successful PR/main/Pages checks. No study or publication-content
+omission remained. [Exact audit scope and verdict](completion/completion-audit-general.md).
+Publishing this dated record and its documentation-only CI/deployment follow-up
+are separate from the already verified numerical result and live content.
