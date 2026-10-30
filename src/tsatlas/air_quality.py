@@ -172,7 +172,7 @@ need not resemble real failures. Natural missing observations have no known trut
 Network methods abstain when fewer than three other stations report.
 Peer-input availability is counted even in blocks excluded for missing local
 truth; scoreable network coverage additionally requires that truth. These are
-different denominators. Baseline
+different subsets of the same scheduled hours. Baseline
 scores on all their available hours are [retained separately](available-hour-scores.csv).
 
 ## Event misses belong beside successful detection delay
