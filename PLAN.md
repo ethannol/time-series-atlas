@@ -4,7 +4,37 @@ Status (2026-10-30): sources acquired, first three designs frozen, implementatio
 reviewed, and first full runs executed and reproduced. Local results/publication
 reviews passed; initial-release GitHub CI and portfolio deployment passed.
 See reports/verification/rollout.json for the recorded rollout scope.
-The remaining five real-data studies are planned.
+The remaining five real-data studies are outstanding authorized work. The first
+release was an interim milestone, not completion of the task.
+
+## Overall completion checklist
+
+Every study must meet the definition of done below: independently reviewed
+design and implementation, executed and reproducible results, evidence and
+figures, reviewed interpretation, a plain-language story, and publication.
+
+- [x] CO₂ — initial release; retain and verify its evidence during final audit.
+- [x] Electricity — initial release; retain and verify its evidence during final audit.
+- [x] Synthetic controls — initial release; retain and verify its evidence during final audit.
+- [ ] Promised synthetic irregular-sampling frequency-recovery control (R10).
+- [ ] Intermittent retail sales.
+- [ ] Oil prices and volatility.
+- [ ] River-flow warnings.
+- [ ] Air-quality warnings during sensor outages.
+- [ ] ECG recognition across people.
+- [ ] Final collection documentation, dataset credits, and method-coverage status.
+- [ ] Reproduction and CI checks for the final revision.
+- [ ] Portfolio and GitHub profile updated for all completed studies; deployment verified.
+- [ ] Independent general-critic audit of this entire checklist with linked evidence.
+- [ ] Reconcile R01–R16 and later findings against a per-study gate/evidence matrix.
+
+Continue until this agreed scope is complete, unless Ethan stops or changes it,
+or a concrete blocker prevents further progress. Completed milestones belong in
+progress reports. They are not permission to end the overall task early.
+
+Resumption baseline: fetched `origin/main` at 2026-10-30T21:17:43Z,
+`bd85e01cb3e3e9af6be5a3a093a70a71e359ef6e`; new work uses branch
+`feat/complete-atlas`. No analysis instrumentation changes at this checkpoint.
 
 ## Purpose and audience
 

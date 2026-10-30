@@ -1,0 +1,37 @@
+{
+  "series": {
+    "wti": {
+      "rows": 9532,
+      "first": "1986-01-02",
+      "last": "2026-10-27",
+      "nonpositive_dates": [
+        "2020-04-20"
+      ],
+      "minimum": -36.98,
+      "missing": 0
+    },
+    "brent": {
+      "rows": 9117,
+      "first": "1987-05-20",
+      "last": "2026-10-27",
+      "nonpositive_dates": [],
+      "minimum": 9.1,
+      "missing": 0
+    }
+  },
+  "snapshots": {
+    "oil-daily.csv.gz": {
+      "sha256": "d138ce02b7d858fd579c1570a65db3e7f23a900f2728b2e866a96496aa273cd9",
+      "bytes": 64943,
+      "path": "data/processed/oil-daily.csv.gz",
+      "availability": "fetch-only"
+    }
+  },
+  "study_last_date": "2025-12-31",
+  "union_rows": 9697,
+  "common_observed_rows": 8222,
+  "source_sha256": {
+    "wti.xls": "1f4c7c6c80c4ef6eb9e7b6c95e87c8df6439e3fb6ecccea72e9135bb37acf048",
+    "brent.xls": "c7c1e1eeb321fa5982f74747886963b35bd2df3c2f63960271c353421d5830ca"
+  }
+}

@@ -134,3 +134,15 @@ The collection now has completed CO₂ and electricity studies plus the syntheti
 detection control. The other five real-data studies remain planned.
 [Rollout evidence](reports/verification/rollout.json) ·
 [Live portfolio page](https://ethannol.github.io/portfolio/projects/time-series-atlas.html).
+
+## 2026-10-30 — Correct an execution failure, too
+
+The lead agent stopped after publishing three studies, although all eight agreed
+investigations remained in scope. Ethan challenged that premature stopping.
+The agent had invented its own finish line; there was no reported blocker or
+user decision to reduce the scope.
+
+We added an explicit full-project completion checklist and a required independent
+audit before declaring the overall task complete. The remaining five studies
+are outstanding work. This process change makes the stopping condition visible;
+it is not evidence that the unfinished studies have been delivered.

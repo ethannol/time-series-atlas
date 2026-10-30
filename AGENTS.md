@@ -38,7 +38,25 @@ Distinguish source facts, design risks, observed defects, empirical findings,
 and limitations. Identify the human/agent contribution accurately. Never invent
 Ethan's personal motivations, decisions, reviews, or professional experience.
 
-## Evidence and scope
+## Overall completion and interim milestones
+
+The authorized task includes all eight agreed investigations: CO₂, electricity,
+retail, oil, river flow, air quality, ECG, and synthetic controls. Consult the
+completion checklist in `PLAN.md` at handoff, resumption, and before any final
+completion message. A subset being published, tests passing, or a PR merging is
+an interim milestone; none authorizes ending the overall task while actionable
+agreed work remains. Continue through the remaining studies without another
+user request. Only Ethan can reduce the agreed scope.
+
+Before declaring overall completion, a non-authoring general critic must audit
+every checklist item against the actual study artifacts and publication state.
+Record that audit and resolve unsupported completion claims. Status messages
+must distinguish progress from completion. If genuinely blocked, identify the
+specific blocker, attempts made, and exact remaining work; do not describe the
+project as complete. Never invent evidence or weaken study requirements to
+satisfy the checklist. Preserve incomplete state across context compactions.
+
+## Study evidence
 
 One primary question per study; a small set of justified comparisons. Freeze
 targets, available inputs, selection rules, splits, metrics, and tuning budget

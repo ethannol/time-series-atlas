@@ -23,13 +23,15 @@ def git(*args):
 def source_snapshot(study):
     paths=sorted((ROOT/'src').rglob('*.py'))+sorted((ROOT/'tests').rglob('*.py'))+sorted((ROOT/'scripts').glob('*.py'))
     paths += [ROOT/'pyproject.toml',ROOT/'uv.lock',ROOT/'studies'/study/'DESIGN.md',ROOT/'data/manifest.json',ROOT/'reports/intake/audit.json']
+    paths += [p for p in [ROOT/'data/manifests'/f'{study}.json',ROOT/'reports/intake'/f'{study}.json'] if p.exists()]
     return {str(p.relative_to(ROOT)):digest(p) for p in paths}
 
 
 def start_run(study):
-    inputs=verify_snapshots()
+    inputs=verify_snapshots(study=study,require_private=True)
     # Full runs start from committed source. Reviews and result-only edits may coexist.
     source_paths=['src','tests','scripts','pyproject.toml','uv.lock',f'studies/{study}/DESIGN.md','data/manifest.json','reports/intake/audit.json']
+    source_paths += [f'data/manifests/{study}.json',f'reports/intake/{study}.json']
     if git('status','--porcelain','--',*source_paths):
         raise ValueError('Commit source/design/configuration before a full run')
     temp_parent=ROOT/'reports/runs';temp_parent.mkdir(parents=True,exist_ok=True)
@@ -48,7 +50,7 @@ def save_frame(frame,path):
 def finish_run(study,out,started,config):
     if source_snapshot(study)!=started['source_files']:
         raise ValueError('Source/design/configuration changed during run; results not published')
-    verify_snapshots()
+    verify_snapshots(study=study,require_private=True)
     target=ROOT/'reports/results'/study
     outputs={str((target/p.name).relative_to(ROOT)):digest(p) for p in sorted(out.iterdir()) if p.is_file() and p.name!='run.json'}
     rss=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
