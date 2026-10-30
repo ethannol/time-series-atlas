@@ -2,10 +2,11 @@
 
 **Question:** How should we forecast next week's sales for products that sell only occasionally?
 
-**Data:** [UCI Online Retail II](https://archive.ics.uci.edu/dataset/502/online+retail+ii); timestamped transactions from December 2009 to December 2011, to be aggregated into product sales series.
+**Data:** [UCI Online Retail II](https://archive.ics.uci.edu/dataset/502/online+retail+ii); timestamped transactions from December 2009 to December 2011, aggregated into daily product series and complete weekly targets.
 
-**Current status (2026-10-30):** source intake complete; later dated entries
-record implementation and results status. Earlier entries preserve the original plan. Ethan set the direction and requested the critical
+**Current status (2026-10-30):** first results executed and independently checked;
+final presentation and fresh-checkout reproduction remain pending. Earlier
+entries preserve the original plan. Ethan set the direction and requested the critical
 review; agents proposed and critiqued the design described below.
 
 ## 2026-10-29 — Choose a question worth investigating
@@ -22,7 +23,7 @@ The target is observed sales, with cancellations treated explicitly. Product sel
 
 Technical evidence and outstanding checks: [R06–R07](../../reviews/01-design-review.md#r06--transactions-tell-us-what-sold-not-everything-customers-wanted).
 
-## Next, not yet done
+## Next at planning time — 2026-10-29
 
 Audit transaction types and product histories, then freeze the target and comparison rules. We have not estimated unmet demand, optimized inventory, or measured forecast performance.
 
@@ -52,8 +53,7 @@ explicitly so underforecasting would remain visible beside the headline score.
 The first full run scored 24 products over 48 complete weeks. Always predicting
 zero had the lowest average normalized absolute error, yet missed all 33,858
 recorded units. The result makes the choice of evaluation question tangible:
-low error alone does not tell a planner what to order. Other methods capture
-much more sales volume. This dataset still cannot reveal unmet demand or an
+low error alone does not tell a planner what to order. Other methods predict totals much closer to the recorded sales volume. This dataset still cannot reveal unmet demand or an
 optimal purchasing decision. Results and publication review are pending.
 
 [Report](../../reports/results/retail/REPORT.md) ·

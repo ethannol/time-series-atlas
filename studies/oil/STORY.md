@@ -2,10 +2,10 @@
 
 **Question:** Can volatility forecasts improve on simple baselines even when price-direction forecasts cannot?
 
-**Data:** EIA daily spot prices for [WTI](https://www.eia.gov/dnav/pet/hist/RWTCD.htm) and [Brent](https://www.eia.gov/dnav/pet/hist/RBRTED.htm); the intended common-history snapshot ends in 2025.
+**Data:** EIA daily spot prices for [WTI](https://www.eia.gov/dnav/pet/hist/RWTCD.htm) and [Brent](https://www.eia.gov/dnav/pet/hist/RBRTED.htm); the pinned study snapshot ends in 2025.
 
-**Current status (2026-10-30):** source intake complete; later dated entries
-record implementation and results status. Earlier entries preserve the original plan. Ethan set the direction and requested the critical
+**Current status (2026-10-30):** executed and independently checked; final
+presentation and clean-checkout reproduction remain pending. Ethan set the direction and requested the critical
 review; agents proposed and critiqued the design described below.
 
 ## 2026-10-29 — Choose a question worth investigating
@@ -22,7 +22,7 @@ Direction and volatility will each be evaluated against their own simple benchma
 
 Technical evidence and outstanding checks: [R11](../../reviews/01-design-review.md#r11--price-transformations-and-relationships-are-hypotheses), [R13](../../reviews/01-design-review.md#r13--a-checksum-is-not-an-archive-or-a-redistribution-license), and [R16](../../reviews/01-design-review.md#r16--the-story-must-stay-within-the-evidence).
 
-## Next, not yet done
+## Next at planning time — 2026-10-29
 
 Inspect the actual price history, establish source-snapshot handling, and freeze comparable horizons and scoring. No price relationship or forecasting skill has been established.
 
@@ -45,3 +45,26 @@ prevent exact public reproduction; that limitation is explicit. The oil study
 remains in scope, with separate direction and volatility questions and scores.
 
 [Design](DESIGN.md) · [Review](../../reviews/completion/design-general.md).
+
+## 2026-10-30 — Review units and preserve earlier evidence
+
+Before the full run, technical review caught a variance floor expressed in the
+wrong units inside the standardized optimizer. We corrected its scale and added
+a regression check. Review also required private outcome files to be immutable,
+so a failed later run could not overwrite the evidence supporting an earlier
+report. The repaired implementation passed independent pre-run checks.
+
+## 2026-10-30 — Uncertainty and direction give different answers
+
+Adaptive variance forecasts beat a fixed variance on the declared QLIKE score
+for both WTI and Brent. The direction model instead performed worse than a
+simple historical upward-frequency baseline. GARCH's advantage over simple EWMA
+was small. The fixed variance won the absolute squared-change-error comparison,
+which asks a different statistical question. We kept all of those results.
+
+Independent reviewers reconstructed the forecasts from saved parameters and
+recalculated the scores without refitting. Final presentation and clean-checkout
+reproduction remain pending. No settings changed after seeing the test scores.
+
+[Executed report](../../reports/results/oil/REPORT.md) ·
+[Results review](../../reviews/completion/oil-results-statistical.md).

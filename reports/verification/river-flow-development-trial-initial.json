@@ -1,0 +1,24 @@
+{
+  "at": "2026-10-30T22:09:16.704376+00:00",
+  "gauge": "01162500",
+  "horizon": 3,
+  "training_end": "1989-12-31",
+  "calibration_end": "1994-12-31",
+  "trial_end": "1995-01-31",
+  "prediction_rows": 51,
+  "finite": true,
+  "accuracy_scores_computed": false,
+  "source_sha256": "66cac156ec5e5194a15ee2da689503aaae3e771fff8b46752448916d7b1a0308",
+  "split_audit": {
+    "gauge": "01162500",
+    "horizon": 3,
+    "train_rows": 3286,
+    "calibration_rows": 1588,
+    "test_rows": 17,
+    "calibration_boundary_exclusions": 2,
+    "test_boundary_exclusions": 2,
+    "test_invalid_input_rows": 9,
+    "test_invalid_target_rows": 3,
+    "test_scheduled_after_boundary": 29
+  }
+}

@@ -87,6 +87,11 @@ truth, eligible onsets, alerted onsets and misses. Count runs of alerting target
 days with no overlap with actual high days as false-alert episodes; unknown
 truth splits runs and cannot prove a false alert. All event ledgers show horizon,
 origin and target date; no within-day timing or damage claim.
+Pre-run implementation clarification: an alert segment touching unknown truth,
+an unissued forecast or the test boundary is unresolved, rather than a proven
+wholly false episode. Keep those counts alongside observed false episodes and
+daily false-positive rates. Primary model contrasts use matched gauge/horizon
+sets if a method is unevaluable; retain all per-gauge attempts and failure reasons.
 
 Show results by gauge and by metadata area (<100,100–1000,>1000km²). Additionally
 report a training-only cold-precipitation fraction: sum precip on days with mean

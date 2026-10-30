@@ -22,7 +22,7 @@ We will trace where each input comes from and what would be known when a warning
 
 Technical evidence and outstanding checks: [R04–R05](../../reviews/01-design-review.md#r04--some-catchment-descriptors-already-contain-the-outcome) and [R14](../../reviews/01-design-review.md#r14--resolve-actual-camels-files-and-versions).
 
-## Next, not yet done
+## Next at planning time — 2026-10-29
 
 Acquire and audit the intended source files, choose a fixed catchment subset, and define warning horizons and reporting assumptions. No high-flow performance or transfer result exists yet.
 
@@ -46,3 +46,12 @@ temperatures now use explicit column names. The proposed study separates
 continuing high water from warning before a new rise. No model has run yet.
 
 [Source review](../../reviews/completion/source-implementation.md).
+
+## 2026-10-30 — Check when the warning rule itself becomes available
+
+A later design check by the lead agent caught a boundary problem that the first
+review pass had missed. The earliest three-day forecasts could have used a
+cutoff calibrated on outcomes occurring after their forecast origin. We amended
+the date rules before implementation and added a boundary test. Independent
+reviewers verified the amendment and recorded that their earlier approval had
+missed it. Review is repeated because one pass cannot guarantee correctness.

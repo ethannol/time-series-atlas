@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-30T22:20:51.911478+00:00",
+  "fold": 0,
+  "training_cap_per_person": 50,
+  "test_cap_per_person": 10,
+  "training_beats": 1700,
+  "test_beats": 90,
+  "prediction_rows": 360,
+  "valid_labels": true,
+  "patient_disjoint": true,
+  "accuracy_scores_computed": false,
+  "source_sha256": "6dd098712d2e82053b1e566f533568f750c9a9230b0e77bf2c8786ef94768b25",
+  "purpose": "bounded structural run with declared classifiers, no model selection"
+}

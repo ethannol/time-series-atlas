@@ -22,7 +22,7 @@ People, rather than files or individual beats, will be kept apart in evaluation.
 
 Technical evidence and outstanding checks: [R09–R10](../../reviews/01-design-review.md#r09--separate-people-not-just-files).
 
-## Next, not yet done
+## Next at planning time — 2026-10-29
 
 Audit person/record mappings and annotations, then freeze the recognition task and evaluation. No recognition accuracy, diagnostic performance, or clinical benefit has been established.
 

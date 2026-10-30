@@ -81,3 +81,43 @@ d2261a87326367c7def22678a8199afb4235c1254ac0f28fc8d9988feaef89ce  reports/result
 fde607a4c43cbb7c6c54cc12fa0bcdf5af627a594d94b43c5b34015e1ecd99c4  studies/retail/STORY.md
 8d58cba8b31629d8a84e8b2c31a09cad084bdda99d3637fdf4e98abf6ec087ca  STORY.md
 ```
+
+## 2026-10-30 — Presentation amendment verification
+
+Re-read the regenerated report and current retail story, inspected the updated
+figure, and compared numeric-artifact hashes with the original review and
+`reports/verification/retail-presentation-update.json`. The refreshed run uses
+source `ed1072c56209d3b53cdfbcd80e42ea4c480529e3`; the parent identified output
+commit `c1cbd6a`. No models or tests were run by this reviewer.
+
+- **GRET01: verified.** Current data/status text now describes aggregated targets
+  and executed results, while the old next-steps text is explicitly dated as the
+  2026-10-29 planning state. Reproduction remains honestly pending.
+- **GRET02: verified.** The report explains the raw-unit ranking, TSB versus zero,
+  the different product weighting, and why zero-heavy outcomes can reward a median
+  forecast under absolute error. It defines the three named rate-based methods;
+  the figure uses readable labels and numerical annotations. The prediction,
+  metrics, per-product, and quarterly hashes match the original reviewed artifacts.
+- **GRET03: new, low-priority publication layout correction.** The new -100.0%
+  annotation on the zero forecast's bias bar extends left of the plot and overlaps
+  the "Zero" y-axis label. Place this one annotation inside the bar or reserve
+  enough left space. The numerical value is correct; this is a presentation-only
+  regression observed in the rendered PNG.
+
+**Results verdict remains accepted. Publication presentation is ready after
+GRET03; fresh-checkout reproduction and final release gates remain separate.**
+No change to models, scoring, or the interpretation is requested.
+
+Inspected updated hashes:
+
+```text
+b4a32c0f011fbeea823d95a84b15b1ed57a770e31ebae17b458dbaa46e17021d  reports/results/retail/REPORT.md
+e494b492efb9b2bc2d679df24ce268326a58140e4c6986b375cafa581d048791  reports/results/retail/weekly-sales.png
+a95dc6ff2ac953a0704c1e6924f37ea5eca4dc655e92bc175f5d4a3df620c761  reports/results/retail/run.json
+d83db1f2327f24e26c73e0876b3bbd9c5eff216b321c3da4e72a7596cc0f00ef  studies/retail/STORY.md
+f12de2a4e25857c31ded025e93adfe4a857fecd39af55c9cb371b84a4f7a45ae  reports/verification/retail-presentation-update.json
+a0cb2c69370222904b3f0798069cd63bb0df6f44de8919636c53cbe9c8f391ff  reports/results/retail/metrics.json
+0015d463a48c59bf9d30ce936c4df243a89126c847bf15195bdd6858f4d81350  reports/results/retail/per-product.csv
+cd7d0e8be650b70e376c7595766414a8d0a1a621da950f047bbe41a29b1f5aa4  reports/results/retail/per-quarter.csv
+ca96bcf0d9c4655635ab84e317126bb60038cbeee20112d4e61f6560211da2e6  reports/results/retail/predictions.csv.gz
+```

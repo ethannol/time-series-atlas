@@ -127,8 +127,8 @@ def run():
         s=score(g);s['quarter']=int(quarter);seasonal.append(s)
     pd.concat(seasonal,ignore_index=True).to_csv(out/'quarter-scores.csv',index=False)
     fig,axes=plt.subplots(1,2,figsize=(11,4.5));table=pd.DataFrame(primary)
-    for model,label in zip(MODELS,['Last local reading','Calendar median','Other-station median','Calibrated network']):
-        g=table[table.model==model].sort_values('duration');axes[0].plot(g.duration,g.macro_balanced_accuracy,'o-',label=label)
+    for model,label,style in zip(MODELS,['Last local reading','Calendar median','Other-station median','Calibrated network'],['o-','s:','^-','x--']):
+        g=table[table.model==model].sort_values('duration');axes[0].plot(g.duration,g.macro_balanced_accuracy,style,label=label)
     axes[0].set_xticks([6,24,72]);axes[0].set_ylim(0,1);axes[0].set_xlabel('Simulated outage duration (hours)');axes[0].set_ylabel('Macro station balanced accuracy');axes[0].legend(fontsize=8)
     c=pd.DataFrame(coverage);axes[1].bar(np.arange(3)-.24,c.eligible_hours/c.scheduled_hours,width=.22,label='Hours in scoreable blocks')
     axes[1].bar(np.arange(3),c.scoreable_network_fraction_of_scheduled,width=.22,label='Scoreable network hours')
@@ -139,8 +139,16 @@ def run():
     def fmt(value):return f'{value:.3f}' if value is not None else 'undefined'
     rates_table=markdown_table(['Hours','Method','Pooled precision','Pooled recall','Pooled false-positive rate'],[[r['duration'],r['model'],fmt(r['pooled_precision']),fmt(r['pooled_recall']),fmt(r['pooled_false_positive_rate'])] for r in primary])
     coverage_table=markdown_table(['Hours','Eligible / scheduled blocks','Scoreable network / scheduled hours','Peer data available / scheduled hours'],[[r['duration'],f"{r['eligible_blocks']} / {r['scheduled_blocks']}",f"{r['scoreable_network_hours']} / {r['scheduled_hours']}",f"{r['peer_available_hours_all_scheduled']} / {r['scheduled_hours']}"] for r in coverage])
-    event_table=markdown_table(['Hours','Method','Missed / high events','False-alert episodes','Median onset delay','Delay sample'],[[r['duration'],r['model'],f"{r['missed_events']} / {r['high_events']}",r['false_alert_episodes'],r['median_delay_hours'],r['delay_observations']] for r in event_summary])
+    event_table=markdown_table(['Hours','Method','Missed / high events','False-alert episodes','Median onset delay (hours)','Delay sample'],[[r['duration'],r['model'],f"{r['missed_events']} / {r['high_events']}",r['false_alert_episodes'],r['median_delay_hours'] if r['median_delay_hours'] is not None else 'undefined',r['delay_observations']] for r in event_summary])
     report=f'''# Can other stations preserve indications during a sensor outage?
+
+**Other-station medians outperform holding the last local reading on balanced
+accuracy at all three tested durations.** Learned calibration produces almost
+the same high/low warning score, while reducing concentration error. Its lower
+false-positive rates can come with lower recall; those tradeoffs are shown
+separately below. The near-overlapping network curves are a near tie, not a
+missing method. A higher 72-hour score than 24-hour score is not evidence that
+longer outages help: eligible blocks and evaluated hours differ.
 
 This is a **same-hour nowcast under an explicit reporting assumption**. Other
 stations must have delivered their readings. It is not a forecast of future
@@ -184,6 +192,12 @@ in the table. Episodes are defined within blocks, not deduplicated pollution
 incidents across stations or overlapping-duration scenarios. One sustained
 prediction may overlap multiple high runs. The [event ledger](events.csv.gz)
 retains censoring and event times so these denominators can be inspected.
+
+A zero median delay means same-hour recognition among the detected, non-censored
+events; it does not mean advance warning or that no events were missed. A zero
+false-alert-episode count also need not mean zero false-positive hours: under
+the frozen matching rule, a long alert run that overlaps any true high hour is
+not a wholly false episode. The hourly false-positive rates remain essential.
 
 Fit/calibration uses March 2013–February 2015. No local value inside an outage or
 future endpoint enters a prediction. No real-gap recovery, future reporting

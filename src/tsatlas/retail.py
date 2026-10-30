@@ -82,7 +82,10 @@ def run():
     axes[0].set_title('Weekly error, equally weighted products')
     bias=(table.forecast_total_units/table.observed_total_units-1)*100
     bars=axes[1].barh(labels,bias,color=colors);axes[1].axvline(0,color='black',lw=.8)
-    axes[1].bar_label(bars,fmt='%.1f%%',padding=3);axes[1].set_xlim(min(-112,float(bias.min())*1.15),max(12,float(bias.max())*1.5))
+    for i,value in enumerate(bias):
+        if value < -20:axes[1].text(value+3,i,f'{value:.1f}%',ha='left',va='center',color='white')
+        else:axes[1].text(value+(1.5 if value>=0 else -1.5),i,f'{value:.1f}%',ha='left' if value>=0 else 'right',va='center')
+    axes[1].set_xlim(min(-112,float(bias.min())*1.15),max(12,float(bias.max())*1.5))
     axes[1].set_xlabel('Total forecast minus recorded sales (%)');axes[1].set_title('Underforecasting remains visible')
     fig.suptitle('24 established intermittent products • 48 complete test weeks')
     fig.tight_layout();fig.savefig(out/'weekly-sales.png');plt.close(fig)
