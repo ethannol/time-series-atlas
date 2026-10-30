@@ -1,111 +1,102 @@
 # Time Series Atlas
 
-**A portfolio of time series investigations—and the questions, critiques, and
-revisions that make their conclusions worth trusting.**
+**Seven real datasets, eight investigations, and a visible record of the questions,
+critiques and corrections behind each answer.** Built as a data-science hiring
+portfolio: the methods matter, and so does knowing what their scores mean.
 
-Each study starts with a question that matters for its data. Business questions
-belong where they fit; scientific and engineering questions belong here too.
-Methods serve the question. A more complicated model does not have to win.
+> **The first consequential result changed the plan.**
+> Ethan asked for independent critics before implementation. They surfaced
+> outcome-derived river attributes, ECG recordings from the same person, and
+> interpolation and observing-site changes in the CO₂ record. Those were design
+> risks, caught before models ran. Later reviews found actual source discrepancies,
+> code defects and misleading summaries. We keep those categories separate.
+> **Asking the right question at the right time changed what we built and what
+> we could honestly conclude.**
 
-> **The first consequential result was a change to the plan.**
-> Ethan requested independent critical agents before implementation. Their review
-> exposed source details and evaluation risks the initial proposal had not
-> addressed: river-flow predictors derived from the outcome, ECG records from the
-> same person, and CO₂ values that already include interpolation and a temporary
-> observing-site substitution. These findings changed the planned analyses.
-> **At that checkpoint no models had run: those were risks caught in design.
-> Later source discrepancies, actual code defects, and measured results are
-> recorded separately in the process stories.**
-
-**Start here:** [How the project changed](STORY.md) ·
-[What review caught and why it matters](reviews/01-design-review.md) ·
-[Open findings and evidence status](reviews/README.md)
-
-## What this portfolio demonstrates
-
-The aim is to make analytical judgment visible: framing a useful question,
-examining how measurements were produced, choosing an honest evaluation,
-responding to criticism, and explaining what the evidence supports. Model
-performance will be shown alongside the decisions that make it interpretable.
-
-For a quick read, follow the project story and the individual study stories.
-For technical scrutiny, follow their finding IDs into the review records and,
-once implemented, the analysis designs and reproducible results.
+Start with [the project story](STORY.md), [what the initial critique changed](reviews/01-design-review.md),
+or the [dataset → question → method guide](docs/METHODS.md).
+The [review register](reviews/README.md) and [full evidence matrix](reviews/completion/README.md)
+connect the plain-language account to technical checks.
 
 ## The investigations
 
-| Study | Primary question | Plain-language process story | Status |
+Every row has a frozen design, retained evidence and a chronological story.
+Synthetic detection and sampling are two execution units within one investigation.
+
+| Investigation | Question and measured lesson | Results | Process |
 | --- | --- | --- | --- |
-| Atmospheric CO₂ | Does a changing growth rate improve multiyear forecasts over a fixed trend and annual cycle? | [CO₂ story](studies/co2/STORY.md) | [Executed report](reports/results/co2/REPORT.md) |
-| Electricity demand | When does learning across customers improve tomorrow's load forecast, and who benefits or suffers? | [Electricity story](studies/electricity/STORY.md) | [Executed report](reports/results/electricity/REPORT.md) |
-| River flow | How much warning of high flow can recent rainfall and flow provide across different catchment types? | [River-flow story](studies/river-flow/STORY.md) | Planned |
-| Oil prices | Can volatility forecasts improve on simple baselines even when price-direction forecasts cannot? | [Oil story](studies/oil/STORY.md) | Planned |
-| Intermittent retail sales | How should we forecast next week's sales for products that sell only occasionally? | [Retail story](studies/retail/STORY.md) | Planned |
-| Air quality | Can nearby stations preserve useful high-pollution warnings when a local sensor goes offline? | [Air-quality story](studies/air-quality/STORY.md) | Planned |
-| ECG waveforms | Does a model that recognizes abnormal heartbeat shapes work on people it has never seen? | [ECG story](studies/ecg/STORY.md) | Planned |
-| Synthetic controls | When the truth is known, how quickly can a sustained change be distinguished from ordinary variation? | [Synthetic-lab story](studies/synthetic/STORY.md) | [Executed report](reports/results/synthetic/REPORT.md) |
+| Atmospheric CO₂ | Does changing growth improve multiyear forecasts? A trailing-decade model reduced three-year December-target MAE from 6.964 to 1.119 ppm in the revised-data comparison. | [Report](reports/results/co2/REPORT.md) | [Story](studies/co2/STORY.md) |
+| Electricity | Who gains from learning across customers? Sharing coefficients worsened forecasts for 21 of 24 selected customers. | [Report](reports/results/electricity/REPORT.md) | [Story](studies/electricity/STORY.md) |
+| Intermittent retail sales | What should next week's forecast optimize? Zero won normalized absolute error while missing every recorded sale; TSB won raw-unit MAE. | [Report](reports/results/retail/REPORT.md) | [Story](studies/retail/STORY.md) |
+| Oil | Can volatility improve when direction does not? Adaptive variance beat fixed variance on QLIKE; direction lost to prevalence on Brier. The secondary variance loss favored the fixed baseline. | [Report](reports/results/oil/REPORT.md) | [Story](studies/oil/STORY.md) |
+| River flow | Does recognizing high water mean warning before a rise? Weather added little at the longer date offset; onset misses and false alerts qualified the high-day recall. | [Report](reports/results/river-flow/REPORT.md) | [Story](studies/river-flow/STORY.md) |
+| Air quality | Can peers preserve indications during a station outage? Same-hour network readings beat local persistence, but missing local truth restricted what could be scored. | [Report](reports/results/air-quality/REPORT.md) | [Story](studies/air-quality/STORY.md) |
+| ECG | Does annotated-beat recognition transfer to new people? The forest led macro F1 yet missed every F-group beat; overall accuracy hid rare-class failure. | [Report](reports/results/ecg/REPORT.md) | [Story](studies/ecg/STORY.md) |
+| Synthetic controls | Can an apparently good detector or spectral peak be trusted? Persistent noise broke false-alert calibration; sampling ambiguity is evaluated separately from frequency recovery. | [Detection](reports/results/synthetic/REPORT.md) · [Sampling](reports/results/spectral/REPORT.md) | [Detection story](studies/synthetic/STORY.md) · [Sampling story](studies/spectral/STORY.md) |
 
-The seven real-data collections are free to access. The first-release snapshot attribution and redistribution basis are documented
-in [data credits](data/README.md); the remaining datasets will be checked before
-their snapshots are published. The first CO₂, electricity, and synthetic studies have executed under frozen
-designs. The other five real-data studies remain planned. No financial or clinical
-benefit is claimed.
+These are bounded comparisons, not universal method rankings. No realized savings,
+causal explanation, clinical benefit or operational warning performance is claimed.
+The [method guide](docs/METHODS.md) explicitly distinguishes evaluated techniques
+from conditional extensions that were not performed.
 
-## Review is part of the analysis
+## What review changed after the plan
 
-Separate agents review source intake, the analysis design, the implementation,
-results, and publication claims. A general critic participates alongside
-statistical and data/implementation critics. Findings remain visible until
-evidence supports closure; changing the prose is not proof that a fix works.
+- **The source changed the target:** duplicated retail workbook periods required
+  a documented cutover; recorded sales could not become unconstrained demand.
+- **The clock changed the split:** a later check found that early three-day river
+  targets could use calibration outcomes from after their forecast origin. The
+  initial review missed this; explicit origin guards were added before the full run.
+- **The denominator changed the answer:** air-quality input availability and
+  availability of hidden scoring truth were different quantities; ECG person and
+  class support mattered more than a high pooled accuracy.
+- **The grid could invent certainty:** the spectral design needed every candidate's
+  sampling aliases, not merely an alias at the known true frequency.
+- **Delivery needed review too:** the lead agent stopped after three studies and
+  Ethan challenged the premature completion claim. That failure, the restored
+  full scope, and the required final audit remain in the [story](STORY.md).
 
-See the [recurring review protocol](docs/REVIEW_PROTOCOL.md) and
-[implementation plan](PLAN.md). These are required checkpoints, not optional
-cleanup at the end. Automated reviews can share blind spots: they are additional
-scrutiny, not independent human validation or a guarantee of correctness.
-
-## Ownership and AI assistance
-
-Ethan set the project direction, requested the initial independent critique, and
-made the process and its corrections central to the portfolio. AI agents drafted
-the plan, researched sources, implemented and executed the analyses, generated
-reports, and supplied the critiques recorded here. Future
-stories will identify who made each substantive decision and what was checked;
-they will not attribute agent work or unperformed reviews to Ethan.
-
-## What the first runs found
-
-- **CO₂:** the recent-growth model reduced three-year December-target MAE from
-  6.964 ppm for the expanding fixed-growth model to 1.119 ppm. This is a bounded
-  revised-data comparison, not a claim about every forecast date or future climate.
-- **Electricity:** the shared model was worse for 21 of 24 selected customers.
-  More shared data did not automatically improve this forecasting comparison.
-- **Change detection:** CUSUM's false-alert frequency rose from 5% on independent
-  noise to 73% on persistent noise under the same frozen threshold. Assumptions
-  mattered more than the attractive detection-delay number.
-
-These statements refer to the linked reports and their saved predictions. Read
-[the first-release review record](reviews/first-release/README.md) for checkpoints,
-known limitations, and publication status. Planned capabilities remain distinct.
+Separate general, statistical and data/implementation agents review sources,
+designs, implementations before full runs, results and publication claims.
+Findings and rechecks stay linked in the [review records](reviews/completion/README.md).
+Agent agreement is additional scrutiny, not independent human validation or a
+guarantee of correctness. [Recurring review protocol](docs/REVIEW_PROTOCOL.md).
 
 ## Run and inspect
 
 ```bash
 uv sync --locked --python 3.12
-uv run atlas verify                 # checks pinned analysis snapshot hashes
-uv run python scripts/check.py      # offline, bounded tests with evidence
-uv run atlas all                    # three reviewed studies; one CPU thread
+uv run atlas verify                 # absent fetch-only oil input is disclosed
+uv run python scripts/check.py      # bounded offline invariant tests
+uv run atlas fetch oil              # explicit free acquisition; pinned history required
+uv run atlas all                    # nine execution units, sequential, one CPU thread
 uv run python scripts/validate_evidence.py
+uv run python scripts/validate_docs.py
 ```
 
-Run from a clean, committed source checkout: full execution refuses uncommitted
-source/design changes and stages output until source stability is checked.
-Analysis uses the committed snapshots and does not download data. The first
-recorded local full run took about eleven seconds; runtime varies by machine.
-For the original archives, `uv run atlas fetch` verifies pinned hashes and
-`uv run atlas intake` rebuilds the panel. Upstream revisions fail explicitly;
-there is no silent refresh. See [data credits and transformations](data/README.md).
+Individual commands are `atlas co2`, `electricity`, `retail`, `oil`, `river-flow`,
+`air-quality`, `ecg`, `synthetic` and `spectral`, each prefixed with `uv run`.
+All except oil can run offline from committed snapshots or generated inputs.
+Full execution requires committed source/designs, stages outputs and verifies
+that source and input bytes stayed fixed. Run records retain source/protocol
+commits, seeds, parameters, runtime, memory and output hashes; the full Git history
+is required to verify historical source blobs.
 
-[CO₂ result and evidence](reports/results/co2/REPORT.md) ·
-[Electricity result and evidence](reports/results/electricity/REPORT.md) ·
-[Synthetic result and evidence](reports/results/synthetic/REPORT.md)
+**Oil is freely accessible but its inputs are not mirrored:** the EIA tables
+identify third-party material. Acquisition must reproduce the pinned historical
+snapshot; changed history fails explicitly. A successful current reproduction
+does not guarantee future public recovery. See [data credits and transformations](data/README.md)
+for all seven sources, licences, exact acquisition commands and this limitation.
+No analysis command silently downloads or refreshes data.
 
+Final reproduction, test and publication records are indexed in the
+[completion evidence](reviews/completion/README.md). The original three-study
+[release record](reviews/first-release/README.md) remains historical evidence,
+not proof of completion for the rest of the collection.
+
+## Ownership and AI assistance
+
+Ethan set the direction, requested the critical reviews and made the process and
+its corrections central to the portfolio. AI agents researched sources, drafted
+contracts, implemented and executed analyses, generated reports and supplied the
+recorded critiques. Stories identify substantive decisions and checks without
+attributing agent work or unperformed human reviews to Ethan.

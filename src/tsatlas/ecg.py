@@ -125,19 +125,28 @@ def run():
     axes[0].set_xticks(range(4),CLASSES);axes[0].set_ylim(0,1);axes[0].set_ylabel('Pooled class recall');axes[0].legend(fontsize=8)
     axes[1].boxplot([people[people.model==m].supported_macro_recall for m in MODELS],tick_labels=labels,showfliers=True)
     axes[1].set_ylim(0,1);axes[1].set_ylabel('Per-person recall over present classes');axes[1].tick_params(axis='x',rotation=15)
-    fig.suptitle('43 unseen-at-test people • 100,662 annotated beats • fixed patient-disjoint folds');fig.tight_layout();fig.savefig(out/'people-and-classes.png');plt.close(fig)
+    fig.suptitle('43 people held out from training in turn • 100,662 annotated beats');fig.tight_layout();fig.savefig(out/'people-and-classes.png');plt.close(fig)
     fig,ax=plt.subplots(figsize=(8,4))
     for label,template in audits['0']['templates'].items():ax.plot(np.arange(60)/120-.25,template,label=label)
     ax.set_xlabel('Seconds relative to expert beat center');ax.set_ylabel('Beat-local normalized amplitude')
     ax.set_title('Fold 0 training class templates (no test beats)');ax.legend();fig.tight_layout();fig.savefig(out/'training-templates.png');plt.close(fig)
     table=markdown_table(['Method','Macro F1 (four fixed groups)','Accuracy','Macro class recall'],[[model,f"{metrics[model]['macro_f1']:.3f}",f"{metrics[model]['accuracy']:.3f}",f"{metrics[model]['supported_macro_recall']:.3f}"] for model in MODELS])
-    support=markdown_table(['Group','Included symbols','Beats','People with group'],[[c,{'N':'N,L,R,e,j','S':'A,a,J,S','V':'V,E','F':'F'}[c],int((beats['label']==c).sum()),len(set(beats['person'][beats['label']==c]))] for c in CLASSES])
+    support=markdown_table(['Group','Readable benchmark group','Included symbols','Beats','People with group'],[[c,{'N':'Normal, bundle-branch and escape beats','S':'Supraventricular ectopic beats','V':'Ventricular ectopic beats','F':'Fusion of ventricular and normal beats'}[c],{'N':'N,L,R,e,j','S':'A,a,J,S','V':'V,E','F':'F'}[c],int((beats['label']==c).sum()),len(set(beats['person'][beats['label']==c]))] for c in CLASSES])
     report=f'''# Do heartbeat patterns transfer to people absent from training?
+
+Transfer was uneven. The forest had the highest four-group macro F1
+({metrics['forest']['macro_f1']:.3f}, versus {metrics['majority']['macro_f1']:.3f}
+for always choosing the majority group), but it recognized **none of the 802 F
+beats** and only {metrics['forest']['per_class'][1]['recall']:.1%} of S beats.
+Its {metrics['forest']['accuracy']:.2%} accuracy was barely above the majority
+baseline's {metrics['majority']['accuracy']:.2%}. Overall accuracy concealed major
+class failures. No tested pipeline supports a claim of reliable recognition
+across all four groups.
 
 Every retained person is tested once in a fold that excludes that person from
 training. The two recordings of patient 201 remain together. Performance by
 class and person matters alongside the pooled score; 100,662 beats still provide
-only 43 independent patient groups in this selected historic benchmark.
+only 43 distinct patient groups in this selected historic benchmark.
 
 {table}
 
@@ -160,6 +169,14 @@ selected beats per person, without label balancing in that sample selection;
 every eligible held-out beat is scored. PCA and fitted feature scaling use only
 that fold's training people. Template, logistic and forest are different pipelines,
 not a controlled comparison of model families with every other choice identical.
+The template baseline compares each normalized waveform with the training class
+means; the PCA pipelines also use amplitude and previous beat timing.
+
+Rare examples are concentrated in particular people: fold 2 holds 755 of the
+802 F test beats, while its capped training set contains only 14 F examples.
+The person split and label-independent cap were frozen before results; we did
+not change them to improve this score. This reveals limited rare-class support
+under the declared design, not a general impossibility of learning that group.
 
 ![Training-only normalized templates](training-templates.png)
 

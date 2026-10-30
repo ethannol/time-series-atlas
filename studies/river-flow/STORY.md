@@ -2,10 +2,10 @@
 
 **Question:** How much warning of high flow can recent rainfall and flow provide across different catchment types?
 
-**Data:** [CAMELS-US](https://ncar.github.io/hydrology/datasets/); daily streamflow and weather for US catchments, with the analytical subset still to be fixed.
+**Data:** [CAMELS-US](https://ncar.github.io/hydrology/datasets/); daily streamflow and weather for US catchments, with a 17-gauge panel selected using geography and training-period approved-flow coverage.
 
-**Current status (2026-10-30):** source intake complete; later dated entries
-record implementation and results status. Earlier entries preserve the original plan. Ethan set the direction and requested the critical
+**Current status (2026-10-30):** executed and numerically audited; final
+presentation, reproduction and publication checks remain. Earlier entries preserve the original plan. Ethan set the direction and requested the critical
 review; agents proposed and critiqued the design described below.
 
 ## 2026-10-29 — Choose a question worth investigating
@@ -55,3 +55,21 @@ cutoff calibrated on outcomes occurring after their forecast origin. We amended
 the date rules before implementation and added a boundary test. Independent
 reviewers verified the amendment and recorded that their earlier approval had
 missed it. Review is repeated because one pass cannot guarantee correctness.
+
+## 2026-10-30 — Recognizing high water is not the same as early warning
+
+We ran the frozen comparison on the seventeen retained gauges. Past weather
+added only a little to recognizing high-flow days. Before new rises, the
+next-day weather model alerted on 496 of 822 eligible events, compared with
+467 using flow alone, but generated more fully observed false-alert episodes.
+At the three-day date offset it added just one detected onset.
+
+The roughly ten-percent calibration false-positive target became about
+fourteen to fifteen percent in the test period. We kept that loss of calibration
+visible, alongside missed onsets and the daily-information assumption. Separate
+reviewers reconstructed predictions, event boundaries and scores from retained
+evidence. The useful answer is about a limited warning tradeoff, not a claim
+that a high day-level recall establishes a flood warning system.
+
+[Results](../../reports/results/river-flow/REPORT.md) ·
+[Statistical audit](../../reviews/completion/river-flow-results-statistical.md).
