@@ -208,3 +208,29 @@ this machine. The evidence retains exact revisions, timings and hashes.
 That verifies this reproduction, not a promise that future oil source revisions
 will remain recoverable. Publication review and live deployment are the final
 delivery checks. [Reproduction record](reports/verification/completion-reproduction.json).
+
+## 2026-10-30 — Deliver the complete collection to GitHub and the portfolio
+
+The full-collection PR merged after its final checks passed, preserving the
+design and analysis commits. The profile now describes every investigation,
+and the portfolio deployment succeeded. Live checks verified all nine report
+links, the displayed numbers, the figure bytes and the exact profile copy.
+Ethan's existing portfolio edits remained untouched; integration used isolated
+worktrees.
+
+The next and final review checks the whole original scope against those actual
+artifacts and the live deployment. A successful subset is no longer the finish
+line. [Rollout evidence](reports/verification/completion-rollout.json).
+
+## 2026-10-30 — Audit the original commitment before closing
+
+A separate general critic checked every completion item against the actual
+reports, retained files, independent reviews, reproduction, GitHub checks, profile
+and live portfolio. It found no missing investigation or publication-content
+obligation. Its [full-scope audit](reviews/completion/completion-audit-general.md)
+is published with this closure record. The documentation follow-up goes through
+CI and deployment too; the numerical analyses remain unchanged.
+
+The collection now preserves both the results and the process that corrected
+the work, including the lead agent's earlier premature stop. The finish line
+is the agreed scope with verified delivery, not a self-selected milestone.

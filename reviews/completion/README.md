@@ -8,8 +8,13 @@ remains scoped historical evidence.
 
 **Current checkpoint:** all nine run units executed and numerically reviewed.
 A fresh checkout reproduced all 68 published result files exactly, including
-figures and reports; 41 offline tests passed. Final publication verdicts, GitHub
-CI and live deployment are tracked separately below.
+figures and reports; 41 offline tests passed. Publication content is approved, merged main CI is green, and the live portfolio
+and profile are verified below. The independent
+[full-scope audit](completion-audit-general.md) found no remaining study or
+publication-content omission. Its checkpoint precedes publication of this closure
+record; the [latest GitHub checks](https://github.com/ethannol/time-series-atlas/actions)
+and [portfolio deployments](https://github.com/ethannol/portfolio/actions/workflows/pages.yml)
+track that documentation follow-through.
 
 ## Per-study gates
 
@@ -77,8 +82,11 @@ perspectives are also retained:
   was unavailable.
 - [Integration scope and PR inventory](../../reports/verification/completion-integration-scope.json):
   Atlas PR2 and profile PR3, independent main targets; no unrelated open PRs.
-  Final GitHub checks and deployment remain gates. The general critic must audit
-  the final live state before an overall completion claim.
+  [Actual rollout](../../reports/verification/completion-rollout.json) verifies
+  both merges, green PR/main checks, successful Pages deployment, the exact live
+  profile copy, all nine report links, 156 pinned Atlas paths and four figure hashes.
+  The [final full-scope audit](completion-audit-general.md) independently checked
+  these published artifacts and the entire agreed checklist.
 
 The [publication preflight](publication-preflight-general.md) identified the
 full-scope obligations. [Copy review](publication-copy-general.md) caught actual
@@ -93,7 +101,8 @@ Each run then froze its committed source; no revision changed mid-run.
 [statistical](publication-final-statistical.md), and
 [data/evidence](publication-final-data.md) reviews approve the scoped publication
 content. The general critic inspected all eleven scientific figures and the
-profile draft. These verdicts do not substitute for final CI and live checks.
+profile draft. The separate rollout record supplies final CI and live checks; these content
+verdicts do not substitute for those executed actions.
 
 ## Accepted boundaries
 

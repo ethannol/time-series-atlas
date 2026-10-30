@@ -49,3 +49,9 @@ A clean checkout regenerated the same observations, spectra, metrics, figures
 and report byte-for-byte. [Reproduction evidence](../../reports/verification/completion-reproduction.json)
 records the separate environment and comparison against committed reference files.
 Live publication verification remains a separate delivery gate.
+
+## 2026-10-30 — Verify the public control alongside the real-data studies
+
+The control is published within the synthetic investigation. Live verification
+checked its report link and the deployed recovery/ambiguity figure against the
+retained bytes. [Publication evidence](../../reports/verification/completion-rollout.json).
