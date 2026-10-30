@@ -1,25 +1,30 @@
 {
-  "started_at": "2026-10-30T21:39:41.394979+00:00",
-  "source_commit": "715ac6c89b1948609c67626c883a4cc63ec3abde",
+  "started_at": "2026-10-30T21:58:15.878034+00:00",
+  "source_commit": "ed1072c56209d3b53cdfbcd80e42ea4c480529e3",
   "protocol_commit": "b369cc865d4eafaabe8e8f4d3b7ba26ae36bb0ba",
   "source_files": {
     "src/tsatlas/__init__.py": "89f11ba0aa45c18d94a0ca870de8484452e2fa55cfcacbadf6a9f70a34c54ca9",
     "src/tsatlas/acquire.py": "b15b13e15064526b97e8615581521147800704caed6587ad933b85fe11517fe3",
+    "src/tsatlas/air_quality.py": "f553a836e2eae2be550f72a6397a1c7ce2057b6e5f2a45a0a1ae2400c8f8c851",
     "src/tsatlas/camels_source.py": "e1a84280cb4f2d7c590b9d508c654f92de8d6d023df13cca113e3a1a024faa3e",
+    "src/tsatlas/classification.py": "36a342dd2c23a9826d25a478a7a85028c70e6f93395f7e7befc3571de580fd6a",
     "src/tsatlas/cli.py": "8ded82ddfaa1d7d1cfaae756419e614e991eb8b2bc699c59a746c8d23e3930dc",
     "src/tsatlas/co2.py": "6a652546f1a67f658e99cfc5808c341505b83a3f04bdac1082468c99cec98c0a",
-    "src/tsatlas/common.py": "d71a5dcaf01e04e47a630cdeb9446e1e2b0dea608f3aabd75be37bee4aec7254",
+    "src/tsatlas/common.py": "95a699e75a84da2651dc70268c942232abb62c7cdbd75f6e0454dc14788d3468",
     "src/tsatlas/data.py": "a57144b965db2d23066ec3a96e88ab7e8ade6edffc248382edb6691cda0ffb4d",
-    "src/tsatlas/ecg_source.py": "9d491002430c73decadc96081b250d2bbfb221ded4718d3b79b858fc05d2cf6a",
+    "src/tsatlas/ecg_source.py": "3ddc1074feb94ce2f0ad08ca6196c9491035dc8f5f0f1bc5d12af3490bd92186",
     "src/tsatlas/electricity.py": "bff038460bc7cba8996c999b22a327101d9252ed123be5054071af3946a5b43f",
     "src/tsatlas/extended_data.py": "870801c933476d2133b0a233d3e85188b376ba93b33a8c75c88fc36ba03675f5",
     "src/tsatlas/metrics.py": "f0029cfbcee9a19df28294b40e39627fda31d7d5f4e5fc4b52e7068083c24931",
-    "src/tsatlas/retail.py": "d94819d04917c476abbd039a1f90ba46a6ff0ac633b09f1cd04cb636d2081c92",
+    "src/tsatlas/oil.py": "d3ab40ec71bae9cb94ac30829ae2dece45a124899f611cc8794663efb5456bf5",
+    "src/tsatlas/retail.py": "9cbbcaed077555fc52331e9e048416e3ba5a3fe125c50d65ca1d82cfe88a1150",
     "src/tsatlas/synthetic.py": "7974c9d74ab57f4db295e8b6008b28acf675cc91b4e2d85fe39ea5caa61ac8fc",
+    "tests/test_air_quality.py": "f9be97008368484c68bed34dcb86530cbe8b1bd3e8620d03b1e0cff913add8a9",
     "tests/test_evidence.py": "05f21be147e935c64eb7a0b98117c75faa766cd81830eec25b4ccdf28912c7de",
     "tests/test_forecasts.py": "bfdb1be484fbbda2939cebf152711041b89030e1ba56b415756a458890c4b71d",
     "tests/test_intake.py": "372ba374e5b26d9baefe1955a9568b6613cd68eb9c273c47f866f1077f147d08",
     "tests/test_metrics.py": "e3c7a398b72e28aa1175eaa16e45702a73828205fbe402952320070c39fb88c5",
+    "tests/test_oil.py": "cf44f073a01162c95a42c1f130e3f6c13337311fd7a1f0fde7f66a0aa959202a",
     "tests/test_retail.py": "bfe578cd417c166cba55ee069662773d4e135f5af55b8819a07de5006615751c",
     "scripts/check.py": "d111d6606fd523638a661e5f575c6c33b450d4c4271d00d71807dbdfe318b0e8",
     "scripts/validate_docs.py": "1270ddf6a7896224627afb78447e33528032abfb2c53b096d038027e4502dd9f",
@@ -39,13 +44,13 @@
     }
   },
   "study": "retail",
-  "recorded_at": "2026-10-30T21:39:41.914250+00:00",
+  "recorded_at": "2026-10-30T21:58:16.467271+00:00",
   "source_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "source_stable_during_run": true,
   "python": "3.12.0",
   "platform": "macOS-27.2-arm64-arm-64bit",
-  "elapsed_seconds": 0.5374467500078026,
-  "process_lifetime_peak_rss_bytes": 121995264,
+  "elapsed_seconds": 0.6030175409978256,
+  "process_lifetime_peak_rss_bytes": 125812736,
   "configuration": {
     "test_origins": [
       "2011-01-03",
@@ -62,11 +67,11 @@
     "selection_end": "2010-12-31"
   },
   "outputs": {
-    "reports/results/retail/REPORT.md": "7cc2937018564832c656dbed080dba3b7eba36c15327a87735addf0bcfcb5f68",
+    "reports/results/retail/REPORT.md": "b4a32c0f011fbeea823d95a84b15b1ed57a770e31ebae17b458dbaa46e17021d",
     "reports/results/retail/metrics.json": "a0cb2c69370222904b3f0798069cd63bb0df6f44de8919636c53cbe9c8f391ff",
     "reports/results/retail/per-product.csv": "0015d463a48c59bf9d30ce936c4df243a89126c847bf15195bdd6858f4d81350",
     "reports/results/retail/per-quarter.csv": "cd7d0e8be650b70e376c7595766414a8d0a1a621da950f047bbe41a29b1f5aa4",
     "reports/results/retail/predictions.csv.gz": "ca96bcf0d9c4655635ab84e317126bb60038cbeee20112d4e61f6560211da2e6",
-    "reports/results/retail/weekly-sales.png": "d2261a87326367c7def22678a8199afb4235c1254ac0f28fc8d9988feaef89ce"
+    "reports/results/retail/weekly-sales.png": "e494b492efb9b2bc2d679df24ce268326a58140e4c6986b375cafa581d048791"
   }
 }

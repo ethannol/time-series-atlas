@@ -259,3 +259,31 @@ eb205ebe3249cf4a9fd5051e1e2deee086ca80a4c669d45e98890ad01c5be994  studies/spectr
 1a61640bf69e5cd72bf217ab66065bf618938ad2fb10caaf13053a18bc72bc75  reports/intake/ecg.json
 228644d98e2c549638eb6c464e9fedb338f39c7a6d8f073be9646e8f010ab051  data/snapshots/ecg-beats.npz
 ```
+
+
+## 2026-10-30 — Author-identified river boundary risk and verification
+
+After the initial statistical design approval, the author identified a split
+boundary problem before implementation: target-date assignment alone permits
+the first two horizon-three calibration origins to occur before the last
+training outcome, and the first two test origins before the last calibration
+outcome. Thresholds/model parameters or calibrated cutoffs would then include
+outcomes later than those forecast origins. The earlier statistical pass missed
+this boundary risk; it was not an executed-model result or discovered final-score
+effect.
+
+The design gate was reopened for this material availability clarification. The
+amended contract requires calibration origins `>=1999-12-31` and test origins
+`>=2004-12-31`, in addition to target-period membership. Independent date arithmetic
+confirms that this removes the first two target dates at h=3 and none at h=1.
+All fitted/calibrated outcomes then precede or coincide with the last observed
+origin day under the stated next-day issuance assumption.
+
+Status: author identified → design amended → independently verified at contract
+level. **River design approval is restored for the amended contract.** Require
+the actual implementation to enforce and ledger these boundary exclusions;
+target-date-only slicing remains insufficient. No river models were run.
+
+```text
+19acfb8f72b093b6ec2b4947c6a7d53f05a4c0f79f800bfda1abf959a62f5021  studies/river-flow/DESIGN.md
+```

@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-30T21:58:16.818133+00:00",
+  "original_results_commit": "107063e",
+  "new_source_commit": "ed1072c56209d3b53cdfbcd80e42ea4c480529e3",
+  "numeric_artifacts": {
+    "predictions.csv.gz": {
+      "before": "ca96bcf0d9c4655635ab84e317126bb60038cbeee20112d4e61f6560211da2e6",
+      "after": "ca96bcf0d9c4655635ab84e317126bb60038cbeee20112d4e61f6560211da2e6",
+      "identical": true
+    },
+    "metrics.json": {
+      "before": "a0cb2c69370222904b3f0798069cd63bb0df6f44de8919636c53cbe9c8f391ff",
+      "after": "a0cb2c69370222904b3f0798069cd63bb0df6f44de8919636c53cbe9c8f391ff",
+      "identical": true
+    },
+    "per-product.csv": {
+      "before": "0015d463a48c59bf9d30ce936c4df243a89126c847bf15195bdd6858f4d81350",
+      "after": "0015d463a48c59bf9d30ce936c4df243a89126c847bf15195bdd6858f4d81350",
+      "identical": true
+    },
+    "per-quarter.csv": {
+      "before": "cd7d0e8be650b70e376c7595766414a8d0a1a621da950f047bbe41a29b1f5aa4",
+      "after": "cd7d0e8be650b70e376c7595766414a8d0a1a621da950f047bbe41a29b1f5aa4",
+      "identical": true
+    }
+  },
+  "reason": "Independent review requested raw-unit ranking, method explanations and clearer labels; no model or metric settings changed"
+}

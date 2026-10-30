@@ -167,3 +167,28 @@ eb205ebe3249cf4a9fd5051e1e2deee086ca80a4c669d45e98890ad01c5be994  studies/spectr
 228644d98e2c549638eb6c464e9fedb338f39c7a6d8f073be9646e8f010ab051  data/snapshots/ecg-beats.npz
 2e99a77d11059ba65913b6f91c3f847bd3d5132e1a441592bd0c1fcb2e953562  studies/ecg/folds.json
 ```
+
+## 2026-10-30 — River issue-time split amendment reviewed
+
+The primary agent identified a boundary defect in the previously approved
+target-date-only split before implementing or fitting river models. This
+reviewer's earlier design pass did not identify it. For the three-day horizon,
+the first two calibration/test targets could have origins earlier than the
+last outcomes used to fit the model or calibrate its alert cutoff.
+
+The amended design adds origin `d >= 1999-12-31` for calibration and
+`d >= 2004-12-31` for test, in addition to existing target-date windows. Given
+the declared completed-day information assumption, those conditions ensure
+the fixed model and cutoff use outcomes known by issue time. Independent date
+arithmetic confirms no initial targets are removed at h=1, while January 1–2
+are removed at h=3 in both later periods; January 3 is the first allowed target.
+The source cohort, available predictors, model budget, and evaluation question
+remain unchanged. The design requires these exclusions in the split audit.
+
+**Amended river design: pass.** This is specification verification only; the
+forthcoming implementation must enforce and test the origin guards. No river
+model or comparison was run in this follow-up.
+
+```text
+19acfb8f72b093b6ec2b4947c6a7d53f05a4c0f79f800bfda1abf959a62f5021  studies/river-flow/DESIGN.md
+```

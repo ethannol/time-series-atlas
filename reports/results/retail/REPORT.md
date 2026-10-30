@@ -5,6 +5,18 @@ error (0.986)**. The total-sales comparison below shows
 whether a low-error forecast still systematically understates recorded sales.
 Neither criterion alone establishes an inventory decision or unmet demand.
 
+The ranking changes when errors are counted in raw units: TSB has the lowest
+unit MAE (25.92), compared
+with zero's 29.39.
+The normalized score weights products equally relative to their past sales;
+raw-unit error gives large sellers more influence. Neither is a universal winner.
+
+Absolute error rewards a median forecast, while rate-based methods target
+average sales. In the test panel, 669
+of 1152 product-weeks have zero recorded
+sales. That helps explain why a zero forecast can score well. The metric and
+the intended decision must be considered together.
+
 | Model | Scaled weekly MAE | Unit MAE | Forecast total | Recorded total |
 | --- | --- | --- | --- | --- |
 | zero | 0.986 | 29.39 | 0.0 | 33858 |
@@ -25,6 +37,10 @@ before test scoring. The mean training-week denominator gives small products a
 voice; the second panel instead counts units across products and is dominated by
 larger sellers. Those answer different questions. See [per-product](per-product.csv)
 and [quarterly](per-quarter.csv) evidence before generalizing a pooled ranking.
+
+`rolling_28` averages the last 28 days. Croston-SBA smooths sale size and the
+interval between sales, with a bias adjustment. TSB smooths sale size and the
+daily probability of a sale, so its forecast decays during prolonged inactivity.
 
 The workbook repeats 22,523 transaction rows across its annual sheets. Independent
 source review verified exact duplicate multiplicities; using the later sheet at

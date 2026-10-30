@@ -1,0 +1,79 @@
+{
+  "started_at": "2026-10-30T21:57:03.911913+00:00",
+  "source_commit": "ed1072c56209d3b53cdfbcd80e42ea4c480529e3",
+  "protocol_commit": "715ac6c89b1948609c67626c883a4cc63ec3abde",
+  "source_files": {
+    "src/tsatlas/__init__.py": "89f11ba0aa45c18d94a0ca870de8484452e2fa55cfcacbadf6a9f70a34c54ca9",
+    "src/tsatlas/acquire.py": "b15b13e15064526b97e8615581521147800704caed6587ad933b85fe11517fe3",
+    "src/tsatlas/air_quality.py": "f553a836e2eae2be550f72a6397a1c7ce2057b6e5f2a45a0a1ae2400c8f8c851",
+    "src/tsatlas/camels_source.py": "e1a84280cb4f2d7c590b9d508c654f92de8d6d023df13cca113e3a1a024faa3e",
+    "src/tsatlas/classification.py": "36a342dd2c23a9826d25a478a7a85028c70e6f93395f7e7befc3571de580fd6a",
+    "src/tsatlas/cli.py": "8ded82ddfaa1d7d1cfaae756419e614e991eb8b2bc699c59a746c8d23e3930dc",
+    "src/tsatlas/co2.py": "6a652546f1a67f658e99cfc5808c341505b83a3f04bdac1082468c99cec98c0a",
+    "src/tsatlas/common.py": "95a699e75a84da2651dc70268c942232abb62c7cdbd75f6e0454dc14788d3468",
+    "src/tsatlas/data.py": "a57144b965db2d23066ec3a96e88ab7e8ade6edffc248382edb6691cda0ffb4d",
+    "src/tsatlas/ecg_source.py": "3ddc1074feb94ce2f0ad08ca6196c9491035dc8f5f0f1bc5d12af3490bd92186",
+    "src/tsatlas/electricity.py": "bff038460bc7cba8996c999b22a327101d9252ed123be5054071af3946a5b43f",
+    "src/tsatlas/extended_data.py": "870801c933476d2133b0a233d3e85188b376ba93b33a8c75c88fc36ba03675f5",
+    "src/tsatlas/metrics.py": "f0029cfbcee9a19df28294b40e39627fda31d7d5f4e5fc4b52e7068083c24931",
+    "src/tsatlas/oil.py": "d3ab40ec71bae9cb94ac30829ae2dece45a124899f611cc8794663efb5456bf5",
+    "src/tsatlas/retail.py": "9cbbcaed077555fc52331e9e048416e3ba5a3fe125c50d65ca1d82cfe88a1150",
+    "src/tsatlas/synthetic.py": "7974c9d74ab57f4db295e8b6008b28acf675cc91b4e2d85fe39ea5caa61ac8fc",
+    "tests/test_air_quality.py": "f9be97008368484c68bed34dcb86530cbe8b1bd3e8620d03b1e0cff913add8a9",
+    "tests/test_evidence.py": "05f21be147e935c64eb7a0b98117c75faa766cd81830eec25b4ccdf28912c7de",
+    "tests/test_forecasts.py": "bfdb1be484fbbda2939cebf152711041b89030e1ba56b415756a458890c4b71d",
+    "tests/test_intake.py": "372ba374e5b26d9baefe1955a9568b6613cd68eb9c273c47f866f1077f147d08",
+    "tests/test_metrics.py": "e3c7a398b72e28aa1175eaa16e45702a73828205fbe402952320070c39fb88c5",
+    "tests/test_oil.py": "cf44f073a01162c95a42c1f130e3f6c13337311fd7a1f0fde7f66a0aa959202a",
+    "tests/test_retail.py": "bfe578cd417c166cba55ee069662773d4e135f5af55b8819a07de5006615751c",
+    "scripts/check.py": "d111d6606fd523638a661e5f575c6c33b450d4c4271d00d71807dbdfe318b0e8",
+    "scripts/validate_docs.py": "1270ddf6a7896224627afb78447e33528032abfb2c53b096d038027e4502dd9f",
+    "scripts/validate_evidence.py": "e931e6a747f57e53deb9aa16042f2d7f1432abb265919517bf2dfebbe5bebc18",
+    "pyproject.toml": "344f8b05f5a8edb8cf825855ab7aa5e0cf7df92303bc24eb1b8ebaeaaf07d7e1",
+    "uv.lock": "c3e53043987b412876a7f8fe1a7c6e6321b11f56d12674a41feec95bb11a59da",
+    "studies/oil/DESIGN.md": "64e2b98cd9f2a653bd8444412be50500a4007a211560045390e8f16e7515b2ef",
+    "data/manifest.json": "6d7a297fe89d6a653e52beae413ac3f352396ae0759a60d1e9016fcdd6ba8fd8",
+    "reports/intake/audit.json": "2b44293c453ecd008e8c7cf76e87a3f38a592afdd14870cb54b408309b020198",
+    "data/manifests/oil.json": "0024217008da826cf749bee93fbe85200f5ce9abf8526e49616b804b911b3990",
+    "reports/intake/oil.json": "a3a388c33094c2bd00af2cddb12ed32a634b161956c7040dbf49e03c4b39aa00"
+  },
+  "snapshots": {
+    "oil-daily.csv.gz": {
+      "sha256": "d138ce02b7d858fd579c1570a65db3e7f23a900f2728b2e866a96496aa273cd9",
+      "bytes": 64943,
+      "path": "data/processed/oil-daily.csv.gz",
+      "availability": "fetch-only"
+    }
+  },
+  "study": "oil",
+  "recorded_at": "2026-10-30T21:57:04.712840+00:00",
+  "source_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source_stable_during_run": true,
+  "python": "3.12.0",
+  "platform": "macOS-27.2-arm64-arm-64bit",
+  "elapsed_seconds": 0.8169908329873579,
+  "process_lifetime_peak_rss_bytes": 225427456,
+  "configuration": {
+    "train": [
+      "2000-01-01",
+      "2014-12-31"
+    ],
+    "test": [
+      "2015-01-01",
+      "2025-12-31"
+    ],
+    "ewma_decay": 0.94,
+    "price_inputs": "fetch-only"
+  },
+  "outputs": {
+    "reports/results/oil/REPORT.md": "7210a4dbcc7e30c51ddaeeff211e990512b920b754273763401e6c240a97ea2b",
+    "reports/results/oil/direction-gaps.csv": "a29d37e52523e623d827667fd7dce5d5c2593106cf0cdfbcffa9340d95145303",
+    "reports/results/oil/direction-predictions.csv.gz": "888ed1714e9f9018b83a92561d7cf6d86dfa8b9d06006b9f5d0f5ddb0947e053",
+    "reports/results/oil/direction-years.csv": "504abe81276767a8d8eed646d16552cc6f54a3d03ba50554cb03be6129a71726",
+    "reports/results/oil/metrics.json": "dc2dbe7350d482009aff4524d636f16a398baccd00e16d638b8e9bd7e823045a",
+    "reports/results/oil/parameters.json": "3baef33eaf77a467713bf2d4c04a3b53af123f369e0ebc63b44d8378b3da7766",
+    "reports/results/oil/risk-and-direction.png": "359f64e2917c22e74d08624e02c3313e1dd2e6226d2344d67ce842815ec86bd8",
+    "reports/results/oil/variance-predictions.csv.gz": "f58f9b28b1e7b714409e7e5b0e2e6d14b2de03cc291ce49aecd88685d3a862f3",
+    "reports/results/oil/variance-subgroups.csv": "3c7f1bf10cdf3caeed7dbb521925994af9a115d24e0ab7a1027ad947928373d2"
+  }
+}

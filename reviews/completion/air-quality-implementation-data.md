@@ -91,3 +91,37 @@ aefd807b20f4bff6ab06a5beb9e0d7c68fdb0e74d6c9e227ccd900664a642494  data/manifests
 1728af0edf50039ca234a58803f75bcc5e121c51b0fc9bef2c3d298f19a20fc5  data/snapshots/air-quality-hourly.csv.gz
 940af75e51501e090f8df8e5e3108439b0a087b784b2e8e06a46ce2d9eb6237f  reports/verification/air-quality-development-trial.json
 ```
+
+## 2026-10-30 — All-schedule peer-availability correction verified
+
+The statistical reviewer identified that the earlier coverage implementation
+counted available peer hours only inside scoreable blocks. The initial review
+above accepted its scoreable/scheduled coverage but did not identify the missing
+all-schedule availability measure. These are distinct questions: peer data can
+exist even when missing local truth prevents scoring.
+
+The corrected outage function computes peer availability before any eligibility
+return and records `peer_available_hours` for every scheduled block. Metrics
+separately retain all-schedule peer input availability and scoreable network
+hours; the figure and report label both alongside truth eligibility. Predictions
+and model settings are unchanged. Pooled precision, recall and false-positive
+rate are also exposed directly from the already retained confusion counts.
+
+The reviewer reran the four focused tests: **4 passed**, with six existing
+timedelta deprecation warnings. An independent fixture made a six-hour block
+unscoreable by deleting local truth while leaving only five peer-available
+hours. The ledger retained five; restoring local truth made those same five
+hours scoreable. This verifies the required distinction without final-period
+evaluation or a new model fit.
+
+**Pre-run implementation pass stands.** One presentation correction remains:
+the template's phrase “different denominators” is inaccurate for the two
+scheduled-hour fractions, which share a denominator but count different subsets.
+The author has been asked to correct that sentence before publication. The
+previous finite-only trial is for the earlier source hash; this follow-up's
+tests/probe specifically cover the changed ledger behavior.
+
+```text
+f553a836e2eae2be550f72a6397a1c7ce2057b6e5f2a45a0a1ae2400c8f8c851  src/tsatlas/air_quality.py
+f9be97008368484c68bed34dcb86530cbe8b1bd3e8620d03b1e0cff913add8a9  tests/test_air_quality.py
+```

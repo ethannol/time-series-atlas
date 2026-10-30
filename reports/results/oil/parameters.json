@@ -1,0 +1,212 @@
+{
+  "wti": {
+    "garch": {
+      "attempts": [
+        {
+          "start": [
+            0.04999999999999993,
+            0.05,
+            0.9
+          ],
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "iterations": 16,
+          "objective": 0.664226859078126,
+          "standardized_parameters": [
+            0.00411245449485707,
+            0.053814175189942,
+            0.9439980382251358
+          ]
+        },
+        {
+          "start": [
+            0.09999999999999998,
+            0.1,
+            0.8
+          ],
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "iterations": 19,
+          "objective": 0.6642268590851046,
+          "standardized_parameters": [
+            0.004112325910488507,
+            0.05381412045647165,
+            0.9439984173022715
+          ]
+        },
+        {
+          "start": [
+            0.15000000000000002,
+            0.15,
+            0.7
+          ],
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "iterations": 18,
+          "objective": 0.6642268592453294,
+          "standardized_parameters": [
+            0.004112438412535672,
+            0.05380992685551462,
+            0.9440019199494217
+          ]
+        }
+      ],
+      "training_rms": 1.5728608503033448,
+      "parameters_dollar_units": [
+        0.010173765209014626,
+        0.053814175189942,
+        0.9439980382251358
+      ]
+    },
+    "variance_initial": 2.473891254416961,
+    "training_changes": 3396,
+    "variance_first_test_date": "2015-01-02",
+    "direction": {
+      "training_rows": 3396,
+      "test_rows": 2745,
+      "prevalence": 0.5212014134275619,
+      "features": [
+        "last_change",
+        "mean5",
+        "mean20",
+        "std20",
+        "previous_price"
+      ],
+      "mean": [
+        0.008165488810365136,
+        0.008396937573616016,
+        0.00988854534746761,
+        1.341239669693373,
+        66.95222320376915
+      ],
+      "scale": [
+        1.5728346371869513,
+        0.6803861079329329,
+        0.33953796165396094,
+        0.7432130417309721,
+        28.960799920109363
+      ],
+      "coefficient": [
+        [
+          -0.06141963219476983,
+          0.006898614485005675,
+          0.04003318720875271,
+          -0.061747219882116844,
+          -0.04162199173017952
+        ]
+      ],
+      "intercept": [
+        0.0848632136730317
+      ],
+      "iterations": [
+        5
+      ],
+      "warnings": []
+    }
+  },
+  "brent": {
+    "garch": {
+      "attempts": [
+        {
+          "start": [
+            0.04999999999999993,
+            0.05,
+            0.9
+          ],
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "iterations": 16,
+          "objective": 0.7236020981435857,
+          "standardized_parameters": [
+            0.0025188109078141028,
+            0.0446849563473955,
+            0.9540271090092668
+          ]
+        },
+        {
+          "start": [
+            0.09999999999999998,
+            0.1,
+            0.8
+          ],
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "iterations": 18,
+          "objective": 0.7236020981860727,
+          "standardized_parameters": [
+            0.0025188493917177954,
+            0.04468398611907521,
+            0.9540283916888925
+          ]
+        },
+        {
+          "start": [
+            0.15000000000000002,
+            0.15,
+            0.7
+          ],
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "iterations": 14,
+          "objective": 0.7236020981532015,
+          "standardized_parameters": [
+            0.0025189258220013463,
+            0.04468590992722774,
+            0.9540261347487654
+          ]
+        }
+      ],
+      "training_rms": 1.4124878568103245,
+      "parameters_dollar_units": [
+        0.0050253349190888235,
+        0.0446849563473955,
+        0.9540271090092668
+      ]
+    },
+    "variance_initial": 1.995121945636624,
+    "training_changes": 3495,
+    "variance_first_test_date": "2015-01-02",
+    "direction": {
+      "training_rows": 3495,
+      "test_rows": 2793,
+      "prevalence": 0.5144492131616595,
+      "features": [
+        "last_change",
+        "mean5",
+        "mean20",
+        "std20",
+        "previous_price"
+      ],
+      "mean": [
+        0.008575107296137339,
+        0.009307582260371957,
+        0.010473962804005721,
+        1.239404339565592,
+        69.72784835479256
+      ],
+      "scale": [
+        1.4125004264280148,
+        0.6469949898090976,
+        0.3380901322421128,
+        0.5847274947189399,
+        33.22752892326034
+      ],
+      "coefficient": [
+        [
+          0.02487219726169171,
+          0.10216055778195905,
+          0.0021298183951694223,
+          -0.06095683365553903,
+          0.011757093303578107
+        ]
+      ],
+      "intercept": [
+        0.058096980964807046
+      ],
+      "iterations": [
+        5
+      ],
+      "warnings": []
+    }
+  }
+}
