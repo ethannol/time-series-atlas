@@ -4,8 +4,9 @@
 
 **Data:** [PhysioNet MIT-BIH Arrhythmia Database](https://physionet.org/content/mitdb/1.0.0/); 48 roughly half-hour ECG recordings sampled at 360 Hz, with beat annotations.
 
-**Current status (2026-10-30):** executed and numerically audited; final
-presentation, reproduction and publication checks remain. Earlier entries preserve the original plan. Ethan set the direction and requested the critical
+**Current status (2026-10-30):** executed, independently reviewed and reproduced
+from a fresh checkout. Final live publication checks are pending. Earlier dated
+entries preserve what was known at each stage. Ethan set the direction and requested the critical
 review; agents proposed and critiqued the design described below.
 
 ## 2026-10-29 — Choose a question worth investigating
@@ -67,3 +68,12 @@ checked the person separation, saved predictions, scoring and support counts.
 The evaluated cohort contains 44 recordings from 43 people. Expert-located
 waveforms, amplitude and previous-beat timing feed the fitted pipelines; this
 is not a shape-only result or automatic beat localization.
+
+## 2026-10-30 — Reproduce the complete result from a new checkout
+
+A new locked environment reproduced every published numerical and presentation
+file for this study exactly, compared against the committed reference hashes.
+The full collection also passed forty-one tests. This is a reproduction check,
+not new evidence of operational or scientific generalization.
+
+[Full reproduction record](../../reports/verification/completion-reproduction.json).

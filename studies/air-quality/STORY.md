@@ -4,8 +4,9 @@
 
 **Data:** [UCI Beijing Multi-Site Air Quality](https://archive.ics.uci.edu/dataset/501/beijing+multi+site+air+quality+data); hourly pollution and weather observations at 12 stations, March 2013–February 2017.
 
-**Current status (2026-10-30):** executed and independently checked; final
-presentation and clean-checkout reproduction remain pending. Ethan set the direction and requested the critical
+**Current status (2026-10-30):** executed, independently reviewed and reproduced
+from a fresh checkout. Final live publication checks are pending. Earlier dated
+entries preserve what was known at each stage. Ethan set the direction and requested the critical
 review; agents proposed and critiqued the design described below.
 
 ## 2026-10-29 — Choose a question worth investigating
@@ -65,3 +66,12 @@ Final presentation and clean-checkout reproduction remain pending.
 
 [Executed report](../../reports/results/air-quality/REPORT.md) ·
 [Results review](../../reviews/completion/air-quality-results-statistical.md).
+
+## 2026-10-30 — Reproduce the complete result from a new checkout
+
+A new locked environment reproduced every published numerical and presentation
+file for this study exactly, compared against the committed reference hashes.
+The full collection also passed forty-one tests. This is a reproduction check,
+not new evidence of operational or scientific generalization.
+
+[Full reproduction record](../../reports/verification/completion-reproduction.json).

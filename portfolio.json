@@ -78,7 +78,7 @@
   "traps": [
     {
       "id": "target-leakage",
-      "how": "Features use only observations available at each declared origin; future-perturbation checks test that earlier predictions remain unchanged."
+      "how": "Forecasting and nowcasting use declared information cutoffs and training-only transformations. ECG is classification given expert beat centers, including the declared post-center waveform window; people remain separate across training and evaluation."
     },
     {
       "id": "units-definitions",
@@ -176,7 +176,7 @@
     "UCI electricity and retail panels",
     "EIA oil series with third-party attribution; fetch-only inputs",
     "CAMELS-US observed flow and Daymet weather",
-    "UCI Beijing multi-site PM2.5",
+    "UCI Beijing multi-site fine-particle concentrations",
     "PhysioNet MIT-BIH annotated ECG",
     "Seeded synthetic changes and sampled sinusoids"
   ],

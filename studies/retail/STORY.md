@@ -4,9 +4,9 @@
 
 **Data:** [UCI Online Retail II](https://archive.ics.uci.edu/dataset/502/online+retail+ii); timestamped transactions from December 2009 to December 2011, aggregated into daily product series and complete weekly targets.
 
-**Current status (2026-10-30):** first results executed and independently checked;
-final presentation and fresh-checkout reproduction remain pending. Earlier
-entries preserve the original plan. Ethan set the direction and requested the critical
+**Current status (2026-10-30):** executed, independently reviewed and reproduced
+from a fresh checkout. Final live publication checks are pending. Earlier dated
+entries preserve what was known at each stage. Ethan set the direction and requested the critical
 review; agents proposed and critiqued the design described below.
 
 ## 2026-10-29 — Choose a question worth investigating
@@ -59,3 +59,25 @@ optimal purchasing decision. Results and publication review are pending.
 [Report](../../reports/results/retail/REPORT.md) ·
 [Independent source/design review](../../reviews/completion/design-implementation.md) ·
 [Pre-run statistical review](../../reviews/completion/retail-implementation-statistical.md).
+
+## 2026-10-30 — Check the decision hidden inside the score
+
+Independent reviewers reproduced the predictions and scores, then asked us to
+make the disagreement between metrics explicit. Zero won normalized absolute
+error; TSB won raw-unit error and its forecast total was much closer to recorded
+sales. Most product-weeks had no sales, so a median-oriented loss could reward
+zero while missing all volume. Neither score establishes what stock to buy.
+
+We revised the explanation and figure labels without changing any numerical
+artifact. [Results review](../../reviews/completion/retail-results-general.md)
+records that interpretation; final fresh-checkout reproduction and publication
+are separate delivery checks.
+
+## 2026-10-30 — Reproduce the complete result from a new checkout
+
+A new locked environment reproduced every published numerical and presentation
+file for this study exactly, compared against the committed reference hashes.
+The full collection also passed forty-one tests. This is a reproduction check,
+not new evidence of operational or scientific generalization.
+
+[Full reproduction record](../../reports/verification/completion-reproduction.json).

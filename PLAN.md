@@ -2,8 +2,8 @@
 
 Status (2026-10-30): all eight investigations executed, including both synthetic
 controls. Independent numerical audits passed. Presentation amendments preserve
-numerical outputs. Full-checkout reproduction, final publication review, CI,
-profile integration and live deployment remain mandatory gates below.
+numerical outputs. Fresh-checkout reproduction matched all 68 files and 41 tests passed. Final
+publication review, CI, profile integration and live deployment remain gates below.
 
 ## Overall completion checklist
 

@@ -5,7 +5,8 @@
 **Data:** Purpose-built generated series, with generating rules and random seeds frozen before execution; no downloaded observational dataset.
 
 **Status (2026-10-30):** the change-detection control is executed, independently
-reviewed, and reproduced. The promised supporting spectral control is outstanding.
+reviewed, and reproduced. The supporting spectral control has also executed and
+passed independent numerical review; its report and story are linked below.
 The dated entries distinguish earlier plans from later measurements. Ethan set the direction and requested the critical
 review; agents proposed and critiqued the design described below.
 

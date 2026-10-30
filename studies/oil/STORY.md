@@ -4,8 +4,9 @@
 
 **Data:** EIA daily spot prices for [WTI](https://www.eia.gov/dnav/pet/hist/RWTCD.htm) and [Brent](https://www.eia.gov/dnav/pet/hist/RBRTED.htm); the pinned study snapshot ends in 2025.
 
-**Current status (2026-10-30):** executed and independently checked; final
-presentation and clean-checkout reproduction remain pending. Ethan set the direction and requested the critical
+**Current status (2026-10-30):** executed, independently reviewed and reproduced
+from a fresh checkout. Final live publication checks are pending. Earlier dated
+entries preserve what was known at each stage. Ethan set the direction and requested the critical
 review; agents proposed and critiqued the design described below.
 
 ## 2026-10-29 — Choose a question worth investigating
@@ -68,3 +69,12 @@ reproduction remain pending. No settings changed after seeing the test scores.
 
 [Executed report](../../reports/results/oil/REPORT.md) ·
 [Results review](../../reviews/completion/oil-results-statistical.md).
+
+## 2026-10-30 — Reproduce the complete result from a new checkout
+
+A new locked environment reproduced every published numerical and presentation
+file for this study exactly, compared against the committed reference hashes.
+The full collection also passed forty-one tests. This is a reproduction check,
+not new evidence of operational or scientific generalization.
+
+[Full reproduction record](../../reports/verification/completion-reproduction.json).

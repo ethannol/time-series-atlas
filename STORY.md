@@ -196,3 +196,15 @@ were actual copy errors, corrected before publication. The dataset guide, source
 credits, per-study stories and full evidence matrix now make the analytical
 process inspectable. Fresh-checkout reproduction and live publication remain the
 next delivery gates; executing every experiment alone does not complete them.
+
+## 2026-10-30 — Reproduce the full collection, including the acquisition exception
+
+A new checkout and locked Python environment reproduced all sixty-eight result
+files exactly across the nine execution units. It started without raw or private
+inputs, fetched oil data independently, and verified the pinned history before
+running. All forty-one tests passed. The full analysis took about a minute on
+this machine. The evidence retains exact revisions, timings and hashes.
+
+That verifies this reproduction, not a promise that future oil source revisions
+will remain recoverable. Publication review and live deployment are the final
+delivery checks. [Reproduction record](reports/verification/completion-reproduction.json).

@@ -42,3 +42,10 @@ in the report and figures. The result does not establish an ECG rhythm finding.
 
 [Results](../../reports/results/spectral/REPORT.md) ·
 [Statistical audit](../../reviews/completion/spectral-results-statistical.md).
+
+## 2026-10-30 — Reproduce all generated inputs and outputs
+
+A clean checkout regenerated the same observations, spectra, metrics, figures
+and report byte-for-byte. [Reproduction evidence](../../reports/verification/completion-reproduction.json)
+records the separate environment and comparison against committed reference files.
+Live publication verification remains a separate delivery gate.

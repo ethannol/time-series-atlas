@@ -150,8 +150,11 @@ field performance. Their protocols and run records retain all assumptions.
 All source collections are free to access; only oil lacks a mirrored analysis
 snapshot. `atlas verify` checks every locally present pinned snapshot and explicitly
 lists absent fetch-only inputs as **not verified**. For original CO₂/electricity
-archives use `atlas fetch` then `atlas intake`. For each later source use
-`atlas fetch <slug>` then `atlas intake <slug>`; acquisition remains separate from
-analysis. Exact intake reproduction requires the pinned original bytes, locked
+archives use `atlas fetch` then `atlas intake`. For retail, river flow, air quality
+and ECG use `atlas fetch <slug>` then `atlas intake <slug>`. Oil instead uses
+`atlas fetch oil` directly before analysis: that command creates the verified
+normalized input. `atlas intake oil` is only for retained original pinned
+workbooks, not the newer-workbook acquisition route. Acquisition remains separate
+from analysis. Exact intake reproduction requires the pinned original bytes, locked
 software and transformation code. Revised upstream history requires an explicit
 new version and review, never a silent refresh.

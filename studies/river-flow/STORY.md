@@ -4,8 +4,9 @@
 
 **Data:** [CAMELS-US](https://ncar.github.io/hydrology/datasets/); daily streamflow and weather for US catchments, with a 17-gauge panel selected using geography and training-period approved-flow coverage.
 
-**Current status (2026-10-30):** executed and numerically audited; final
-presentation, reproduction and publication checks remain. Earlier entries preserve the original plan. Ethan set the direction and requested the critical
+**Current status (2026-10-30):** executed, independently reviewed and reproduced
+from a fresh checkout. Final live publication checks are pending. Earlier dated
+entries preserve what was known at each stage. Ethan set the direction and requested the critical
 review; agents proposed and critiqued the design described below.
 
 ## 2026-10-29 — Choose a question worth investigating
@@ -73,3 +74,12 @@ that a high day-level recall establishes a flood warning system.
 
 [Results](../../reports/results/river-flow/REPORT.md) ·
 [Statistical audit](../../reviews/completion/river-flow-results-statistical.md).
+
+## 2026-10-30 — Reproduce the complete result from a new checkout
+
+A new locked environment reproduced every published numerical and presentation
+file for this study exactly, compared against the committed reference hashes.
+The full collection also passed forty-one tests. This is a reproduction check,
+not new evidence of operational or scientific generalization.
+
+[Full reproduction record](../../reports/verification/completion-reproduction.json).

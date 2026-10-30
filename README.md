@@ -88,7 +88,10 @@ does not guarantee future public recovery. See [data credits and transformations
 for all seven sources, licences, exact acquisition commands and this limitation.
 No analysis command silently downloads or refreshes data.
 
-Final reproduction, test and publication records are indexed in the
+A fresh checkout reproduced all 68 result files exactly and passed 41 tests.
+The nine sequential run units took about 66 seconds with a process peak of
+730 MiB on this machine, excluding installation and acquisition. Runtime varies.
+Reproduction, test and publication records are indexed in the
 [completion evidence](reviews/completion/README.md). The original three-study
 [release record](reviews/first-release/README.md) remains historical evidence,
 not proof of completion for the rest of the collection.
