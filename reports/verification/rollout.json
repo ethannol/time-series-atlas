@@ -1,0 +1,38 @@
+{
+  "recorded_at": "2026-10-30T16:52:00.715107+00:00",
+  "scope": "Initial reviewed release, portfolio integration, and profile update",
+  "checks": [
+    {
+      "repository": "ethannol/time-series-atlas",
+      "conclusion": "success",
+      "headSha": "40e89b7b135e553c1aedd0b2d69019d9a4ad6520",
+      "status": "completed",
+      "url": "https://github.com/ethannol/time-series-atlas/actions/runs/41093307752",
+      "workflowName": "Offline checks"
+    },
+    {
+      "repository": "ethannol/portfolio",
+      "conclusion": "success",
+      "headSha": "058bd54604a1458ae8f724540bdd88133fe4674a",
+      "status": "completed",
+      "url": "https://github.com/ethannol/portfolio/actions/runs/41093398219",
+      "workflowName": "Unit tests"
+    },
+    {
+      "repository": "ethannol/portfolio",
+      "conclusion": "success",
+      "headSha": "058bd54604a1458ae8f724540bdd88133fe4674a",
+      "status": "completed",
+      "url": "https://github.com/ethannol/portfolio/actions/runs/41093398139",
+      "workflowName": "Publish portfolio"
+    }
+  ],
+  "pull_requests": [
+    "https://github.com/ethannol/time-series-atlas/pull/1",
+    "https://github.com/ethannol/portfolio/pull/3",
+    "https://github.com/ethannol/ethannol/pull/2"
+  ],
+  "profile_ci": "No workflows configured; reviewed Markdown update merged at expected head",
+  "live_page": "https://ethannol.github.io/portfolio/projects/time-series-atlas.html",
+  "live_page_checked": true
+}

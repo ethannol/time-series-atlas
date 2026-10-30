@@ -101,3 +101,14 @@ work are included. CI and deployment are followed to completion after publishing
 Integration baselines fetched 2026-10-30: portfolio
 `e7235937fb91177b56712a7f8cfa52d16757d566` at 16:39:04 UTC; profile
 `1434b98c8a78f2a2be5ae3dfdcb2e6d14005102b` at 16:39:05 UTC.
+
+## Published rollout — 2026-10-30
+
+Atlas PR #1, portfolio PR #3, and profile PR #2 were merged in the declared order.
+Atlas checks and portfolio tests passed on their merge revisions; Pages build
+and deployment succeeded. The live project page was fetched and checked for
+its report figures and ledger values. The profile has no configured CI workflow.
+[Recorded run URLs and revisions](../../reports/verification/rollout.json).
+
+This post-publication status entry changes no source, design, model, or result.
+Future work starts from fresh main and receives the same review checkpoints.

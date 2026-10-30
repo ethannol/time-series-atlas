@@ -2,7 +2,8 @@
 
 Status (2026-10-30): sources acquired, first three designs frozen, implementation
 reviewed, and first full runs executed and reproduced. Local results/publication
-reviews passed; GitHub CI and deployment are tracked during rollout.
+reviews passed; initial-release GitHub CI and portfolio deployment passed.
+See reports/verification/rollout.json for the recorded rollout scope.
 The remaining five real-data studies are planned.
 
 ## Purpose and audience

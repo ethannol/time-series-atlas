@@ -121,3 +121,16 @@ committing the outputs corrected the links. Reproducibility, clear communication
 and working evidence links are all part of delivering the analysis.
 
 [Final review and reproduction evidence](reviews/first-release/README.md#local-publication-gate).
+
+## 2026-10-30 — Publish the first completed studies
+
+The first release was merged to GitHub after its checks passed. The portfolio
+and profile additions followed, with the existing portfolio checkout left
+untouched. Portfolio tests and deployment succeeded, and the live project page
+was checked for the result figures and recorded values. The analysis and review
+commits were preserved so a reader can see that the designs preceded fitting.
+
+The collection now has completed CO₂ and electricity studies plus the synthetic
+detection control. The other five real-data studies remain planned.
+[Rollout evidence](reports/verification/rollout.json) ·
+[Live portfolio page](https://ethannol.github.io/portfolio/projects/time-series-atlas.html).
