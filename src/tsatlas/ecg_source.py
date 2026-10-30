@@ -36,14 +36,16 @@ def intake():
         if data.fs!=360 or data.sig_len!=650000:raise ValueError('Unexpected ECG sampling metadata')
         reason='paced_record' if record in PACED else 'no_MLII' if 'MLII' not in data.sig_name else None
         stat={'person':person(record),'leads':data.sig_name,'fs':data.fs,'samples':data.sig_len,
-              'annotation_counts':dict(Counter(ann.symbol)),'excluded_record_reason':reason,'retained':0,'boundary_excluded':0,'nonfinite_excluded':0}
+              'annotation_counts':dict(Counter(ann.symbol)),'excluded_record_reason':reason,'retained':0,'boundary_excluded':0,'no_previous_beat_excluded':0,'nonfinite_excluded':0}
         if reason is None:
             channel=data.sig_name.index('MLII');last_beat=None
             for center,symbol in zip(ann.sample,ann.symbol):
                 if symbol not in BEAT_SYMBOLS:continue
                 prior=last_beat;last_beat=int(center)
                 if symbol not in GROUPS:continue
-                if prior is None or center<90 or center+90>data.sig_len:
+                if prior is None:
+                    stat['no_previous_beat_excluded']+=1;continue
+                if center<90 or center+90>data.sig_len:
                     stat['boundary_excluded']+=1;continue
                 wave=data.p_signal[center-90:center+90,channel]
                 if not np.isfinite(wave).all():stat['nonfinite_excluded']+=1;continue

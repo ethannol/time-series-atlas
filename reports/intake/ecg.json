@@ -16,7 +16,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2271,
-      "boundary_excluded": 2,
+      "boundary_excluded": 1,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "101": {
@@ -37,7 +38,8 @@
       },
       "excluded_record_reason": null,
       "retained": 1862,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "102": {
@@ -58,6 +60,7 @@
       "excluded_record_reason": "paced_record",
       "retained": 0,
       "boundary_excluded": 0,
+      "no_previous_beat_excluded": 0,
       "nonfinite_excluded": 0
     },
     "103": {
@@ -76,7 +79,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2083,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "104": {
@@ -99,6 +103,7 @@
       "excluded_record_reason": "paced_record",
       "retained": 0,
       "boundary_excluded": 0,
+      "no_previous_beat_excluded": 0,
       "nonfinite_excluded": 0
     },
     "105": {
@@ -119,7 +124,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2566,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "106": {
@@ -138,7 +144,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2026,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "107": {
@@ -158,6 +165,7 @@
       "excluded_record_reason": "paced_record",
       "retained": 0,
       "boundary_excluded": 0,
+      "no_previous_beat_excluded": 0,
       "nonfinite_excluded": 0
     },
     "108": {
@@ -181,7 +189,8 @@
       },
       "excluded_record_reason": null,
       "retained": 1762,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "109": {
@@ -201,7 +210,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2530,
-      "boundary_excluded": 2,
+      "boundary_excluded": 1,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "111": {
@@ -220,7 +230,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2123,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "112": {
@@ -239,7 +250,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2538,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "113": {
@@ -257,7 +269,8 @@
       },
       "excluded_record_reason": null,
       "retained": 1793,
-      "boundary_excluded": 2,
+      "boundary_excluded": 1,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "114": {
@@ -280,7 +293,8 @@
       },
       "excluded_record_reason": null,
       "retained": 1878,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "115": {
@@ -299,7 +313,8 @@
       },
       "excluded_record_reason": null,
       "retained": 1951,
-      "boundary_excluded": 2,
+      "boundary_excluded": 1,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "116": {
@@ -319,7 +334,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2410,
-      "boundary_excluded": 2,
+      "boundary_excluded": 1,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "117": {
@@ -338,7 +354,8 @@
       },
       "excluded_record_reason": null,
       "retained": 1533,
-      "boundary_excluded": 2,
+      "boundary_excluded": 1,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "118": {
@@ -359,7 +376,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2277,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "119": {
@@ -378,7 +396,8 @@
       },
       "excluded_record_reason": null,
       "retained": 1986,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "121": {
@@ -398,7 +417,8 @@
       },
       "excluded_record_reason": null,
       "retained": 1862,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "122": {
@@ -416,7 +436,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2475,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "123": {
@@ -434,7 +455,8 @@
       },
       "excluded_record_reason": null,
       "retained": 1517,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "124": {
@@ -457,7 +479,8 @@
       },
       "excluded_record_reason": null,
       "retained": 1618,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "200": {
@@ -478,7 +501,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2599,
-      "boundary_excluded": 2,
+      "boundary_excluded": 1,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "201": {
@@ -503,7 +527,8 @@
       },
       "excluded_record_reason": null,
       "retained": 1962,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "202": {
@@ -525,7 +550,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2135,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "203": {
@@ -548,7 +574,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2975,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "205": {
@@ -570,7 +597,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2655,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "207": {
@@ -596,7 +624,8 @@
       },
       "excluded_record_reason": null,
       "retained": 1859,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "208": {
@@ -619,7 +648,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2951,
-      "boundary_excluded": 2,
+      "boundary_excluded": 1,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "209": {
@@ -640,7 +670,8 @@
       },
       "excluded_record_reason": null,
       "retained": 3004,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "210": {
@@ -663,7 +694,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2648,
-      "boundary_excluded": 2,
+      "boundary_excluded": 1,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "212": {
@@ -683,7 +715,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2746,
-      "boundary_excluded": 2,
+      "boundary_excluded": 1,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "213": {
@@ -704,7 +737,8 @@
       },
       "excluded_record_reason": null,
       "retained": 3249,
-      "boundary_excluded": 2,
+      "boundary_excluded": 1,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "214": {
@@ -727,7 +761,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2259,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "215": {
@@ -749,7 +784,8 @@
       },
       "excluded_record_reason": null,
       "retained": 3362,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "217": {
@@ -772,6 +808,7 @@
       "excluded_record_reason": "paced_record",
       "retained": 0,
       "boundary_excluded": 0,
+      "no_previous_beat_excluded": 0,
       "nonfinite_excluded": 0
     },
     "219": {
@@ -793,7 +830,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2153,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "220": {
@@ -812,7 +850,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2047,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "221": {
@@ -831,7 +870,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2426,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "222": {
@@ -852,7 +892,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2482,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "223": {
@@ -875,7 +916,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2604,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "228": {
@@ -897,7 +939,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2052,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "230": {
@@ -917,7 +960,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2255,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "231": {
@@ -939,7 +983,8 @@
       },
       "excluded_record_reason": null,
       "retained": 1570,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "232": {
@@ -959,7 +1004,8 @@
       },
       "excluded_record_reason": null,
       "retained": 1779,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "233": {
@@ -980,7 +1026,8 @@
       },
       "excluded_record_reason": null,
       "retained": 3077,
-      "boundary_excluded": 2,
+      "boundary_excluded": 1,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     },
     "234": {
@@ -1000,7 +1047,8 @@
       },
       "excluded_record_reason": null,
       "retained": 2752,
-      "boundary_excluded": 1,
+      "boundary_excluded": 0,
+      "no_previous_beat_excluded": 1,
       "nonfinite_excluded": 0
     }
   },
