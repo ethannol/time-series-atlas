@@ -4,7 +4,7 @@ Adding past weather improved next-day high-flow recall only slightly (0.915
 versus 0.906 for flow alone). Before new rises, it alerted on 496 of 822 eligible
 onsets versus 467 for flow alone, with 830 wholly false alert episodes versus
 653. At a three-day date offset, weather added just one detected onset
-(166 versus 165 of 696). Continued high flow is easier to recognize than a new rise.
+(166 versus 165 of 696). High-day recall did not translate into equally high eligible-onset recall.
 
 Test false-positive rates were about 14–15%, above the roughly 10% targeted in
 calibration. That target did not guarantee the later alert burden. The comparison

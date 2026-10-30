@@ -1,11 +1,9 @@
 # Implementation plan
 
-Status (2026-10-30): sources acquired, first three designs frozen, implementation
-reviewed, and first full runs executed and reproduced. Local results/publication
-reviews passed; initial-release GitHub CI and portfolio deployment passed.
-See reports/verification/rollout.json for the recorded rollout scope.
-The remaining five real-data studies are outstanding authorized work. The first
-release was an interim milestone, not completion of the task.
+Status (2026-10-30): all eight investigations executed, including both synthetic
+controls. Independent numerical audits passed. Presentation amendments preserve
+numerical outputs. Full-checkout reproduction, final publication review, CI,
+profile integration and live deployment remain mandatory gates below.
 
 ## Overall completion checklist
 
@@ -15,7 +13,7 @@ figures, reviewed interpretation, a plain-language story, and publication.
 
 - [x] CO₂ — initial release; retain and verify its evidence during final audit.
 - [x] Electricity — initial release; retain and verify its evidence during final audit.
-- [x] Synthetic controls — initial release; retain and verify its evidence during final audit.
+- [x] Synthetic change detection — initial release; retain and verify its evidence during final audit.
 - [ ] Promised synthetic irregular-sampling frequency-recovery control (R10).
 - [ ] Intermittent retail sales.
 - [ ] Oil prices and volatility.
@@ -58,13 +56,13 @@ Keep the [initial findings](reviews/01-design-review.md) visible and maintain th
    release demonstrates more than forecasting. Build only the shared utilities
    these studies need.
 3. **Extend one complete study at a time.** Retail, oil, river flow, air quality,
-   and ECG remain in scope. Each receives the same review and story workflow.
+   and ECG all received the same review and story workflow.
 4. **Question-driven extensions.** Bayesian, neural/pretrained, reconciliation,
    or other advanced methods only when a specific unresolved question justifies
    their dependencies and compute. Keep planned versus evaluated coverage visible.
 5. **Publication and integration.** Publish reviewed work to GitHub and integrate
-   completed-study evidence into Ethan's portfolio and profile. Keep planned
-   studies visibly separate. Follow any PR checks through the final revision.
+   completed-study evidence into Ethan's portfolio and profile. Keep unevaluated conditional
+   extensions visibly separate. Follow any PR checks through the final revision.
 
 ## Study contract, frozen before fitting
 
@@ -103,8 +101,8 @@ is needed to perform routine reviews or repairs within the approved scope.
 - Separate `reproduce` with pinned source bytes from an explicit data refresh.
   Preserve permitted immutable snapshots; document any public reproduction limit
   where source bytes cannot be redistributed.
-- Offer an offline small example and full-study commands. Use optional dependency
-  groups for specialized methods.
+- Offer an offline small example and full-study commands. The locked package installs the bounded specialized
+  dependencies together; optional groups were considered but not implemented.
 - Use offline CI fixtures for meaningful data/split/scoring invariants. Full model
   runs are explicit release checks; live provider access is not a unit test.
 - Execute locally with bounded concurrency. Measure a representative run before
