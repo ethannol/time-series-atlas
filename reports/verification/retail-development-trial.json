@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-30T21:34:40.579856+00:00",
+  "purpose": "finite-only pre-test implementation trial; no comparative accuracy computed",
+  "origins": [
+    "2010-12-20"
+  ],
+  "products": [
+    "90181B",
+    "85232b"
+  ],
+  "prediction_rows": 10,
+  "finite_nonnegative": true,
+  "output_scores_inspected": false,
+  "review_note": "Report-only signed-total-error and prose additions after trial; prediction functions unchanged",
+  "prediction_source_hash_at_trial": "12866e44e3d63a2bb6d999444442b8a414f70085a97d209fe078d11d7d456278"
+}

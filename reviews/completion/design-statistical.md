@@ -224,3 +224,98 @@ b04da438b2f331ac0ffd45aebdfec0d20d2367feb5f6948c4b1f7ce1191e33c4  data/raw/air-q
 retail design approved to implement; D01–D03 identified and oil/air design freeze
 pending. A later appended review must verify the author's amendments. No full
 model run or result validation has occurred in this review.
+
+## 2026-10-30 — Verification of oil and air contract amendments
+
+The statistical reviewer reread the amended contracts and independently checked
+the EIA source notes. No model was run and no final scores were inspected.
+
+**D01: identified → design amended → verified at the contract level.** Oil now
+assigns membership by target observation date, explicitly permits the first 2000
+change to use the last 1999 price, and uses identical complete-feature rows for
+the direction models. The EWMA and GARCH recursions, training-mean-square initial
+variance, chronological training-state updates, GARCH fixed initial likelihood
+variance, training-RMS numerical scaling, SLSQP budget/tolerance, convergence
+criteria, and three predeclared starts are specified. This closes the design
+ambiguity. Code review must still prove actual indexing, original-unit
+conversion, constraint checks, and no test-outcome-dependent fitting.
+
+**D02: identified → design amended → verified at the contract level.** Air
+outages are explicitly separate single-station scenarios. Other stations retain
+their real missingness. The half-open block `[s, s+L hours)` removes endpoint
+ambiguity. Model-feature masking remains an implementation gate.
+
+**D03: identified → design amended → verified at the contract level.** The
+threshold uses linear quantile interpolation and a strict `>` comparison; ties
+are low for predictions and truth. Station balanced accuracy requires both
+actual classes. Undefined stations are excluded from its macro with the
+contributing count reported, while other rates retain their denominators and
+pooled confusion counts remain available. Because all methods use the same
+common subset, this class-support exclusion is identical across methods.
+Saved ledgers/per-station evidence must still establish every actual denominator.
+
+**Added event summaries: approved at design level.** The amended air contract
+defines consecutive high-hour events, left censoring at block starts, overlap
+detection, conditional delay with misses/censoring, and false-alert episodes.
+Abstentions break issued-alert runs and remain visible in misses. These are
+explicitly block-local summaries; overlapping duration scenarios and a sustained
+prediction touching several true runs are not counted as independent incidents
+or distinct notification events. This is a bounded secondary description, not a
+clinical, regulatory, or operational alarm-effectiveness claim. Implementation
+fixtures must cover these exact censoring, overlap and abstention rules.
+
+### Correction/clarification to the earlier oil source discussion
+
+The earlier source section described EIA's **general** government-data reuse
+policy but did not independently close the price data's third-party ownership
+question. It must not be read as approval to republish these raw prices. The
+[specific EIA spot-price source notes](https://www.eia.gov/dnav/pet/TblDefs/pet_pri_spt_tbldef2.asp)
+identify **Refinitiv, an LSEG business**. The generic public-domain language does
+not by itself establish that these underlying third-party prices are openly
+licensed. This source fact was independently verified in this follow-up.
+
+The amended oil contract adopts the acceptable fetch-only/local-input path:
+raw workbooks, normalized price input and full true-change outcomes remain
+outside Git; original forecasts, aggregate scores, parameters and hashes are
+public. Local rescoring reconstructs truth from pinned inputs. A later source
+refresh may differ, and the normalized analysis-input hash must match before
+claiming exact reproduction. This is an explicit acquisition limitation, not a
+new source license determination.
+
+**Packaging remains unverified:** at this inspection, the raw directory is
+ignored, but `data/snapshots/oil-daily.csv.gz` is untracked and is **not yet
+ignored** by `.gitignore`. The contract therefore states the intended policy;
+it does not prove publication exclusion has been implemented. Before staging or
+publishing, move/ignore that input and verify tracked files and generated public
+results exclude the complete underlying price/change series. This packaging
+follow-up does not prevent local modeling after implementation review.
+
+### Updated verdict and inspected identities
+
+**Oil and air-quality design gates are approved to implement from the statistical
+perspective.** Retail's earlier design approval remains. The source-value checks
+remain valid; oil source approval is expressly for local analysis, with its
+fetch-only public reproduction limitation. Full runs still require the separate
+pre-run implementation gate, and publication still requires concrete artifact
+and claim review. No finding is represented as an executed bug or verified
+analytical result.
+
+```text
+8bc0e4e5723e23beb7c729a2128f78ce62d5f2900700d558dce049fda8f8f16e  studies/oil/DESIGN.md
+1882931a691d8da2df1bd2532011a0f4aff55b2e12e2e60d00f1156d991e2b32  studies/air-quality/DESIGN.md
+aaf1096c3a90aa3ae739c97cce26412a10361a1d3dabfff99ab1d67434a88d8f  src/tsatlas/extended_data.py
+```
+
+**Subsequent packaging verification, same date:** the author moved the oil
+snapshot into `data/processed/oil-daily.csv.gz`. The reviewer confirmed that
+`git check-ignore` identifies that path, the old public snapshot path no longer
+exists, and the input SHA-256 is unchanged. The intake record now identifies the
+private path and `fetch-only` availability. This verifies the current snapshot
+exclusion, closing that narrow packaging follow-up. Generated result files do
+not yet exist and still need the planned publication-content check.
+
+```text
+d138ce02b7d858fd579c1570a65db3e7f23a900f2728b2e866a96496aa273cd9  data/processed/oil-daily.csv.gz
+a3a388c33094c2bd00af2cddb12ed32a634b161956c7040dbf49e03c4b39aa00  reports/intake/oil.json
+fafaf2e42d1e98f74390fed96032f216046947d245ff34c5736a1a738311129f  .gitignore
+```

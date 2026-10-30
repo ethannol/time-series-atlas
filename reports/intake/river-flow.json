@@ -1,0 +1,531 @@
+{
+  "gauges": {
+    "01162500": {
+      "qc_counts": {
+        "A": 12027,
+        "A:e": 698,
+        "M": 59
+      },
+      "negative_flow_days": 59,
+      "forcing_header": [
+        "  42.68",
+        " 332.00",
+        "  50224291"
+      ],
+      "forcing_hours": [
+        12
+      ],
+      "metadata": {
+        "huc": "01",
+        "gauge": "01162500",
+        "name": "PRIEST BROOK NEAR WINCHENDON, MA",
+        "latitude": 42.68259,
+        "longitude": -72.11508,
+        "area_km2": 49.71
+      }
+    },
+    "01411300": {
+      "qc_counts": {
+        "A": 12286,
+        "M": 254,
+        "A:e": 244
+      },
+      "negative_flow_days": 254,
+      "forcing_header": [
+        "  39.28",
+        "  16.00",
+        "  79737535"
+      ],
+      "forcing_hours": [
+        12
+      ],
+      "metadata": {
+        "huc": "02",
+        "gauge": "01411300",
+        "name": "TUCKAHOE RIVER AT HEAD OF RIVER NJ",
+        "latitude": 39.30694,
+        "longitude": -74.82056,
+        "area_km2": 79.32
+      }
+    },
+    "02051500": {
+      "qc_counts": {
+        "A": 12221,
+        "A:e": 513,
+        "M": 50
+      },
+      "negative_flow_days": 50,
+      "forcing_header": [
+        "  36.87",
+        " 132.00",
+        "1429062312"
+      ],
+      "forcing_hours": [
+        12
+      ],
+      "metadata": {
+        "huc": "03",
+        "gauge": "02051500",
+        "name": "MEHERRIN RIVER NEAR LAWRENCEVILLE, VA",
+        "latitude": 36.71681,
+        "longitude": -77.83166,
+        "area_km2": 1428.71
+      }
+    },
+    "04015330": {
+      "qc_counts": {
+        "A": 10434,
+        "A:e": 2265,
+        "M": 85
+      },
+      "negative_flow_days": 85,
+      "forcing_header": [
+        "  46.88",
+        " 327.00",
+        " 216430452"
+      ],
+      "forcing_hours": [
+        12
+      ],
+      "metadata": {
+        "huc": "04",
+        "gauge": "04015330",
+        "name": "KNIFE RIVER NEAR TWO HARBORS, MN",
+        "latitude": 46.94688,
+        "longitude": -91.7924,
+        "area_km2": 224.35
+      }
+    },
+    "03049000": {
+      "qc_counts": {
+        "A": 12001,
+        "A:e": 768,
+        "M": 15
+      },
+      "negative_flow_days": 15,
+      "forcing_header": [
+        "  40.82",
+        " 384.00",
+        " 354676697"
+      ],
+      "forcing_hours": [
+        12
+      ],
+      "metadata": {
+        "huc": "05",
+        "gauge": "03049000",
+        "name": "Buffalo Creek near Freeport, PA",
+        "latitude": 40.7159,
+        "longitude": -79.69949,
+        "area_km2": 357.15
+      }
+    },
+    "03439000": {
+      "qc_counts": {
+        "A": 12559,
+        "A:e": 141,
+        "M": 84
+      },
+      "negative_flow_days": 84,
+      "forcing_header": [
+        "  35.10",
+        " 854.00",
+        " 175785020"
+      ],
+      "forcing_hours": [
+        12
+      ],
+      "metadata": {
+        "huc": "06",
+        "gauge": "03439000",
+        "name": "FRENCH BROAD RIVER AT ROSMAN, NC",
+        "latitude": 35.14333,
+        "longitude": -82.82472,
+        "area_km2": 178.67
+      }
+    },
+    "05458000": {
+      "qc_counts": {
+        "A": 11647,
+        "A:e": 1137
+      },
+      "negative_flow_days": 0,
+      "forcing_header": [
+        "  43.49",
+        " 406.00",
+        " 792197586"
+      ],
+      "forcing_hours": [
+        12
+      ],
+      "metadata": {
+        "huc": "07",
+        "gauge": "05458000",
+        "name": "Little Cedar River near Ionia, IA",
+        "latitude": 43.03328,
+        "longitude": -92.50354,
+        "area_km2": 776.76
+      }
+    },
+    "07290650": {
+      "qc_counts": {
+        "A": 10557,
+        "M": 1752,
+        "A:e": 475
+      },
+      "negative_flow_days": 1752,
+      "forcing_header": [
+        "  31.89",
+        "  66.00",
+        "1693128174"
+      ],
+      "forcing_hours": [
+        12
+      ],
+      "metadata": {
+        "huc": "08",
+        "gauge": "07290650",
+        "name": "BAYOU PIERRE NR WILLOWS, MS",
+        "latitude": 32.01778,
+        "longitude": -90.87694,
+        "area_km2": 1688.73
+      }
+    },
+    "06154410": {
+      "qc_counts": {
+        "A": 10481,
+        "no_source_row": 1918,
+        "A:e": 385
+      },
+      "negative_flow_days": 0,
+      "forcing_header": [
+        "  47.86",
+        "1309.00",
+        "  33655453"
+      ],
+      "forcing_hours": [
+        12
+      ],
+      "metadata": {
+        "huc": "10",
+        "gauge": "06154410",
+        "name": "Little Peoples Creek near Hays MT",
+        "latitude": 47.9661,
+        "longitude": -108.66071,
+        "area_km2": 33.41
+      }
+    },
+    "07056000": {
+      "qc_counts": {
+        "A": 12610,
+        "A:e": 104,
+        "M": 70
+      },
+      "negative_flow_days": 70,
+      "forcing_header": [
+        "  35.71",
+        " 200.00",
+        "2146182349"
+      ],
+      "forcing_hours": [
+        12
+      ],
+      "metadata": {
+        "huc": "11",
+        "gauge": "07056000",
+        "name": "Buffalo River near St. Joe, AR",
+        "latitude": 35.98318,
+        "longitude": -92.74755,
+        "area_km2": 2149.36
+      }
+    },
+    "08029500": {
+      "qc_counts": {
+        "A": 12588,
+        "A:e": 196
+      },
+      "negative_flow_days": 0,
+      "forcing_header": [
+        "  31.03",
+        " 106.00",
+        " 331376768"
+      ],
+      "forcing_hours": [
+        12
+      ],
+      "metadata": {
+        "huc": "12",
+        "gauge": "08029500",
+        "name": "Big Cow Ck nr Newton, TX",
+        "latitude": 30.81889,
+        "longitude": -93.78556,
+        "area_km2": 333.4
+      }
+    },
+    "08324000": {
+      "qc_counts": {
+        "A": 12475,
+        "A:e": 285,
+        "M": 24
+      },
+      "negative_flow_days": 24,
+      "forcing_header": [
+        "  36.05",
+        "3122.00",
+        "1216774070"
+      ],
+      "forcing_hours": [
+        12
+      ],
+      "metadata": {
+        "huc": "13",
+        "gauge": "08324000",
+        "name": "JEMEZ RIVER NEAR JEMEZ, NM",
+        "latitude": 35.66169,
+        "longitude": -106.74337,
+        "area_km2": 1207.95
+      }
+    },
+    "09081600": {
+      "qc_counts": {
+        "A": 12607,
+        "A:e": 177
+      },
+      "negative_flow_days": 0,
+      "forcing_header": [
+        "  39.02",
+        "3511.00",
+        " 432343127"
+      ],
+      "forcing_hours": [
+        12
+      ],
+      "metadata": {
+        "huc": "14",
+        "gauge": "09081600",
+        "name": "CRYSTAL RIVER AB AVALANCHE C, NEAR REDSTONE, CO.",
+        "latitude": 39.23221,
+        "longitude": -107.22727,
+        "area_km2": 432.89
+      }
+    },
+    "09386900": {
+      "qc_counts": {
+        "A": 8861,
+        "A:e": 3878,
+        "M": 45
+      },
+      "negative_flow_days": 45,
+      "forcing_header": [
+        "  35.23",
+        "2427.00",
+        " 184846103"
+      ],
+      "forcing_hours": [
+        12
+      ],
+      "metadata": {
+        "huc": "15",
+        "gauge": "09386900",
+        "name": "RIO NUTRIA NEAR RAMAH, NM",
+        "latitude": 35.28253,
+        "longitude": -108.55341,
+        "area_km2": 184.94
+      }
+    },
+    "10244950": {
+      "qc_counts": {
+        "A": 12313,
+        "A:e": 471
+      },
+      "negative_flow_days": 0,
+      "forcing_header": [
+        "  39.17",
+        "2610.00",
+        "  28736579"
+      ],
+      "forcing_hours": [
+        12
+      ],
+      "metadata": {
+        "huc": "16",
+        "gauge": "10244950",
+        "name": "STEPTOE C NR ELY, NV",
+        "latitude": 39.20154,
+        "longitude": -114.68916,
+        "area_km2": 28.2
+      }
+    },
+    "10396000": {
+      "qc_counts": {
+        "A": 12403,
+        "A:e": 357,
+        "M": 24
+      },
+      "negative_flow_days": 24,
+      "forcing_header": [
+        "  42.58",
+        "1679.00",
+        " 517776200"
+      ],
+      "forcing_hours": [
+        12
+      ],
+      "metadata": {
+        "huc": "17",
+        "gauge": "10396000",
+        "name": "DONNER UND BLITZEN RIVER NR FRENCHGLEN OR",
+        "latitude": 42.79083,
+        "longitude": -118.8675,
+        "area_km2": 528.89
+      }
+    },
+    "10258500": {
+      "qc_counts": {
+        "A": 12481,
+        "A:e": 303
+      },
+      "negative_flow_days": 0,
+      "forcing_header": [
+        "  33.53",
+        "1534.00",
+        " 241024821"
+      ],
+      "forcing_hours": [
+        12
+      ],
+      "metadata": {
+        "huc": "18",
+        "gauge": "10258500",
+        "name": "PALM CYN C NR PALM SPRINGS CA",
+        "latitude": 33.74502,
+        "longitude": -116.53557,
+        "area_km2": 241.51
+      }
+    }
+  },
+  "selection": "First gauge by ID in each HUC with >=95% approved nonnegative 1980\u20131999 flow",
+  "snapshot_rows": 217328,
+  "snapshots": {
+    "river-daily-panel.csv.gz": {
+      "sha256": "392dd930c5a975488d938ae56ee722982c02feca9f32b0bb0a7d8af299295956",
+      "bytes": 2281480
+    }
+  },
+  "source_sha256": {
+    "camels/readme_FIRST.txt": "b8697d0f12d1ca9f7755c5b620fce940687b78f2b32c830c0150d7dc4a933b7f",
+    "camels/readme_basin_mean_forcing.txt": "a2bf7ba2050bc3602064ae99c5e63da62ddcb364c7e7662c067ad5454558e5a5",
+    "camels/readme_streamflow.txt": "2e616da566af66821d94c0ee192d681e6343f01969cbd330f75402e2af6a85a6",
+    "camels/basin_metadata/gauge_information.txt": "71694637f4a6e8407d6e3a54dea04818881094d550241590a2f422ca7235a1fa",
+    "camels/usgs_streamflow/01/01013500_streamflow_qc.txt": "bce4b441f9bdf8b22438d9106d9b049f5bbd57f6bd455330ee9dbf3941b8e12a",
+    "camels/usgs_streamflow/01/01022500_streamflow_qc.txt": "46ac37932d4b4c9a119d0577bfa6887ead379709f09f384996b808f0aff7cc68",
+    "camels/usgs_streamflow/01/01030500_streamflow_qc.txt": "f2d375993c2872eabf13098d3de9ca56ab9a030ffd0f6ec8ce7112837d810d6e",
+    "camels/usgs_streamflow/01/01031500_streamflow_qc.txt": "c574c4e8975e5d0d09708c9b7a7eab0d33301620733810115bac81b417ab8722",
+    "camels/usgs_streamflow/01/01047000_streamflow_qc.txt": "56390691c3720719c15bfae1c10d17ba30cd13a58fef1c88560a7a4d4dafd0e5",
+    "camels/usgs_streamflow/01/01052500_streamflow_qc.txt": "93a2a28952ecdfb4c67cf0e224caeac550d3c3b305b22384788bce4959064ec3",
+    "camels/usgs_streamflow/01/01054200_streamflow_qc.txt": "d962a344737ae81b710f98b26bbcb92f921b37fb91a76666c2c40c7dd8ba1cd2",
+    "camels/usgs_streamflow/01/01055000_streamflow_qc.txt": "19edb09a72efa53c0016a145179be9656f7a2526aff86d742c6f0e75fc49e7a0",
+    "camels/usgs_streamflow/01/01057000_streamflow_qc.txt": "cf7e8ab1402e4eb267eb4afcef46121a032cbb26d4b9bd24acb96d33247ac79c",
+    "camels/usgs_streamflow/01/01073000_streamflow_qc.txt": "d7aec1bccfd852c5355ea350a56666caa60bb0f5b1d290e538b4dc4bcf77f927",
+    "camels/usgs_streamflow/01/01078000_streamflow_qc.txt": "cd26f85f16d323adb74af2b540ba203edb0bad55c56c864371f4325e6f1f1fc0",
+    "camels/usgs_streamflow/01/01118300_streamflow_qc.txt": "fcc6c38b998f9643cb2982b3dfe425e9729c36cd63fc38280b035e84bd0fc198",
+    "camels/usgs_streamflow/01/01121000_streamflow_qc.txt": "8b4fb773568ac31f24f047078aef6a984c0da651a9d9f6d7b9fa9ed64b43af51",
+    "camels/usgs_streamflow/01/01123000_streamflow_qc.txt": "2b95536bfe25e18dc2cc21305df7dc819578526f48049e9b3b42020d41ac9a3a",
+    "camels/usgs_streamflow/01/01134500_streamflow_qc.txt": "4cf5db4210384fc65d4f256288c916eefc3824156139294305c3774ce83fd1ec",
+    "camels/usgs_streamflow/01/01137500_streamflow_qc.txt": "3d5e497a7d6a18e0db6a86de0c2a2380a62a9f81efe6f546ef50ec98e0840222",
+    "camels/usgs_streamflow/01/01139000_streamflow_qc.txt": "2379b82f060bb562a5e1d25629cb79d9ab34d7f0e757cc193e438a6f324335e3",
+    "camels/usgs_streamflow/01/01139800_streamflow_qc.txt": "70d00f133474b7e615e2f831986359b83b6709ccfabd428d92f27cdc2ee23f02",
+    "camels/usgs_streamflow/01/01142500_streamflow_qc.txt": "dc521bd595aac0bdcf79047fc7a90a85a6ca6db605df84400d90c063651ebbd3",
+    "camels/usgs_streamflow/01/01144000_streamflow_qc.txt": "9b422c96461c14b6094284fe67d7cb5ac09643e0de95126d1d32011d82fb263d",
+    "camels/usgs_streamflow/01/01162500_streamflow_qc.txt": "a431789e9a78841ef6960c9a94f0dcbe7a0fdab0b789b617ce49b892e6fec682",
+    "camels/basin_mean_forcing/daymet/01/01162500_lump_cida_forcing_leap.txt": "323955ab6f850f9ea2cf74d13eab9c6f8f3f839454eb19c3396be8cc4ac625ae",
+    "camels/usgs_streamflow/02/01333000_streamflow_qc.txt": "83f54f19dfdb0cfd2ea74759898783c75ef373e03a62bacd854c8561ff9ab025",
+    "camels/usgs_streamflow/02/01350000_streamflow_qc.txt": "bfbed124826900e6d9a99d879e2d2ad22cfd9f5414e7b1e7f78fb703b39501dc",
+    "camels/usgs_streamflow/02/01350080_streamflow_qc.txt": "ff8170506188b6decb802cfabedd8619d96973988d72c08bace1526532817fa8",
+    "camels/usgs_streamflow/02/01350140_streamflow_qc.txt": "a3e8bd57ce38b8b2999a5067afa57bedb869670044151a780f31b5990e39a50b",
+    "camels/usgs_streamflow/02/01365000_streamflow_qc.txt": "3d3b8951c829d965a750a3fbe63d05df1751e9fe159abe3cb1d5609a369a18ba",
+    "camels/usgs_streamflow/02/01411300_streamflow_qc.txt": "e05b2fa43cab8ffdae4fb12e4f73211bdd35804f1cda5186a8c039d768817dd9",
+    "camels/basin_mean_forcing/daymet/02/01411300_lump_cida_forcing_leap.txt": "25de704eb7b7429bbb1d0577702b03b7350e0b006ac51406dea8c939617c9fdf",
+    "camels/usgs_streamflow/03/02046000_streamflow_qc.txt": "5dbc61d9d2f3266ded633a3f5a41df23306c85d0ae089d39a71c325c09712633",
+    "camels/usgs_streamflow/03/02051000_streamflow_qc.txt": "602a298a34e463d8181754dc04112c7bcc0c4b9d89ff892d429c85bd2278d412",
+    "camels/usgs_streamflow/03/02051500_streamflow_qc.txt": "0d274f8ce4a1d88d15d07d32f0635e007928b303298b05f713d6a97d3fd2cc17",
+    "camels/basin_mean_forcing/daymet/03/02051500_lump_cida_forcing_leap.txt": "c57d0b7895be1722beb4bdf4bf3a9dd4ccfe42de1a23c6ddca22ec0d6700b346",
+    "camels/usgs_streamflow/04/04015330_streamflow_qc.txt": "7285ac91528209e82c51b4c0ff618323d40b29535e13d98619ea35b06bbac3bd",
+    "camels/basin_mean_forcing/daymet/04/04015330_lump_cida_forcing_leap.txt": "a0de6e04758dba951bc9263c0576deee3ba01f6a7ef9f38de9e2a7be4dbf21a0",
+    "camels/usgs_streamflow/05/03010655_streamflow_qc.txt": "78e5a0087e8e60e954c46f92181ee2bb7f2997419e67075b8aa17e9d5a73894c",
+    "camels/usgs_streamflow/05/03011800_streamflow_qc.txt": "5df9aa5535ab255d7535ee0d17fa539b1e1496fa0abe80dd78fd24216329f067",
+    "camels/usgs_streamflow/05/03015500_streamflow_qc.txt": "d86a8236efb67672953e73cc2c88465d4ef3b3853aa09f9affdfc350e73a3ee2",
+    "camels/usgs_streamflow/05/03021350_streamflow_qc.txt": "ee916dff2b947eeb923323f4ef517f689c64af564f190824830697522b81ef21",
+    "camels/usgs_streamflow/05/03026500_streamflow_qc.txt": "ad290b59ec1b338cbe1b2ca04919275c1ab560ef0bf3a3d6a2908a981afdfb22",
+    "camels/usgs_streamflow/05/03028000_streamflow_qc.txt": "e02f62f118cda1c3424a14329cc3bf6429cfb38da0bbd431640abecd98ecf426",
+    "camels/usgs_streamflow/05/03049000_streamflow_qc.txt": "bdfaf5aa0f719e5f158c807c5a3b63fb8ef7bab5d5ddaa7dd8332ef7dc1e0e17",
+    "camels/basin_mean_forcing/daymet/05/03049000_lump_cida_forcing_leap.txt": "e0172e5ce5252caa27484e2e5ac581f25e751052d630e5ede747e6d931954776",
+    "camels/usgs_streamflow/06/03439000_streamflow_qc.txt": "5ec167a6dc0a834df9a7ce0935bace464b555ffb96bb2d1ca73d0c4cd4a97a2a",
+    "camels/basin_mean_forcing/daymet/06/03439000_lump_cida_forcing_leap.txt": "0e2762875b08b2978cfdd4c3226abd164f42aecb3d6d4afc1e34634324c25b8e",
+    "camels/usgs_streamflow/07/05291000_streamflow_qc.txt": "7429049203d5d752e07c80bad38a4cb4dc85e3fb9a29f98d1614474395c336f5",
+    "camels/usgs_streamflow/07/05362000_streamflow_qc.txt": "3a912444f51e5cd29479554afe6c92b2451a8bf2ea62653caf8338d603e3f86a",
+    "camels/usgs_streamflow/07/05393500_streamflow_qc.txt": "72ec534314990e412d9ee9c93bb38510a693421f18746ec11e52c6b67438b645",
+    "camels/usgs_streamflow/07/05399500_streamflow_qc.txt": "ebd9708a972c5370a99cb5e0cdddca81cf03241b84573f36172c1f31b5c991a8",
+    "camels/usgs_streamflow/07/05408000_streamflow_qc.txt": "172d990eb800f3349d20f702cc1f4cb750c0e19d8127dddd6e73a39a65d2c954",
+    "camels/usgs_streamflow/07/05412500_streamflow_qc.txt": "cb893ec0981d70af468dfb930bd0c5573789c2892e98f1a28dc58b28787575f7",
+    "camels/usgs_streamflow/07/05413500_streamflow_qc.txt": "a30731237e8f10b9e7ebf9a4e4f746d4e67e0a71376980fb79990d0d1b3d62b5",
+    "camels/usgs_streamflow/07/05414000_streamflow_qc.txt": "78fa036a2dbe17f410d9b0a45cedc0a3ea32932422189deaca2b5cfd87e88dd5",
+    "camels/usgs_streamflow/07/05444000_streamflow_qc.txt": "6ee3177fb1c5c3f82b1bbabfd3b23b086a9e2a9910e55164513b2ed2ee511ac7",
+    "camels/usgs_streamflow/07/05454000_streamflow_qc.txt": "c1ca1a5dc6bf9d04dbef72c7a38fb5e1c14d0849bf55b282ef2d2573808069b3",
+    "camels/usgs_streamflow/07/05458000_streamflow_qc.txt": "378409b2056553690533d3fb6e9e63a5f2b681f270fc69af816a9b6443db3b8a",
+    "camels/basin_mean_forcing/daymet/07/05458000_lump_cida_forcing_leap.txt": "54b9c85d493c0255fbadbb0e2ee7bd12e4ba18b02391e9840a99090f968c96bd",
+    "camels/usgs_streamflow/08/07290650_streamflow_qc.txt": "4f6f3f8c938f607214116e51ba34e720e974252df4884b37b5a624c96edb9b64",
+    "camels/basin_mean_forcing/daymet/08/07290650_lump_cida_forcing_leap.txt": "5d973243a68f9c22ea5a023aee6c08cf6891d7fb272e52078ee0f79ec90be13e",
+    "camels/usgs_streamflow/09/05056000_streamflow_qc.txt": "5689c79db072f65604b5964ab3759954d2aa46a9fe540cabc85323f67d9198a5",
+    "camels/usgs_streamflow/09/05057000_streamflow_qc.txt": "7a0390c39e9053c9595039c9fe2497b5e2291ca706316b5af034837353c80c46",
+    "camels/usgs_streamflow/09/05057200_streamflow_qc.txt": "b51f1dd85167693ad3803831fa6efaa8301e4dd36105a2386364993c3cce4a91",
+    "camels/usgs_streamflow/09/05062500_streamflow_qc.txt": "0da3a74a29a547750a02d36d98fd6598d6e1bba7c44e204099ece20a33a19b06",
+    "camels/usgs_streamflow/09/05087500_streamflow_qc.txt": "17bee243e4c52d02be9623c53eb5400a5c073a61f40c622d6881e00af364ee09",
+    "camels/usgs_streamflow/09/05120500_streamflow_qc.txt": "fc2b6c2892fc7fdb57ce1fab82839fba1ccc5aa68e274c2208d28f468135c3d8",
+    "camels/usgs_streamflow/09/05123400_streamflow_qc.txt": "593aaf0cc219f4caea2a3087854b3fc77ffb31d692a6bdc62ea8cc3263ff78d2",
+    "camels/usgs_streamflow/09/05129115_streamflow_qc.txt": "31bbcb0c7866f78f6406a3869888b8b2ddd9ccc2ba1041c4211351301f7b5b66",
+    "camels/usgs_streamflow/09/05131500_streamflow_qc.txt": "e69460a5d7e32793fa16ea515ef6afb671aef8b314fc414774b8b9b49c96e042",
+    "camels/usgs_streamflow/10/06037500_streamflow_qc.txt": "1294aa551e3a077d177f756bb0eb0c05a9701ebc2423f5e81053fb990a79d718",
+    "camels/usgs_streamflow/10/06043500_streamflow_qc.txt": "358cf4fd065724c545d0b804a0a20c2cdd8a1f9865d18e916307051a55f61624",
+    "camels/usgs_streamflow/10/06154410_streamflow_qc.txt": "41c64222068a29dbebdd7630db2095b6ca51d82bacd9d2a4ea74a8f91ba861af",
+    "camels/basin_mean_forcing/daymet/10/06154410_lump_cida_forcing_leap.txt": "cbf6aecf0373ab7dee6fc5da41533f8ec07abccf2596a524bc82e4512b0b8902",
+    "camels/usgs_streamflow/11/07056000_streamflow_qc.txt": "5115eddf43a66b264ed73db62f01a5d2492040cda6ce4beff94cca997f209e15",
+    "camels/basin_mean_forcing/daymet/11/07056000_lump_cida_forcing_leap.txt": "d4162224d429b627d7c17e412f58b4fa02feb811f60b41e583ae65e70e3c29da",
+    "camels/usgs_streamflow/12/08023080_streamflow_qc.txt": "2b6aaa5c7878220d53cde58826a37a4595f6342b7300f6432ff8169ddbbfbf81",
+    "camels/usgs_streamflow/12/08025500_streamflow_qc.txt": "10d65438c9e6886b2b6e5ae24255941e46a4013d5ca591a7992f270abf4fd7c8",
+    "camels/usgs_streamflow/12/08029500_streamflow_qc.txt": "6969fb0f9894d22ec8eaa22c635324aa20347e6916cd8625455dbcff37be4799",
+    "camels/basin_mean_forcing/daymet/12/08029500_lump_cida_forcing_leap.txt": "4b2938fcf7dee750de825b750c4bcc17048494623b8d6d210ebb3f553517dcf6",
+    "camels/usgs_streamflow/13/08267500_streamflow_qc.txt": "97d2832e48cc60a31f52718f17c77ea4acc788a2d88a3345de4ffc4d83ea8dd2",
+    "camels/usgs_streamflow/13/08269000_streamflow_qc.txt": "b8b260655cde8d7b328feecedc9d01180e9755117362b009a9dd853a4b4fbb56",
+    "camels/usgs_streamflow/13/08271000_streamflow_qc.txt": "c8fa776bcb5cc58b625858b74fd0358450a5f9bf005625675a5b324bd2079dfa",
+    "camels/usgs_streamflow/13/08324000_streamflow_qc.txt": "e26966b395396286a671bac42095028856bee8cfba83e59447a7a9a75e6cc604",
+    "camels/basin_mean_forcing/daymet/13/08324000_lump_cida_forcing_leap.txt": "fde0f3801d0a5f6ff88b8814da5c8ea530e317ec16bfba76f89ec07b34e2eeff",
+    "camels/usgs_streamflow/14/09034900_streamflow_qc.txt": "76242065472fa984b00a65e8bf9aabdb52b5fddc841ab7044efd393043abc520",
+    "camels/usgs_streamflow/14/09035800_streamflow_qc.txt": "1b6292a23369d78d4d3bd11d6298e59f057b0c585226f16594ffd2a30eb3d153",
+    "camels/usgs_streamflow/14/09035900_streamflow_qc.txt": "59b89f97ac055f449b5282b9bb0b83e7e9ff736b5cbdd2e7b396e8c658affd70",
+    "camels/usgs_streamflow/14/09047700_streamflow_qc.txt": "970db36013166ece744603678f5af5717b5125fb70bd13cb8ded90d951ab6751",
+    "camels/usgs_streamflow/14/09065500_streamflow_qc.txt": "57281a177f79f284a8df7bce993b641655df6fbdd69ae527539d85ed3d15059d",
+    "camels/usgs_streamflow/14/09066000_streamflow_qc.txt": "f9519a2f350747ccf71b277995bfbab8e7c22a50dc4cef6e8feb90546f85d93c",
+    "camels/usgs_streamflow/14/09066200_streamflow_qc.txt": "1a6a6d7964d28f9456e345570f9c548e939fd691103b51b4ec439e3b30073ccc",
+    "camels/usgs_streamflow/14/09066300_streamflow_qc.txt": "bd283dce27811f0492ce78894e1f408fabcbe8d8d29b02de0e7c15e947719ffd",
+    "camels/usgs_streamflow/14/09081600_streamflow_qc.txt": "a2c16b09c70fbb131635a62d8d2a6affc2f94801ef123bf88f157961d705c129",
+    "camels/basin_mean_forcing/daymet/14/09081600_lump_cida_forcing_leap.txt": "12afc9d8f22ffb213c6ffd4c9755f6fc28f819a85e308b19723395abb63103c6",
+    "camels/usgs_streamflow/15/09386900_streamflow_qc.txt": "7e5dd80019792a5f8ee785d2dec880b7b6670873c4ffafdfe9056ec30a103c33",
+    "camels/basin_mean_forcing/daymet/15/09386900_lump_cida_forcing_leap.txt": "78966f724b8c842a8726c217e9a1aac70bf9b707ec8e36f16df38e4f44c6a8d5",
+    "camels/usgs_streamflow/16/10023000_streamflow_qc.txt": "b8507a664254260674be845558bc6292f31e211351c8fbbb1c1de2c237043782",
+    "camels/usgs_streamflow/16/10166430_streamflow_qc.txt": "5b144498c032cf21776c593180afdf2bc3bae6a0b047fe2f547a5a1b0e387f38",
+    "camels/usgs_streamflow/16/10172700_streamflow_qc.txt": "cee7ac8a86ef71933c90e721e350b03fdc90ceec925d4e21c168b35086f70fec",
+    "camels/usgs_streamflow/16/10172800_streamflow_qc.txt": "ba5bc18c161e86cdf9444bdd4fb17172a312af77d1fa2d0c48987c43c1ad5b36",
+    "camels/usgs_streamflow/16/10173450_streamflow_qc.txt": "874ab0a1fb6c88c7d10b03d53a371c7a8e16fa5f9649b4f05a25448b8075a32f",
+    "camels/usgs_streamflow/16/10205030_streamflow_qc.txt": "9dcc994c8b5919ac97cd18fab35fe8bc2bfa9579b46d30a7f6ed02d77b910a12",
+    "camels/usgs_streamflow/16/10234500_streamflow_qc.txt": "62f2edfebcd3fbeadbd452c80fe0f9d62c56f476988b8575644f9674e00573cd",
+    "camels/usgs_streamflow/16/10242000_streamflow_qc.txt": "d75ad2c5b83e4bf0ee1c1f171de3d069ab56f5c9b07d492717660e53af485d92",
+    "camels/usgs_streamflow/16/10244950_streamflow_qc.txt": "00afce0f5f517493dff5bb9f868bf902be93e78bcbb85076569773603082f1e2",
+    "camels/basin_mean_forcing/daymet/16/10244950_lump_cida_forcing_leap.txt": "0bbb36038429c81e487a49275916a434fec3e8d2f012a79e0c3fd15c8eaec2a9",
+    "camels/usgs_streamflow/17/10396000_streamflow_qc.txt": "1e5a3df24eb87c818b540def82aaaec1e37c60e75ead7b2e176ac41856341115",
+    "camels/basin_mean_forcing/daymet/17/10396000_lump_cida_forcing_leap.txt": "510d67beb576ee0120360a93661376d589db8563e864ad314b4b41b18b5030be",
+    "camels/usgs_streamflow/18/10258000_streamflow_qc.txt": "bec24953c42fe410ecba4a8b82d673a9b8e68ddc2cf19238a06cabed0974297a",
+    "camels/usgs_streamflow/18/10258500_streamflow_qc.txt": "fe7069ca867ab343e0b775ba9d64a79d921c68f6b8bc504b45bea496730ebeed",
+    "camels/basin_mean_forcing/daymet/18/10258500_lump_cida_forcing_leap.txt": "3931f0ea370844177c7380f041eaeebe7d7c1c9bb043a62e270616061ac4dffd"
+  }
+}

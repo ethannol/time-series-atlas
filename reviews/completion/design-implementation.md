@@ -156,3 +156,79 @@ d138ce02b7d858fd579c1570a65db3e7f23a900f2728b2e866a96496aa273cd9  data/snapshots
 
 Later resolution verification belongs in a dated addendum; do not rewrite the
 initial findings as though the missing specifications were present initially.
+
+## 2026-10-30 — Amendment verification and oil acquisition boundary
+
+Reviewer: `/root/implementation_critic`. This is a design/documentation check,
+with a narrow check of the relocated oil input. No model evaluation was run.
+
+**C-D02: verified at the design checkpoint.** Air quality now declares pandas'
+linear quantile interpolation, strict `concentration > threshold` for both truth
+and predictions, and exactly L hourly labels in `[start, start + L hours)`.
+The contract defines single-station scenarios, undefined balanced accuracy, and
+contributing-station counts, and adds explicit block-local event evidence.
+The previous implementation-scope precautions remain for the next gate; this
+verification does not establish executed behavior.
+
+**C-D01: mostly amended, narrow clarification pending at this inspection.**
+The oil contract now specifies initial mean squared change, exact variance
+recurrences, SLSQP/500 iterations/1e-9 tolerance, training-RMS conditioning,
+convergence checks, target-date membership, identical direction training rows,
+and population rolling standard deviation. The older phrase initializing omega
+with “training variance” should use the exact intended definition, consistent
+with the new mean-square wording. Also state explicitly whether pre-2000 changes
+may supply lag features; this avoids ambiguity with the retained statement that
+prior observations are not fitted. The reviewer requested these two final
+wording corrections before closing C-D01.
+
+### Oil input remains local; reproducibility requires acquisition
+
+The revised contract correctly identifies that EIA's official
+[spot-price source notes](https://www.eia.gov/dnav/pet/TblDefs/pet_pri_spt_tbldef2.asp)
+name Refinitiv, an LSEG business. The generic EIA reuse policy alone is
+insufficient evidence to label these particular prices government-owned or
+freely redistributable. This qualifies the initial feasibility discussion's
+generic EIA-policy reference; it is not a newly verified redistribution license.
+
+The design therefore keeps raw workbooks, normalized source prices, and complete
+true changes local, while publishing analysis forecasts, parameters, aggregate
+scores, and hashes. The reviewer confirmed the old public snapshot path is
+absent, the normalized file is now `data/processed/oil-daily.csv.gz`, Git ignores
+that path, and its bytes still match the independently checked original
+normalized-input hash. The audit records `availability: fetch-only` and its
+explicit private path. This verifies relocation and the design decision only.
+
+The proposed exact-reproduction rule is sound: acquire the public source,
+normalize the declared historical window, and require its pinned hash before
+claiming exact reproduction. A revised provider history may prevent new users
+from obtaining the exact historical input. State that limitation in public
+commands/CI evidence; missing private data cannot count as a successful full
+oil reproduction. The acquisition/validator implementation and public-output
+redaction will be reviewed later. Retail's verified overlap belongs in the
+story/review evidence without silently rewriting the earlier deterministic audit.
+
+```text
+8bc0e4e5723e23beb7c729a2128f78ce62d5f2900700d558dce049fda8f8f16e  studies/oil/DESIGN.md
+1882931a691d8da2df1bd2532011a0f4aff55b2e12e2e60d00f1156d991e2b32  studies/air-quality/DESIGN.md
+fafaf2e42d1e98f74390fed96032f216046947d245ff34c5736a1a738311129f  .gitignore
+a3a388c33094c2bd00af2cddb12ed32a634b161956c7040dbf49e03c4b39aa00  reports/intake/oil.json
+d138ce02b7d858fd579c1570a65db3e7f23a900f2728b2e866a96496aa273cd9  data/processed/oil-daily.csv.gz
+```
+
+## 2026-10-30 — Oil design clarification verified; freeze approved
+
+**C-D01: verified at the design checkpoint.** The final wording initializes
+omega using the training mean squared change and explicitly permits pre-2000
+changes only for lag-feature warm-up, excluding their targets from fitting,
+prevalence, scale, and initial-variance statistics. This resolves both remaining
+ambiguities without a new model or inspected evaluation result.
+
+**Design verdict: retail, oil, and air quality are ready to freeze and implement
+from the data/implementation perspective.** C-D01 and C-D02 are closed for the
+specification, not as claims of verified model behavior. Oil's fetch-only input
+boundary and eventual acquisition/reproduction checks remain as documented above.
+
+```text
+64e2b98cd9f2a653bd8444412be50500a4007a211560045390e8f16e7515b2ef  studies/oil/DESIGN.md
+1882931a691d8da2df1bd2532011a0f4aff55b2e12e2e60d00f1156d991e2b32  studies/air-quality/DESIGN.md
+```
