@@ -146,3 +146,16 @@ We added an explicit full-project completion checklist and a required independen
 audit before declaring the overall task complete. The remaining five studies
 are outstanding work. This process change makes the stopping condition visible;
 it is not evidence that the unfinished studies have been delivered.
+
+## 2026-10-30 — Continue the collection and keep discovering source problems
+
+Independent intake review found exact duplicated transactions across retail
+workbook sheets, a negative WTI price, and third-party attribution behind the
+public oil-price files. Each finding changed a concrete choice: overlap handling,
+price transformation, or how inputs are distributed. The continuing review also
+recovered a promised synthetic control that the completion checklist had missed.
+
+The retail study then supplied a useful first result: an always-zero forecast
+won one normalized error score while missing every recorded sale. That result
+is under review. The remaining studies are underway; this is progress within
+the agreed scope, not a completed collection.

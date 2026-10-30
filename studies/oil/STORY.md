@@ -4,8 +4,8 @@
 
 **Data:** EIA daily spot prices for [WTI](https://www.eia.gov/dnav/pet/hist/RWTCD.htm) and [Brent](https://www.eia.gov/dnav/pet/hist/RBRTED.htm); the intended common-history snapshot ends in 2025.
 
-**Status:** design only. This is a record of decisions already made and work still
-to do, not a report of results. Ethan set the direction and requested the critical
+**Current status (2026-10-30):** source intake complete; later dated entries
+record implementation and results status. Earlier entries preserve the original plan. Ethan set the direction and requested the critical
 review; agents proposed and critiqued the design described below.
 
 ## 2026-10-29 — Choose a question worth investigating
@@ -30,3 +30,18 @@ Future entries will summarize actual source intake, benchmarks, implementation
 reviews, results, and revisions in plain language. Detailed evidence stays linked
 from the [review register](../../reviews/README.md).
 
+
+## 2026-10-30 — Check both mathematical and reuse assumptions
+
+The actual WTI file contains a negative price. We retained it and chose dollar
+changes, since ordinary log returns would fail on that observation. We also
+verified that EIA identifies Refinitiv as the price source. Free access through
+a government website does not, by itself, settle redistribution rights.
+
+The study will fetch price inputs for local use and publish our analysis outputs,
+without claiming the underlying prices are government-owned. A normalized-input
+hash will detect changes to the historical data. Future source revisions may
+prevent exact public reproduction; that limitation is explicit. The oil study
+remains in scope, with separate direction and volatility questions and scores.
+
+[Design](DESIGN.md) · [Review](../../reviews/completion/design-general.md).

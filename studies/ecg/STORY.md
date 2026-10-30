@@ -4,8 +4,8 @@
 
 **Data:** [PhysioNet MIT-BIH Arrhythmia Database](https://physionet.org/content/mitdb/1.0.0/); 48 roughly half-hour ECG recordings sampled at 360 Hz, with beat annotations.
 
-**Status:** design only. This is a record of decisions already made and work still
-to do, not a report of results. Ethan set the direction and requested the critical
+**Current status (2026-10-30):** source intake complete; later dated entries
+record implementation and results status. Earlier entries preserve the original plan. Ethan set the direction and requested the critical
 review; agents proposed and critiqued the design described below.
 
 ## 2026-10-29 — Choose a question worth investigating
@@ -30,3 +30,18 @@ Future entries will summarize actual source intake, benchmarks, implementation
 reviews, results, and revisions in plain language. Detailed evidence stays linked
 from the [review register](../../reviews/README.md).
 
+
+## 2026-10-30 — Make the person and the signal explicit
+
+We acquired the complete recording collection and checked its current files
+against provider checksums. The intake selects the MLII lead by name, including
+a recording where channel order is reversed, and preserves the shared-person
+identity of records 201 and 202. Paced recordings and non-target annotations are
+accounted for explicitly.
+
+The compact input contains 100,662 eligible annotated beats. These are waveform
+classification examples with expert-provided beat locations, not an end-to-end
+diagnostic system. The proposed evaluation keeps people apart and will report
+class support and variation between people. No classifier has run yet.
+
+[Source review](../../reviews/completion/source-statistical.md).

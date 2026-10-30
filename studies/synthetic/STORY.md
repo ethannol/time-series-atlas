@@ -4,7 +4,8 @@
 
 **Data:** Purpose-built generated series, with generating rules and random seeds frozen before execution; no downloaded observational dataset.
 
-**Status (2026-10-30):** executed, independently reviewed, and reproduced from a fresh checkout.
+**Status (2026-10-30):** the change-detection control is executed, independently
+reviewed, and reproduced. The promised supporting spectral control is outstanding.
 The dated entries distinguish earlier plans from later measurements. Ethan set the direction and requested the critical
 review; agents proposed and critiqued the design described below.
 
@@ -57,3 +58,13 @@ belong in the main story. It is evidence from declared simulated conditions, not
 a measured failure rate for a deployed monitoring system.
 
 [Executed report](../../reports/results/synthetic/REPORT.md) · [Saved outcomes](../../reports/results/synthetic/replicates.csv.gz).
+
+## 2026-10-30 — Recover a promised control from the scope audit
+
+The independent completion critic noticed that the project had promised a
+frequency-recovery example for irregularly sampled data, but the checklist
+counted the synthetic work as finished after change detection alone. We restored
+that supporting control to the outstanding work. Its design includes a sampling
+pattern that makes the true frequency ambiguous, so a good-looking peak cannot
+be mistaken for proof that a method recovered the truth. No spectral comparison
+has run yet.

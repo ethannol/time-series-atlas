@@ -1,0 +1,72 @@
+{
+  "started_at": "2026-10-30T21:39:41.394979+00:00",
+  "source_commit": "715ac6c89b1948609c67626c883a4cc63ec3abde",
+  "protocol_commit": "b369cc865d4eafaabe8e8f4d3b7ba26ae36bb0ba",
+  "source_files": {
+    "src/tsatlas/__init__.py": "89f11ba0aa45c18d94a0ca870de8484452e2fa55cfcacbadf6a9f70a34c54ca9",
+    "src/tsatlas/acquire.py": "b15b13e15064526b97e8615581521147800704caed6587ad933b85fe11517fe3",
+    "src/tsatlas/camels_source.py": "e1a84280cb4f2d7c590b9d508c654f92de8d6d023df13cca113e3a1a024faa3e",
+    "src/tsatlas/cli.py": "8ded82ddfaa1d7d1cfaae756419e614e991eb8b2bc699c59a746c8d23e3930dc",
+    "src/tsatlas/co2.py": "6a652546f1a67f658e99cfc5808c341505b83a3f04bdac1082468c99cec98c0a",
+    "src/tsatlas/common.py": "d71a5dcaf01e04e47a630cdeb9446e1e2b0dea608f3aabd75be37bee4aec7254",
+    "src/tsatlas/data.py": "a57144b965db2d23066ec3a96e88ab7e8ade6edffc248382edb6691cda0ffb4d",
+    "src/tsatlas/ecg_source.py": "9d491002430c73decadc96081b250d2bbfb221ded4718d3b79b858fc05d2cf6a",
+    "src/tsatlas/electricity.py": "bff038460bc7cba8996c999b22a327101d9252ed123be5054071af3946a5b43f",
+    "src/tsatlas/extended_data.py": "870801c933476d2133b0a233d3e85188b376ba93b33a8c75c88fc36ba03675f5",
+    "src/tsatlas/metrics.py": "f0029cfbcee9a19df28294b40e39627fda31d7d5f4e5fc4b52e7068083c24931",
+    "src/tsatlas/retail.py": "d94819d04917c476abbd039a1f90ba46a6ff0ac633b09f1cd04cb636d2081c92",
+    "src/tsatlas/synthetic.py": "7974c9d74ab57f4db295e8b6008b28acf675cc91b4e2d85fe39ea5caa61ac8fc",
+    "tests/test_evidence.py": "05f21be147e935c64eb7a0b98117c75faa766cd81830eec25b4ccdf28912c7de",
+    "tests/test_forecasts.py": "bfdb1be484fbbda2939cebf152711041b89030e1ba56b415756a458890c4b71d",
+    "tests/test_intake.py": "372ba374e5b26d9baefe1955a9568b6613cd68eb9c273c47f866f1077f147d08",
+    "tests/test_metrics.py": "e3c7a398b72e28aa1175eaa16e45702a73828205fbe402952320070c39fb88c5",
+    "tests/test_retail.py": "bfe578cd417c166cba55ee069662773d4e135f5af55b8819a07de5006615751c",
+    "scripts/check.py": "d111d6606fd523638a661e5f575c6c33b450d4c4271d00d71807dbdfe318b0e8",
+    "scripts/validate_docs.py": "1270ddf6a7896224627afb78447e33528032abfb2c53b096d038027e4502dd9f",
+    "scripts/validate_evidence.py": "e931e6a747f57e53deb9aa16042f2d7f1432abb265919517bf2dfebbe5bebc18",
+    "pyproject.toml": "344f8b05f5a8edb8cf825855ab7aa5e0cf7df92303bc24eb1b8ebaeaaf07d7e1",
+    "uv.lock": "c3e53043987b412876a7f8fe1a7c6e6321b11f56d12674a41feec95bb11a59da",
+    "studies/retail/DESIGN.md": "ccbbae99f581992fc1f9111d14d076fd316fa7db93e56dcad43fd21ae29df840",
+    "data/manifest.json": "6d7a297fe89d6a653e52beae413ac3f352396ae0759a60d1e9016fcdd6ba8fd8",
+    "reports/intake/audit.json": "2b44293c453ecd008e8c7cf76e87a3f38a592afdd14870cb54b408309b020198",
+    "data/manifests/retail.json": "ff182cabcef9a37ea81cadc0997ea2c4dd2ba02ed2586d44d472b05038fec275",
+    "reports/intake/retail.json": "1335e7efa10e41ee7fc4a0a5cdf19294f1e77a6ba59fbec7a89f880d174324fc"
+  },
+  "snapshots": {
+    "retail-daily-panel.csv.gz": {
+      "sha256": "c99f629abc67df7eecf625f47bcdf8e294558f9a6a625747838bd48d317b7b53",
+      "bytes": 6652
+    }
+  },
+  "study": "retail",
+  "recorded_at": "2026-10-30T21:39:41.914250+00:00",
+  "source_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source_stable_during_run": true,
+  "python": "3.12.0",
+  "platform": "macOS-27.2-arm64-arm-64bit",
+  "elapsed_seconds": 0.5374467500078026,
+  "process_lifetime_peak_rss_bytes": 121995264,
+  "configuration": {
+    "test_origins": [
+      "2011-01-03",
+      "2011-11-28"
+    ],
+    "alpha": 0.1,
+    "models": [
+      "zero",
+      "last_week",
+      "rolling_28",
+      "croston_sba",
+      "tsb"
+    ],
+    "selection_end": "2010-12-31"
+  },
+  "outputs": {
+    "reports/results/retail/REPORT.md": "7cc2937018564832c656dbed080dba3b7eba36c15327a87735addf0bcfcb5f68",
+    "reports/results/retail/metrics.json": "a0cb2c69370222904b3f0798069cd63bb0df6f44de8919636c53cbe9c8f391ff",
+    "reports/results/retail/per-product.csv": "0015d463a48c59bf9d30ce936c4df243a89126c847bf15195bdd6858f4d81350",
+    "reports/results/retail/per-quarter.csv": "cd7d0e8be650b70e376c7595766414a8d0a1a621da950f047bbe41a29b1f5aa4",
+    "reports/results/retail/predictions.csv.gz": "ca96bcf0d9c4655635ab84e317126bb60038cbeee20112d4e61f6560211da2e6",
+    "reports/results/retail/weekly-sales.png": "d2261a87326367c7def22678a8199afb4235c1254ac0f28fc8d9988feaef89ce"
+  }
+}
