@@ -4,8 +4,8 @@
 
 **Data:** [UCI Electricity Load Diagrams 2011–2014](https://archive.ics.uci.edu/dataset/321/electricityloaddiagrams20112014); 15-minute readings for 370 customers, with explicit aggregation planned.
 
-**Status:** design only. This is a record of decisions already made and work still
-to do, not a report of results. Ethan set the direction and requested the critical
+**Status (2026-10-30):** first run executed; result/publication review in progress.
+The dated entries distinguish earlier plans from later measurements. Ethan set the direction and requested the critical
 review; agents proposed and critiqued the design described below.
 
 ## 2026-10-29 — Choose a question worth investigating
@@ -22,7 +22,7 @@ The main comparison is now whether sharing information helps different customers
 
 Technical evidence and outstanding checks: [R03](../../reviews/01-design-review.md#r03--electricity-zeros-and-time-labels-are-not-self-explanatory) and [R12](../../reviews/01-design-review.md#r12--separate-tasks-and-protect-the-evaluation-process).
 
-## Next, not yet done
+## Next at planning time — 2026-10-29
 
 Inspect the files and their time/unit conventions, then freeze customer selection and evaluation. No demand model, saving, or improvement has been demonstrated.
 
@@ -56,3 +56,18 @@ explicitly, and tests preserve that behavior.
 
 [Source/design evidence](../../reviews/first-release/README.md) ·
 [Scoring review](../../reviews/first-release/implementation/statistical.md).
+
+## 2026-10-30 — Sharing information did not generally help here
+
+The shared model was slightly better for three customers and worse for the other
+21. Separate models also had the lower error for the total load. The same ordering
+held when the excluded clock-change-related dates were included as a sensitivity
+check. This gives a useful answer even though it is not a victory for pooling.
+
+The improvements for the three customers were small; the report preserves the
+magnitudes rather than treating a win count as decisive. This is a particular
+regression comparison on a deliberately selected panel. It does not show that
+all shared models fail or that the panel represents all customers. No model or
+customer-selection rule was changed after seeing the final scores.
+
+[Executed report](../../reports/results/electricity/REPORT.md) · [Saved metrics](../../reports/results/electricity/metrics.json).

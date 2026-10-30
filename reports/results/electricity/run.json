@@ -1,0 +1,65 @@
+{
+  "started_at": "2026-10-30T16:31:51.276676+00:00",
+  "source_commit": "5953a7f6426bb44ddb2433153ce0c54038b6eb90",
+  "protocol_commit": "b374e9baa39f021481aefaefba958543534c916f",
+  "source_files": {
+    "src/tsatlas/__init__.py": "89f11ba0aa45c18d94a0ca870de8484452e2fa55cfcacbadf6a9f70a34c54ca9",
+    "src/tsatlas/cli.py": "2fed5022d7d69fb0878b3b932620883f98aab1edf581d91b4f20979ffeb34cd3",
+    "src/tsatlas/co2.py": "07ca58309b36a5dc578667397750e0721b7358f3a5e1a2bee7fa9b4c8c2b27a8",
+    "src/tsatlas/common.py": "1bdc4e6ce523986d004678f7ed876fae57a258f6ae9eebdace225e5aa6ea3c3a",
+    "src/tsatlas/data.py": "20c2b1b2b1be74dade626c8b54d18f3db5691ec3e82b94416fa4bd73d65a1fd5",
+    "src/tsatlas/electricity.py": "32f7680163364a48010193d6957915a797df709541401effed394704064ad320",
+    "src/tsatlas/metrics.py": "f0029cfbcee9a19df28294b40e39627fda31d7d5f4e5fc4b52e7068083c24931",
+    "src/tsatlas/synthetic.py": "717177942041ff2cd6be3ef65edb4094f69b74de1199bffd933162c6ba5bc763",
+    "tests/test_forecasts.py": "bfdb1be484fbbda2939cebf152711041b89030e1ba56b415756a458890c4b71d",
+    "tests/test_intake.py": "372ba374e5b26d9baefe1955a9568b6613cd68eb9c273c47f866f1077f147d08",
+    "tests/test_metrics.py": "e3c7a398b72e28aa1175eaa16e45702a73828205fbe402952320070c39fb88c5",
+    "scripts/check.py": "4ddebc8f09003170fc9902c9727e011b861d1776b19b8c627986d89f1b6f011c",
+    "scripts/validate_docs.py": "1270ddf6a7896224627afb78447e33528032abfb2c53b096d038027e4502dd9f",
+    "scripts/validate_evidence.py": "bc10ccbb5bb0e031f3964c216752b427518327f4cd6444760dcdd0a5ae12b756",
+    "pyproject.toml": "0de9017d9a999123fd7f57fdece2afc3a47ca3f2584847e89abdc453a88a0691",
+    "uv.lock": "54c0cd902e55158735fba20145a5a4d60269ba31f020099e39aa378a0c4061ac",
+    "studies/electricity/DESIGN.md": "d7739838ec65fd59b196385deab8f5da94767bfd1ad29255bae8222758a8c5a5",
+    "data/manifest.json": "6d7a297fe89d6a653e52beae413ac3f352396ae0759a60d1e9016fcdd6ba8fd8",
+    "reports/intake/audit.json": "2b44293c453ecd008e8c7cf76e87a3f38a592afdd14870cb54b408309b020198"
+  },
+  "snapshots": {
+    "co2_mm_mlo.txt": {
+      "sha256": "0ce4e7749217b4af2cca8e0bdf263856ad59b0a2946d4e98c7b22ccfbff21cad",
+      "bytes": 59678
+    },
+    "electricity-hourly-panel.csv.gz": {
+      "sha256": "2283fe9e8c2fdcdf4c9544267c34dcf2671efd8ebabc754201b87fb7f414d6fc",
+      "bytes": 5445152
+    }
+  },
+  "study": "electricity",
+  "recorded_at": "2026-10-30T16:32:01.476047+00:00",
+  "source_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source_stable_during_run": true,
+  "python": "3.12.0",
+  "platform": "macOS-27.2-arm64-arm-64bit",
+  "elapsed_seconds": 10.199369917005242,
+  "process_lifetime_peak_rss_bytes": 740605952,
+  "configuration": {
+    "models": [
+      "yesterday",
+      "last_week",
+      "local_ridge",
+      "pooled_ridge"
+    ],
+    "lambda_mean_loss": 0.001,
+    "threads": 1,
+    "years": [
+      2013,
+      2014
+    ]
+  },
+  "outputs": {
+    "reports/results/electricity/REPORT.md": "5d9ba50ea685c9d1845890d18c0eb23d1106d78d496bfc125a1c3a1d778bf0a8",
+    "reports/results/electricity/metrics.json": "eea0c9d198bbbedd09910f407b41bf74ddac16e13e32eb450c870226cd0ab0db",
+    "reports/results/electricity/parameters.json": "86e69932a5f36660cf85e5b304827111cc501cf4149cf4f28935359d4b463729",
+    "reports/results/electricity/pooling-comparison.png": "7e71f1aaaf378c9007bb73fd3bdd279112c722ee06467d7c4b4ce0bc62624e6a",
+    "reports/results/electricity/predictions.csv.gz": "d5d006d4ab30f8971290845ece0068bbae075eda9c03c03d1d76238f672c1a09"
+  }
+}

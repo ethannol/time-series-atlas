@@ -4,8 +4,8 @@
 
 **Data:** [NOAA Mauna Loa CO₂ monthly series](https://gml.noaa.gov/ccgg/trends/data.html); monthly records from 1958 onward, with the study snapshot still to be frozen.
 
-**Status:** design only. This is a record of decisions already made and work still
-to do, not a report of results. Ethan set the direction and requested the critical
+**Status (2026-10-30):** first run executed; result/publication review in progress.
+The dated entries distinguish earlier plans from later measurements. Ethan set the direction and requested the critical
 review; agents proposed and critiqued the design described below.
 
 ## 2026-10-29 — Choose a question worth investigating
@@ -22,7 +22,7 @@ The study now asks whether allowing the rate of increase to change actually impr
 
 Technical evidence and outstanding checks: [R01–R02](../../reviews/01-design-review.md#r02--a-published-co₂-series-already-contains-processing-decisions).
 
-## Next, not yet done
+## Next at planning time — 2026-10-29
 
 Inspect the actual monthly records and their source notes, then freeze the forecast horizons and comparisons. No model has been fitted and no forecast improvement has been measured.
 
@@ -48,3 +48,18 @@ committed before fitting, including a calibration period that ends before the
 evaluation begins.
 
 [Source and design evidence](../../reviews/first-release/README.md).
+
+## 2026-10-30 — Run the frozen comparison
+
+For the three-year December targets, the recent-growth model had a mean absolute
+error of 1.119 ppm, compared with 6.964 ppm for a fixed growth rate fitted over the
+expanding history. Both changing-growth approaches improved on that fixed-growth
+baseline at every evaluated origin. The lesson is narrower than “complex models
+win”: how much history we assume still applies can matter more than model complexity.
+
+The uncertainty bands also deserve scrutiny. Historical calibration did not
+maintain its nominal coverage for the fixed-growth model. Wider or more frequently
+covering bands are not automatically better; the report retains their widths and
+scores. There are only 13 overlapping three-year origins, not independent trials.
+
+[Executed report](../../reports/results/co2/REPORT.md) · [Saved metrics](../../reports/results/co2/metrics.json).

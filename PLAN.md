@@ -1,6 +1,8 @@
 # Implementation plan
 
-Status: planning and source-documentation review. No analyses have run.
+Status (2026-10-30): sources acquired, first three designs frozen, implementation
+reviewed, and first full runs executed. Result/publication review is in progress.
+The remaining five real-data studies are planned.
 
 ## Purpose and audience
 

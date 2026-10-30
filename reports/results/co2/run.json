@@ -1,0 +1,66 @@
+{
+  "started_at": "2026-10-30T16:31:49.444253+00:00",
+  "source_commit": "5953a7f6426bb44ddb2433153ce0c54038b6eb90",
+  "protocol_commit": "b374e9baa39f021481aefaefba958543534c916f",
+  "source_files": {
+    "src/tsatlas/__init__.py": "89f11ba0aa45c18d94a0ca870de8484452e2fa55cfcacbadf6a9f70a34c54ca9",
+    "src/tsatlas/cli.py": "2fed5022d7d69fb0878b3b932620883f98aab1edf581d91b4f20979ffeb34cd3",
+    "src/tsatlas/co2.py": "07ca58309b36a5dc578667397750e0721b7358f3a5e1a2bee7fa9b4c8c2b27a8",
+    "src/tsatlas/common.py": "1bdc4e6ce523986d004678f7ed876fae57a258f6ae9eebdace225e5aa6ea3c3a",
+    "src/tsatlas/data.py": "20c2b1b2b1be74dade626c8b54d18f3db5691ec3e82b94416fa4bd73d65a1fd5",
+    "src/tsatlas/electricity.py": "32f7680163364a48010193d6957915a797df709541401effed394704064ad320",
+    "src/tsatlas/metrics.py": "f0029cfbcee9a19df28294b40e39627fda31d7d5f4e5fc4b52e7068083c24931",
+    "src/tsatlas/synthetic.py": "717177942041ff2cd6be3ef65edb4094f69b74de1199bffd933162c6ba5bc763",
+    "tests/test_forecasts.py": "bfdb1be484fbbda2939cebf152711041b89030e1ba56b415756a458890c4b71d",
+    "tests/test_intake.py": "372ba374e5b26d9baefe1955a9568b6613cd68eb9c273c47f866f1077f147d08",
+    "tests/test_metrics.py": "e3c7a398b72e28aa1175eaa16e45702a73828205fbe402952320070c39fb88c5",
+    "scripts/check.py": "4ddebc8f09003170fc9902c9727e011b861d1776b19b8c627986d89f1b6f011c",
+    "scripts/validate_docs.py": "1270ddf6a7896224627afb78447e33528032abfb2c53b096d038027e4502dd9f",
+    "scripts/validate_evidence.py": "bc10ccbb5bb0e031f3964c216752b427518327f4cd6444760dcdd0a5ae12b756",
+    "pyproject.toml": "0de9017d9a999123fd7f57fdece2afc3a47ca3f2584847e89abdc453a88a0691",
+    "uv.lock": "54c0cd902e55158735fba20145a5a4d60269ba31f020099e39aa378a0c4061ac",
+    "studies/co2/DESIGN.md": "d070a91da04b8fee7d4c37e20f8160e6444a649a9551d3a198da62a4d2cb3fb3",
+    "data/manifest.json": "6d7a297fe89d6a653e52beae413ac3f352396ae0759a60d1e9016fcdd6ba8fd8",
+    "reports/intake/audit.json": "2b44293c453ecd008e8c7cf76e87a3f38a592afdd14870cb54b408309b020198"
+  },
+  "snapshots": {
+    "co2_mm_mlo.txt": {
+      "sha256": "0ce4e7749217b4af2cca8e0bdf263856ad59b0a2946d4e98c7b22ccfbff21cad",
+      "bytes": 59678
+    },
+    "electricity-hourly-panel.csv.gz": {
+      "sha256": "2283fe9e8c2fdcdf4c9544267c34dcf2671efd8ebabc754201b87fb7f414d6fc",
+      "bytes": 5445152
+    }
+  },
+  "study": "co2",
+  "recorded_at": "2026-10-30T16:31:50.222615+00:00",
+  "source_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source_stable_during_run": true,
+  "python": "3.12.0",
+  "platform": "macOS-27.2-arm64-arm-64bit",
+  "elapsed_seconds": 0.805518209002912,
+  "process_lifetime_peak_rss_bytes": 126877696,
+  "configuration": {
+    "models": [
+      "seasonal_naive",
+      "linear_expanding",
+      "linear_120months",
+      "quadratic_expanding"
+    ],
+    "horizons": [
+      1,
+      12,
+      36
+    ],
+    "no_tuning": true,
+    "origin_month_semantics": "Last observed monthly value, not release date; assume issuance after December value is available"
+  },
+  "outputs": {
+    "reports/results/co2/REPORT.md": "8fc3d871e01d53f2a43076888c46788d23ba494f77243cd8b1e426029b4ae783",
+    "reports/results/co2/forecast-comparison.png": "d75ced7a440c5dfb50e4ac926ba464651169ed6f3bf1455f06b8712409ed5b68",
+    "reports/results/co2/metrics.json": "36e0cef9a2e517645a44fb78de94bfddf716342a5f031ed4f897b68764c2deb9",
+    "reports/results/co2/paired-error-differences.csv.gz": "b056a41321a6a1fac51abbdf6b20f7bfc1d9b755151fa0a7bd663f1827d8016f",
+    "reports/results/co2/predictions.csv.gz": "90d3993ef871868520c3ef127960fea235431ac872640224397394db9b8eadaa"
+  }
+}

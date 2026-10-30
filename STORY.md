@@ -67,7 +67,7 @@ and a clearer record of rejected suggestions and reopened findings.
 records the changes and their verification status. These are corrections to the
 plan and its explanation, not evidence that the proposed models work.
 
-## Where the work stands
+## Where the work stood on 2026-10-29
 
 The plan and initial source-documentation review exist. Full dataset acquisition,
 implementation, model evaluation, and final scientific conclusions do not yet
@@ -94,3 +94,15 @@ outputs. A test-fixture failure was also corrected, separately from those defect
 
 These repairs are recorded in the [first-release review](reviews/first-release/README.md).
 They establish safeguards to check; they do not establish forecast skill.
+
+## 2026-10-30 — Let the first results answer the questions
+
+The committed first release ran without changing its model choices after seeing
+evaluation scores. Adapting the CO₂ growth estimate improved the declared longer
+forecasts. Sharing electricity-model coefficients generally did not help this
+panel. A change detector's apparent speed hid a high false-alert rate when noise
+became persistent. These are different lessons, rather than one leaderboard.
+
+The next checkpoint challenges these interpretations against the saved predictions
+and outcomes. Process stories, original critiques, and source evidence remain
+visible beside the results.

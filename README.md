@@ -13,8 +13,9 @@ Methods serve the question. A more complicated model does not have to win.
 > addressed: river-flow predictors derived from the outcome, ECG records from the
 > same person, and CO₂ values that already include interpolation and a temporary
 > observing-site substitution. These findings changed the planned analyses.
-> **No models have run yet: these are risks caught in design, not demonstrated
-> implementation failures or empirical findings.**
+> **At that checkpoint no models had run: those were risks caught in design.
+> Later source discrepancies, actual code defects, and measured results are
+> recorded separately in the process stories.**
 
 **Start here:** [How the project changed](STORY.md) ·
 [What review caught and why it matters](reviews/01-design-review.md) ·
@@ -35,18 +36,19 @@ once implemented, the analysis designs and reproducible results.
 
 | Study | Primary question | Plain-language process story | Status |
 | --- | --- | --- | --- |
-| Atmospheric CO₂ | Does a changing growth rate improve multiyear forecasts over a fixed trend and annual cycle? | [CO₂ story](studies/co2/STORY.md) | Design; not implemented |
-| Electricity demand | When does learning across customers improve tomorrow's load forecast, and who benefits or suffers? | [Electricity story](studies/electricity/STORY.md) | Design; not implemented |
-| River flow | How much warning of high flow can recent rainfall and flow provide across different catchment types? | [River-flow story](studies/river-flow/STORY.md) | Design; not implemented |
-| Oil prices | Can volatility forecasts improve on simple baselines even when price-direction forecasts cannot? | [Oil story](studies/oil/STORY.md) | Design; not implemented |
-| Intermittent retail sales | How should we forecast next week's sales for products that sell only occasionally? | [Retail story](studies/retail/STORY.md) | Design; not implemented |
-| Air quality | Can nearby stations preserve useful high-pollution warnings when a local sensor goes offline? | [Air-quality story](studies/air-quality/STORY.md) | Design; not implemented |
-| ECG waveforms | Does a model that recognizes abnormal heartbeat shapes work on people it has never seen? | [ECG story](studies/ecg/STORY.md) | Design; not implemented |
-| Synthetic controls | When the truth is known, how quickly can a sustained change be distinguished from ordinary variation? | [Synthetic-lab story](studies/synthetic/STORY.md) | Design; not implemented |
+| Atmospheric CO₂ | Does a changing growth rate improve multiyear forecasts over a fixed trend and annual cycle? | [CO₂ story](studies/co2/STORY.md) | [Executed report](reports/results/co2/REPORT.md) |
+| Electricity demand | When does learning across customers improve tomorrow's load forecast, and who benefits or suffers? | [Electricity story](studies/electricity/STORY.md) | [Executed report](reports/results/electricity/REPORT.md) |
+| River flow | How much warning of high flow can recent rainfall and flow provide across different catchment types? | [River-flow story](studies/river-flow/STORY.md) | Planned |
+| Oil prices | Can volatility forecasts improve on simple baselines even when price-direction forecasts cannot? | [Oil story](studies/oil/STORY.md) | Planned |
+| Intermittent retail sales | How should we forecast next week's sales for products that sell only occasionally? | [Retail story](studies/retail/STORY.md) | Planned |
+| Air quality | Can nearby stations preserve useful high-pollution warnings when a local sensor goes offline? | [Air-quality story](studies/air-quality/STORY.md) | Planned |
+| ECG waveforms | Does a model that recognizes abnormal heartbeat shapes work on people it has never seen? | [ECG story](studies/ecg/STORY.md) | Planned |
+| Synthetic controls | When the truth is known, how quickly can a sustained change be distinguished from ordinary variation? | [Synthetic-lab story](studies/synthetic/STORY.md) | [Executed report](reports/results/synthetic/REPORT.md) |
 
 The seven real-data collections are free to access. Redistribution conditions
-will be checked separately before publishing source snapshots. No observed model
-scores, conclusions, or claims of financial or clinical benefit exist yet.
+will be checked separately before publishing source snapshots. The first CO₂, electricity, and synthetic studies have executed under frozen
+designs. The other five real-data studies remain planned. No financial or clinical
+benefit is claimed.
 
 ## Review is part of the analysis
 
@@ -68,6 +70,40 @@ the plan, researched sources, and supplied the critiques recorded here. Future
 stories will identify who made each substantive decision and what was checked;
 they will not attribute agent work or unperformed reviews to Ethan.
 
-Implementation, measured results, and reproducible analysis commands will be
-added as each study is completed. Planned capabilities are not presented as
-finished work.
+## What the first runs found
+
+- **CO₂:** the recent-growth model reduced three-year December-target MAE from
+  6.964 ppm for the expanding fixed-growth model to 1.119 ppm. This is a bounded
+  revised-data comparison, not a claim about every forecast date or future climate.
+- **Electricity:** the shared model was worse for 21 of 24 selected customers.
+  More shared data did not automatically improve this forecasting comparison.
+- **Change detection:** CUSUM's false-alert frequency rose from 5% on independent
+  noise to 73% on persistent noise under the same frozen threshold. Assumptions
+  mattered more than the attractive detection-delay number.
+
+These statements refer to the linked reports and their saved predictions. Read
+[the first-release review record](reviews/first-release/README.md) for checkpoints,
+known limitations, and publication status. Planned capabilities remain distinct.
+
+## Run and inspect
+
+```bash
+uv sync --locked --python 3.12
+uv run atlas verify                 # checks pinned analysis snapshot hashes
+uv run python scripts/check.py      # offline, bounded tests with evidence
+uv run atlas all                    # three reviewed studies; one CPU thread
+uv run python scripts/validate_evidence.py
+```
+
+Run from a clean, committed source checkout: full execution refuses uncommitted
+source/design changes and stages output until source stability is checked.
+Analysis uses the committed snapshots and does not download data. The first
+recorded local full run took about eleven seconds; runtime varies by machine.
+For the original archives, `uv run atlas fetch` verifies pinned hashes and
+`uv run atlas intake` rebuilds the panel. Upstream revisions fail explicitly;
+there is no silent refresh. See [data credits and transformations](data/README.md).
+
+[CO₂ result and evidence](reports/results/co2/REPORT.md) ·
+[Electricity result and evidence](reports/results/electricity/REPORT.md) ·
+[Synthetic result and evidence](reports/results/synthetic/REPORT.md)
+
