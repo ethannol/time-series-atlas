@@ -24,4 +24,21 @@ and asked independent reviewers to check it. The lesson is about identifiability
 some observation schedules cannot distinguish different physical signals,
 however clear a plotted peak looks.
 
-[Frozen design and amendment](DESIGN.md). Results have not yet been interpreted.
+[Frozen design and amendment](DESIGN.md). The result step follows below.
+
+## 2026-10-30 — Recover a frequency, then ask whether it is unique
+
+The frozen experiment recovered the planted frequency in every irregular-sampling
+Lomb–Scargle trial, versus seventy-four of one hundred interpolation-plus-FFT
+trials. Ignoring the timestamps recovered none. Yet when observations were
+regularly spaced three seconds apart, every Lomb–Scargle trial had two equally
+strong peaks. Its declared tie rule selected the lower alias each time.
+
+That is the distinction the control was designed to expose: a selected spectral
+peak is not necessarily a uniquely identified physical frequency. Reviewers
+recreated the generated observations and all spectra, checked the numerical
+alias ties, and asked us to make the ambiguity and discrete search grid explicit
+in the report and figures. The result does not establish an ECG rhythm finding.
+
+[Results](../../reports/results/spectral/REPORT.md) ·
+[Statistical audit](../../reviews/completion/spectral-results-statistical.md).

@@ -1,5 +1,13 @@
 # Can other stations preserve indications during a sensor outage?
 
+**Other-station medians outperform holding the last local reading on balanced
+accuracy at all three tested durations.** Learned calibration produces almost
+the same high/low warning score, while reducing concentration error. Its lower
+false-positive rates can come with lower recall; those tradeoffs are shown
+separately below. The near-overlapping network curves are a near tie, not a
+missing method. A higher 72-hour score than 24-hour score is not evidence that
+longer outages help: eligible blocks and evaluated hours differ.
+
 This is a **same-hour nowcast under an explicit reporting assumption**. Other
 stations must have delivered their readings. It is not a forecast of future
 pollution. The tables separate scored performance, truth eligibility, and peer
@@ -68,17 +76,17 @@ scores on all their available hours are [retained separately](available-hour-sco
 
 ## Event misses belong beside successful detection delay
 
-| Hours | Method | Missed / high events | False-alert episodes | Median onset delay | Delay sample |
+| Hours | Method | Missed / high events | False-alert episodes | Median onset delay (hours) | Delay sample |
 | --- | --- | --- | --- | --- | --- |
-| 6 | calendar | 31 / 31 | 0 | None | 0 |
+| 6 | calendar | 31 / 31 | 0 | undefined | 0 |
 | 6 | network_median | 1 / 31 | 4 | 0.0 | 13 |
 | 6 | network_ridge | 3 / 31 | 4 | 0.0 | 11 |
-| 6 | persistence | 15 / 31 | 0 | None | 0 |
-| 24 | calendar | 67 / 67 | 0 | None | 0 |
+| 6 | persistence | 15 / 31 | 0 | undefined | 0 |
+| 24 | calendar | 67 / 67 | 0 | undefined | 0 |
 | 24 | network_median | 19 / 67 | 12 | 0.0 | 33 |
 | 24 | network_ridge | 26 / 67 | 12 | 0.0 | 26 |
 | 24 | persistence | 52 / 67 | 0 | 0.0 | 1 |
-| 72 | calendar | 187 / 187 | 0 | None | 0 |
+| 72 | calendar | 187 / 187 | 0 | undefined | 0 |
 | 72 | network_median | 43 / 187 | 23 | 0.0 | 133 |
 | 72 | network_ridge | 48 / 187 | 28 | 0.0 | 128 |
 | 72 | persistence | 146 / 187 | 0 | 0.0 | 30 |
@@ -89,6 +97,12 @@ in the table. Episodes are defined within blocks, not deduplicated pollution
 incidents across stations or overlapping-duration scenarios. One sustained
 prediction may overlap multiple high runs. The [event ledger](events.csv.gz)
 retains censoring and event times so these denominators can be inspected.
+
+A zero median delay means same-hour recognition among the detected, non-censored
+events; it does not mean advance warning or that no events were missed. A zero
+false-alert-episode count also need not mean zero false-positive hours: under
+the frozen matching rule, a long alert run that overlaps any true high hour is
+not a wholly false episode. The hourly false-positive rates remain essential.
 
 Fit/calibration uses March 2013–February 2015. No local value inside an outage or
 future endpoint enters a prediction. No real-gap recovery, future reporting

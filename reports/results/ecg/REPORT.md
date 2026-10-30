@@ -1,9 +1,18 @@
 # Do heartbeat patterns transfer to people absent from training?
 
+Transfer was uneven. The forest had the highest four-group macro F1
+(0.434, versus 0.236
+for always choosing the majority group), but it recognized **none of the 802 F
+beats** and only 10.9% of S beats.
+Its 89.61% accuracy was barely above the majority
+baseline's 89.48%. Overall accuracy concealed major
+class failures. No tested pipeline supports a claim of reliable recognition
+across all four groups.
+
 Every retained person is tested once in a fold that excludes that person from
 training. The two recordings of patient 201 remain together. Performance by
 class and person matters alongside the pooled score; 100,662 beats still provide
-only 43 independent patient groups in this selected historic benchmark.
+only 43 distinct patient groups in this selected historic benchmark.
 
 | Method | Macro F1 (four fixed groups) | Accuracy | Macro class recall |
 | --- | --- | --- | --- |
@@ -15,12 +24,12 @@ only 43 independent patient groups in this selected historic benchmark.
 
 ![Recognition by class and person](people-and-classes.png)
 
-| Group | Included symbols | Beats | People with group |
-| --- | --- | --- | --- |
-| N | N,L,R,e,j | 90072 | 43 |
-| S | A,a,J,S | 2781 | 31 |
-| V | V,E | 7007 | 32 |
-| F | F | 802 | 16 |
+| Group | Readable benchmark group | Included symbols | Beats | People with group |
+| --- | --- | --- | --- | --- |
+| N | Normal, bundle-branch and escape beats | N,L,R,e,j | 90072 | 43 |
+| S | Supraventricular ectopic beats | A,a,J,S | 2781 | 31 |
+| V | Ventricular ectopic beats | V,E | 7007 | 32 |
+| F | Fusion of ventricular and normal beats | F | 802 | 16 |
 
 
 ## What the models were given
@@ -38,6 +47,14 @@ selected beats per person, without label balancing in that sample selection;
 every eligible held-out beat is scored. PCA and fitted feature scaling use only
 that fold's training people. Template, logistic and forest are different pipelines,
 not a controlled comparison of model families with every other choice identical.
+The template baseline compares each normalized waveform with the training class
+means; the PCA pipelines also use amplitude and previous beat timing.
+
+Rare examples are concentrated in particular people: fold 2 holds 755 of the
+802 F test beats, while its capped training set contains only 14 F examples.
+The person split and label-independent cap were frozen before results; we did
+not change them to improve this score. This reveals limited rare-class support
+under the declared design, not a general impossibility of learning that group.
 
 ![Training-only normalized templates](training-templates.png)
 

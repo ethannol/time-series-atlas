@@ -81,3 +81,25 @@ e22c1ca033feb5ca17d2fba32c3417a108c447260105caebbe07d64f5e9a062b  src/tsatlas/ec
 dc4dcb282eb44726d551372529c14dde56fc1c1d0c432d9bcfdb2398a1d979ea  studies/river-flow/STORY.md
 5518625c5a45ea56c5d6079cf9876dc022ff67ddb96f3327236cfe84105a8f6d  studies/ecg/STORY.md
 ```
+
+## 2026-10-30 — Immediate copy-fix recheck
+
+Re-read the changed method guide, air-quality credit and river label mapping.
+**PCG01's substantive capability error and PCG02's creator attribution are
+verified corrected in source copy.** Electricity no longer claims interval
+evaluation and now lists both persistence baselines; intervals are assigned to
+CO₂. The creator is identified as the single person Song Chen. These were actual
+copy errors caught before publication, not hypothetical design risks.
+
+The explicit river legend map also removes the "flow + only" artifact at source
+level. Rendered-figure verification still follows regeneration. The small
+"score people" wording remains in the electricity guide row. PCG03's river
+comparison sentence remains pending at this recheck, and spectral evaluated
+status still requires its actual run/review. No final publication verdict is
+being issued by these scoped source-copy closures.
+
+```text
+b0634ffa29493a7a300b832d7b9679a5fc92034d04e7d8e3c7df4fc23fa50afc  data/README.md
+498f05dcabe54eef79d0bc90b683a784cea6aa40480127a8437ff99dfd24d27a  docs/METHODS.md
+04fae88b90b9f112cc42a9814fb94406b9ea67353b29aa6a7d8d1879cd5107d0  src/tsatlas/river_flow.py
+```

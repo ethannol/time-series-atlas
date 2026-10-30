@@ -1,5 +1,12 @@
 # Can uncertainty be forecast when direction is difficult?
 
+**In this comparison, adaptive variance forecasts improve the declared QLIKE
+score for both markets, while logistic direction forecasts perform worse than
+the training-prevalence baseline on Brier score.** The fixed variance instead
+has the lowest absolute error against squared price changes. A model ranking
+depends on the quantity and loss being evaluated; these results do not establish
+profitable trading or calibrated financial risk limits.
+
 Variance and direction require separate comparisons. Negative values in the
 chart mean improvement over that task's simple baseline; the two panels have
 different units and must not be compared in magnitude. Every setting was fixed
@@ -44,6 +51,12 @@ tail-risk limits or measured business savings. The [direction gap breakdown](dir
 also separates short observation gaps from longer ones.
 Historical data are revised and
 reporting latency is unknown.
+
+GARCH's QLIKE is only slightly lower than the simple EWMA in both markets. That
+small difference does not, by itself, justify the additional fitting machinery.
+Absolute error against squared changes rewards their conditional median; QLIKE
+targets conditional variance under the stated zero-mean change model. Neither
+criterion is a universal measure of usefulness.
 
 ## Source access is part of reproducibility
 

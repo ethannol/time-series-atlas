@@ -68,3 +68,12 @@ that supporting control to the outstanding work. Its design includes a sampling
 pattern that makes the true frequency ambiguous, so a good-looking peak cannot
 be mistaken for proof that a method recovered the truth. No spectral comparison
 has run yet.
+
+## 2026-10-30 — Complete the second known-truth control
+
+The full investigation also includes a [sampling and frequency experiment](../spectral/STORY.md).
+A general review caught its omission from the first release. We restored it,
+reviewed its alias-aware design before execution, and retained all generated
+observations and spectra. The two controls test different assumptions: persistent
+noise can break an alarm threshold, while a regular sampling schedule can make
+different frequencies indistinguishable. Neither is a field-performance claim.

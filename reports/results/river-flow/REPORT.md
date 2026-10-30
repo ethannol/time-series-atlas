@@ -1,9 +1,14 @@
 # Does high-flow prediction provide warning before a new rise?
 
-High-day recall and advance indications of a new rise are different questions.
-The comparison below separates them, and pairs recall with false-positive rates.
-The cutoffs targeted about 10% false-positive calibration days; that is not a
-guarantee about the later test period.
+Adding past weather improved next-day high-flow recall only slightly (0.915
+versus 0.906 for flow alone). Before new rises, it alerted on 496 of 822 eligible
+onsets versus 467 for flow alone, with 830 wholly false alert episodes versus
+653. At a three-day date offset, weather added just one detected onset
+(166 versus 165 of 696). Continued high flow is easier to recognize than a new rise.
+
+Test false-positive rates were about 14–15%, above the roughly 10% targeted in
+calibration. That target did not guarantee the later alert burden. The comparison
+below separates high-day recall from new-onset indications and shows their false-alert burden.
 
 ![High days versus new onsets](flow-and-onsets.png)
 
@@ -55,6 +60,10 @@ rivers or an ungauged-catchment test. Estimated A:e and missing flow are exclude
 and [split coverage](split-audit.csv) stays visible. [Gauge scores](gauge-scores.csv)
 and [area/climate groups](group-scores.csv) expose heterogeneity. Climate groups
 use training-period cold precipitation only, not full-record hydrological signatures.
+At date offset +3, weather-model recall was 0.858 in the ten higher-cold-fraction
+gauges and 0.528 in the seven lower-group gauges; false-positive rates were
+0.165 and 0.120. These small, selected groups describe heterogeneity. They do
+not establish why catchments differ or a causal effect of cold precipitation.
 
 Training ends in 1999 and calibration in 2004. Source review and a later design
 check caught a boundary hazard: early three-day forecasts could otherwise use
