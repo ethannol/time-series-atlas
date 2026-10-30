@@ -1,0 +1,20 @@
+{
+  "recorded_at": "2026-10-30T22:50:27.689139+00:00",
+  "scope": "Complete Time Series Atlas investigation set, its profile section and portfolio deployment only",
+  "live_pr_inventory_before_publication": {
+    "ethannol/time-series-atlas": [],
+    "ethannol/ethannol": [],
+    "ethannol/portfolio": []
+  },
+  "included_prs": [
+    "https://github.com/ethannol/time-series-atlas/pull/2",
+    "https://github.com/ethannol/ethannol/pull/3"
+  ],
+  "excluded_prs": [],
+  "merge_strategy": "Independent PRs against main; use merge commits to preserve recorded analysis/protocol revisions",
+  "portfolio_change": "Existing main manifest/workflow already includes Atlas; rebuild/deploy after Atlas merge; no edits to original dirty portfolio checkout",
+  "profile_base": "e954360e8e820a7edcfa2c086359878be1952e7c",
+  "portfolio_base": "058bd54604a1458ae8f724540bdd88133fe4674a",
+  "atlas_base": "bd85e01cb3e3e9af6be5a3a093a70a71e359ef6e",
+  "publication_status": "Final PR checks and rollout pending"
+}

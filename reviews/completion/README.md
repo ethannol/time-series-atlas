@@ -70,9 +70,15 @@ perspectives are also retained:
 - The nine sequential one-thread run units took 66.35 seconds in that replay,
   excluding installation/acquisition, with process-lifetime peak RSS about
   730 MiB. This is one machine measurement, not a performance guarantee.
-- Strict local portfolio build passed. Profile copy, final GitHub checks and
-  deployment remain publication gates. The general critic must audit the final
-  live state before an overall completion claim.
+- [Strict local portfolio integration](../../reports/verification/completion-integration-local.json):
+  26 portfolio tests passed; all nine report links, 154 pinned Atlas file paths,
+  ten local assets and three evidence-backed headlines verified. Scientific figures
+  were visually reviewed; no browser screenshot was obtained because that host
+  was unavailable.
+- [Integration scope and PR inventory](../../reports/verification/completion-integration-scope.json):
+  Atlas PR2 and profile PR3, independent main targets; no unrelated open PRs.
+  Final GitHub checks and deployment remain gates. The general critic must audit
+  the final live state before an overall completion claim.
 
 The [publication preflight](publication-preflight-general.md) identified the
 full-scope obligations. [Copy review](publication-copy-general.md) caught actual

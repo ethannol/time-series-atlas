@@ -149,3 +149,71 @@ e931e6a747f57e53deb9aa16042f2d7f1432abb265919517bf2dfebbe5bebc18  scripts/valida
 78ea206f789989dd6dded86a0534f46416eaac992d16b7bf8052648f3f64f6d8  ../portfolio-atlas-complete-20261030/manifest.json
 244012b3f3bba5fd5ae7fce6d0fa5c8160a35a62076e605f43dfb89129a2629c  ../portfolio-atlas-complete-20261030/.github/workflows/pages.yml
 ```
+
+## 2026-10-30 — Completed clean-checkout reproduction verification
+
+**Reproduction gate: pass.** This closes the reproduction condition above;
+final-revision CI, merge and live portfolio/profile verification remain separate
+publication conditions. The reviewer did not rerun any model or test suite.
+
+The completed replay used checkout
+`0bafb857639ab5df600aa187d4bec5354fba3944` in the separate
+`time-series-atlas-repro-20261030` worktree. Its recorded start was
+`2026-10-30T22:43:57.762531+00:00`; final comparison was recorded at
+`2026-10-30T22:45:25.197914+00:00`. The start record reports no raw downloads,
+private inputs or source changes before execution. Those start-state assertions
+were recorded by the executing agent, not directly observed by this reviewer.
+The reviewer checked the resulting actual worktree, source history, acquisition
+files, output files and complete replay run records independently.
+
+All **68 public outputs** match byte-for-byte in four places: their committed
+reference at `0bafb857`, the actual replay worktree, the retained main-workspace
+artifact and the comparison record. The comparison includes all outputs declared
+by all nine replay run records, including reports and images, not only metrics.
+New execution metadata is retained separately rather than replacing the original
+historical run provenance. Each archived replay record is exactly equal to its
+actual replay `run.json`; each carries the intended commit, empty source-patch
+hash, stable-source flag and ordered start/end timestamps.
+
+The reviewer independently verified all **344 replay source-hash entries**
+against both the corresponding Git blobs and actual checkout files, and all
+**13 declared input entries** against present bytes and sizes. Current source,
+tests, scripts, designs, dependency lock and manifests are clean in the replay
+worktree. Its own environment records CPython 3.12.0 and uv 0.13.6. The replay's
+actual `checks.json` equals the archived test record: **41 passed, 41 warnings**,
+exit zero and stable source. All 34 check-source hashes match the checkout and
+recorded commit. The known deprecation warnings remain visible.
+
+Oil was explicitly acquired from the official EIA workbook URLs in the frozen
+manifest. The actual downloaded `wti.xls` and `brent.xls` hashes match the
+acquisition record and original manifest; normalized historical input hash
+`d138ce02b7d858fd579c1570a65db3e7f23a900f2728b2e866a96496aa273cd9`
+also matches. Both regenerated immutable private outcome files match their
+content-addressed names and the public metrics' recorded hashes. Raw and private
+paths are ignored and absent from tracked files. Only these two oil workbooks
+are present under the replay's raw directory; other studies reproduced from
+their redistributable pinned analysis snapshots. This is complete analysis
+reproduction, not a new seven-source raw-intake replay or a promise that revised
+upstream oil history will remain reproducible indefinitely.
+
+The ECG replay includes all five full folds, 172,000 training-membership rows,
+100,662 predictions per model across all 43 people, and 100 forest trees per
+fold. Its model-audit, membership and prediction bytes all match the original
+full-run references. The execution path unconditionally fits these models;
+there is no result-cache shortcut. This closes the prior results review's
+specific limitation that the reviewer rescored stored forest predictions but
+did not independently refit the forest. It does not turn agent agreement into
+external scientific validation.
+
+Recorded study runtimes sum to **66.35 seconds**. The highest recorded
+process-lifetime RSS is **765,018,112 bytes (729.58 MiB)**. That memory measure
+is cumulative for the sequential process, not separate attributable per-study
+memory. Exact byte equality is established for this locked local runtime;
+cross-platform bitwise identity is not claimed.
+
+Inspected reproduction artifact hashes:
+
+```text
+72c3035e8ef6f9662b556cbfa63ef31a2f75aa7132b2052b60556dfb45300a29  reports/verification/completion-reproduction.json
+135bd04a0076313a0e4736a4bd6362ea8d3ad2263243b36e973910f5126cd607  reports/verification/completion-reproduction-runs.json
+```
