@@ -75,11 +75,14 @@ def run():
     table=pd.DataFrame(metrics).set_index('model').loc[MODELS]
     fig,axes=plt.subplots(1,2,figsize=(11,4.5))
     colors=['#6b7280','#9ca3af','#2563eb','#0f766e','#b45309']
-    axes[0].barh(MODELS,table.macro_scaled_mae,color=colors)
+    labels=['Zero','Last week','28-day mean','Croston-SBA','TSB']
+    bars=axes[0].barh(labels,table.macro_scaled_mae,color=colors)
+    axes[0].bar_label(bars,fmt='%.3f',padding=3);axes[0].set_xlim(0,float(table.macro_scaled_mae.max())*1.14)
     axes[0].set_xlabel('Weekly MAE / mean training-week sales (lower is better)')
     axes[0].set_title('Weekly error, equally weighted products')
     bias=(table.forecast_total_units/table.observed_total_units-1)*100
-    axes[1].barh(MODELS,bias,color=colors);axes[1].axvline(0,color='black',lw=.8)
+    bars=axes[1].barh(labels,bias,color=colors);axes[1].axvline(0,color='black',lw=.8)
+    axes[1].bar_label(bars,fmt='%.1f%%',padding=3);axes[1].set_xlim(min(-112,float(bias.min())*1.15),max(12,float(bias.max())*1.5))
     axes[1].set_xlabel('Total forecast minus recorded sales (%)');axes[1].set_title('Underforecasting remains visible')
     fig.suptitle('24 established intermittent products • 48 complete test weeks')
     fig.tight_layout();fig.savefig(out/'weekly-sales.png');plt.close(fig)
@@ -92,6 +95,18 @@ For this fixed panel, **{best['model']} has the lowest normalized weekly absolut
 error ({best['macro_scaled_mae']:.3f})**. The total-sales comparison below shows
 whether a low-error forecast still systematically understates recorded sales.
 Neither criterion alone establishes an inventory decision or unmet demand.
+
+The ranking changes when errors are counted in raw units: TSB has the lowest
+unit MAE ({next(r for r in metrics if r['model']=='tsb')['unit_mae']:.2f}), compared
+with zero's {next(r for r in metrics if r['model']=='zero')['unit_mae']:.2f}.
+The normalized score weights products equally relative to their past sales;
+raw-unit error gives large sellers more influence. Neither is a universal winner.
+
+Absolute error rewards a median forecast, while rate-based methods target
+average sales. In the test panel, {(predictions[predictions.model=='zero'].observed==0).sum()}
+of {len(predictions[predictions.model=='zero'])} product-weeks have zero recorded
+sales. That helps explain why a zero forecast can score well. The metric and
+the intended decision must be considered together.
 
 {markdown_table(headers,rows)}
 
@@ -106,6 +121,10 @@ before test scoring. The mean training-week denominator gives small products a
 voice; the second panel instead counts units across products and is dominated by
 larger sellers. Those answer different questions. See [per-product](per-product.csv)
 and [quarterly](per-quarter.csv) evidence before generalizing a pooled ranking.
+
+`rolling_28` averages the last 28 days. Croston-SBA smooths sale size and the
+interval between sales, with a bias adjustment. TSB smooths sale size and the
+daily probability of a sale, so its forecast decays during prolonged inactivity.
 
 The workbook repeats 22,523 transaction rows across its annual sheets. Independent
 source review verified exact duplicate multiplicities; using the later sheet at

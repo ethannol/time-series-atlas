@@ -24,6 +24,7 @@ def source_snapshot(study):
     paths=sorted((ROOT/'src').rglob('*.py'))+sorted((ROOT/'tests').rglob('*.py'))+sorted((ROOT/'scripts').glob('*.py'))
     paths += [ROOT/'pyproject.toml',ROOT/'uv.lock',ROOT/'studies'/study/'DESIGN.md',ROOT/'data/manifest.json',ROOT/'reports/intake/audit.json']
     paths += [p for p in [ROOT/'data/manifests'/f'{study}.json',ROOT/'reports/intake'/f'{study}.json'] if p.exists()]
+    paths += sorted((ROOT/'studies'/study).glob('*.json'))
     return {str(p.relative_to(ROOT)):digest(p) for p in paths}
 
 
@@ -32,6 +33,7 @@ def start_run(study):
     # Full runs start from committed source. Reviews and result-only edits may coexist.
     source_paths=['src','tests','scripts','pyproject.toml','uv.lock',f'studies/{study}/DESIGN.md','data/manifest.json','reports/intake/audit.json']
     source_paths += [f'data/manifests/{study}.json',f'reports/intake/{study}.json']
+    source_paths += [str(p.relative_to(ROOT)) for p in sorted((ROOT/'studies'/study).glob('*.json'))]
     if git('status','--porcelain','--',*source_paths):
         raise ValueError('Commit source/design/configuration before a full run')
     temp_parent=ROOT/'reports/runs';temp_parent.mkdir(parents=True,exist_ok=True)

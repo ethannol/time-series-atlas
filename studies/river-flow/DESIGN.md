@@ -45,6 +45,14 @@ at or before its origin d. Define high flow as strictly greater than the trainin
 90th percentile of approved daily flow, pandas linear quantile. Train separate
 models per gauge and horizon, no test-based tuning or refitting.
 
+Pre-run boundary clarification: calibration also requires origin d>=1999-12-31,
+and test also requires origin d>=2004-12-31. Thus each fitted model and alert
+cutoff uses outcomes already known by the issue time. At h=3 this excludes the
+first two target dates of each later period. Target-date splitting alone would
+otherwise let training/calibration outcomes occur after an early forecast origin.
+This was corrected before implementation or full scoring, not after inspecting
+performance. Retain those boundary exclusions in the split audit.
+
 Use three score models: persistence score = latest flow / training threshold;
 logistic flow-only; logistic flow+weather. Flow features: log1p latest flow,
 log1p flow at d-1 and d-2, log1p mean of last7 days, and annual sine/cosine at d.

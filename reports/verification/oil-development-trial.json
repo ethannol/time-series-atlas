@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-30T21:54:06.102235+00:00",
+  "train_end": "2003-12-31",
+  "trial_period": [
+    "2004-01-01",
+    "2004-01-31"
+  ],
+  "variance_rows": 32,
+  "direction_rows": 16,
+  "finite_positive_variances": true,
+  "valid_probabilities": true,
+  "accuracy_scores_computed": false,
+  "garch_successful_starts": 3,
+  "source_sha256": "d3ab40ec71bae9cb94ac30829ae2dece45a124899f611cc8794663efb5456bf5",
+  "repeated_because": "Pre-run review corrected variance-floor units and private-evidence preservation; added direction gap summaries"
+}
