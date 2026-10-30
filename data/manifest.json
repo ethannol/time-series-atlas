@@ -1,0 +1,19 @@
+{
+  "recorded_at": "2026-10-30T16:16:20.171283+00:00",
+  "baseline": "d7218096c7920e30da3ad722a3d1bffbede8fa4e",
+  "fetch_time": "2026-10-30T16:14:39Z",
+  "files": {
+    "co2_mm_mlo.txt": {
+      "url": "https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_mm_mlo.txt",
+      "sha256": "0ce4e7749217b4af2cca8e0bdf263856ad59b0a2946d4e98c7b22ccfbff21cad",
+      "bytes": 59678,
+      "download_completed_at_from_file_mtime": "2026-10-30T16:15:00.902166+00:00"
+    },
+    "electricity.zip": {
+      "url": "https://archive.ics.uci.edu/static/public/321/electricityloaddiagrams20112014.zip",
+      "sha256": "f6c4d0e0df12ecdb9ea008dd6eef3518adb52c559d04a9bac2e1b81dcfc8d4e1",
+      "bytes": 261335609,
+      "download_completed_at_from_file_mtime": "2026-10-30T16:15:44.464256+00:00"
+    }
+  }
+}
