@@ -128,3 +128,36 @@ fc2a946b768c3db213375ba2dcf1820eb671d7f60afb79175d97677472f7503f  studies/co2/ST
 bac79f08d741a51b6f177cd4469d282fcf38fc173421e605dd25067251626b00  studies/electricity/STORY.md
 c25add0a5944cbf16da3bcc19bff7d744eddc8b9aa7512868c10d5d1060872d5  studies/synthetic/STORY.md
 ```
+
+## 2026-10-30 — Final regenerated-output and integration verification
+
+I inspected the final regenerated output recorded at commit `d20c0ccf2d458986ad99afbd7b01569b6cd86fbd`, whose run evidence identifies source `b607f9f410dec080388b84163f6ca073c6630607` and the unchanged protocol commit `b374e9baa39f021481aefaefba958543534c916f`. I also reviewed `portfolio.json` and the proposed GitHub-profile README for claims about this project. No model was fitted by this reviewer.
+
+**Final results verdict: approved. Final statistical publication verdict: approved, including the inspected portfolio/profile integration claims. No statistical blocker remains.**
+
+I compared the regenerated metric files and saved predictions/replicate outcomes directly with their Git bytes at `4a3022c` (the archived results from source `5953a7f`). They are byte-for-byte identical for all three studies. Electricity model parameters and the CO₂ paired-error-difference file are also identical. Every output hash in each new run manifest matches the final file. Thus the previously independently recomputed results remain unchanged after the presentation/evidence update.
+
+The new electricity customer-comparison table has one row for each of the 24 customers. I independently checked its local error, pooled error, and signed difference against the unchanged metrics. I viewed the regenerated figure: customer IDs, signed labels, negative/positive directions, and aggregate comparison agree with that table. It makes the tiny improvements and larger deteriorations visible without changing the comparison population or scoring.
+
+P-STAT-01 is resolved: current study summaries describe the actual setup, and the README distinguishes the first-release snapshot basis from later datasets' pending intake. P-STAT-02 is resolved: the electricity story/report distinguish preserved overall ranking from the changed identity of one small-gain customer. P-STAT-03 is addressed by the verified labelled difference view and exact comparison table.
+
+The reports' plain-language conclusions match the unchanged results. Synthetic delay now has explicit sample units, and its conditional nature remains visible. The portfolio card and GitHub-profile text describe the selected electricity panel, bounded CO₂ comparison, and synthetic detection stress test without claiming universal rankings, realized savings, clinical benefit, completion of planned datasets, or human validation of agent work. Ledger-backed headline quantities are consistent with the reviewed metrics; portfolio-builder rendering and publication mechanics are outside this statistical check.
+
+Relevant final artifact hashes (unchanged numerical artifacts retain the hashes recorded earlier):
+
+```text
+0529ea280461ce3e002cb89abc27f6d32e1d794aaaf5302791621b4db927f682  reports/results/co2/REPORT.md
+c51c73977e13304a8106e37f5afd419ebf40bf940561e9e6cce47d2f72d63826  reports/results/co2/run.json
+34ddc6041e119e23be8a2b31d60121e1fab1c57a11036ca4cf01d29a4fbadf1f  reports/results/electricity/REPORT.md
+114034594c046b771f5d9b3386e0ce6315332551103096b84cc4aa35023f979b  reports/results/electricity/customer-comparison.csv.gz
+c4369754e5402e7f18b8592b27c7b22d5d5be5eedf81bd552d4439028e4454d2  reports/results/electricity/pooling-comparison.png
+43a55431f786690ecd605ea71cd4d42e7a4aff821a38168b56672853405f0204  reports/results/electricity/run.json
+ec3778a38a65578015cc44168de506c926b866d4e078cc4eb2c9d5e303a16476  reports/results/synthetic/REPORT.md
+c77320ad4f5cd842afce8991f2802a85a95fc981b6dcf0b015df4fc2594657b1  reports/results/synthetic/run.json
+ab27a5138fb5e9e969019f69a775f1de2b62e9b6cef19f24b0219cf83a2bb9f3  README.md
+5ac08ff58dd4bc552693ecd50ad8d11226995fbf6c0a7f9d295fd9f6035635a3  portfolio.json
+d9578ca794e903c3a74553446c18450f0c7930a8fe3e34653f7144f3cd934b3b  ../github-profile-tsatlas-20261030/README.md
+fc2a946b768c3db213375ba2dcf1820eb671d7f60afb79175d97677472f7503f  studies/co2/STORY.md
+bac79f08d741a51b6f177cd4469d282fcf38fc173421e605dd25067251626b00  studies/electricity/STORY.md
+c25add0a5944cbf16da3bcc19bff7d744eddc8b9aa7512868c10d5d1060872d5  studies/synthetic/STORY.md
+```

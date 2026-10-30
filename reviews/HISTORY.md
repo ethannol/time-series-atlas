@@ -39,3 +39,35 @@ agent recording their verdicts. The reports contain the inspected file hashes.
   a heading-link correction only. R01–R16 remain `design amended` and unverified
   as analytical remedies. Registry/status updates record these verdicts; they do
   not alter the inspected study text or protocol.
+
+## 2026-10-30 — Scoped implementation and empirical evidence
+
+R01–R03, R07, R12–R13, and R15: `design amended` → verified for the first-release
+scope, with limitations preserved and remaining study-specific work pending.
+R04–R06, R08–R11, and R14 remain design-only. R16 claims are subject to the final
+publication review, not presumed correct because scripts emitted numbers.
+
+Evidence: [source/design/implementation/results reviewers](first-release/README.md),
+[recorded tests](../reports/verification/checks.json), and
+[fresh-checkout reproduction](../reports/verification/reproduction-final.json).
+The first-release scopes are CO₂ forecasting, electricity forecasting, and the
+synthetic detection control, not all planned methods on those datasets.
+
+New observed issues and their resolutions are preserved in their original reports:
+source metadata/DST discrepancies, invalid-input scoring defects, source-stability
+evidence gaps, and a missing-record validation defect. No known result changed
+because of those defects: scoring fixes preceded full runs, and the publication
+changes left predictions and metrics unchanged.
+
+## 2026-10-30 — Local publication and integration review complete
+
+R16: first-release claim scope → independently verified by general/statistical
+review, with wider planned-study claims still pending. This includes the exact
+reports, figures, README, process stories, portfolio card, and profile addition.
+
+RI04: stale portfolio revision links identified → rebuilt after committed outputs
+→ independently verified locally. The final metadata commit is followed by another
+strict build before rollout. No analysis computation changed for this correction.
+
+[Publication verdicts](first-release/README.md#local-publication-gate) retain exact
+scopes and hashes. Actual GitHub checks and deployment are separate rollout gates.

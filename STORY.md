@@ -106,3 +106,18 @@ became persistent. These are different lessons, rather than one leaderboard.
 The next checkpoint challenges these interpretations against the saved predictions
 and outcomes. Process stories, original critiques, and source evidence remain
 visible beside the results.
+
+## 2026-10-30 — Check whether another checkout gets the same answer
+
+A separate checkout, without downloaded raw archives, reproduced every published
+result file from the committed analysis snapshots. Rebuilding from the pinned
+original sources also reproduced the snapshots. The reviewers recalculated the
+headline metrics and asked for a clearer plot so tiny customer gains would not
+look more important than they were.
+
+Publication review caught a different kind of mistake: an early portfolio build
+linked to a commit that did not yet contain a new result table. Rebuilding after
+committing the outputs corrected the links. Reproducibility, clear communication,
+and working evidence links are all part of delivering the analysis.
+
+[Final review and reproduction evidence](reviews/first-release/README.md#local-publication-gate).

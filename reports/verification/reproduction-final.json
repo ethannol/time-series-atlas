@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-10-30T16:42:17.091684+00:00",
+  "checkout_commit": "d20c0ccf2d458986ad99afbd7b01569b6cd86fbd",
+  "command": "uv sync --locked --python 3.12; OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 uv run atlas all",
+  "raw_downloads_present": false,
+  "comparison": "exact SHA-256 equality of all regenerated outputs except execution metadata",
+  "comparisons": {
+    "co2": {
+      "reports/results/co2/REPORT.md": true,
+      "reports/results/co2/forecast-comparison.png": true,
+      "reports/results/co2/metrics.json": true,
+      "reports/results/co2/paired-error-differences.csv.gz": true,
+      "reports/results/co2/predictions.csv.gz": true
+    },
+    "electricity": {
+      "reports/results/electricity/REPORT.md": true,
+      "reports/results/electricity/customer-comparison.csv.gz": true,
+      "reports/results/electricity/metrics.json": true,
+      "reports/results/electricity/parameters.json": true,
+      "reports/results/electricity/pooling-comparison.png": true,
+      "reports/results/electricity/predictions.csv.gz": true
+    },
+    "synthetic": {
+      "reports/results/synthetic/REPORT.md": true,
+      "reports/results/synthetic/detection-comparison.png": true,
+      "reports/results/synthetic/metrics.json": true,
+      "reports/results/synthetic/replicates.csv.gz": true
+    }
+  },
+  "all_match": true
+}

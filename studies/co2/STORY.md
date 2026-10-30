@@ -4,7 +4,7 @@
 
 **Data:** [NOAA Mauna Loa CO₂ monthly series](https://gml.noaa.gov/ccgg/trends/data.html); monthly records from 1958 onward, with the downloaded snapshot pinned and the study ending in December 2025.
 
-**Status (2026-10-30):** first run executed; result/publication review in progress.
+**Status (2026-10-30):** executed, independently reviewed, and reproduced from a fresh checkout.
 The dated entries distinguish earlier plans from later measurements. Ethan set the direction and requested the critical
 review; agents proposed and critiqued the design described below.
 

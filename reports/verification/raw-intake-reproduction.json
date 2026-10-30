@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-10-30T16:44:45.758995+00:00",
+  "command": "atlas intake from pinned local raw files",
+  "before": {
+    "reports/intake/audit.json": "2b44293c453ecd008e8c7cf76e87a3f38a592afdd14870cb54b408309b020198",
+    "data/snapshots/co2_mm_mlo.txt": "0ce4e7749217b4af2cca8e0bdf263856ad59b0a2946d4e98c7b22ccfbff21cad",
+    "data/snapshots/electricity-hourly-panel.csv.gz": "2283fe9e8c2fdcdf4c9544267c34dcf2671efd8ebabc754201b87fb7f414d6fc"
+  },
+  "after": {
+    "reports/intake/audit.json": "2b44293c453ecd008e8c7cf76e87a3f38a592afdd14870cb54b408309b020198",
+    "data/snapshots/co2_mm_mlo.txt": "0ce4e7749217b4af2cca8e0bdf263856ad59b0a2946d4e98c7b22ccfbff21cad",
+    "data/snapshots/electricity-hourly-panel.csv.gz": "2283fe9e8c2fdcdf4c9544267c34dcf2671efd8ebabc754201b87fb7f414d6fc"
+  },
+  "all_match": true
+}

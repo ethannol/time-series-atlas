@@ -73,3 +73,31 @@ records this separately from merely checking a generated manifest against itself
 These are presentation/verification changes after seeing results, not changes to
 models, split choices, thresholds, or scoring. A committed refresh run will update
 source/output evidence, followed by reproduction and final publication checks.
+
+## Local publication gate
+
+All three perspectives approve the first-release scope:
+[general](results/general.md), [statistical](results/statistical.md), and
+[implementation](results/implementation.md). Headline metrics were independently
+recomputed from saved predictions. The refreshed presentation preserves the
+original model predictions and metrics.
+
+[Final fresh-checkout reproduction](../../reports/verification/reproduction-final.json)
+matched all fifteen result outputs exactly on this machine;
+[raw-intake regeneration](../../reports/verification/raw-intake-reproduction.json)
+also reproduced both analysis snapshots and their audit. This is not a promise
+of bitwise identity on every platform. Offline checks now contain eighteen tests.
+
+RI04, the stale portfolio build, was corrected by rebuilding after the output
+commit; the reviewer checked every pinned Atlas link against Git. Integration uses
+isolated worktrees and leaves Ethan's dirty portfolio checkout unchanged.
+
+Rollout order: Atlas to main first, then independent portfolio/profile PRs. All
+three repositories allow merge commits; Atlas retains the design-before-fitting
+commit history. At scope reconciliation there were no existing open PRs in these
+repositories. Only this task's three new PRs are in scope; no drafts or unrelated
+work are included. CI and deployment are followed to completion after publishing.
+
+Integration baselines fetched 2026-10-30: portfolio
+`e7235937fb91177b56712a7f8cfa52d16757d566` at 16:39:04 UTC; profile
+`1434b98c8a78f2a2be5ae3dfdcb2e6d14005102b` at 16:39:05 UTC.

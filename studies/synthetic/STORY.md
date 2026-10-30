@@ -4,7 +4,7 @@
 
 **Data:** Purpose-built generated series, with generating rules and random seeds frozen before execution; no downloaded observational dataset.
 
-**Status (2026-10-30):** first run executed; result/publication review in progress.
+**Status (2026-10-30):** executed, independently reviewed, and reproduced from a fresh checkout.
 The dated entries distinguish earlier plans from later measurements. Ethan set the direction and requested the critical
 review; agents proposed and critiqued the design described below.
 

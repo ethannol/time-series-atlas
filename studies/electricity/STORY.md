@@ -4,7 +4,7 @@
 
 **Data:** [UCI Electricity Load Diagrams 2011–2014](https://archive.ics.uci.edu/dataset/321/electricityloaddiagrams20112014); 15-minute readings for 370 customers, aggregated to hourly mean power under the documented nominal-clock convention.
 
-**Status (2026-10-30):** first run executed; result/publication review in progress.
+**Status (2026-10-30):** executed, independently reviewed, and reproduced from a fresh checkout.
 The dated entries distinguish earlier plans from later measurements. Ethan set the direction and requested the critical
 review; agents proposed and critiqued the design described below.
 

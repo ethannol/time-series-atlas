@@ -1,7 +1,8 @@
 # Implementation plan
 
 Status (2026-10-30): sources acquired, first three designs frozen, implementation
-reviewed, and first full runs executed. Result/publication review is in progress.
+reviewed, and first full runs executed and reproduced. Local results/publication
+reviews passed; GitHub CI and deployment are tracked during rollout.
 The remaining five real-data studies are planned.
 
 ## Purpose and audience
