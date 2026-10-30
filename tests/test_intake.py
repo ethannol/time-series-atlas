@@ -25,7 +25,7 @@ def test_quality_flags_do_not_confuse_scripps_with_noaa(tmp_path):
 
 def test_cohort_cannot_use_future_values():
     idx=pd.date_range('2011-01-01','2014-12-31 23:00',freq='h')
-    frame=pd.DataFrame(np.broadcast_to(np.arange(1,31),(len(idx),30)),index=idx)
+    frame=pd.DataFrame(np.broadcast_to(np.arange(1.,31.),(len(idx),30)).copy(),index=idx)
     before=cohort(frame)
     frame.loc['2013':]=np.random.default_rng(5).normal(size=frame.loc['2013':].shape)
     assert cohort(frame)==before

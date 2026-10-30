@@ -30,3 +30,29 @@ Future entries will summarize actual source intake, benchmarks, implementation
 reviews, results, and revisions in plain language. Detailed evidence stays linked
 from the [review register](../../reviews/README.md).
 
+
+## 2026-10-30 — Find a mismatch between description and readings
+
+We downloaded the full archive. The provider says customers have zeros during a
+spring clock-change window, but the reviewers found customers with nonzero
+readings there. We therefore flag transition dates by calendar, not by looking
+for every customer to become zero. The hourly clock convention is documented as
+an assumption, rather than pretending to recover exact physical-time readings.
+
+## 2026-10-30 — Make the comparison fair and bounded
+
+The panel uses 24 established customers selected from earlier data across a range
+of consumption levels. Review required the separate and shared models to use the
+same penalty per observation and the same handling of impossible negative
+forecasts. The contract was frozen before evaluation.
+
+## 2026-10-30 — Catch a scoring defect before the full run
+
+A critic deliberately supplied a missing prediction. The scoring code could
+silently drop it from one average while still reporting the full observation
+count. That was a real implementation defect, although it had not yet affected a
+study result. Missing, duplicate, or mismatched prediction records now fail
+explicitly, and tests preserve that behavior.
+
+[Source/design evidence](../../reviews/first-release/README.md) ·
+[Scoring review](../../reviews/first-release/implementation/statistical.md).

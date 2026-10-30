@@ -1,0 +1,28 @@
+{
+  "source_stable_during_checks": true,
+  "checked_at": "2026-10-30T16:30:21.713338+00:00",
+  "command": "uv run python scripts/check.py (runs python -m pytest -q)",
+  "source_commit": "b374e9baa39f021481aefaefba958543534c916f",
+  "source_files": {
+    "pyproject.toml": "0de9017d9a999123fd7f57fdece2afc3a47ca3f2584847e89abdc453a88a0691",
+    "scripts/check.py": "4ddebc8f09003170fc9902c9727e011b861d1776b19b8c627986d89f1b6f011c",
+    "scripts/validate_docs.py": "1270ddf6a7896224627afb78447e33528032abfb2c53b096d038027e4502dd9f",
+    "scripts/validate_evidence.py": "bc10ccbb5bb0e031f3964c216752b427518327f4cd6444760dcdd0a5ae12b756",
+    "src/tsatlas/__init__.py": "89f11ba0aa45c18d94a0ca870de8484452e2fa55cfcacbadf6a9f70a34c54ca9",
+    "src/tsatlas/cli.py": "2fed5022d7d69fb0878b3b932620883f98aab1edf581d91b4f20979ffeb34cd3",
+    "src/tsatlas/co2.py": "07ca58309b36a5dc578667397750e0721b7358f3a5e1a2bee7fa9b4c8c2b27a8",
+    "src/tsatlas/common.py": "1bdc4e6ce523986d004678f7ed876fae57a258f6ae9eebdace225e5aa6ea3c3a",
+    "src/tsatlas/data.py": "20c2b1b2b1be74dade626c8b54d18f3db5691ec3e82b94416fa4bd73d65a1fd5",
+    "src/tsatlas/electricity.py": "32f7680163364a48010193d6957915a797df709541401effed394704064ad320",
+    "src/tsatlas/metrics.py": "f0029cfbcee9a19df28294b40e39627fda31d7d5f4e5fc4b52e7068083c24931",
+    "src/tsatlas/synthetic.py": "717177942041ff2cd6be3ef65edb4094f69b74de1199bffd933162c6ba5bc763",
+    "tests/test_forecasts.py": "bfdb1be484fbbda2939cebf152711041b89030e1ba56b415756a458890c4b71d",
+    "tests/test_intake.py": "372ba374e5b26d9baefe1955a9568b6613cd68eb9c273c47f866f1077f147d08",
+    "tests/test_metrics.py": "e3c7a398b72e28aa1175eaa16e45702a73828205fbe402952320070c39fb88c5",
+    "uv.lock": "54c0cd902e55158735fba20145a5a4d60269ba31f020099e39aa378a0c4061ac"
+  },
+  "exit_code": 0,
+  "elapsed_seconds": 1.8696364579955116,
+  "stdout": "................                                                         [100%]\n=============================== warnings summary ===============================\ntests/test_forecasts.py::test_monthly_training_cannot_see_future_and_shared_model_handles_clipping\ntests/test_forecasts.py::test_monthly_training_cannot_see_future_and_shared_model_handles_clipping\n  /Users/ethannol/src/side-projects/time-series-atlas/src/tsatlas/electricity.py:38: DeprecationWarning: The 'generic' unit for NumPy timedelta is deprecated, and will raise an error in the future. This includes implicit conversion of bare integers (e.g. `+ 1`). Please use a specific unit instead.\n    train_mask=(panel.index>=month-pd.Timedelta(days=365))&(panel.index<month)&safe_hours(panel.index)\n\ntests/test_forecasts.py::test_monthly_training_cannot_see_future_and_shared_model_handles_clipping\ntests/test_forecasts.py::test_monthly_training_cannot_see_future_and_shared_model_handles_clipping\ntests/test_forecasts.py::test_monthly_training_cannot_see_future_and_shared_model_handles_clipping\ntests/test_forecasts.py::test_monthly_training_cannot_see_future_and_shared_model_handles_clipping\ntests/test_forecasts.py::test_monthly_training_cannot_see_future_and_shared_model_handles_clipping\ntests/test_forecasts.py::test_monthly_training_cannot_see_future_and_shared_model_handles_clipping\ntests/test_forecasts.py::test_dst_exclusion_covers_target_plus_longest_lag\n  /Users/ethannol/src/side-projects/time-series-atlas/src/tsatlas/electricity.py:13: DeprecationWarning: The 'generic' unit for NumPy timedelta is deprecated, and will raise an error in the future. This includes implicit conversion of bare integers (e.g. `+ 1`). Please use a specific unit instead.\n    days=pd.date_range(index.min().normalize()-pd.Timedelta(days=14),index.max().normalize(),freq='D')\n\ntests/test_intake.py::test_end_labels_keep_last_midnight_in_previous_day\ntests/test_intake.py::test_end_labels_keep_last_midnight_in_previous_day\n  /Users/ethannol/src/side-projects/time-series-atlas/src/tsatlas/data.py:76: DeprecationWarning: The 'generic' unit for NumPy timedelta is deprecated, and will raise an error in the future. This includes implicit conversion of bare integers (e.g. `+ 1`). Please use a specific unit instead.\n    frame.index = pd.to_datetime(frame.index) - pd.Timedelta(minutes=15)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n16 passed, 11 warnings in 1.54s\n",
+  "stderr": ""
+}

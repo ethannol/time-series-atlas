@@ -36,3 +36,21 @@ implementation trials and full runs. This does not verify numerical behavior.
 
 Pending. No full model run or scientific conclusion is authorized by a design-only
 review. Independent implementation review follows bounded tests/trials.
+
+## 2026-10-30 — Pre-run implementation gate completed
+
+[Statistical implementation review](implementation/statistical.md) reproduced two
+invalid-input scoring defects: NaNs could be omitted while retaining the count,
+and vector shapes could broadcast instead of pairing. Both now raise explicit
+errors, with independently verified regression tests. The original finding and
+resolution remain in the review.
+
+[Implementation review](implementation/implementation.md) required start/end source
+hash checks, committed-source full runs, staged result promotion, UTC timestamps,
+and honest month/peak-memory labels. These were implemented and verified.
+The final check artifact records 16 passing tests, including bounded future-data
+perturbation checks. A two-customer January 2013 trial exercised the implementation;
+no final evaluation scores were used to make model choices.
+
+Both technical perspectives approve committing the reviewed source and running
+the frozen studies. Results/interpretation and publication review remain pending.

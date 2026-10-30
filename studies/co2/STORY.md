@@ -30,3 +30,21 @@ Future entries will summarize actual source intake, benchmarks, implementation
 reviews, results, and revisions in plain language. Detailed evidence stays linked
 from the [review register](../../reviews/README.md).
 
+
+## 2026-10-30 — Check the actual observations
+
+We downloaded and pinned the source file. Both source reviewers found that two
+NOAA-era rows had negative variability metadata but zero uncertainty, rather than
+the paired negative flags described in the header. The loader now preserves the
+fields and conservatively marks either negative value as quality-suspect. It does
+not confuse the older Scripps records' unknown metadata with these later flags.
+
+## 2026-10-30 — Define what the comparison can answer
+
+Review narrowed the claim to forecasts made after the December monthly value is
+available: one month ahead means January; three years ahead means December. This
+is not an evaluation of every month of a future trajectory. The design was
+committed before fitting, including a calibration period that ends before the
+evaluation begins.
+
+[Source and design evidence](../../reviews/first-release/README.md).

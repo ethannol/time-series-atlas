@@ -30,3 +30,17 @@ Future entries will summarize actual source intake, benchmarks, implementation
 reviews, results, and revisions in plain language. Detailed evidence stays linked
 from the [review register](../../reviews/README.md).
 
+
+## 2026-10-30 — Specify what counts as a successful warning
+
+Review made the experiment precise before it ran: an early false alert consumes
+the attempt, missed changes stay visible, and reported delay is conditional on
+actually detecting a change. The thresholds are calibrated on separate simple
+noise streams, then tested against both similar noise and deliberately persistent
+noise. This lets us ask whether a method's apparent reliability survives a change
+in assumptions.
+
+The committed design also fixes the initial condition, the size of the change,
+and the exact alert rule. No result has been selected by trying different rules.
+
+[Reviewed contract](DESIGN.md) · [Design checkpoint](../../reviews/first-release/README.md).

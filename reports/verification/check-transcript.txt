@@ -1,0 +1,22 @@
+ationWarning: The 'generic' unit for NumPy timedelta is deprecated, and will raise an error in the future. This includes implicit conversion of bare integers (e.g. `+ 1`). Please use a specific unit instead.
+    train_mask=(panel.index>=month-pd.Timedelta(days=365))&(panel.index<month)&safe_hours(panel.index)
+
+tests/test_forecasts.py::test_monthly_training_cannot_see_future_and_shared_model_handles_clipping
+tests/test_forecasts.py::test_monthly_training_cannot_see_future_and_shared_model_handles_clipping
+tests/test_forecasts.py::test_monthly_training_cannot_see_future_and_shared_model_handles_clipping
+tests/test_forecasts.py::test_monthly_training_cannot_see_future_and_shared_model_handles_clipping
+tests/test_forecasts.py::test_monthly_training_cannot_see_future_and_shared_model_handles_clipping
+tests/test_forecasts.py::test_monthly_training_cannot_see_future_and_shared_model_handles_clipping
+tests/test_forecasts.py::test_dst_exclusion_covers_target_plus_longest_lag
+  /Users/ethannol/src/side-projects/time-series-atlas/src/tsatlas/electricity.py:13: DeprecationWarning: The 'generic' unit for NumPy timedelta is deprecated, and will raise an error in the future. This includes implicit conversion of bare integers (e.g. `+ 1`). Please use a specific unit instead.
+    days=pd.date_range(index.min().normalize()-pd.Timedelta(days=14),index.max().normalize(),freq='D')
+
+tests/test_intake.py::test_end_labels_keep_last_midnight_in_previous_day
+tests/test_intake.py::test_end_labels_keep_last_midnight_in_previous_day
+  /Users/ethannol/src/side-projects/time-series-atlas/src/tsatlas/data.py:76: DeprecationWarning: The 'generic' unit for NumPy timedelta is deprecated, and will raise an error in the future. This includes implicit conversion of bare integers (e.g. `+ 1`). Please use a specific unit instead.
+    frame.index = pd.to_datetime(frame.index) - pd.Timedelta(minutes=15)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+16 passed, 11 warnings in 1.54s
+
+

@@ -73,3 +73,24 @@ The plan and initial source-documentation review exist. Full dataset acquisition
 implementation, model evaluation, and final scientific conclusions do not yet
 exist. Next comes source intake: checking actual files before freezing the first
 two studies' analysis designs.
+
+## 2026-10-30 — Start with real files, not just source pages
+
+The planning scaffold was published to GitHub. We acquired the two initial real
+datasets and preserved their source hashes and analysis snapshots. Independent
+source review found discrepancies between provider descriptions and actual
+quality flags and clock-change values. Those are observed source findings, beyond
+the prospective risks found in the original plan.
+
+## 2026-10-30 — Review the implementation before accepting its scores
+
+The analysis designs were committed before fitting. A bounded development trial
+then exercised the pipeline without choosing models on final evaluation results.
+Independent review found that malformed predictions could silently produce
+misleading scores, and that run evidence needed stronger protection against code
+changing mid-execution. The scoring paths now reject those malformed inputs;
+run evidence captures and checks source stability and only promotes completed
+outputs. A test-fixture failure was also corrected, separately from those defects.
+
+These repairs are recorded in the [first-release review](reviews/first-release/README.md).
+They establish safeguards to check; they do not establish forecast skill.
