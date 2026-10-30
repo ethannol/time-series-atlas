@@ -2,10 +2,10 @@
 
 **Question:** Does a changing growth rate improve multiyear forecasts over a fixed trend and annual cycle?
 
-**Data:** [NOAA Mauna Loa CO₂ monthly series](https://gml.noaa.gov/ccgg/trends/data.html); monthly records from 1958 onward, with the study snapshot still to be frozen.
+**Data:** [NOAA Mauna Loa CO₂ monthly series](https://gml.noaa.gov/ccgg/trends/data.html); monthly records from 1958 onward, with the downloaded snapshot pinned and the study ending in December 2025.
 
-**Status:** design only. This is a record of decisions already made and work still
-to do, not a report of results. Ethan set the direction and requested the critical
+**Status (2026-10-30):** executed, independently reviewed, and reproduced from a fresh checkout.
+The dated entries distinguish earlier plans from later measurements. Ethan set the direction and requested the critical
 review; agents proposed and critiqued the design described below.
 
 ## 2026-10-29 — Choose a question worth investigating
@@ -22,7 +22,7 @@ The study now asks whether allowing the rate of increase to change actually impr
 
 Technical evidence and outstanding checks: [R01–R02](../../reviews/01-design-review.md#r02--a-published-co₂-series-already-contains-processing-decisions).
 
-## Next, not yet done
+## Next at planning time — 2026-10-29
 
 Inspect the actual monthly records and their source notes, then freeze the forecast horizons and comparisons. No model has been fitted and no forecast improvement has been measured.
 
@@ -30,3 +30,36 @@ Future entries will summarize actual source intake, benchmarks, implementation
 reviews, results, and revisions in plain language. Detailed evidence stays linked
 from the [review register](../../reviews/README.md).
 
+
+## 2026-10-30 — Check the actual observations
+
+We downloaded and pinned the source file. Both source reviewers found that two
+NOAA-era rows had negative variability metadata but zero uncertainty, rather than
+the paired negative flags described in the header. The loader now preserves the
+fields and conservatively marks either negative value as quality-suspect. It does
+not confuse the older Scripps records' unknown metadata with these later flags.
+
+## 2026-10-30 — Define what the comparison can answer
+
+Review narrowed the claim to forecasts made after the December monthly value is
+available: one month ahead means January; three years ahead means December. This
+is not an evaluation of every month of a future trajectory. The design was
+committed before fitting, including a calibration period that ends before the
+evaluation begins.
+
+[Source and design evidence](../../reviews/first-release/README.md).
+
+## 2026-10-30 — Run the frozen comparison
+
+For the three-year December targets, the recent-growth model had a mean absolute
+error of 1.119 ppm, compared with 6.964 ppm for a fixed growth rate fitted over the
+expanding history. Both changing-growth approaches improved on that fixed-growth
+baseline at every evaluated origin. The lesson is narrower than “complex models
+win”: how much history we assume still applies can matter more than model complexity.
+
+The uncertainty bands also deserve scrutiny. Historical calibration did not
+maintain its nominal coverage for the fixed-growth model. Wider or more frequently
+covering bands are not automatically better; the report retains their widths and
+scores. There are only 13 overlapping three-year origins, not independent trials.
+
+[Executed report](../../reports/results/co2/REPORT.md) · [Saved metrics](../../reports/results/co2/metrics.json).
