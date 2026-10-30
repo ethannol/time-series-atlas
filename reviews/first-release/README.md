@@ -32,9 +32,9 @@ and verified their requested clarifications before any model fitting:
 Design verdict: ready to freeze. Contracts will be committed before bounded
 implementation trials and full runs. This does not verify numerical behavior.
 
-## Implementation and results
+## Initial implementation/results status, before the gates below
 
-Pending. No full model run or scientific conclusion is authorized by a design-only
+At that point these stages were pending. No full model run or scientific conclusion is authorized by a design-only
 review. Independent implementation review follows bounded tests/trials.
 
 ## 2026-10-30 — Pre-run implementation gate completed
@@ -54,3 +54,22 @@ no final evaluation scores were used to make model choices.
 
 Both technical perspectives approve committing the reviewed source and running
 the frozen studies. Results/interpretation and publication review remain pending.
+
+## 2026-10-30 — First results reviewed, presentation and evidence gate revised
+
+The critics independently recomputed the headline metrics from saved predictions.
+They agreed with the bounded interpretations, but requested clearer customer-level
+magnitudes, readable model names, delay units, and current-status wording.
+The first scatter hid most small customer differences; a labelled difference plot
+and table replace it without changing the experiment.
+
+Publication review also found a real verification defect: the evidence validator
+could pass when expected study records were missing. It now requires all declared
+studies, matching names, and nonempty evidence maps, with regression tests.
+A fresh checkout reproduced every original result output exactly without raw
+source downloads; [comparison evidence](../../reports/verification/reproduction-initial.json)
+records this separately from merely checking a generated manifest against itself.
+
+These are presentation/verification changes after seeing results, not changes to
+models, split choices, thresholds, or scoring. A committed refresh run will update
+source/output evidence, followed by reproduction and final publication checks.

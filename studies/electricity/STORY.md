@@ -2,7 +2,7 @@
 
 **Question:** When does learning across customers improve tomorrow's load forecast, and who benefits or suffers?
 
-**Data:** [UCI Electricity Load Diagrams 2011–2014](https://archive.ics.uci.edu/dataset/321/electricityloaddiagrams20112014); 15-minute readings for 370 customers, with explicit aggregation planned.
+**Data:** [UCI Electricity Load Diagrams 2011–2014](https://archive.ics.uci.edu/dataset/321/electricityloaddiagrams20112014); 15-minute readings for 370 customers, aggregated to hourly mean power under the documented nominal-clock convention.
 
 **Status (2026-10-30):** first run executed; result/publication review in progress.
 The dated entries distinguish earlier plans from later measurements. Ethan set the direction and requested the critical
@@ -60,9 +60,9 @@ explicitly, and tests preserve that behavior.
 ## 2026-10-30 — Sharing information did not generally help here
 
 The shared model was slightly better for three customers and worse for the other
-21. Separate models also had the lower error for the total load. The same ordering
+21. Separate models also had the lower error for the total load. The same overall model ordering
 held when the excluded clock-change-related dates were included as a sensitivity
-check. This gives a useful answer even though it is not a victory for pooling.
+check, though one customer with a tiny gain changed identity. This gives a useful answer even though it is not a victory for pooling.
 
 The improvements for the three customers were small; the report preserves the
 magnitudes rather than treating a win count as decisive. This is a particular

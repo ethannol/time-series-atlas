@@ -2,7 +2,7 @@
 
 **Question:** When the truth is known, how quickly can a sustained change be distinguished from ordinary variation?
 
-**Data:** Purpose-built generated series, with generating rules and random seeds to be frozen before execution; no downloaded observational dataset.
+**Data:** Purpose-built generated series, with generating rules and random seeds frozen before execution; no downloaded observational dataset.
 
 **Status (2026-10-30):** first run executed; result/publication review in progress.
 The dated entries distinguish earlier plans from later measurements. Ethan set the direction and requested the critical

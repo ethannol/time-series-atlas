@@ -77,8 +77,9 @@ def run():
     rows=[]
     for m in MODELS:
         v=scores[f'{m}/36']
-        rows.append([m,f"{v['mae']:.3f}",f"{v['bias']:+.3f}",f"{v['coverage80']:.1%}",f"{v['width80']:.3f}",f"{v['interval_score80']:.3f}"])
+        rows.append([{'seasonal_naive':'Repeat last same month','linear_expanding':'Fixed growth, all history','linear_120months':'Recent growth, trailing decade','quadratic_expanding':'Quadratic growth, all history'}[m],f"{v['mae']:.3f}",f"{v['bias']:+.3f}",f"{v['coverage80']:.1%}",f"{v['width80']:.3f}",f"{v['interval_score80']:.3f}"])
     report='# Can changing growth improve CO₂ forecasts?\n\n'
+    report+=f"The recent-growth model reduced three-year mean absolute error from {scores['linear_expanding/36']['mae']:.3f} ppm for expanding fixed growth to {scores['linear_120months/36']['mae']:.3f} ppm in this comparison. Both changing-growth specifications improved on fixed growth at every evaluated three-year origin.\n\n"
     report+='These are December-origin revised-data hindcasts. The primary comparison predicts December three years later, not an entire monthly trajectory.\n\n'
     report+='![Forecast comparisons](forecast-comparison.png)\n\n'
     report+=markdown_table(['Model','MAE ppm','Bias ppm','80% coverage','Width ppm','Interval score'],rows)

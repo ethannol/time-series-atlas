@@ -10,7 +10,7 @@ def hashes():
 before=hashes()
 result=subprocess.run(command,cwd=root,text=True,capture_output=True)
 stable=before==hashes()
-evidence={'source_stable_during_checks':stable,'checked_at':datetime.datetime.now(datetime.UTC).isoformat(),'command':'uv run python scripts/check.py (runs python -m pytest -q)',
+evidence={'ok':result.returncode==0 and stable,'source_stable_during_checks':stable,'checked_at':datetime.datetime.now(datetime.UTC).isoformat(),'command':'uv run python scripts/check.py (runs python -m pytest -q)',
  'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),
  'source_files':before,
  'exit_code':result.returncode if stable else 1,'elapsed_seconds':time.perf_counter()-started,'stdout':result.stdout,'stderr':result.stderr}

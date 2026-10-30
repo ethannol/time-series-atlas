@@ -77,8 +77,9 @@ def run():
             c=result[f'{method}/rho={rho}/shift'];n=result[f'{method}/rho={rho}/no_shift']
             rows.append([method,rho,f"{n['false_alarm_rate']:.1%}",c['prechange_alarms'],c['eligible'],c['detections'],c['misses'],c['median_detected_delay']])
     report='# How quickly can a sustained change be detected?\n\n'
+    report+=f"CUSUM false-alert frequency rose from {result['cusum/rho=0.0/no_shift']['false_alarm_rate']:.0%} on independent noise to {result['cusum/rho=0.6/no_shift']['false_alarm_rate']:.0%} on persistent noise under the same frozen threshold. Fast conditional detection did not make it a reliable alarm system in the stress test.\n\n"
     report+='Thresholds were calibrated on separate IID streams, then frozen. AR(1) streams deliberately violate the independence assumption. These are known-truth simulations, not measured field performance.\n\n![Detection comparison](detection-comparison.png)\n\n'
-    report+=markdown_table(['Method','rho','No-change false alerts','Early alarms /200','Eligible','Detected','Missed','Median detected delay'],rows)
+    report+=markdown_table(['Method','rho','No-change false alerts','Early alarms /200','Eligible','Detected','Missed','Median detected delay (samples)'],rows)
     report+='\nEach changed condition contains 200 streams. Early alarms remove a stream from the eligible denominator; detected-delay summaries omit misses and must be read beside detection counts. No restart after an early alarm is allowed. Each no-change false-alert rate has denominator 200. A 5% calibration target is not a universal guarantee.\n\n'
     report+='[Design](../../../studies/synthetic/DESIGN.md) · [Process story](../../../studies/synthetic/STORY.md) · [Metrics](metrics.json) · [Run evidence](run.json)\n'
     (out/'REPORT.md').write_text(report)

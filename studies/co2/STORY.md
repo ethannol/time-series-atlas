@@ -2,7 +2,7 @@
 
 **Question:** Does a changing growth rate improve multiyear forecasts over a fixed trend and annual cycle?
 
-**Data:** [NOAA Mauna Loa CO₂ monthly series](https://gml.noaa.gov/ccgg/trends/data.html); monthly records from 1958 onward, with the study snapshot still to be frozen.
+**Data:** [NOAA Mauna Loa CO₂ monthly series](https://gml.noaa.gov/ccgg/trends/data.html); monthly records from 1958 onward, with the downloaded snapshot pinned and the study ending in December 2025.
 
 **Status (2026-10-30):** first run executed; result/publication review in progress.
 The dated entries distinguish earlier plans from later measurements. Ethan set the direction and requested the critical

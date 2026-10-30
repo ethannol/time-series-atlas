@@ -26,7 +26,7 @@ Repository. [DOI](https://doi.org/10.24432/C58C86).
 [Provider documentation](https://archive.ics.uci.edu/dataset/321/electricityloaddiagrams20112014).
 
 The committed file is a **modified subset**, not the original archive: 24 selected
-customers, quarterly-hour power readings aggregated to hourly mean kW under the
+customers, quarter-hour power readings aggregated to hourly mean kW under the
 explicit nominal end-label convention. Original source bytes remain pinned but
 the large ZIP is not in Git. Source timestamps are shifted back 15 minutes before
 aggregation into start-labeled hours; no UTC reconstruction is claimed. Selection

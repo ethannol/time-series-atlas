@@ -1,0 +1,56 @@
+{
+  "slug": "time-series-atlas",
+  "title": "Time Series Atlas",
+  "kind": "study",
+  "status": "first studies complete; collection expanding",
+  "question": "Which time series methods answer useful questions once source conventions, information timing, and evaluation assumptions are made explicit?",
+  "one_liner": "Forecasting and detection studies with a visible record of the questions, critiques, and corrections behind each result.",
+  "aim": "Demonstrate analytical judgment through reproducible investigations and short process stories, with independent agent reviews before design, execution, and publication.",
+  "scope": "Completed atmospheric carbon dioxide and electricity forecasting studies plus a known-truth change-detection experiment. Retail, oil, river flow, air quality, and ECG studies remain planned.",
+  "conclusion": "Recent-growth forecasts improved the declared carbon dioxide comparison. Sharing electricity-model coefficients generally did not help this panel. Persistent noise broke the detector's calibrated false-alert behavior.",
+  "summary": {
+    "question": "What changes when we challenge the question, measurements, and evaluation before trusting a time series result?",
+    "techniques": ["Seasonal regression", "Rolling-origin evaluation", "Local and pooled ridge regression", "Prediction intervals", "Sequential detection", "Source audits"],
+    "result": "The first studies show why shared information, more history, and fast detection are not automatically improvements."
+  },
+  "ledger": {"type": "json", "path": "reports/results/electricity/metrics.json"},
+  "sources": {
+    "co2_recent": {"source": "json_file", "path": "reports/results/co2/metrics.json", "key": "test.linear_120months/36.mae"},
+    "co2_fixed": {"source": "json_file", "path": "reports/results/co2/metrics.json", "key": "test.linear_expanding/36.mae"}
+  },
+  "headline": [
+    {"label": "Customers worsened by pooling", "value": "test.pooled_worse_customers", "fmt": "d"},
+    {"label": "Recent-growth forecast MAE", "value": "co2_recent", "fmt": ".3f", "unit": "ppm"},
+    {"label": "Fixed-growth forecast MAE", "value": "co2_fixed", "fmt": ".3f", "unit": "ppm"}
+  ],
+  "finding": [
+    "In the fixed electricity panel, the shared model worsened forecasts for {{test.pooled_worse_customers:d}} customers. Separate models also had the lower aggregate-load error; the few customer gains from sharing were small.",
+    "For three-year December targets, adapting to recent growth reduced carbon dioxide MAE from {{co2_fixed:.3f}} ppm to {{co2_recent:.3f}} ppm. These are revised-data hindcasts, not all-month or causal claims.",
+    "In the synthetic control, persistent noise sharply increased false alerts under a frozen threshold. Conditional detection delay alone hid that failure.",
+    "The process story preserves source/documentation discrepancies, actual scoring defects found before full runs, original agent critiques, and verified corrections. Agent agreement is not independent human validation."
+  ],
+  "traps": [
+    {"id": "target-leakage", "how": "Features use only observations available at each declared origin; future-perturbation checks test that earlier predictions remain unchanged."},
+    {"id": "units-definitions", "how": "Power and interval labels are explicit. Provider DST conventions differ from sampled values, so calendar masks and a nominal-clock assumption are recorded."},
+    {"id": "analyst-choices", "how": "Comparison designs were committed before fitting, with no model selection on final scores. Customer differences and sensitivity results remain visible."}
+  ],
+  "figures": [
+    {"path": "reports/results/electricity/pooling-comparison.png", "caption": "Customer-level gains and losses from sharing regression coefficients, with aggregate error scored after summing the panel."},
+    {"path": "reports/results/co2/forecast-comparison.png", "caption": "December-origin forecast errors and paired differences against the expanding fixed-growth baseline."},
+    {"path": "reports/results/synthetic/detection-comparison.png", "caption": "A frozen detector threshold behaves differently under independent and persistent synthetic noise. Detection rates are conditional on no early alarm."}
+  ],
+  "not_claimed": ["Universal model rankings, causal attribution, realized savings, or clinical benefit.", "A representative sample of all electricity customers or historical real-time data vintages.", "Completion of the remaining planned studies or independent human validation."],
+  "documents": [
+    {"title": "The process story", "path": "STORY.md"},
+    {"title": "What the initial critique changed", "path": "reviews/01-design-review.md"},
+    {"title": "First-release review and verification", "path": "reviews/first-release/README.md"},
+    {"title": "Electricity results", "path": "reports/results/electricity/REPORT.md"},
+    {"title": "CO₂ results", "path": "reports/results/co2/REPORT.md"},
+    {"title": "Synthetic detection results", "path": "reports/results/synthetic/REPORT.md"}
+  ],
+  "verification": {"artifact": "reports/verification/checks.json", "harness": "Offline invariant tests; analysis evidence linked in each report"},
+  "data": ["Pinned NOAA GML monthly carbon dioxide observations", "Attributed UCI electricity customer panel", "Declared known-truth synthetic streams"],
+  "stack": ["Python", "NumPy", "pandas", "scikit-learn", "Matplotlib", "pytest"],
+  "links": {"Repository": "https://github.com/ethannol/time-series-atlas"},
+  "strict_numbers": true
+}

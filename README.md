@@ -45,8 +45,9 @@ once implemented, the analysis designs and reproducible results.
 | ECG waveforms | Does a model that recognizes abnormal heartbeat shapes work on people it has never seen? | [ECG story](studies/ecg/STORY.md) | Planned |
 | Synthetic controls | When the truth is known, how quickly can a sustained change be distinguished from ordinary variation? | [Synthetic-lab story](studies/synthetic/STORY.md) | [Executed report](reports/results/synthetic/REPORT.md) |
 
-The seven real-data collections are free to access. Redistribution conditions
-will be checked separately before publishing source snapshots. The first CO₂, electricity, and synthetic studies have executed under frozen
+The seven real-data collections are free to access. The first-release snapshot attribution and redistribution basis are documented
+in [data credits](data/README.md); the remaining datasets will be checked before
+their snapshots are published. The first CO₂, electricity, and synthetic studies have executed under frozen
 designs. The other five real-data studies remain planned. No financial or clinical
 benefit is claimed.
 
@@ -66,7 +67,8 @@ scrutiny, not independent human validation or a guarantee of correctness.
 
 Ethan set the project direction, requested the initial independent critique, and
 made the process and its corrections central to the portfolio. AI agents drafted
-the plan, researched sources, and supplied the critiques recorded here. Future
+the plan, researched sources, implemented and executed the analyses, generated
+reports, and supplied the critiques recorded here. Future
 stories will identify who made each substantive decision and what was checked;
 they will not attribute agent work or unperformed reviews to Ethan.
 

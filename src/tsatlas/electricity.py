@@ -119,22 +119,34 @@ def run():
     scores['test']['pooled_better_customers']=int((pooled<local).sum())
     scores['test']['pooled_worse_customers']=int((pooled>local).sum())
     write_json(out/'metrics.json',scores)
-    fig,axes=plt.subplots(1,2,figsize=(11,4.2))
-    scatter=axes[0].scatter(local,pooled,c=np.log10(means.reindex(customers)),cmap='viridis',s=42)
-    top=max(local.max(),pooled.max())*1.08
-    axes[0].plot([0,top],[0,top],color='gray',ls='--')
-    axes[0].set(xlabel='Local model normalized MAE',ylabel='Pooled model normalized MAE',title='Below diagonal: pooling helps')
-    fig.colorbar(scatter,ax=axes[0],label='log10 training mean kW')
-    axes[1].barh(MODELS,[primary[m]['aggregate_mae_kw'] for m in MODELS],color='#3c718e')
+    delta=pooled-local
+    order=np.argsort(delta)
+    fig,axes=plt.subplots(1,2,figsize=(12,8),gridspec_kw={'width_ratios':[1.2,1]})
+    ordered=delta[order]
+    axes[0].barh(np.arange(len(order)),ordered,color=np.where(ordered<0,'#26836d','#ac563e'))
+    axes[0].axvline(0,color='gray',lw=.8)
+    axes[0].set_yticks(np.arange(len(order)),np.array(customers)[order])
+    axes[0].invert_yaxis()
+    axes[0].set(xlabel='Pooled minus local normalized MAE',title='Most differences are small; negative helps')
+    for i,value in enumerate(ordered):
+        axes[0].text(max(value,0)+.0005,i,f'{value:+.3g}',va='center',fontsize=7)
+    axes[0].set_xlim(-.003,max(delta)*1.35)
+    labels=['Yesterday','Last week','Separate regressions','Shared regression']
+    axes[1].barh(labels,[primary[m]['aggregate_mae_kw'] for m in MODELS],color='#3c718e')
     axes[1].set(xlabel='Aggregate-load MAE (kW)',title='Sum customers before scoring')
     fig.tight_layout();fig.savefig(out/'pooling-comparison.png');plt.close(fig)
-    rows=[[m,f"{primary[m]['macro_normalized_mae']:.4f}",f"{primary[m]['aggregate_mae_kw']:.1f}",f"{primary[m]['aggregate_bias_kw']:+.1f}"] for m in MODELS]
+    detail=pd.DataFrame({'client':customers,'local_normalized_mae':local,'pooled_normalized_mae':pooled,'pooled_minus_local':delta})
+    detail=detail.sort_values('pooled_minus_local')
+    save_frame(detail,out/'customer-comparison.csv.gz')
+    rows=[[{'yesterday':'Yesterday','last_week':'Last week','local_ridge':'Separate regressions','pooled_ridge':'Shared regression'}[m],f"{primary[m]['macro_normalized_mae']:.4f}",f"{primary[m]['aggregate_mae_kw']:.1f}",f"{primary[m]['aggregate_bias_kw']:+.1f}"] for m in MODELS]
     report='# Does sharing information help tomorrow’s electricity forecasts?\n\n'
+    report+='Sharing coefficients did not improve this panel overall: the separate regressions had lower customer-normalized and aggregate-load error. That is a result for this specified comparison, not a claim that all pooled models fail.\n\n'
     report+='This is a fixed, scale-spanning panel of 24 established customers, not a random sample or new-customer test. Primary results use 2014 dates whose targets and recent history avoid the DST exclusions.\n\n'
     report+='![Customer and aggregate comparisons](pooling-comparison.png)\n\n'
     report+=markdown_table(['Model','Macro normalized MAE','Aggregate MAE kW','Aggregate bias kW'],rows)
-    report+=f"\nPooling improves normalized MAE for {int((pooled<local).sum())} of {len(customers)} customers and worsens it for {int((pooled>local).sum())}. The scatter preserves those differences rather than hiding them in a single average.\n\n"
+    report+=f"\nPooling improves normalized MAE for {int((pooled<local).sum())} of {len(customers)} customers and worsens it for {int((pooled>local).sum())}. The labelled difference plot preserves those magnitudes rather than hiding them in a single average.\n\n"
     report+=f"Primary evaluation excludes {scores['test']['excluded_hour_customer_rows']} of {scores['test']['hour_customer_rows']} hourly customer observations. Full-date sensitivity and 2013 development scores are retained separately in the metrics file.\n\n"
+    report+='The three gains are small; the exact customer-level differences are retained in [the comparison table](customer-comparison.csv.gz). Full-date sensitivity preserves the overall model ranking, but not the identity of every customer with a small gain.\n\n'
     report+='Normalized MAE divides each customer’s error by its fixed 2012 mean power; it is not MASE or a percentage-error metric. Peak subsets exceed fixed 2012 thresholds and need not contain 10% of test hours. No intervals, measured cost savings, or production latency claims are made. The nominal-clock interval convention is an assumption, not a UTC reconstruction.\n\n'
     report+='[Design](../../../studies/electricity/DESIGN.md) · [Process story](../../../studies/electricity/STORY.md) · [Metrics](metrics.json) · [Run evidence](run.json)\n'
     (out/'REPORT.md').write_text(report)

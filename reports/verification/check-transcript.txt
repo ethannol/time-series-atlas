@@ -17,6 +17,6 @@ tests/test_intake.py::test_end_labels_keep_last_midnight_in_previous_day
     frame.index = pd.to_datetime(frame.index) - pd.Timedelta(minutes=15)
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-16 passed, 11 warnings in 1.54s
+18 passed, 11 warnings in 1.63s
 
 
