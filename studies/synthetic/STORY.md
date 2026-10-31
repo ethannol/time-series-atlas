@@ -78,3 +78,14 @@ reviewed its alias-aware design before execution, and retained all generated
 observations and spectra. The two controls test different assumptions: persistent
 noise can break an alarm threshold, while a regular sampling schedule can make
 different frequencies indistinguishable. Neither is a field-performance claim.
+
+## 2026-10-30 — Recheck both controls independently
+
+The fresh synthetic critic reproduced the saved detection arithmetic and found
+no new result defect in this control. Its frozen thresholds still fail under
+persistent noise, and reported delay remains conditional on detection. The
+companion frequency study required clearer disclosure of unequal search ranges;
+that correction is recorded in its own story.
+
+[Dedicated critique](../../reviews/study-critiques-20261030/synthetic.md) ·
+[Resolution status](../../reviews/study-critiques-20261030/RESPONSE.md).

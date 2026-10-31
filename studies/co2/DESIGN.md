@@ -57,3 +57,19 @@ targets. Do not label a model a universal winner from a small number of origins.
 Complete source/design reviews and commit this contract before fitting. A changed
 question, split, model, or metric requires a dated amendment stating whether
 results were already inspected.
+
+## 2026-10-30 — Post-publication interpretation amendment
+
+The original comparison and all predictions, splits, intervals and metrics remain
+unchanged. A fresh dedicated critic identified that the two linear regressions
+fit their origin level freely; the training window changes that level as well as
+growth. The current question therefore describes whether fitting recent history
+improves forecasts, without attributing the full improvement to growth adaptation.
+
+Results had already been inspected. A new, explicitly post-publication diagnostic
+uses the saved December predictions of the two linear fits: fitted origin =
+`(3 * p12 - p36) / 2`; origin gap = observed origin minus fitted origin; growth
+error = signed three-year error minus origin gap. Save these quantities by origin
+and report their means. This is signed-error accounting, not causal attribution
+or an MAE decomposition. It does not evaluate an origin-anchored model or select
+a replacement baseline. [Critique and arithmetic](../../reviews/study-critiques-20261030/co2.md).

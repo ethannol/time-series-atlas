@@ -84,3 +84,18 @@ not new evidence of operational or scientific generalization.
 The reviewed collection merged after green checks. The deployed portfolio links
 this report and its evidence, and the live page was checked against the published
 revision. [Rollout record](../../reports/verification/completion-rollout.json).
+
+## 2026-10-30 — A published forecast can reveal part of its target
+
+The fresh oil critic reproduced the calculations, then tested what a reader
+could recover from the public forecasts alone. Consecutive adaptive variance
+forecasts reveal squared price changes. Keeping source workbooks and signed
+outcomes out of Git does not make all derived outcomes unrecoverable.
+
+We added that disclosure to the report and data documentation and retained the
+already-public analysis and its history. The finding neither reconstructs the
+complete signed price history nor establishes a licence violation. It changes
+how we explain the publication boundary, not the forecast scores.
+
+[Dedicated critique](../../reviews/study-critiques-20261030/oil.md) ·
+[Resolution status](../../reviews/study-critiques-20261030/RESPONSE.md).

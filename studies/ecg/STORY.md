@@ -83,3 +83,15 @@ not new evidence of operational or scientific generalization.
 The reviewed collection merged after green checks. The deployed portfolio links
 this report and its evidence, and the live page was checked against the published
 revision. [Rollout record](../../reports/verification/completion-rollout.json).
+
+## 2026-10-30 — A fresh critic independently reconstructs the evidence
+
+The dedicated ECG critic recomputed every saved score, checked that people stay
+apart across folds, verified training caps and transforms, and reconstructed
+logistic predictions without fitting. Checks against the source annotations and
+waveforms also agreed. No required correction was found. The annotated-beat
+setup, rare-class support and absence of clinical validation remain explicit;
+a successful review does not remove those limits.
+
+[Dedicated critique](../../reviews/study-critiques-20261030/ecg.md) ·
+[Resolution status](../../reviews/study-critiques-20261030/RESPONSE.md).

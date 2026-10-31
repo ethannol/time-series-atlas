@@ -1,6 +1,6 @@
 # Intermittent retail sales: the process story
 
-**Question:** How should we forecast next week's sales for products that sell only occasionally?
+**Question:** How should we forecast next week's recorded sales for stock codes that sell only occasionally?
 
 **Data:** [UCI Online Retail II](https://archive.ics.uci.edu/dataset/502/online+retail+ii); timestamped transactions from December 2009 to December 2011, aggregated into daily product series and complete weekly targets.
 
@@ -87,3 +87,16 @@ not new evidence of operational or scientific generalization.
 The reviewed collection merged after green checks. The deployed portfolio links
 this report and its evidence, and the live page was checked against the published
 revision. [Rollout record](../../reports/verification/completion-rollout.json).
+
+## 2026-10-30 — Check what a “product” identifier means
+
+The fresh retail critic reproduced the source panel and every saved score, then
+asked whether our product labels implied more identity certainty than the data
+supplied. Some differently capitalized stock codes share descriptions. Without
+a verified crosswalk, we cannot tell whether a quiet code means a discontinued
+product or activity recorded under another identifier.
+
+We now describe the exact case-sensitive codes prominently. The original panel
+and scores remain unchanged; merging identifiers after seeing the result would
+require a separate, reviewed analysis. [Dedicated critique](../../reviews/study-critiques-20261030/retail.md)
+and [resolution status](../../reviews/study-critiques-20261030/RESPONSE.md).

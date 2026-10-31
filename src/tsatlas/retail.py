@@ -79,7 +79,7 @@ def run():
     bars=axes[0].barh(labels,table.macro_scaled_mae,color=colors)
     axes[0].bar_label(bars,fmt='%.3f',padding=3);axes[0].set_xlim(0,float(table.macro_scaled_mae.max())*1.14)
     axes[0].set_xlabel('Weekly MAE / mean training-week sales (lower is better)')
-    axes[0].set_title('Weekly error, equally weighted products')
+    axes[0].set_title('Weekly error, equally weighted stock codes')
     bias=(table.forecast_total_units/table.observed_total_units-1)*100
     bars=axes[1].barh(labels,bias,color=colors);axes[1].axvline(0,color='black',lw=.8)
     for i,value in enumerate(bias):
@@ -87,7 +87,7 @@ def run():
         else:axes[1].text(value+(1.5 if value>=0 else -1.5),i,f'{value:.1f}%',ha='left' if value>=0 else 'right',va='center')
     axes[1].set_xlim(min(-112,float(bias.min())*1.15),max(12,float(bias.max())*1.5))
     axes[1].set_xlabel('Total forecast minus recorded sales (%)');axes[1].set_title('Underforecasting remains visible')
-    fig.suptitle('24 established intermittent products • 48 complete test weeks')
+    fig.suptitle('24 exact stock-code series • 48 complete test weeks')
     fig.tight_layout();fig.savefig(out/'weekly-sales.png');plt.close(fig)
     best=min(metrics,key=lambda x:x['macro_scaled_mae'])
     headers=['Model','Scaled weekly MAE','Unit MAE','Forecast total','Recorded total']
@@ -117,8 +117,10 @@ the intended decision must be considered together.
 
 ## What this comparison means
 
-The cohort contains 24 products selected using 2010 sales only, from 2,072 eligible
-intermittent products. We evaluated {predictions.origin.nunique()} full weeks in 2011.
+The cohort contains 24 exact, case-sensitive stock-code series selected using
+2010 sales only, from 2,072 eligible intermittent codes. The retained `product`
+column means this source identifier, not a verified harmonized product identity.
+We evaluated {predictions.origin.nunique()} full weeks in 2011.
 Forecasts update using prior transactions only; all smoothing settings were fixed
 before test scoring. The mean training-week denominator gives small products a
 voice; the second panel instead counts units across products and is dominated by
@@ -140,6 +142,12 @@ Missing customer IDs remain: product-level sales do not require customer identit
 A recorded zero is not proof of availability or zero demand. This fixed,
 nonrandom established-product panel includes later inactivity, and does not
 represent new products. There is no stockout, profit or purchasing-cost outcome.
+Some differently capitalized source codes have matching descriptions, including
+`85232b` and `85232B`. We have no verified identity crosswalk and preserve the
+original strings. **Inactivity of a code is not verified product discontinuation**;
+splitting a product across aliases could affect its apparent sparsity and history.
+[The fresh source check](../../../reviews/study-critiques-20261030/retail.md)
+documents examples without asserting that the identifiers should be merged.
 Signed bias is a sales-forecast diagnostic. Repeated rows within one annual sheet
 remain because their meaning cannot be inferred safely from identical fields.
 

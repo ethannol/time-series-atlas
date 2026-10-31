@@ -134,3 +134,15 @@ copy, and successful PR/main/Pages checks. No study or publication-content
 omission remained. [Exact audit scope and verdict](completion/completion-audit-general.md).
 Publishing this dated record and its documentation-only CI/deployment follow-up
 are separate from the already verified numerical result and live content.
+
+## 2026-10-30 — Dedicated post-publication reviews reopen specific claims
+
+Ethan requested a new critic for each investigation. The review baseline is
+71999b34ccfd7127840b173efb287ac0a66b2a26. CO₂'s growth-only interpretation, retail's
+product-identity wording, oil's derived-outcome disclosure, river coverage and
+air-quality subgroup presentation reopened their affected publication gates.
+Status: **identified → design amended → implemented**, pending independent
+repair checks. Predictions, splits, models and original scores are preserved.
+The CO₂ diagnostic is a dated post-publication amendment. Electricity's reviewer
+found no required correction. All eight critics' findings and subsequent status
+transitions are retained in the [new round](study-critiques-20261030/README.md).

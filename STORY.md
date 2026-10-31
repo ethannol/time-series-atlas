@@ -234,3 +234,23 @@ CI and deployment too; the numerical analyses remain unchanged.
 The collection now preserves both the results and the process that corrected
 the work, including the lead agent's earlier premature stop. The finish line
 is the agreed scope with verified delivery, not a self-selected milestone.
+
+## 2026-10-30 — Give every investigation a fresh critic
+
+After the full collection was published, Ethan asked for a dedicated critic of
+each investigation's implementation, findings and presentation. The critics
+read the implementations before prior verdicts and independently reconstructed
+saved evidence. Repeated review is part of the work, including after publication.
+
+The first completed reviews reproduced the numbers and still found qualifications
+that mattered. The CO₂ improvement included a better starting level as well as
+growth. Retail's exact source codes did not establish product identity. Oil
+forecasts exposed squared outcomes despite the source files being kept local.
+River coverage and air-quality subgroup exceptions needed to be visible beside
+their averages. Previous approvals had not made those implications clear enough.
+
+We preserved the experiments and added the missing explanations and context.
+A new CO₂ diagnostic is explicitly labeled as post-publication; no model was
+retuned to improve its final score. The [dedicated reviews](reviews/study-critiques-20261030/README.md)
+and [author response](reviews/study-critiques-20261030/RESPONSE.md) distinguish
+implemented corrections, independent verification and remaining work.

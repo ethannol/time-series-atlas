@@ -125,7 +125,8 @@ def run():
     seasonal=[]
     for quarter,g in predictions.groupby(predictions.hour.dt.quarter):
         s=score(g);s['quarter']=int(quarter);seasonal.append(s)
-    pd.concat(seasonal,ignore_index=True).to_csv(out/'quarter-scores.csv',index=False)
+    quarter_scores=pd.concat(seasonal,ignore_index=True)
+    quarter_scores.to_csv(out/'quarter-scores.csv',index=False)
     fig,axes=plt.subplots(1,2,figsize=(11,4.5));table=pd.DataFrame(primary)
     for model,label,style in zip(MODELS,['Last local reading','Calendar median','Other-station median','Calibrated network'],['o-','s:','^-','x--']):
         g=table[table.model==model].sort_values('duration');axes[0].plot(g.duration,g.macro_balanced_accuracy,style,label=label)
@@ -140,6 +141,19 @@ def run():
     rates_table=markdown_table(['Hours','Method','Pooled precision','Pooled recall','Pooled false-positive rate'],[[r['duration'],r['model'],fmt(r['pooled_precision']),fmt(r['pooled_recall']),fmt(r['pooled_false_positive_rate'])] for r in primary])
     coverage_table=markdown_table(['Hours','Eligible / scheduled blocks','Scoreable network / scheduled hours','Peer data available / scheduled hours'],[[r['duration'],f"{r['eligible_blocks']} / {r['scheduled_blocks']}",f"{r['scoreable_network_hours']} / {r['scheduled_hours']}",f"{r['peer_available_hours_all_scheduled']} / {r['scheduled_hours']}"] for r in coverage])
     event_table=markdown_table(['Hours','Method','Missed / high events','False-alert episodes','Median onset delay (hours)','Delay sample'],[[r['duration'],r['model'],f"{r['missed_events']} / {r['high_events']}",r['false_alert_episodes'],r['median_delay_hours'] if r['median_delay_hours'] is not None else 'undefined',r['delay_observations']] for r in event_summary])
+    quarter_rows=[]
+    for (duration,quarter),g in quarter_scores.groupby(['duration','quarter']):
+        reference=g[g.model=='persistence']
+        values=[g.loc[g.model==m,'balanced_accuracy'].mean() for m in MODELS]
+        quarter_rows.append([duration,int(quarter),int(reference.balanced_accuracy.notna().sum()),
+            int((reference.tp+reference.fn).sum()),*['undefined' if pd.isna(v) else f'{v:.3f}' for v in values]])
+    quarter_table=markdown_table(['Hours','Calendar quarter','BA stations','High hours','Last reading','Calendar','Peer median','Network ridge'],quarter_rows)
+    station_compare=per_station.pivot(index=['duration','station'],columns='model',values='balanced_accuracy')
+    station_rows=[]
+    for duration,g in station_compare.groupby(level='duration'):
+        difference=(g.network_median-g.persistence).dropna()
+        station_rows.append([int(duration),int((difference>0).sum()),int((difference==0).sum()),int((difference<0).sum()),len(difference)])
+    station_table=markdown_table(['Hours','Peer median better','Tied','Worse','Comparable stations'],station_rows)
     report=f'''# Can other stations preserve indications during a sensor outage?
 
 **Other-station medians outperform holding the last local reading on balanced
@@ -167,6 +181,31 @@ in [station evidence](station-scores.csv). All methods use the same scoreable
 hours in the primary table.
 
 {rates_table}
+
+## A pooled advantage is not a guarantee for each season or station
+
+These are descriptive slices of the frozen experiment, already retained in
+[quarterly evidence](quarter-scores.csv), not new tuning criteria. Entries are
+macro station balanced accuracy; undefined means no station in that slice has
+both true classes. High-hour counts use the same matched observations once,
+not once per method. The test spans March 2016–February 2017, so calendar Q1
+combines March 2016 with January–February 2017; it is not a continuous season.
+
+{quarter_table}
+
+At 24 hours in calendar Q1, peer median (0.853) slightly trails the last reading
+(0.860), reversing their overall ranking. At 6 and 24 hours, Q3 has no observed
+high hours in the scored blocks; balanced accuracy is undefined, not zero or
+perfect. Those blocks still contribute other counts and error measurements.
+
+The peer-median comparison also varies across stations:
+
+{station_table}
+
+At 6 hours it loses to persistence at 3 of 12 stations. These small scheduled
+slices support neither a universal seasonal ranking nor a claim that each
+station benefits. All station scores and support remain in the
+[station evidence](station-scores.csv).
 
 ## Coverage changes the scope of the answer
 

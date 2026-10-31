@@ -187,6 +187,10 @@ def run():
     def fmt(value):return f'{value:.3f}' if value is not None else 'undefined'
     primary_table=markdown_table(['Date offset','Method','Macro recall','Macro false-positive rate','Gauges'],[[r['horizon'],r['model'],fmt(r['macro_recall']),fmt(r['macro_false_positive_rate']),r['gauges']] for r in primary])
     event_table=markdown_table(['Date offset','Method','Alerted / eligible onsets','Misses','False-alert episodes'],[[r['horizon'],r['model'],f"{r['alerted_onsets']} / {r['eligible_onsets']}",r['missed_onsets'],r['false_alert_episodes']] for r in onset])
+    coverage=pd.DataFrame(audits).groupby('horizon')[['test_rows','test_scheduled_after_boundary']].sum()
+    coverage_table=markdown_table(['Date offset','Scored / scheduled gauge-days','Fraction scored'],
+        [[h,f"{int(r.test_rows):,} / {int(r.test_scheduled_after_boundary):,}",f"{r.test_rows/r.test_scheduled_after_boundary:.1%}"]
+         for h,r in coverage.iterrows()])
     report=f'''# Does high-flow prediction provide warning before a new rise?
 
 Adding past weather improved next-day high-flow recall only slightly (0.915
@@ -202,6 +206,19 @@ below separates high-day recall from new-onset indications and shows their false
 ![High days versus new onsets](flow-and-onsets.png)
 
 {primary_table}
+
+**The scores describe observed, usable targets, not continuous warning coverage.**
+The same targets are used for all three methods. The schedule below is after
+the origin-boundary guards; excluded inputs and targets remain in the
+[split audit](split-audit.csv).
+
+{coverage_table}
+
+Gauge `09386900` contributes only 200 of 3,652 scheduled next-day targets (5.5%)
+and 195 of 3,650 three-day targets (5.3%), yet receives the same macro weight as
+each other gauge. Its three-day weather-model recall of 1.0 is just 14 of 14
+observed high days. The training-selected panel is preserved; this sparse test
+support limits the generality and stability of the macro average.
 
 {event_table}
 

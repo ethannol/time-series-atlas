@@ -18,6 +18,15 @@ or the [dataset → question → method guide](docs/METHODS.md).
 The [review register](reviews/README.md) and [full evidence matrix](reviews/completion/README.md)
 connect the plain-language account to technical checks.
 
+**Fresh critics after publication found more to explain.** At Ethan's request,
+each investigation received a new dedicated review of implementation, findings
+and presentation. The [reviews and author response](reviews/study-critiques-20261030/README.md)
+show why correct scores still need careful questions: the CO₂ comparison changes
+starting level as well as growth; retail codes are not verified product identities;
+oil forecasts reveal squared outcomes; river and air-quality averages need their
+coverage and subgroup denominators beside them. Earlier approval did not catch
+all of these qualifications. The original results and review history remain visible.
+
 ## The investigations
 
 Every row has a frozen design, retained evidence and a chronological story.
@@ -25,7 +34,7 @@ Synthetic detection and sampling are two execution units within one investigatio
 
 | Investigation | Question and measured lesson | Results | Process |
 | --- | --- | --- | --- |
-| Atmospheric CO₂ | Does changing growth improve multiyear forecasts? A trailing-decade model reduced three-year December-target MAE from 6.964 to 1.119 ppm in the revised-data comparison. | [Report](reports/results/co2/REPORT.md) | [Story](studies/co2/STORY.md) |
+| Atmospheric CO₂ | Does fitting recent history improve multiyear forecasts? A trailing-decade model reduced three-year December-target MAE from 6.964 to 1.119 ppm in the revised-data comparison; it changes both starting level and growth. | [Report](reports/results/co2/REPORT.md) | [Story](studies/co2/STORY.md) |
 | Electricity | Who gains from learning across customers? Sharing coefficients worsened forecasts for 21 of 24 selected customers. | [Report](reports/results/electricity/REPORT.md) | [Story](studies/electricity/STORY.md) |
 | Intermittent retail sales | What should next week's forecast optimize? Zero won normalized absolute error while missing every recorded sale; TSB won raw-unit MAE. | [Report](reports/results/retail/REPORT.md) | [Story](studies/retail/STORY.md) |
 | Oil | Can volatility improve when direction does not? Adaptive variance beat fixed variance on QLIKE; direction lost to prevalence on Brier. The secondary variance loss favored the fixed baseline. | [Report](reports/results/oil/REPORT.md) | [Story](studies/oil/STORY.md) |

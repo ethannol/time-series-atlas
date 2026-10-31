@@ -89,3 +89,18 @@ not new evidence of operational or scientific generalization.
 The reviewed collection merged after green checks. The deployed portfolio links
 this report and its evidence, and the live page was checked against the published
 revision. [Rollout record](../../reports/verification/completion-rollout.json).
+
+## 2026-10-30 — Put the missing days beside the score
+
+The new critic reconstructed the forecasts, scores and event ledger. The
+calculation was sound, but our main report left important coverage counts behind
+a link. About a quarter of scheduled targets cannot be scored, and one equally
+weighted gauge has only about one twentieth of its scheduled days observed and
+usable. Its apparently perfect three-day recall rests on fourteen high days.
+
+We brought those denominators beside the macro scores. The original panel was
+selected using training data and remains unchanged. We can describe performance
+on the observed subset; we cannot turn that into continuous warning coverage.
+
+[Dedicated critique](../../reviews/study-critiques-20261030/river-flow.md) ·
+[Resolution status](../../reviews/study-critiques-20261030/RESPONSE.md).

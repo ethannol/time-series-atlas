@@ -137,7 +137,7 @@ def run():
                             label=method.replace('_', ' '), color=colors[j], alpha=.8, lw=1)
         axes[i, 1].axvline(TRUTH, color='black', ls=':', label='truth')
         axes[i, 1].axvline(ALIAS, color='purple', ls='--', alpha=.6, label='3-second alias')
-        axes[i, 1].set(xlim=(.01, .5), ylabel='Power / own maximum')
+        axes[i, 1].set(xlim=(0, .5), ylabel='Power / own maximum')
     axes[0, 1].legend(fontsize=7, ncol=2)
     axes[-1, 0].set_xlabel('Seconds'); axes[-1, 1].set_xlabel('Frequency (Hz; index FFT assumes 1 s/sample)')
     fig.tight_layout(); fig.savefig(out / 'preselected-examples.png'); plt.close(fig)
@@ -146,7 +146,9 @@ def run():
                '100 of 100 trials, interpolation plus FFT in 74, and the index FFT in none. '
                'With regular three-second sampling, all 100 Lomb–Scargle trials had two '
                'equal-power peaks. Its lowest-frequency tie rule selected the alias, so '
-               'zero counted as recoveries; the data could not uniquely identify the frequency.\n\n')
+               'zero counted as recoveries; the data could not uniquely identify the frequency. '
+               '**The methods use different search ranges and grids, so this does not isolate '
+               'the effect of timestamp handling alone.**\n\n')
     report += ('The experiment compares an index FFT that assumes one second between samples '
                '(correct in the regular control, deliberately wrong for irregular/thinned observations), '
                'linear interpolation followed by FFT, and Lomb–Scargle using actual timestamps. '
@@ -156,6 +158,15 @@ def run():
                              [[r['condition'], r['method'], f"{r['median_absolute_error_hz']:.5f}",
                                r['recovered'], r['ambiguous_grid_peaks']] for r in summaries])
     report += '\n![Recovery and ambiguity](recovery-and-ambiguity.png)\n\n'
+    irregular_fft=frame[(frame.condition=='irregular')&(frame.method=='interpolated_fft')]
+    below=int((irregular_fft.peak_hz<.01).sum())
+    report += (f'Lomb–Scargle searches 0.01–0.45 Hz, whereas both FFT procedures select '
+               f'from all positive native bins (up to about 0.5 under their one-second spacing). '
+               f'Of the {int((~irregular_fft.recovered).sum())} irregular interpolation failures, '
+               f'{below} select peaks below 0.01 Hz, outside the Lomb–Scargle search. '
+               'That is a descriptive audit of the original peaks, not an estimate of what '
+               'a matched-band FFT would achieve. No matched-band comparison was run or '
+               'substituted after seeing results. The spectral plots now show those low frequencies.\n\n')
     report += ('Recovery means within 1/480 Hz of truth. Every-three-second sampling makes '
                '0.17 Hz and 1/3 − 0.17 Hz observationally equivalent. Lomb–Scargle searches '
                'the entire alias family of every candidate; equal maxima select the lowest '
@@ -168,6 +179,20 @@ def run():
     report += ('The grid was amended before any recovery results: adding only the true '
                'frequency and its alias would not expose aliases of noise-shifted maxima. '
                'The expanded grid prevents a numerical search choice from posing as identification.\n\n')
+    sampling_rows=[]
+    alias_rows=[]
+    for condition in CONDITIONS:
+        s=sampling[sampling.condition==condition]
+        sampling_rows.append([condition,f'{s.samples.min()} / {s.samples.median():g} / {s.samples.max()}',
+            f'{s.span_seconds.min():g} / {s.span_seconds.median():g} / {s.span_seconds.max():g}'])
+        a=ls[ls.condition==condition]
+        alias_rows.append([condition,f'{a.truth_power.median():.4f}',f'{a.alias_power.median():.4f}',
+            f'{(a.truth_power-a.alias_power).abs().max():.3g}'])
+    report += '## Sampling support and paired alias power\n\n'
+    report += markdown_table(['Sampling','Sample count min / median / max','Span seconds min / median / max'],sampling_rows)
+    report += '\nThe following powers use the same Lomb–Scargle normalization within each realization. The final column compares the paired powers before summarizing, rather than subtracting two unrelated summary statistics.\n\n'
+    report += markdown_table(['Sampling','Median power at truth','Median power at known alias','Maximum absolute paired power gap'],alias_rows)
+    report += '\nThe nearly equal paired powers under regular thinning express the sampling ambiguity; they do not establish a second physical signal. All replicate values remain in the [replicate ledger](replicates.csv.gz).\n\n'
     report += '![Preselected replicate zero](preselected-examples.png)\n\n'
     report += ('These are the preselected first replicates, not favorable examples. The left panels '
                'show the first 60 seconds; the spectra use the full observation span. Each spectrum is '

@@ -213,7 +213,18 @@ criterion is a universal measure of usefulness.
 EIA identifies Refinitiv as the underlying spot-price source. Free access does
 not establish permission to mirror the complete price history. We retain inputs
 and true-change evidence locally, publish original forecasts and aggregate scores,
-and pin the exact normalized historical-input hash. `uv run atlas fetch oil`
+and pin the exact normalized historical-input hash. **This is a source-file
+distribution boundary, not a guarantee that derived outcomes are unrecoverable.**
+Consecutive published EWMA variance forecasts reveal nearly every test squared
+change: `change[t]² = (variance[t+1] − 0.94 × variance[t]) / 0.06`.
+GARCH forecasts and their published coefficients similarly expose squared
+changes. This does not recover their signs or the complete signed price history.
+[The fresh critique](../../../reviews/study-critiques-20261030/oil.md) documents
+the reconstruction. Keeping those already-public analytical artifacts is an
+explicit publication choice; this disclosure makes no claim of unrestricted
+third-party reuse or a demonstrated licence violation.
+
+`uv run atlas fetch oil`
 can use a newer workbook only if normalization through 2025 reproduces that hash.
 Historical revisions may make exact public reproduction unavailable; the command
 fails explicitly rather than silently changing the experiment.

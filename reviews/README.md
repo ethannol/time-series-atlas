@@ -8,6 +8,14 @@ gates; their current state is explicit there. The
 [original critique](01-design-review.md) and [status history](HISTORY.md) remain
 unchanged historical records.
 
+## Fresh dedicated study critiques after publication
+
+At Ethan's request, each investigation received a new independent agent reviewing
+its implementation, findings and presentation from the published baseline.
+[Per-study verdicts, evidence and resolution status](study-critiques-20261030/README.md)
+record this round. Later qualifications reopen the affected claims; they do not
+erase the earlier checks or imply that every optional extension is a defect.
+
 ## Original findings, reconciled to actual scope
 
 | ID | Finding | Current resolution and evidence | Boundary retained |
