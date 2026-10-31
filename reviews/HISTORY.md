@@ -146,3 +146,14 @@ repair checks. Predictions, splits, models and original scores are preserved.
 The CO₂ diagnostic is a dated post-publication amendment. Electricity's reviewer
 found no required correction. All eight critics' findings and subsequent status
 transitions are retained in the [new round](study-critiques-20261030/README.md).
+
+## 2026-10-30 — Dedicated-review repairs independently verified
+
+C01, RET-01, OIL-01, RF-C01, AQ-C01, SYN-01 and SYN-02 transition from implemented
+to **verified** following separate source preflight and generated-output reviews.
+The data critic verified every new diagnostic/table, all sixty-nine output hashes
+and three changed figures; forty-eight original numerical artifacts are unchanged.
+The general critic checked reader-facing claims and acknowledged explicit optional
+not-adopted dispositions. The statistical review checks the CO₂ diagnostic and
+new descriptive summaries. [Exact verdicts and status history](study-critiques-20261030/README.md).
+Publication CI and live deployment remain separately observable rollout checks.

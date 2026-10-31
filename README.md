@@ -97,9 +97,15 @@ does not guarantee future public recovery. See [data credits and transformations
 for all seven sources, licences, exact acquisition commands and this limitation.
 No analysis command silently downloads or refreshes data.
 
-A fresh checkout reproduced all 68 result files exactly and passed 41 tests.
-The nine sequential run units took about 66 seconds with a process peak of
-730 MiB on this machine, excluding installation and acquisition. Runtime varies.
+At the first full publication, a fresh checkout reproduced all 68 result files
+exactly and passed 41 tests. The nine sequential run units took about 66 seconds
+with a process peak of 730 MiB on this machine, excluding installation and
+acquisition. The later dedicated-review refresh reran all nine units in the
+existing locked checkout: all 48 original numerical artifacts were byte-identical,
+six reports and three figures changed, and one labeled CO₂ diagnostic was added.
+There are now 69 retained outputs, excluding run metadata. The refresh passed
+41 tests; its [execution and comparison record](reports/verification/dedicated-review-regeneration.json)
+is separate from the original fresh-checkout reproduction. Runtime varies.
 Reproduction, test and publication records are indexed in the
 [completion evidence](reviews/completion/README.md). The original three-study
 [release record](reviews/first-release/README.md) remains historical evidence,

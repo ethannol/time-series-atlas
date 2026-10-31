@@ -13,7 +13,7 @@ human validation. Each records inspected files, checks, limitations and evidence
 
 | Investigation | Assigned independent critic | Implementation | Findings | Presentation |
 | --- | --- | --- | --- | --- |
-| [CO₂](co2.md) | `critique_co2` | Accepted | Qualify starting level versus growth | Correction pending verification |
+| [CO₂](co2.md) | `critique_co2` | Accepted | C01: qualify starting level versus growth | Qualification and diagnostic required |
 | [Electricity](electricity.md) | `critique_electricity` | Accepted | Accepted | Accepted; optional extensions |
 | [Retail](retail.md) | `critique_retail` | Accepted | Accepted | Disclose stock-code identity limit |
 | [Oil](oil.md) | `critique_oil` | Accepted | Accepted | OIL-01: disclose recoverable squared outcomes |
@@ -43,9 +43,27 @@ The practical lesson is that reproducing a score does not finish the analysis.
 The right follow-up question may concern the baseline's starting error, the
 identity of a series, what a public artifact reveals, which dates contributed,
 where an aggregate advantage reverses, or which frequencies a method could select.
-These findings are explicit later discoveries, not retroactive claims that the
-original design anticipated them.
+This round includes newly identified implications and renewed requests to make
+known limitations prominent. Retail's identity limit was already acknowledged;
+river coverage was already measured and linked. We preserve that chronology
+without retroactively crediting the original design with the later explanations.
 
-Corrections are implemented in the report generators and stories. Independent
-repair checks, report regeneration, numerical invariance checks and publication
-are still pending. The original scores and frozen comparisons are preserved.
+All seven corrections are independently verified in the generated reports.
+The original scores and frozen comparisons are preserved. Separate
+[data/implementation verification](repair-data.md),
+[statistical verification](co2-repair.md) and
+[general publication-content review](repair-general.md) record their exact scope.
+The [author response](RESPONSE.md) preserves status transitions and explains
+which optional extensions were not adopted.
+
+The nine sequential execution units were rerun from committed source
+`2dee5c82f480637a59489c3043a881dba4c8947b`. All **48 original numerical artifacts
+are byte-identical** to the published baseline. Six reports and three figures
+changed; one labeled CO₂ diagnostic brings the retained output count to 69,
+excluding run metadata. All 41 tests passed. This was an existing-checkout
+regeneration, not another fresh acquisition replay.
+[Execution and per-file comparison](../../reports/verification/dedicated-review-regeneration.json).
+
+These are content and local-evidence verdicts. GitHub checks and the portfolio
+deployment are separate publication records, followed through completion before
+the task's final handoff.

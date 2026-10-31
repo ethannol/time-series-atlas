@@ -1,6 +1,6 @@
 # Can a spectral peak survive the sampling schedule?
 
-With irregular timestamps, Lomb–Scargle recovered the planted frequency in 100 of 100 trials, interpolation plus FFT in 74, and the index FFT in none. With regular three-second sampling, all 100 Lomb–Scargle trials had two equal-power peaks. Its lowest-frequency tie rule selected the alias, so zero counted as recoveries; the data could not uniquely identify the frequency.
+With irregular timestamps, Lomb–Scargle recovered the planted frequency in 100 of 100 trials, interpolation plus FFT in 74, and the index FFT in none. With regular three-second sampling, all 100 Lomb–Scargle trials had two equal-power peaks. Its lowest-frequency tie rule selected the alias, so zero counted as recoveries; the data could not uniquely identify the frequency. **The methods use different search ranges and grids, so this does not isolate the effect of timestamp handling alone.**
 
 The experiment compares an index FFT that assumes one second between samples (correct in the regular control, deliberately wrong for irregular/thinned observations), linear interpolation followed by FFT, and Lomb–Scargle using actual timestamps. Known truth is 0.17 Hz; the same noisy observations feed all methods. This supports the synthetic investigation, not a claim about ECG physiology.
 
@@ -18,9 +18,29 @@ The experiment compares an index FFT that assumes one second between samples (co
 
 ![Recovery and ambiguity](recovery-and-ambiguity.png)
 
+Lomb–Scargle searches 0.01–0.45 Hz, whereas both FFT procedures select from all positive native bins (up to about 0.5 under their one-second spacing). Of the 26 irregular interpolation failures, 6 select peaks below 0.01 Hz, outside the Lomb–Scargle search. That is a descriptive audit of the original peaks, not an estimate of what a matched-band FFT would achieve. No matched-band comparison was run or substituted after seeing results. The spectral plots now show those low frequencies.
+
 Recovery means within 1/480 Hz of truth. Every-three-second sampling makes 0.17 Hz and 1/3 − 0.17 Hz observationally equivalent. Lomb–Scargle searches the entire alias family of every candidate; equal maxima select the lowest frequency. Even if another tie rule selected the true peak, it would not resolve that ambiguity. Ties refer to numerical grid equality, not a confidence interval. The FFT grids need not contain both equivalent frequencies: zero exact FFT ties do not certify identifiability. Lomb–Scargle’s zero median error is also a discrete-grid result: its grid contains the planted truth, while FFT bins differ. It does not mean noiseless or infinitely precise estimation.
 
 The grid was amended before any recovery results: adding only the true frequency and its alias would not expose aliases of noise-shifted maxima. The expanded grid prevents a numerical search choice from posing as identification.
+
+## Sampling support and paired alias power
+
+| Sampling | Sample count min / median / max | Span seconds min / median / max |
+| --- | --- | --- |
+| regular | 480 / 480 / 480 | 479 / 479 / 479 |
+| irregular | 167 / 193 / 217 | 479 / 479 / 479 |
+| every_three_seconds | 160 / 160 / 160 | 477 / 477 / 477 |
+
+The following powers use the same Lomb–Scargle normalization within each realization. The final column compares the paired powers before summarizing, rather than subtracting two unrelated summary statistics.
+
+| Sampling | Median power at truth | Median power at known alias | Maximum absolute paired power gap |
+| --- | --- | --- | --- |
+| regular | 0.6655 | 0.0032 | 0.702 |
+| irregular | 0.6642 | 0.0073 | 0.723 |
+| every_three_seconds | 0.6775 | 0.6775 | 7.36e-11 |
+
+The nearly equal paired powers under regular thinning express the sampling ambiguity; they do not establish a second physical signal. All replicate values remain in the [replicate ledger](replicates.csv.gz).
 
 ![Preselected replicate zero](preselected-examples.png)
 
