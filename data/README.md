@@ -44,13 +44,15 @@ Daqing Chen (2012), [Online Retail II, UCI](https://archive.ics.uci.edu/dataset/
 [DOI 10.24432/C5CG6D](https://doi.org/10.24432/C5CG6D),
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 The modified snapshot contains daily gross recorded UK merchandise sales for
-24 products selected using 2010 only. It is not latent demand or an inventory
+24 exact case-sensitive stock codes selected using 2010 only. It is not latent demand or an inventory
 record. The workbook's annual sheets overlap: the complete 22,523-row multiset
 for December 1–9, 2010 is duplicated. We use the first sheet before December 1
 and the second thereafter. Within-sheet repeated rows remain because their
 meaning is unknown. Cancellations, nonpositive quantities/prices and nonmerchandise
 codes are excluded; missing customer IDs are retained. The audit records every
-filter and the training-only sparse-product cohort.
+filter and the training-only sparse-product cohort. Some case variants have
+matching descriptions, but no verified identity crosswalk is available. Codes
+are not silently merged; code inactivity is not verified product discontinuation.
 [Raw manifest](manifests/retail.json) · [Intake audit](../reports/intake/retail.json).
 
 ## Oil: free access, with a public archival limitation
@@ -71,6 +73,15 @@ outcome hashes. Exact local reproduction needs `uv run atlas fetch oil` before
 workbook additions only if normalization through 2025 reproduces the originally
 pinned snapshot hash. Historical revisions fail explicitly. We do not guarantee
 future recovery of unchanged source bytes from the public endpoint.
+
+**Fetch-only does not mean that all derived outcomes are hidden.** Consecutive
+public EWMA forecasts recover nearly every test squared change via
+`change[t]² = (variance[t+1] - 0.94 * variance[t]) / 0.06`; GARCH forecasts with
+their published coefficients also expose squared changes. Signs and the complete
+signed price history are not recovered by this calculation. We retain the
+already-published analytical artifacts and their history with this explicit
+disclosure; source-file exclusion is not a non-reconstruction or unrestricted
+reuse guarantee. [Dedicated disclosure critique](../reviews/study-critiques-20261030/oil.md).
 
 Each series retains its own observed dates; no weekend filling or forced shared
 calendar is used. The observed negative WTI level makes a universal log-price

@@ -55,7 +55,7 @@
       "fmt": "d"
     },
     {
-      "label": "Three-year December CO₂ MAE, recent growth",
+      "label": "Three-year December CO₂ MAE, recent fit",
       "value": "co2_recent",
       "fmt": ".3f",
       "unit": "ppm"
@@ -67,7 +67,7 @@
     }
   ],
   "finding": [
-    "In the fixed electricity panel, the shared model worsened forecasts for {{test.pooled_worse_customers:d}} customers. For three-year December targets, recent-growth CO₂ regression reduced MAE from {{co2_fixed:.3f}} to {{co2_recent:.3f}} ppm; these are revised-data hindcasts.",
+    "In the fixed electricity panel, the shared model worsened forecasts for {{test.pooled_worse_customers:d}} customers. For three-year December targets, the trailing-decade CO₂ fit reduced MAE from {{co2_fixed:.3f}} to {{co2_recent:.3f}} ppm. These revised-data hindcasts change both the fitted starting level and growth; they do not isolate growth adaptation alone.",
     "An always-zero retail forecast won normalized absolute error while missing every recorded sale. TSB won raw-unit error. Metric weighting and the decision being supported changed the interpretation.",
     "Adaptive oil variance forecasts beat the fixed baseline on QLIKE while direction forecasts lost to prevalence on Brier. A secondary variance loss reversed the ranking. Same-hour air-quality peers outperformed local persistence under simulated outages, with scoring limited by observed truth.",
     "River high-day recall did not translate into equally high new-onset recall. Past weather added little at the longer date offset and brought more false-alert episodes; daily information assumptions limit warning claims.",
@@ -125,6 +125,10 @@
     {
       "title": "Initial critique and changes",
       "path": "reviews/01-design-review.md"
+    },
+    {
+      "title": "Fresh dedicated study critiques and corrections",
+      "path": "reviews/study-critiques-20261030/README.md"
     },
     {
       "title": "Full evidence and review matrix",

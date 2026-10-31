@@ -22,6 +22,23 @@ below separates high-day recall from new-onset indications and shows their false
 | 3 | persistence | 0.715 | 0.149 | 17 |
 
 
+**The scores describe observed, usable targets, not continuous warning coverage.**
+The same targets are used for all three methods. The schedule below is after
+the origin-boundary guards; excluded inputs and targets remain in the
+[split audit](split-audit.csv).
+
+| Date offset | Scored / scheduled gauge-days | Fraction scored |
+| --- | --- | --- |
+| 1 | 48,262 / 62,084 | 77.7% |
+| 3 | 47,877 / 62,050 | 77.2% |
+
+
+Gauge `09386900` contributes only 200 of 3,652 scheduled next-day targets (5.5%)
+and 195 of 3,650 three-day targets (5.3%), yet receives the same macro weight as
+each other gauge. Its three-day weather-model recall of 1.0 is just 14 of 14
+observed high days. The training-selected panel is preserved; this sparse test
+support limits the generality and stability of the macro average.
+
 | Date offset | Method | Alerted / eligible onsets | Misses | False-alert episodes |
 | --- | --- | --- | --- | --- |
 | 1 | flow_only | 467 / 822 | 355 | 653 |

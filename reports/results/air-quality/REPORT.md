@@ -54,6 +54,50 @@ hours in the primary table.
 | 72 | persistence | 0.691 | 0.337 | 0.041 |
 
 
+## A pooled advantage is not a guarantee for each season or station
+
+These are descriptive slices of the frozen experiment, already retained in
+[quarterly evidence](quarter-scores.csv), not new tuning criteria. Entries are
+macro station balanced accuracy; undefined means no station in that slice has
+both true classes. High-hour counts use the same matched observations once,
+not once per method. The test spans March 2016–February 2017, so calendar Q1
+combines March 2016 with January–February 2017; it is not a continuous season.
+
+| Hours | Calendar quarter | BA stations | High hours | Last reading | Calendar | Peer median | Network ridge |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 6 | 1 | 12 | 72 | 1.000 | 0.500 | 1.000 | 1.000 |
+| 6 | 2 | 9 | 44 | 0.722 | 0.500 | 0.946 | 0.943 |
+| 6 | 3 | 0 | 0 | undefined | undefined | undefined | undefined |
+| 6 | 4 | 9 | 30 | 0.500 | 0.500 | 0.811 | 0.839 |
+| 24 | 1 | 12 | 271 | 0.860 | 0.500 | 0.853 | 0.868 |
+| 24 | 2 | 8 | 84 | 0.643 | 0.500 | 0.949 | 0.933 |
+| 24 | 3 | 0 | 0 | undefined | undefined | undefined | undefined |
+| 24 | 4 | 12 | 122 | 0.500 | 0.500 | 0.729 | 0.763 |
+| 72 | 1 | 12 | 989 | 0.674 | 0.500 | 0.879 | 0.880 |
+| 72 | 2 | 4 | 45 | 0.591 | 0.500 | 0.930 | 0.924 |
+| 72 | 3 | 10 | 32 | 0.500 | 0.500 | 0.808 | 0.759 |
+| 72 | 4 | 12 | 557 | 0.500 | 0.500 | 0.834 | 0.836 |
+
+
+At 24 hours in calendar Q1, peer median (0.853) slightly trails the last reading
+(0.860), reversing their overall ranking. At 6 and 24 hours, Q3 has no observed
+high hours in the scored blocks; balanced accuracy is undefined, not zero or
+perfect. Those blocks still contribute other counts and error measurements.
+
+The peer-median comparison also varies across stations:
+
+| Hours | Peer median better | Tied | Worse | Comparable stations |
+| --- | --- | --- | --- | --- |
+| 6 | 9 | 0 | 3 | 12 |
+| 24 | 11 | 0 | 1 | 12 |
+| 72 | 12 | 0 | 0 | 12 |
+
+
+At 6 hours it loses to persistence at 3 of 12 stations. These small scheduled
+slices support neither a universal seasonal ranking nor a claim that each
+station benefits. All station scores and support remain in the
+[station evidence](station-scores.csv).
+
 ## Coverage changes the scope of the answer
 
 | Hours | Eligible / scheduled blocks | Scoreable network / scheduled hours | Peer data available / scheduled hours |

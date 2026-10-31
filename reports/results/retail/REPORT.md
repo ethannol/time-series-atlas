@@ -30,8 +30,10 @@ the intended decision must be considered together.
 
 ## What this comparison means
 
-The cohort contains 24 products selected using 2010 sales only, from 2,072 eligible
-intermittent products. We evaluated 48 full weeks in 2011.
+The cohort contains 24 exact, case-sensitive stock-code series selected using
+2010 sales only, from 2,072 eligible intermittent codes. The retained `product`
+column means this source identifier, not a verified harmonized product identity.
+We evaluated 48 full weeks in 2011.
 Forecasts update using prior transactions only; all smoothing settings were fixed
 before test scoring. The mean training-week denominator gives small products a
 voice; the second panel instead counts units across products and is dominated by
@@ -53,6 +55,12 @@ Missing customer IDs remain: product-level sales do not require customer identit
 A recorded zero is not proof of availability or zero demand. This fixed,
 nonrandom established-product panel includes later inactivity, and does not
 represent new products. There is no stockout, profit or purchasing-cost outcome.
+Some differently capitalized source codes have matching descriptions, including
+`85232b` and `85232B`. We have no verified identity crosswalk and preserve the
+original strings. **Inactivity of a code is not verified product discontinuation**;
+splitting a product across aliases could affect its apparent sparsity and history.
+[The fresh source check](../../../reviews/study-critiques-20261030/retail.md)
+documents examples without asserting that the identifiers should be merged.
 Signed bias is a sales-forecast diagnostic. Repeated rows within one annual sheet
 remain because their meaning cannot be inferred safely from identical fields.
 

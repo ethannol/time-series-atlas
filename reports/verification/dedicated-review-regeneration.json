@@ -1,0 +1,492 @@
+{
+  "baseline_commit": "71999b34ccfd7127840b173efb287ac0a66b2a26",
+  "source_commit": "2dee5c82f480637a59489c3043a881dba4c8947b",
+  "started_at": "2026-10-31T00:17:32.204914+00:00",
+  "finished_at": "2026-10-31T00:18:36.375071+00:00",
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 uv run atlas all",
+  "execution": "Existing locked checkout with pinned inputs; all nine units sequential. This is not a fresh acquisition replay.",
+  "elapsed_seconds": 64.16965424999944,
+  "child_lifetime_peak_rss_bytes": 896401408,
+  "original_outputs": [
+    {
+      "path": "reports/results/air-quality/REPORT.md",
+      "kind": "presentation",
+      "baseline_sha256": "cd55b1d09af0edb1a4ee42f5a16f8e4498193f72ad27ac5adf2377352d4f4afd",
+      "current_sha256": "9e713379e19f066dbb30c76f3be119823c675906a895155ad3575762601ca0fc",
+      "unchanged": false
+    },
+    {
+      "path": "reports/results/air-quality/available-hour-scores.csv",
+      "kind": "numerical",
+      "baseline_sha256": "2792d1cf8e45ad6b9df123161cd06236a7fea3cb59cd061eb105d7b4d4c19a47",
+      "current_sha256": "2792d1cf8e45ad6b9df123161cd06236a7fea3cb59cd061eb105d7b4d4c19a47",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/air-quality/events.csv.gz",
+      "kind": "numerical",
+      "baseline_sha256": "1e90e651ffee8219cd7ec176c06bf8833dda9972da2b0f74f2e69d6d13fbac14",
+      "current_sha256": "1e90e651ffee8219cd7ec176c06bf8833dda9972da2b0f74f2e69d6d13fbac14",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/air-quality/metrics.json",
+      "kind": "numerical",
+      "baseline_sha256": "21c4e8fbe9c6804cd15628fa023d2e3633f0c1eeebb9b040c1d89a5860497ffd",
+      "current_sha256": "21c4e8fbe9c6804cd15628fa023d2e3633f0c1eeebb9b040c1d89a5860497ffd",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/air-quality/outage-warnings.png",
+      "kind": "presentation",
+      "baseline_sha256": "6e6aed2d530ac01158343e571e2e204e6c29f1f62eee15505fed43a41ba2866a",
+      "current_sha256": "6e6aed2d530ac01158343e571e2e204e6c29f1f62eee15505fed43a41ba2866a",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/air-quality/outages.csv",
+      "kind": "numerical",
+      "baseline_sha256": "66479107f6c560c17321da6a3bad46b4dd8bd4fcb78a8c11387e0f34cf57affe",
+      "current_sha256": "66479107f6c560c17321da6a3bad46b4dd8bd4fcb78a8c11387e0f34cf57affe",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/air-quality/parameters.json",
+      "kind": "numerical",
+      "baseline_sha256": "c5d5bf97101dcb31042369133f83da76f8a785a104b9d4023132f0ed942d36ad",
+      "current_sha256": "c5d5bf97101dcb31042369133f83da76f8a785a104b9d4023132f0ed942d36ad",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/air-quality/predictions.csv.gz",
+      "kind": "numerical",
+      "baseline_sha256": "e04843cb83cc6e81274d05ed0c0abab7102a931b07d2f60b0c30b5920372bf01",
+      "current_sha256": "e04843cb83cc6e81274d05ed0c0abab7102a931b07d2f60b0c30b5920372bf01",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/air-quality/quarter-scores.csv",
+      "kind": "numerical",
+      "baseline_sha256": "cc2f9de86546188238b7b8a9b41380c3d7af071f6e4abf28b0d84b6665f6de5e",
+      "current_sha256": "cc2f9de86546188238b7b8a9b41380c3d7af071f6e4abf28b0d84b6665f6de5e",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/air-quality/station-scores.csv",
+      "kind": "numerical",
+      "baseline_sha256": "2792d1cf8e45ad6b9df123161cd06236a7fea3cb59cd061eb105d7b4d4c19a47",
+      "current_sha256": "2792d1cf8e45ad6b9df123161cd06236a7fea3cb59cd061eb105d7b4d4c19a47",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/co2/REPORT.md",
+      "kind": "presentation",
+      "baseline_sha256": "0529ea280461ce3e002cb89abc27f6d32e1d794aaaf5302791621b4db927f682",
+      "current_sha256": "95e62b5cc255cc82b8d1b88d551abd1fbf6a033852fb63d5c9581c82500a1a48",
+      "unchanged": false
+    },
+    {
+      "path": "reports/results/co2/forecast-comparison.png",
+      "kind": "presentation",
+      "baseline_sha256": "d75ced7a440c5dfb50e4ac926ba464651169ed6f3bf1455f06b8712409ed5b68",
+      "current_sha256": "62ecdf2c69175d8f60cfd6a89f85fd4034dc2f965ff9b14653d378bf3dfe2df6",
+      "unchanged": false
+    },
+    {
+      "path": "reports/results/co2/metrics.json",
+      "kind": "numerical",
+      "baseline_sha256": "36e0cef9a2e517645a44fb78de94bfddf716342a5f031ed4f897b68764c2deb9",
+      "current_sha256": "36e0cef9a2e517645a44fb78de94bfddf716342a5f031ed4f897b68764c2deb9",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/co2/paired-error-differences.csv.gz",
+      "kind": "numerical",
+      "baseline_sha256": "b056a41321a6a1fac51abbdf6b20f7bfc1d9b755151fa0a7bd663f1827d8016f",
+      "current_sha256": "b056a41321a6a1fac51abbdf6b20f7bfc1d9b755151fa0a7bd663f1827d8016f",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/co2/predictions.csv.gz",
+      "kind": "numerical",
+      "baseline_sha256": "90d3993ef871868520c3ef127960fea235431ac872640224397394db9b8eadaa",
+      "current_sha256": "90d3993ef871868520c3ef127960fea235431ac872640224397394db9b8eadaa",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/ecg/REPORT.md",
+      "kind": "presentation",
+      "baseline_sha256": "de0e8ddfb3ab2161ea1a6e06153ca6494b3b8e042932fc7e83c63b46afeffdd6",
+      "current_sha256": "de0e8ddfb3ab2161ea1a6e06153ca6494b3b8e042932fc7e83c63b46afeffdd6",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/ecg/fold-scores.csv",
+      "kind": "numerical",
+      "baseline_sha256": "03dab31e3088e973981620eaa3b74dfc898d8bac309e3965655707b349ef1ecf",
+      "current_sha256": "03dab31e3088e973981620eaa3b74dfc898d8bac309e3965655707b349ef1ecf",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/ecg/metrics.json",
+      "kind": "numerical",
+      "baseline_sha256": "f3d1ef9a6a2c2cd88c581a1f675a9765cea20690db4655751b647d847274f359",
+      "current_sha256": "f3d1ef9a6a2c2cd88c581a1f675a9765cea20690db4655751b647d847274f359",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/ecg/model-audit.json",
+      "kind": "numerical",
+      "baseline_sha256": "56330dfd54803a6216d916b2b01f9a9a5365ae67ec0ce2ddec3022ca23fb916b",
+      "current_sha256": "56330dfd54803a6216d916b2b01f9a9a5365ae67ec0ce2ddec3022ca23fb916b",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/ecg/people-and-classes.png",
+      "kind": "presentation",
+      "baseline_sha256": "a0c6760cbb83ba79f028a2f103065eaf89e5d69de2afa61f25696b21e774e1fc",
+      "current_sha256": "a0c6760cbb83ba79f028a2f103065eaf89e5d69de2afa61f25696b21e774e1fc",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/ecg/person-class-scores.csv",
+      "kind": "numerical",
+      "baseline_sha256": "1b8fd4054e02943d17c2f6b94214ed6375baaeb6a33e64a38095ef0582210855",
+      "current_sha256": "1b8fd4054e02943d17c2f6b94214ed6375baaeb6a33e64a38095ef0582210855",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/ecg/person-scores.csv",
+      "kind": "numerical",
+      "baseline_sha256": "b6e3d9e7503ebddf5f3dfbc72af5bb59e59e1de6d8df48d7e581e9a051f0d67c",
+      "current_sha256": "b6e3d9e7503ebddf5f3dfbc72af5bb59e59e1de6d8df48d7e581e9a051f0d67c",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/ecg/predictions.csv.gz",
+      "kind": "numerical",
+      "baseline_sha256": "1c728814c63da383b0440cc5d2bd25f43517e2a07e3303a8af5b5e0b3facc3e8",
+      "current_sha256": "1c728814c63da383b0440cc5d2bd25f43517e2a07e3303a8af5b5e0b3facc3e8",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/ecg/training-membership.csv.gz",
+      "kind": "numerical",
+      "baseline_sha256": "2ec4be305773555d86dc19ccaa5051af17d3fd303700c9b84bb16905090f2776",
+      "current_sha256": "2ec4be305773555d86dc19ccaa5051af17d3fd303700c9b84bb16905090f2776",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/ecg/training-templates.png",
+      "kind": "presentation",
+      "baseline_sha256": "22ddffc2768290e343182e6feb3cc9547bafeb6160bc16b9db6e39617f325f6d",
+      "current_sha256": "22ddffc2768290e343182e6feb3cc9547bafeb6160bc16b9db6e39617f325f6d",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/electricity/REPORT.md",
+      "kind": "presentation",
+      "baseline_sha256": "34ddc6041e119e23be8a2b31d60121e1fab1c57a11036ca4cf01d29a4fbadf1f",
+      "current_sha256": "34ddc6041e119e23be8a2b31d60121e1fab1c57a11036ca4cf01d29a4fbadf1f",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/electricity/customer-comparison.csv.gz",
+      "kind": "numerical",
+      "baseline_sha256": "114034594c046b771f5d9b3386e0ce6315332551103096b84cc4aa35023f979b",
+      "current_sha256": "114034594c046b771f5d9b3386e0ce6315332551103096b84cc4aa35023f979b",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/electricity/metrics.json",
+      "kind": "numerical",
+      "baseline_sha256": "eea0c9d198bbbedd09910f407b41bf74ddac16e13e32eb450c870226cd0ab0db",
+      "current_sha256": "eea0c9d198bbbedd09910f407b41bf74ddac16e13e32eb450c870226cd0ab0db",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/electricity/parameters.json",
+      "kind": "numerical",
+      "baseline_sha256": "86e69932a5f36660cf85e5b304827111cc501cf4149cf4f28935359d4b463729",
+      "current_sha256": "86e69932a5f36660cf85e5b304827111cc501cf4149cf4f28935359d4b463729",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/electricity/pooling-comparison.png",
+      "kind": "presentation",
+      "baseline_sha256": "c4369754e5402e7f18b8592b27c7b22d5d5be5eedf81bd552d4439028e4454d2",
+      "current_sha256": "c4369754e5402e7f18b8592b27c7b22d5d5be5eedf81bd552d4439028e4454d2",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/electricity/predictions.csv.gz",
+      "kind": "numerical",
+      "baseline_sha256": "d5d006d4ab30f8971290845ece0068bbae075eda9c03c03d1d76238f672c1a09",
+      "current_sha256": "d5d006d4ab30f8971290845ece0068bbae075eda9c03c03d1d76238f672c1a09",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/oil/REPORT.md",
+      "kind": "presentation",
+      "baseline_sha256": "51153cc1bb7fc3c69da6c185ae3572f84a6862a38b79680ebef7abf3b17030a3",
+      "current_sha256": "916e0c357c718619d1c4c229b2a16f526295f7ca7c45fe2381234ab8b33a1255",
+      "unchanged": false
+    },
+    {
+      "path": "reports/results/oil/direction-gaps.csv",
+      "kind": "numerical",
+      "baseline_sha256": "a29d37e52523e623d827667fd7dce5d5c2593106cf0cdfbcffa9340d95145303",
+      "current_sha256": "a29d37e52523e623d827667fd7dce5d5c2593106cf0cdfbcffa9340d95145303",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/oil/direction-predictions.csv.gz",
+      "kind": "numerical",
+      "baseline_sha256": "888ed1714e9f9018b83a92561d7cf6d86dfa8b9d06006b9f5d0f5ddb0947e053",
+      "current_sha256": "888ed1714e9f9018b83a92561d7cf6d86dfa8b9d06006b9f5d0f5ddb0947e053",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/oil/direction-years.csv",
+      "kind": "numerical",
+      "baseline_sha256": "504abe81276767a8d8eed646d16552cc6f54a3d03ba50554cb03be6129a71726",
+      "current_sha256": "504abe81276767a8d8eed646d16552cc6f54a3d03ba50554cb03be6129a71726",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/oil/metrics.json",
+      "kind": "numerical",
+      "baseline_sha256": "dc2dbe7350d482009aff4524d636f16a398baccd00e16d638b8e9bd7e823045a",
+      "current_sha256": "dc2dbe7350d482009aff4524d636f16a398baccd00e16d638b8e9bd7e823045a",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/oil/parameters.json",
+      "kind": "numerical",
+      "baseline_sha256": "3baef33eaf77a467713bf2d4c04a3b53af123f369e0ebc63b44d8378b3da7766",
+      "current_sha256": "3baef33eaf77a467713bf2d4c04a3b53af123f369e0ebc63b44d8378b3da7766",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/oil/risk-and-direction.png",
+      "kind": "presentation",
+      "baseline_sha256": "359f64e2917c22e74d08624e02c3313e1dd2e6226d2344d67ce842815ec86bd8",
+      "current_sha256": "359f64e2917c22e74d08624e02c3313e1dd2e6226d2344d67ce842815ec86bd8",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/oil/variance-predictions.csv.gz",
+      "kind": "numerical",
+      "baseline_sha256": "f58f9b28b1e7b714409e7e5b0e2e6d14b2de03cc291ce49aecd88685d3a862f3",
+      "current_sha256": "f58f9b28b1e7b714409e7e5b0e2e6d14b2de03cc291ce49aecd88685d3a862f3",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/oil/variance-subgroups.csv",
+      "kind": "numerical",
+      "baseline_sha256": "3c7f1bf10cdf3caeed7dbb521925994af9a115d24e0ab7a1027ad947928373d2",
+      "current_sha256": "3c7f1bf10cdf3caeed7dbb521925994af9a115d24e0ab7a1027ad947928373d2",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/retail/REPORT.md",
+      "kind": "presentation",
+      "baseline_sha256": "b4a32c0f011fbeea823d95a84b15b1ed57a770e31ebae17b458dbaa46e17021d",
+      "current_sha256": "535a117683357460d5c82d9dce5a2221b44a47c3b9c6e78739a88ad14fc5fd50",
+      "unchanged": false
+    },
+    {
+      "path": "reports/results/retail/metrics.json",
+      "kind": "numerical",
+      "baseline_sha256": "a0cb2c69370222904b3f0798069cd63bb0df6f44de8919636c53cbe9c8f391ff",
+      "current_sha256": "a0cb2c69370222904b3f0798069cd63bb0df6f44de8919636c53cbe9c8f391ff",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/retail/per-product.csv",
+      "kind": "numerical",
+      "baseline_sha256": "0015d463a48c59bf9d30ce936c4df243a89126c847bf15195bdd6858f4d81350",
+      "current_sha256": "0015d463a48c59bf9d30ce936c4df243a89126c847bf15195bdd6858f4d81350",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/retail/per-quarter.csv",
+      "kind": "numerical",
+      "baseline_sha256": "cd7d0e8be650b70e376c7595766414a8d0a1a621da950f047bbe41a29b1f5aa4",
+      "current_sha256": "cd7d0e8be650b70e376c7595766414a8d0a1a621da950f047bbe41a29b1f5aa4",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/retail/predictions.csv.gz",
+      "kind": "numerical",
+      "baseline_sha256": "ca96bcf0d9c4655635ab84e317126bb60038cbeee20112d4e61f6560211da2e6",
+      "current_sha256": "ca96bcf0d9c4655635ab84e317126bb60038cbeee20112d4e61f6560211da2e6",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/retail/weekly-sales.png",
+      "kind": "presentation",
+      "baseline_sha256": "0cebc13252d809986dafa26d8f3a41d4f6a134fe88bec5152c01e90b57c8b873",
+      "current_sha256": "a5efea25abdd88987f5952e9141eed160bc716bf7b3dc5cc04a668c5c71100cd",
+      "unchanged": false
+    },
+    {
+      "path": "reports/results/river-flow/REPORT.md",
+      "kind": "presentation",
+      "baseline_sha256": "81bb7dbcd2df5e19504060702952a4fd26d84dab77243900fbb7f23c96ba6f50",
+      "current_sha256": "e41e5fd9686e2ca8d9407e8932f4ab175322bc30f7e728a27d0a4cd2319e3c91",
+      "unchanged": false
+    },
+    {
+      "path": "reports/results/river-flow/catchment-groups.csv",
+      "kind": "numerical",
+      "baseline_sha256": "65018e04323a5bb5e810b0f158002b9464b4a3b6b7ce2b07cf1c57d9ef48e411",
+      "current_sha256": "65018e04323a5bb5e810b0f158002b9464b4a3b6b7ce2b07cf1c57d9ef48e411",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/river-flow/events.csv.gz",
+      "kind": "numerical",
+      "baseline_sha256": "ed6454881bf8ff270d43b90a8b83aadbea1e2fcad23cbb836636929780bbf2e6",
+      "current_sha256": "ed6454881bf8ff270d43b90a8b83aadbea1e2fcad23cbb836636929780bbf2e6",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/river-flow/flow-and-onsets.png",
+      "kind": "presentation",
+      "baseline_sha256": "99fa0bf0efcec997d9034a48568d9e20c667cd2e0f61fe0a8b8b6a82b001303a",
+      "current_sha256": "99fa0bf0efcec997d9034a48568d9e20c667cd2e0f61fe0a8b8b6a82b001303a",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/river-flow/gauge-scores.csv",
+      "kind": "numerical",
+      "baseline_sha256": "63b44f22fadcc61a995fe13bc5b172bdb854ba665d42b1b650856931df66e7b0",
+      "current_sha256": "63b44f22fadcc61a995fe13bc5b172bdb854ba665d42b1b650856931df66e7b0",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/river-flow/group-scores.csv",
+      "kind": "numerical",
+      "baseline_sha256": "f0ca5b224e9590949f1dcacaea8cf1e72bae4348acfcc9d1e855afe8597df35c",
+      "current_sha256": "f0ca5b224e9590949f1dcacaea8cf1e72bae4348acfcc9d1e855afe8597df35c",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/river-flow/metrics.json",
+      "kind": "numerical",
+      "baseline_sha256": "0af39059acf633a74c818405bef3d2340957e2bb2f06028da060475f5f72b33b",
+      "current_sha256": "0af39059acf633a74c818405bef3d2340957e2bb2f06028da060475f5f72b33b",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/river-flow/parameters.json",
+      "kind": "numerical",
+      "baseline_sha256": "f6eac62831ded8233484a88b16c7da93db2fb69bf1a3adc253a731749d109df2",
+      "current_sha256": "f6eac62831ded8233484a88b16c7da93db2fb69bf1a3adc253a731749d109df2",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/river-flow/predictions.csv.gz",
+      "kind": "numerical",
+      "baseline_sha256": "530a67b01853c859d34780f0e82e1753d0ca85cc0fc798ad4fcf1fb2bb98588f",
+      "current_sha256": "530a67b01853c859d34780f0e82e1753d0ca85cc0fc798ad4fcf1fb2bb98588f",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/river-flow/split-audit.csv",
+      "kind": "numerical",
+      "baseline_sha256": "ec32436c279cce849bddd658a20141f7b15647216b07b14982ba679339d80905",
+      "current_sha256": "ec32436c279cce849bddd658a20141f7b15647216b07b14982ba679339d80905",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/spectral/REPORT.md",
+      "kind": "presentation",
+      "baseline_sha256": "1cf6598a7523e65cd322ae11e300018cec2930bb275e9fa42cb7ce97ee416d4f",
+      "current_sha256": "bbcff43d53ad5c321c24a2f975254f8e11d75b649267a2f367e65ef339fc89d3",
+      "unchanged": false
+    },
+    {
+      "path": "reports/results/spectral/example-spectra.csv.gz",
+      "kind": "numerical",
+      "baseline_sha256": "c7d006cfa5b4de98c37643b5e0ca190a6260d7c0ba5ce0b17ab633c9e2ec4615",
+      "current_sha256": "c7d006cfa5b4de98c37643b5e0ca190a6260d7c0ba5ce0b17ab633c9e2ec4615",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/spectral/inputs.csv.gz",
+      "kind": "numerical",
+      "baseline_sha256": "7dd5b02bb7bc8afeaaf41bd0320c8d2b0b36170380bc85d9ba2e80b002ebff9f",
+      "current_sha256": "7dd5b02bb7bc8afeaaf41bd0320c8d2b0b36170380bc85d9ba2e80b002ebff9f",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/spectral/metrics.json",
+      "kind": "numerical",
+      "baseline_sha256": "3c1ab52d60ce41bb9920aa29c2a8fcf8bcff3a6b80b142bd2ac78b152250d244",
+      "current_sha256": "3c1ab52d60ce41bb9920aa29c2a8fcf8bcff3a6b80b142bd2ac78b152250d244",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/spectral/preselected-examples.png",
+      "kind": "presentation",
+      "baseline_sha256": "37036241d69b51e948e0ce74559dc2f3083cdb8085f2b2d897325b3461c50d7a",
+      "current_sha256": "76089a638185642295277d68e859dd26d2bcc3a463c77c7f90d31503b42fc3d2",
+      "unchanged": false
+    },
+    {
+      "path": "reports/results/spectral/recovery-and-ambiguity.png",
+      "kind": "presentation",
+      "baseline_sha256": "31a09b91de1ab316aaf4c17ada03a25aea63842d7e962651bc153bf783a47408",
+      "current_sha256": "31a09b91de1ab316aaf4c17ada03a25aea63842d7e962651bc153bf783a47408",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/spectral/replicates.csv.gz",
+      "kind": "numerical",
+      "baseline_sha256": "8067b80377a5af51487ac842f827c976dc66c1eb412fcc75bb433ca81db4b467",
+      "current_sha256": "8067b80377a5af51487ac842f827c976dc66c1eb412fcc75bb433ca81db4b467",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/spectral/sampling.csv",
+      "kind": "numerical",
+      "baseline_sha256": "58e32d541f4c26b72c40b69ce2a8977cf1af8824eb97c82beb83c14770a41fee",
+      "current_sha256": "58e32d541f4c26b72c40b69ce2a8977cf1af8824eb97c82beb83c14770a41fee",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/synthetic/REPORT.md",
+      "kind": "presentation",
+      "baseline_sha256": "ec3778a38a65578015cc44168de506c926b866d4e078cc4eb2c9d5e303a16476",
+      "current_sha256": "ec3778a38a65578015cc44168de506c926b866d4e078cc4eb2c9d5e303a16476",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/synthetic/detection-comparison.png",
+      "kind": "presentation",
+      "baseline_sha256": "74830249eb8de5f54433487a0470e9a5bce5a48b708ad6a905c3fea420bda997",
+      "current_sha256": "74830249eb8de5f54433487a0470e9a5bce5a48b708ad6a905c3fea420bda997",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/synthetic/metrics.json",
+      "kind": "numerical",
+      "baseline_sha256": "17eb15c6a025db3dad0536ff9579e1f201392472e790d58d54b44188ea44aeec",
+      "current_sha256": "17eb15c6a025db3dad0536ff9579e1f201392472e790d58d54b44188ea44aeec",
+      "unchanged": true
+    },
+    {
+      "path": "reports/results/synthetic/replicates.csv.gz",
+      "kind": "numerical",
+      "baseline_sha256": "b7265351f8b0b730057915777b33dcc5eeb4f53aa3ba05db86f6336851b8c75a",
+      "current_sha256": "b7265351f8b0b730057915777b33dcc5eeb4f53aa3ba05db86f6336851b8c75a",
+      "unchanged": true
+    }
+  ],
+  "numerical_changes": [],
+  "added_artifact": "reports/results/co2/origin-level-diagnostic.csv.gz",
+  "new_diagnostic_sha256": "fb5d245e771502879432a98863674ac961ef59daef7d9a2cf7c32b5a30acaa2b",
+  "ok": true
+}

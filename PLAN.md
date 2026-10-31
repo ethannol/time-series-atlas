@@ -1,5 +1,11 @@
 # Implementation plan
 
+Post-publication follow-up (2026-10-30): Ethan requested fresh dedicated critics
+for every investigation's implementation, findings and presentation. That review
+round and its corrections are tracked [separately](reviews/study-critiques-20261030/README.md)
+from the historical first-completion checklist below. A fresh review is additional
+scrutiny, not a promise that earlier approvals found every limitation.
+
 Status (2026-10-30): all eight investigations executed, reviewed, reproduced and
 published. All 68 outputs matched in a fresh checkout; 41 tests passed. Atlas
 PR2 and profile PR3 merged, main CI passed, and the live portfolio deployment

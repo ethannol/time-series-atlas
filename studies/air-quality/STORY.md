@@ -81,3 +81,18 @@ not new evidence of operational or scientific generalization.
 The reviewed collection merged after green checks. The deployed portfolio links
 this report and its evidence, and the live page was checked against the published
 revision. [Rollout record](../../reports/verification/completion-rollout.json).
+
+## 2026-10-30 — Bring the seasonal exceptions into the main answer
+
+The dedicated critic reproduced the scores and found that a promised piece of
+context was saved but omitted from the main report: quarter and station
+variation. The peer median slightly loses to persistence in one quarterly slice,
+and some slices have no observed high-pollution hours, making balanced accuracy
+undefined. Several stations also lose at the shortest duration.
+
+We added readable tables and those exceptions beside the overall result. No
+threshold, outage, model or score changed. A pooled advantage cannot answer the
+separate question of whether every season or station benefits.
+
+[Dedicated critique](../../reviews/study-critiques-20261030/air-quality.md) ·
+[Resolution status](../../reviews/study-critiques-20261030/RESPONSE.md).

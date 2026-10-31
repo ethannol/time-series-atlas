@@ -1,0 +1,8 @@
+{
+  "baseline_fetch_verified_at": "2026-10-30T23:19:56.565503+00:00",
+  "baseline_commit": "71999b34ccfd7127840b173efb287ac0a66b2a26",
+  "branch": "review/study-critiques-20261030",
+  "scope": "Eight Time Series Atlas investigations; synthetic detection and spectral control reviewed together",
+  "review_design": "One fresh dedicated critic per investigation, reviewing implementation, findings and presentation; at most three critics active concurrently; prior verdicts do not substitute for new evidence",
+  "instrumentation_patch": null
+}

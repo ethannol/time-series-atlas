@@ -234,3 +234,37 @@ CI and deployment too; the numerical analyses remain unchanged.
 The collection now preserves both the results and the process that corrected
 the work, including the lead agent's earlier premature stop. The finish line
 is the agreed scope with verified delivery, not a self-selected milestone.
+
+## 2026-10-30 — Give every investigation a fresh critic
+
+After the full collection was published, Ethan asked for a dedicated critic of
+each investigation's implementation, findings and presentation. The critics
+read the implementations before prior verdicts and independently reconstructed
+saved evidence. Repeated review is part of the work, including after publication.
+
+The first completed reviews reproduced the numbers and still found qualifications
+that mattered. The CO₂ improvement included a better starting level as well as
+growth. Retail's exact source codes did not establish product identity. Oil
+forecasts exposed squared outcomes despite the source files being kept local.
+River coverage and air-quality subgroup exceptions needed to be visible beside
+their averages. Previous approvals had not made those implications clear enough.
+
+We preserved the experiments and added the missing explanations and context.
+A new CO₂ diagnostic is explicitly labeled as post-publication; no model was
+retuned to improve its final score. The [dedicated reviews](reviews/study-critiques-20261030/README.md)
+and [author response](reviews/study-critiques-20261030/RESPONSE.md) distinguish
+implemented corrections, independent verification and remaining work.
+
+## 2026-10-30 — Verify the corrections without changing the answer
+
+All eight dedicated reviews finished. Seven findings across six investigations
+required better interpretation, disclosure or context; electricity and ECG
+needed no correction. Separate critics checked the proposed repairs and the
+generated reports. All forty-eight original numerical artifacts stayed exactly
+the same. We added one labeled CO₂ diagnostic, revised six reports and three
+figures, and passed all forty-one tests.
+
+The lesson is practical: a correct computation can still leave the reader with
+an incomplete answer. Some implications were newly identified; other limitations
+were known but not prominent enough. Both deserve a visible correction and a
+record of when it happened. [Final review synthesis and evidence](reviews/study-critiques-20261030/README.md).

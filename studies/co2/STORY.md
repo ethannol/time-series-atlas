@@ -1,6 +1,6 @@
 # Atmospheric CO₂: the process story
 
-**Question:** Does a changing growth rate improve multiyear forecasts over a fixed trend and annual cycle?
+**Current question:** Does fitting recent history improve multiyear forecasts? The later critique below explains why the original growth-only framing was too narrow.
 
 **Data:** [NOAA Mauna Loa CO₂ monthly series](https://gml.noaa.gov/ccgg/trends/data.html); monthly records from 1958 onward, with the downloaded snapshot pinned and the study ending in December 2025.
 
@@ -63,3 +63,18 @@ covering bands are not automatically better; the report retains their widths and
 scores. There are only 13 overlapping three-year origins, not independent trials.
 
 [Executed report](../../reports/results/co2/REPORT.md) · [Saved metrics](../../reports/results/co2/metrics.json).
+
+## 2026-10-30 — Ask what the improvement actually contains
+
+Ethan requested a fresh critic dedicated to each investigation after publication.
+The CO₂ critic reproduced the scores, then noticed that our explanation left out
+something important: the all-history fit already missed the observed level at
+the forecast's starting point. Using recent history improves that starting level
+as well as the estimated future increase. The original scores remain valid, but
+they do not isolate the benefit of adapting growth alone.
+
+We qualified the question and added a clearly labeled diagnostic of the same
+predictions. We did not fit a new alternative after seeing the test results.
+This is a correction to our explanation, not a discovery that the original
+scores were wrong. [Dedicated critique](../../reviews/study-critiques-20261030/co2.md)
+and [resolution status](../../reviews/study-critiques-20261030/RESPONSE.md).

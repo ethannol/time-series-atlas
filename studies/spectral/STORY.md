@@ -55,3 +55,19 @@ Live publication verification remains a separate delivery gate.
 The control is published within the synthetic investigation. Live verification
 checked its report link and the deployed recovery/ambiguity figure against the
 retained bytes. [Publication evidence](../../reports/verification/completion-rollout.json).
+
+## 2026-10-30 — Ask whether the comparison changes more than timestamps
+
+The dedicated critic confirmed the recovery counts and alias ambiguity, then
+noticed that our main explanation did not make the unequal search ranges clear.
+Lomb–Scargle excludes very low frequencies that the FFT can select. Some FFT
+failures fall in that excluded range, so the comparison cannot isolate timestamp
+handling alone.
+
+We disclosed that difference, exposed the low-frequency part of the spectrum
+plot, and summarized the already-saved sampling support and paired alias powers.
+The methods, grids and recovery scores remain unchanged. A matched-range
+comparison would be a separate study, not a correction to these frozen scores.
+
+[Dedicated critique](../../reviews/study-critiques-20261030/synthetic.md) ·
+[Resolution status](../../reviews/study-critiques-20261030/RESPONSE.md).
