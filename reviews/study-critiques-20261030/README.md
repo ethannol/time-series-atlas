@@ -67,3 +67,9 @@ regeneration, not another fresh acquisition replay.
 These are content and local-evidence verdicts. GitHub checks and the portfolio
 deployment are separate publication records, followed through completion before
 the task's final handoff.
+
+The [portfolio preflight](../../reports/verification/dedicated-review-publication-preflight.json)
+used an isolated freshly fetched portfolio checkout and an Atlas-only manifest
+fixture. Strict number checks passed; every pinned link, all nine report links,
+four copied figures and the qualified CO₂ copy were checked. The fixture avoids
+building unrelated local project checkouts and is not a production-source edit.

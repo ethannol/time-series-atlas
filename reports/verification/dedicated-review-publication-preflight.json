@@ -1,0 +1,102 @@
+{
+  "checked_at": "2026-10-31T00:22:02.451535+00:00",
+  "atlas_commit": "90b7246056ee4006b08bae0f81848eff493ea059",
+  "portfolio_commit": "058bd54604a1458ae8f724540bdd88133fe4674a",
+  "portfolio_fetch_verified_main": "058bd54604a1458ae8f724540bdd88133fe4674a",
+  "command": "uv run --locked portfolio-build --strict-numbers",
+  "fixture": "Isolated fresh-main portfolio worktree; manifest projects reduced to Atlas only and method_chooser omitted. No production source change; other local project checkouts not built.",
+  "fixture_manifest_sha256": "307c7089a68719c32528183e3ce73de9d45d1e691b9b965997cfd8271fefec57",
+  "pinned_links_checked": 234,
+  "all_nine_reports_linked": true,
+  "figures": [
+    {
+      "site_path": "../assets/time-series-atlas/weekly-sales.png",
+      "sha256": "a5efea25abdd88987f5952e9141eed160bc716bf7b3dc5cc04a668c5c71100cd",
+      "source": "reports/results/retail/weekly-sales.png"
+    },
+    {
+      "site_path": "../assets/time-series-atlas/people-and-classes.png",
+      "sha256": "a0c6760cbb83ba79f028a2f103065eaf89e5d69de2afa61f25696b21e774e1fc",
+      "source": "reports/results/ecg/people-and-classes.png"
+    },
+    {
+      "site_path": "../assets/time-series-atlas/flow-and-onsets.png",
+      "sha256": "99fa0bf0efcec997d9034a48568d9e20c667cd2e0f61fe0a8b8b6a82b001303a",
+      "source": "reports/results/river-flow/flow-and-onsets.png"
+    },
+    {
+      "site_path": "../assets/time-series-atlas/recovery-and-ambiguity.png",
+      "sha256": "31a09b91de1ab316aaf4c17ada03a25aea63842d7e962651bc153bf783a47408",
+      "source": "reports/results/spectral/recovery-and-ambiguity.png"
+    }
+  ],
+  "ledger": {
+    "headline": [
+      {
+        "label": "Customers worsened by pooling",
+        "shown": "21",
+        "unit": "",
+        "provenance": "reports/results/electricity/metrics.json path test.pooled_worse_customers",
+        "key": "test.pooled_worse_customers"
+      },
+      {
+        "label": "Three-year December CO\u2082 MAE, recent fit",
+        "shown": "1.119",
+        "unit": "ppm",
+        "provenance": "reports/results/co2/metrics.json path test.linear_120months/36.mae",
+        "key": "co2_recent"
+      },
+      {
+        "label": "ECG forest macro F1, four groups",
+        "shown": "0.434",
+        "unit": "",
+        "provenance": "reports/results/ecg/metrics.json path primary.forest.macro_f1",
+        "key": "ecg_forest"
+      }
+    ],
+    "inline": [
+      {
+        "key": "test.pooled_worse_customers",
+        "value": 21,
+        "shown": "21",
+        "provenance": "reports/results/electricity/metrics.json path test.pooled_worse_customers"
+      },
+      {
+        "key": "co2_fixed",
+        "value": 6.963805866697118,
+        "shown": "6.964",
+        "provenance": "reports/results/co2/metrics.json path test.linear_expanding/36.mae"
+      },
+      {
+        "key": "co2_recent",
+        "value": 1.11881585081595,
+        "shown": "1.119",
+        "provenance": "reports/results/co2/metrics.json path test.linear_120months/36.mae"
+      },
+      {
+        "key": "ecg_forest",
+        "value": 0.43401845977482834,
+        "shown": "0.434",
+        "provenance": "reports/results/ecg/metrics.json path primary.forest.macro_f1"
+      },
+      {
+        "key": "ecg_majority",
+        "value": 0.23611941237534997,
+        "shown": "0.236",
+        "provenance": "reports/results/ecg/metrics.json path primary.majority.macro_f1"
+      }
+    ],
+    "source_commit": "90b7246056ee4006b08bae0f81848eff493ea059",
+    "source_dirty": false,
+    "verification": {
+      "harness": "Offline invariant tests; analysis evidence linked in each report",
+      "verify": "pass; recorded source hashes match",
+      "artifact": "reports/verification/checks.json",
+      "checked_commit": "2dee5c82f480637a59489c3043a881dba4c8947b",
+      "checked_at": "2026-10-31T00:18:52.883823+00:00"
+    },
+    "literal_numbers": []
+  },
+  "browser_rendering": "Not performed; strict HTML/link/asset checks and separate PNG visual inspections",
+  "live_deployment": "Separate CI/deploy gate; not inferred from local build"
+}
