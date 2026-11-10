@@ -71,3 +71,12 @@ Generation order is regular, irregular, every-three-seconds, then replicate
 0–99 within each condition. Draw phase first, then any retention/jitter, then
 measurement noise. The same realization feeds all three methods. The saved
 replicate-zero spectra are illustrative, not selected for their appearance.
+
+## 2026-11-10 — Optional follow-up amendment
+
+Original results were already inspected and published. Ethan authorized the
+optional suggestions: matched-band FFT comparisons and a fixed off-grid frequency/noise robustness grid.
+The [shared follow-up contract](../followups/DESIGN.md) fixes this extension's
+methods, seeds, denominators and limits before its new full runs. Original
+comparisons and numerical artifacts remain preserved; separately named
+follow-up outputs and report sections are explicitly exploratory.

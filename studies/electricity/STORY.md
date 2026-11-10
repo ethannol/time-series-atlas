@@ -83,3 +83,25 @@ model. A review that confirms the evidence belongs in the story too.
 
 [Dedicated critique](../../reviews/study-critiques-20261030/electricity.md) ·
 [Resolution status](../../reviews/study-critiques-20261030/RESPONSE.md).
+
+## 2026-11-10 — Take the optional review suggestions further
+
+Ethan asked us to keep improving the collection, including the optional follow-ups
+left after the earlier corrections. For this study we planned effect sizes, customer/error concentration and all-customer high-load results.
+The original results were already known, so these are explicitly later questions.
+We declared their scope before new runs and sent the plan to independent critics.
+New findings have not yet been measured at this step.
+[Declared extension](../followups/DESIGN.md) ·
+[Review and current status](../../reviews/optional-followups-20261110/README.md).
+
+## 2026-11-10 — What the follow-up changed
+
+We added magnitudes to the count of customers harmed by sharing coefficients.
+The pooled model increased macro normalized error by 3.89% and aggregate error
+by 2.12%. Two customers account for much of the signed normalized-error increase;
+a different customer dominates recorded load. Those are different questions,
+so we retained both summaries and every customer's high-load scores. No customer
+was removed to make pooling look better.
+
+[Updated report](../../reports/results/electricity/REPORT.md) ·
+[Follow-up contract and review trail](../../reviews/optional-followups-20261110/README.md).

@@ -149,6 +149,8 @@ def run():
     report+='The three gains are small; the exact customer-level differences are retained in [the comparison table](customer-comparison.csv.gz). Full-date sensitivity preserves the overall model ranking, but not the identity of every customer with a small gain.\n\n'
     report+='Normalized MAE divides each customer’s error by its fixed 2012 mean power; it is not MASE or a percentage-error metric. Peak subsets exceed fixed 2012 thresholds and need not contain 10% of test hours. No intervals, measured cost savings, or production latency claims are made. The nominal-clock interval convention is an assumption, not a UTC reconstruction.\n\n'
     report+='[Design](../../../studies/electricity/DESIGN.md) · [Process story](../../../studies/electricity/STORY.md) · [Metrics](metrics.json) · [Run evidence](run.json)\n'
+    from .followup_context import electricity_context
+    report += electricity_context(out, predictions, primary, peaks)
     (out/'REPORT.md').write_text(report)
     finish_run('electricity',out,started,{'models':MODELS,'lambda_mean_loss':.001,'threads':1,'years':[2013,2014]})
     return scores

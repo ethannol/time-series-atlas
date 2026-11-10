@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-11-10T19:21:22.662080+00:00",
+  "reason": "Independent reviewers requested a prominent current result and original-five-method qualification",
+  "source_commit": "a90ceb16236015edd92f06d67bcb7488c1436bf5",
+  "changed_outputs": [
+    "REPORT.md",
+    "run.json"
+  ],
+  "unchanged_outputs": {
+    "metrics.json": "a0cb2c69370222904b3f0798069cd63bb0df6f44de8919636c53cbe9c8f391ff",
+    "per-product.csv": "0015d463a48c59bf9d30ce936c4df243a89126c847bf15195bdd6858f4d81350",
+    "followup-volume-shares.csv": "46bda13ccf68a31516d27760ca948f20356a0442d9a9746298e71993aa02bcfe",
+    "followup-per-product.csv": "7a74fd6fcd489ce47c4078493c4535cfab69ea2ec37211565bea4b12a931d873",
+    "followup-leave-one-code-out.csv": "bea8a24047e64161884b8a31838044825eb5e6fe79734517b590a346b02ba446",
+    "predictions.csv.gz": "ca96bcf0d9c4655635ab84e317126bb60038cbeee20112d4e61f6560211da2e6",
+    "followup-metrics.json": "6d3772b488ce23f55b301e4adf09592f94c5795385a66c6809f4630d74de4e0e",
+    "followup-median-comparison.png": "e5fcb7ca41a62e36343129dc5d05172b67c56f27257124f40866e0f543683b82",
+    "followup-bias-identity.csv": "ebb3e252c7fb1afb94117854024287296d214ac0dac86f06c37d922ba00f8009",
+    "followup-per-quarter.csv": "2306be80eaa61a6fae0088a3f1ecd3bc8c4ccd8ec9c2100785421fb6d51dcabe",
+    "per-quarter.csv": "cd7d0e8be650b70e376c7595766414a8d0a1a621da950f047bbe41a29b1f5aa4",
+    "weekly-sales.png": "a5efea25abdd88987f5952e9141eed160bc716bf7b3dc5cc04a668c5c71100cd",
+    "followup-predictions.csv.gz": "96c15231446847aa911cd91fd51ff7ad4dbe9c503cc4bcee26352d44398b77fb"
+  },
+  "ok": true
+}

@@ -106,3 +106,12 @@ compact snapshot `river-daily-panel.csv.gz`. Preserve dated scores, targets,
 thresholds, event ledgers, exclusions, coefficients, source and protocol commits.
 Source/design and implementation reviews precede full runs; results/publication
 reviews must challenge the warning and cross-catchment interpretations.
+
+## 2026-11-10 — Optional follow-up amendment
+
+Original results were already inspected and published. Ethan authorized the
+optional suggestions: standalone figure/caption context for assumed daily availability and warning limitations.
+The [shared follow-up contract](../followups/DESIGN.md) fixes this extension's
+methods, seeds, denominators and limits before its new full runs. Original
+comparisons and numerical artifacts remain preserved; separately named
+follow-up outputs and report sections are explicitly exploratory.

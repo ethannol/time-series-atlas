@@ -134,16 +134,16 @@ def run():
     support=markdown_table(['Group','Readable benchmark group','Included symbols','Beats','People with group'],[[c,{'N':'Normal, bundle-branch and escape beats','S':'Supraventricular ectopic beats','V':'Ventricular ectopic beats','F':'Fusion of ventricular and normal beats'}[c],{'N':'N,L,R,e,j','S':'A,a,J,S','V':'V,E','F':'F'}[c],int((beats['label']==c).sum()),len(set(beats['person'][beats['label']==c]))] for c in CLASSES])
     report=f'''# Do heartbeat patterns transfer to people absent from training?
 
-Transfer was uneven. The forest had the highest four-group macro F1
+Under the original frozen fold assignment, transfer was uneven. The forest had the highest four-group macro F1
 ({metrics['forest']['macro_f1']:.3f}, versus {metrics['majority']['macro_f1']:.3f}
 for always choosing the majority group), but it recognized **none of the 802 F
 beats** and only {metrics['forest']['per_class'][1]['recall']:.1%} of S beats.
 Its {metrics['forest']['accuracy']:.2%} accuracy was barely above the majority
 baseline's {metrics['majority']['accuracy']:.2%}. Overall accuracy concealed major
-class failures. No tested pipeline supports a claim of reliable recognition
+class failures. That original comparison supports no claim of reliable recognition
 across all four groups.
 
-Every retained person is tested once in a fold that excludes that person from
+In the original comparison, every retained person is tested once in a fold that excludes that person from
 training. The two recordings of patient 201 remain together. Performance by
 class and person matters alongside the pooled score; 100,662 beats still provide
 only 43 distinct patient groups in this selected historic benchmark.
@@ -164,7 +164,7 @@ The N benchmark group includes bundle-branch and escape beats: N is not a
 healthy-person diagnosis. Other symbols, missing prior RR and waveform boundaries
 are counted in the [source audit](../../intake/ecg.json).
 
-All five folds were fixed before fitting. Training is capped at 1,000 randomly
+The original five folds were fixed before fitting. Training is capped at 1,000 randomly
 selected beats per person, without label balancing in that sample selection;
 every eligible held-out beat is scored. PCA and fitted feature scaling use only
 that fold's training people. Template, logistic and forest are different pipelines,
@@ -201,6 +201,8 @@ every capped sample; [test predictions](predictions.csv.gz) expose every outcome
 Contains information from the MIT-BIH Arrhythmia Database v1.0.0 (Moody and Mark,
 2005), DOI10.13026/C2F305, made available under Open Data Commons Attribution1.0.
 '''
+    from .followup_ecg import ecg_followup
+    report += ecg_followup(out, waves, beats, predictions, metrics, mapping)
     (out/'REPORT.md').write_text(report)
     finish_run('ecg',out,started,{'folds':5,'seed':SEED,'training_beats_per_person_cap':1000,'classes':CLASSES,'models':MODELS})
 

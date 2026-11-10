@@ -104,3 +104,24 @@ on the observed subset; we cannot turn that into continuous warning coverage.
 
 [Dedicated critique](../../reviews/study-critiques-20261030/river-flow.md) ·
 [Resolution status](../../reviews/study-critiques-20261030/RESPONSE.md).
+
+## 2026-11-10 — Take the optional review suggestions further
+
+Ethan asked us to keep improving the collection, including the optional follow-ups
+left after the earlier corrections. For this study we planned standalone figure/caption context for assumed daily availability and warning limitations.
+The original results were already known, so these are explicitly later questions.
+We declared their scope before new runs and sent the plan to independent critics.
+New findings have not yet been measured at this step.
+[Declared extension](../followups/DESIGN.md) ·
+[Review and current status](../../reviews/optional-followups-20261110/README.md).
+
+## 2026-11-10 — What the follow-up changed
+
+We put the operational assumptions directly on the figure and portfolio caption:
+daily inputs are assumed available the following morning, and high-day recall
+must be read beside missed rises, false alerts and unscored days. This improves
+how the existing result is presented; it does not supply a new latency experiment
+or change the numerical evidence.
+
+[Updated report](../../reports/results/river-flow/REPORT.md) ·
+[Follow-up contract and review trail](../../reviews/optional-followups-20261110/README.md).

@@ -71,3 +71,27 @@ comparison would be a separate study, not a correction to these frozen scores.
 
 [Dedicated critique](../../reviews/study-critiques-20261030/synthetic.md) ·
 [Resolution status](../../reviews/study-critiques-20261030/RESPONSE.md).
+
+## 2026-11-10 — Take the optional review suggestions further
+
+Ethan asked us to keep improving the collection, including the optional follow-ups
+left after the earlier corrections. For this study we planned matched-band FFT comparisons and a fixed off-grid frequency/noise robustness grid.
+The original results were already known, so these are explicitly later questions.
+We declared their scope before new runs and sent the plan to independent critics.
+New findings have not yet been measured at this step.
+[Declared extension](../followups/DESIGN.md) ·
+[Review and current status](../../reviews/optional-followups-20261110/README.md).
+
+## 2026-11-10 — Make the comparison fairer, then test its limits
+
+We restricted both FFT peak searches to the same frequency band used by
+Lomb–Scargle on the original realizations. Interpolation-plus-FFT recovery rose
+from 74 to 79 of 100 irregular-sampling trials; matching the band did not erase
+the remaining differences in grids, interpolation and timing assumptions.
+We also retained every cell of a fixed frequency/noise/sampling grid, including
+off-grid truths. Regular thinning remained analytically ambiguous even when a
+procedure selected the planted frequency. Finding the right number and uniquely
+identifying a signal are still different achievements.
+
+[Updated report](../../reports/results/spectral/REPORT.md) ·
+[Follow-up contract and review trail](../../reviews/optional-followups-20261110/README.md).

@@ -165,8 +165,8 @@ def run():
                f'Of the {int((~irregular_fft.recovered).sum())} irregular interpolation failures, '
                f'{below} select peaks below 0.01 Hz, outside the Lomb–Scargle search. '
                'That is a descriptive audit of the original peaks, not an estimate of what '
-               'a matched-band FFT would achieve. No matched-band comparison was run or '
-               'substituted after seeing results. The spectral plots now show those low frequencies.\n\n')
+               'a matched-band FFT would achieve. The original comparison did not match search bands; the new '
+               'post-publication section below adds that comparison explicitly. The spectral plots show those low frequencies.\n\n')
     report += ('Recovery means within 1/480 Hz of truth. Every-three-second sampling makes '
                '0.17 Hz and 1/3 − 0.17 Hz observationally equivalent. Lomb–Scargle searches '
                'the entire alias family of every candidate; equal maxima select the lowest '
@@ -203,6 +203,8 @@ def run():
                '[Design](../../../studies/spectral/DESIGN.md) · [Story](../../../studies/spectral/STORY.md) · '
                '[Inputs](inputs.csv.gz) · [Replicate results](replicates.csv.gz) · '
                '[Metrics](metrics.json) · [Run evidence](run.json). Run `uv run atlas spectral`.\n')
+    from .followup_simulation import spectral_followup
+    report += spectral_followup(out, data, frame)
     (out / 'REPORT.md').write_text(report)
     finish_run('spectral', out, started, {'seed': 20261032, 'replicates_per_condition': 100,
                                         'truth_hz': TRUTH, 'recovery_tolerance_hz': TOLERANCE,

@@ -100,3 +100,26 @@ We now describe the exact case-sensitive codes prominently. The original panel
 and scores remain unchanged; merging identifiers after seeing the result would
 require a separate, reviewed analysis. [Dedicated critique](../../reviews/study-critiques-20261030/retail.md)
 and [resolution status](../../reviews/study-critiques-20261030/RESPONSE.md).
+
+## 2026-11-10 — Take the optional review suggestions further
+
+Ethan asked us to keep improving the collection, including the optional follow-ups
+left after the earlier corrections. For this study we planned a trailing 52-week median, all-code influence diagnostics and the summed-bias explanation.
+The original results were already known, so these are explicitly later questions.
+We declared their scope before new runs and sent the plan to independent critics.
+New findings have not yet been measured at this step.
+[Declared extension](../followups/DESIGN.md) ·
+[Review and current status](../../reviews/optional-followups-20261110/README.md).
+
+## 2026-11-10 — What the follow-up changed
+
+We challenged the original comparison with a simple historical weekly median.
+It beat all five earlier methods on both error measures, but forecast about 47%
+fewer units than were actually recorded. Removing the largest-volume code changed
+the raw-unit winner, while every leave-one-code-out scaled comparison still favored
+the median. We also showed why last week's nearly correct total can conceal poor
+week-by-week allocation. This exploratory result changes the method ranking,
+while strengthening the lesson that a forecast score is not an inventory decision.
+
+[Updated report](../../reports/results/retail/REPORT.md) ·
+[Follow-up contract and review trail](../../reviews/optional-followups-20261110/README.md).

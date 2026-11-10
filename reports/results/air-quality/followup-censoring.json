@@ -1,0 +1,25 @@
+{
+  "support": [
+    {
+      "duration": 6,
+      "high_runs": 31,
+      "left_censored": 17,
+      "right_censored": 23,
+      "both_boundaries": 17
+    },
+    {
+      "duration": 24,
+      "high_runs": 67,
+      "left_censored": 15,
+      "right_censored": 6,
+      "both_boundaries": 0
+    },
+    {
+      "duration": 72,
+      "high_runs": 187,
+      "left_censored": 11,
+      "right_censored": 46,
+      "both_boundaries": 0
+    }
+  ]
+}

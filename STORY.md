@@ -268,3 +268,32 @@ The lesson is practical: a correct computation can still leave the reader with
 an incomplete answer. Some implications were newly identified; other limitations
 were known but not prominent enough. Both deserve a visible correction and a
 record of when it happened. [Final review synthesis and evidence](reviews/study-critiques-20261030/README.md).
+
+## 2026-11-10 — Reopen the questions, then review before running
+
+Ethan asked to pursue the optional improvements. We declared a finite extension:
+anchor the CO₂ starting level, add a retail median baseline, test ECG sensitivity
+to patient assignments, and challenge the synthetic methods across fixed grids.
+The other studies gain effect sizes, annual context and clearer operational limits.
+These are exploratory follow-ups because the original outcomes were already known.
+
+Three independent critics reviewed the plan and implementation. They clarified
+what the comparisons can establish, and the data critic caught a CLI thread cap
+that missed a library loaded later. We fixed and independently verified it before
+the full analyses. Recurring review changed the work again; an earlier approval
+was not a reason to stop checking. [Contract and review trail](reviews/optional-followups-20261110/README.md).
+
+## 2026-11-10 — Let the follow-up change the story
+
+All nine run units completed. The new median forecast changed retail's method
+ranking without solving its sales-volume shortfall. Anchoring CO₂ narrowed the
+gap between the original linear fits, and the recent fit still led. ECG repeated
+assignments kept the forest ahead in macro F1 while the patient bootstrap showed
+that its advantage was sensitive to which people were represented. Matching
+spectral search bands helped interpolation, but did not resolve sampling aliases.
+
+We kept the original results and every declared new comparison. Separate critics
+reconstructed the evidence, and asked us to bring retail's changed answer to the
+top of the report. We revised the summaries and appended each study's story,
+instead of rewriting the earlier reasoning as if we had known the answers.
+[New findings and review trail](reviews/optional-followups-20261110/README.md).

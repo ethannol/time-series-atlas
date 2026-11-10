@@ -22,3 +22,24 @@ The three gains are small; the exact customer-level differences are retained in 
 Normalized MAE divides each customer’s error by its fixed 2012 mean power; it is not MASE or a percentage-error metric. Peak subsets exceed fixed 2012 thresholds and need not contain 10% of test hours. No intervals, measured cost savings, or production latency claims are made. The nominal-clock interval convention is an assumption, not a UTC reconstruction.
 
 [Design](../../../studies/electricity/DESIGN.md) · [Process story](../../../studies/electricity/STORY.md) · [Metrics](metrics.json) · [Run evidence](run.json)
+
+## Follow-up: how large is the disadvantage, and who contributes?
+
+Added after publication on 2026-11-10, using the same saved comparisons. Relative
+to separate regression, pooled regression changes macro normalized MAE by
+**+3.89%** and aggregate MAE by **+2.12%**. These
+are relative changes in error, not percentage errors on each observation or
+measured business costs. The original count of customers harmed does not show
+the magnitude by itself.
+
+The two largest positive customer-normalized error changes,
+MT_156, MT_187, account for 68.57% of the **signed net** increase
+summed across customers. Gains elsewhere reduce that denominator. Separately,
+MT_196 contributes 67.15% of actual load on
+the primary test dates. Load share alone does not prove error dominance: the
+aggregate score sums signed prediction errors before taking an absolute value.
+No customer was removed or reweighted after inspecting these summaries.
+
+[All customer deltas and load shares](followup-customer-context.csv) ·
+[Every customer's high-load threshold, count and method scores](followup-peak-scores.md) ·
+[Summary values](followup-context.json).

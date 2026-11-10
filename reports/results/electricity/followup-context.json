@@ -1,0 +1,11 @@
+{
+  "macro_mae_relative_change_percent": 3.8909177197848477,
+  "aggregate_mae_relative_change_percent": 2.116504032251587,
+  "top_two_positive_delta_customers": [
+    "MT_156",
+    "MT_187"
+  ],
+  "top_two_share_of_net_delta": 0.685673089573629,
+  "largest_load_customer": "MT_196",
+  "largest_actual_load_share": 0.6715149999271263
+}

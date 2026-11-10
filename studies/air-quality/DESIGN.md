@@ -85,3 +85,12 @@ assumption; correlated failures and event-dependent real missingness are outside
 this simulation. Do not claim recovered natural gaps or population health benefit.
 Independent source/design and pre-run implementation reviews precede full runs;
 results/publication reviews challenge exactly those scoped claims.
+
+## 2026-11-10 — Optional follow-up amendment
+
+Original results were already inspected and published. Ethan authorized the
+optional suggestions: explicit macro-MAE labeling, true-event censoring support and calendar-baseline behavior.
+The [shared follow-up contract](../followups/DESIGN.md) fixes this extension's
+methods, seeds, denominators and limits before its new full runs. Original
+comparisons and numerical artifacts remain preserved; separately named
+follow-up outputs and report sections are explicitly exploratory.

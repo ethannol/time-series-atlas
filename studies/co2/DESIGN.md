@@ -73,3 +73,12 @@ error = signed three-year error minus origin gap. Save these quantities by origi
 and report their means. This is signed-error accounting, not causal attribution
 or an MAE decomposition. It does not evaluate an origin-anchored model or select
 a replacement baseline. [Critique and arithmetic](../../reviews/study-critiques-20261030/co2.md).
+
+## 2026-11-10 — Optional follow-up amendment
+
+Original results were already inspected and published. Ethan authorized the
+optional suggestions: anchored linear forecasts, inherited target-site sensitivity and an explanatory source/origin-gap figure.
+The [shared follow-up contract](../followups/DESIGN.md) fixes this extension's
+methods, seeds, denominators and limits before its new full runs. Original
+comparisons and numerical artifacts remain preserved; separately named
+follow-up outputs and report sections are explicitly exploratory.

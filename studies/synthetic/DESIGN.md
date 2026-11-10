@@ -29,3 +29,12 @@ no alarms / eligible. Delay is alarm index minus 200 conditional on detection.
 No-change false-alarm rate uses all 200 no-change streams.
 Persist replicate outcomes and calibrated thresholds. No universal winner or
 real-world false-alarm guarantee. Pre-run review and protocol commit required.
+
+## 2026-11-10 — Optional follow-up amendment
+
+Original results were already inspected and published. Ethan authorized the
+optional suggestions: overall detection counts, a fixed dependence/shift grid and pointwise simulation intervals.
+The [shared follow-up contract](../followups/DESIGN.md) fixes this extension's
+methods, seeds, denominators and limits before its new full runs. Original
+comparisons and numerical artifacts remain preserved; separately named
+follow-up outputs and report sections are explicitly exploratory.

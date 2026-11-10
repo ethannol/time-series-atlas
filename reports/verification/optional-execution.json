@@ -1,0 +1,67 @@
+{
+  "started_at": "2026-11-10T19:16:43.925048+00:00",
+  "source_commit": "2446d4b1defbff7b5fd341171d9130381e279eb4",
+  "baseline_main": "1a0ec0180b857f7d98b092a8104a575657d53445",
+  "command": "five native thread environment caps=1; uv run python wrapper calling atlas all",
+  "environment": {
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1"
+  },
+  "accelerate_limit": "environment request only; Accelerate is not enumerated by threadpoolctl",
+  "instrumentation": "wrapper prints unit completion and records threadpool state; no scoring/source patch",
+  "units": [
+    {
+      "study": "co2",
+      "elapsed_seconds": 0.6423682920285501
+    },
+    {
+      "study": "electricity",
+      "elapsed_seconds": 11.926052374998108
+    },
+    {
+      "study": "synthetic",
+      "elapsed_seconds": 1.2149230419890955
+    },
+    {
+      "study": "retail",
+      "elapsed_seconds": 1.0220118750003166
+    },
+    {
+      "study": "oil",
+      "elapsed_seconds": 0.924146916018799
+    },
+    {
+      "study": "river-flow",
+      "elapsed_seconds": 7.121081541990861
+    },
+    {
+      "study": "air-quality",
+      "elapsed_seconds": 2.744718375033699
+    },
+    {
+      "study": "ecg",
+      "elapsed_seconds": 162.88323366601253
+    },
+    {
+      "study": "spectral",
+      "elapsed_seconds": 29.099693332973402
+    }
+  ],
+  "observed_threadpools": [
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libomp",
+      "filepath": "/Users/ethannol/src/side-projects/time-series-atlas/.venv/lib/python3.12/site-packages/sklearn/.dylibs/libomp.dylib",
+      "version": null
+    }
+  ],
+  "ok": true,
+  "elapsed_seconds": 219.09036695800023,
+  "process_lifetime_peak_rss_bytes": 644251648,
+  "finished_at": "2026-11-10T19:20:21.545040+00:00"
+}

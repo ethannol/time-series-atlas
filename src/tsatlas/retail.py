@@ -1,4 +1,5 @@
 """Forecast recorded weekly sales using origin-safe intermittent-demand methods."""
+import json
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -94,12 +95,12 @@ def run():
     rows=[[m['model'],f"{m['macro_scaled_mae']:.3f}",f"{m['unit_mae']:.2f}",f"{m['forecast_total_units']:.1f}",f"{m['observed_total_units']:.0f}"] for m in metrics]
     report=f'''# What should next week's sales forecast optimize?
 
-For this fixed panel, **{best['model']} has the lowest normalized weekly absolute
+In the original five-method comparison on this fixed panel, **{best['model']} has the lowest normalized weekly absolute
 error ({best['macro_scaled_mae']:.3f})**. The total-sales comparison below shows
 whether a low-error forecast still systematically understates recorded sales.
 Neither criterion alone establishes an inventory decision or unmet demand.
 
-The ranking changes when errors are counted in raw units: TSB has the lowest
+Within that original five-method comparison, the ranking changes when errors are counted in raw units: TSB has the lowest
 unit MAE ({next(r for r in metrics if r['model']=='tsb')['unit_mae']:.2f}), compared
 with zero's {next(r for r in metrics if r['model']=='zero')['unit_mae']:.2f}.
 The normalized score weights products equally relative to their past sales;
@@ -158,6 +159,20 @@ Reproduce with `uv run atlas retail` from committed source.
 Data: Daqing Chen, Online Retail II, UCI (2012), CC BY 4.0;
 source and transformations are credited in the repository data documentation.
 '''
+    from .followup_forecasting import retail_followup
+    report += retail_followup(out, panel, predictions)
+    followup_metrics=json.loads((out/'followup-metrics.json').read_text())['primary']
+    median=next(row for row in followup_metrics if row['model']=='median_52weeks')
+    scaled_best=min(followup_metrics,key=lambda row:row['macro_scaled_mae'])['model']
+    unit_best=min(followup_metrics,key=lambda row:row['unit_mae'])['model']
+    summary=(f"**2026-11-10 exploratory follow-up:** Among all six methods, {scaled_best} has "
+             f"the lowest scaled MAE and {unit_best} has the lowest unit MAE. "
+             f"The historical median scores {median['macro_scaled_mae']:.3f} and "
+             f"{median['unit_mae']:.3f}, respectively, while forecasting "
+             f"{median['forecast_total_units']:,.1f} of {median['observed_total_units']:,.0f} "
+             "recorded units. Lower error still does not establish an inventory policy. "
+             "[See the later comparison and its limits](#post-publication-exploratory-follow-up-a-historical-weekly-median).\n\n")
+    report=report.replace('\n\n','\n\n'+summary,1)
     (out/'REPORT.md').write_text(report)
     finish_run('retail',out,started,{'test_origins':['2011-01-03','2011-11-28'],'alpha':.1,'models':MODELS,'selection_end':'2010-12-31'})
 
