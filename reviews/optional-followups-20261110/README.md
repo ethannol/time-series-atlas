@@ -25,7 +25,7 @@ declared before their runs; they do not become retroactive confirmatory results.
 - [x] Verify every original numerical artifact remains byte-identical.
 - [x] Complete independent numerical, interpretation and presentation reviews.
 - [x] Update every story and the portfolio's claims to the actual findings.
-- [ ] Follow final PR/main checks, deployment and live verification to completion.
+- [x] Follow implementation PR/main checks, deployment and live verification to completion (initial delivery recorded below; audit-only follow-up uses the same gates).
 
 ## Reviews and chronological decisions
 
@@ -100,3 +100,24 @@ GitHub profile's Atlas-summary PR, followed by the Atlas audit-only documentatio
 PR. Fresh live PR inventories in both repositories were empty before publication.
 No unrelated or draft PR is included; no portfolio source change is needed.
 CI, main revisions, live deployment and final audit remain separate completion gates.
+
+## Delivered checkpoint and independent completion audit
+
+[Atlas PR5](https://github.com/ethannol/time-series-atlas/pull/5) merged at its
+expected non-draft head with both checks green, preserving the analysis-source
+commits. [Profile PR4](https://github.com/ethannol/ethannol/pull/4) merged its
+reviewed Atlas summary; that repository has no configured workflows. Atlas main
+CI and Pages deployment passed. The [live verification](../../reports/verification/optional-rollout.json)
+checked all nine reports, 249 pinned paths, all four displayed figure hashes,
+sourced numbers and exact profile bytes.
+
+The [non-authoring completion audit](completion-audit-general.md) checks every
+extension obligation against those artifacts and live delivery. It distinguishes
+that delivered checkpoint from the documentation-only PR publishing this audit.
+The latter receives the same expected-head CI, main checks, deployment and live
+verification before final handoff; its newer Git revisions do not change the
+recorded analysis provenance.
+
+[Local strict build](../../reports/verification/optional-local-build.json) ·
+[PR/main/deployment gates](../../reports/verification/optional-publication-gates.json).
+The earlier historical completion records remain unchanged.

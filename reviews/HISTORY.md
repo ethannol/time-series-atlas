@@ -182,3 +182,12 @@ The reviewers asked for a prominent new retail answer and precise wording about
 the unchanged spectral search grid and ECG assignments. Those repairs preserve
 the numerical evidence. [Verdicts and exact scope](optional-followups-20261110/README.md).
 Publication, live delivery and their final audit remain separately checked.
+
+## 2026-11-10 — Audit the optional extension's delivered scope
+
+The non-authoring general critic audited all extension checklist items, retained
+results, process stories, review responses, merged Atlas/profile PRs and live
+portfolio evidence. Initial delivery passed; no agreed study addition remained
+unimplemented. Its [audit](optional-followups-20261110/completion-audit-general.md)
+records the exact main and deployment checkpoint and separately requires the
+audit-only documentation PR to receive CI and deployment verification.
