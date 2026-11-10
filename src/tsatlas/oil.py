@@ -173,6 +173,8 @@ has the lowest absolute error against squared price changes. A model ranking
 depends on the quantity and loss being evaluated; these results do not establish
 profitable trading or calibrated financial risk limits.
 
+Brier is the mean squared error of an up/non-up probability. QLIKE scores the variance forecast: it penalizes variance that is too small for large squared changes as well as unnecessarily large forecasts. Smaller is better within each score.
+
 Variance and direction require separate comparisons. Negative values in the
 chart mean improvement over that task's simple baseline; the two panels have
 different units and must not be compared in magnitude. Every setting was fixed
@@ -236,6 +238,8 @@ Reproduce locally with `uv run atlas fetch oil` then `uv run atlas oil`.
 Source: EIA spot-price workbooks released October 28, 2026, underlying source
 Refinitiv; figures, model forecasts and summaries are this project's analysis.
 '''
+    from .followup_context import oil_context
+    report += oil_context(out)
     (out/'REPORT.md').write_text(report)
     finish_run('oil',out,started,{'train':['2000-01-01','2014-12-31'],'test':['2015-01-01','2025-12-31'],'ewma_decay':.94,'price_inputs':'fetch-only'})
 

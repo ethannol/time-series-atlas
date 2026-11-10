@@ -70,3 +70,12 @@ a population effect. Save monthly coefficients/scales/configuration and run meta
 
 Complete source/design reviews and commit before fitting. Keep any full-sample
 source audit distinct from selection or tuning: no future outcome-informed choices.
+
+## 2026-11-10 — Optional follow-up amendment
+
+Original results were already inspected and published. Ethan authorized the
+optional suggestions: effect sizes, customer/error concentration and all-customer high-load results.
+The [shared follow-up contract](../followups/DESIGN.md) fixes this extension's
+methods, seeds, denominators and limits before its new full runs. Original
+comparisons and numerical artifacts remain preserved; separately named
+follow-up outputs and report sections are explicitly exploratory.

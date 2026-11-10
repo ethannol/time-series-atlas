@@ -78,3 +78,13 @@ predictions. We did not fit a new alternative after seeing the test results.
 This is a correction to our explanation, not a discovery that the original
 scores were wrong. [Dedicated critique](../../reviews/study-critiques-20261030/co2.md)
 and [resolution status](../../reviews/study-critiques-20261030/RESPONSE.md).
+
+## 2026-11-10 — Take the optional review suggestions further
+
+Ethan asked us to keep improving the collection, including the optional follow-ups
+left after the earlier corrections. For this study we planned anchored linear forecasts, inherited target-site sensitivity and an explanatory source/origin-gap figure.
+The original results were already known, so these are explicitly later questions.
+We declared their scope before new runs and sent the plan to independent critics.
+New findings have not yet been measured at this step.
+[Declared extension](../followups/DESIGN.md) ·
+[Review and current status](../../reviews/optional-followups-20261110/README.md).

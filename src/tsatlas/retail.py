@@ -94,7 +94,7 @@ def run():
     rows=[[m['model'],f"{m['macro_scaled_mae']:.3f}",f"{m['unit_mae']:.2f}",f"{m['forecast_total_units']:.1f}",f"{m['observed_total_units']:.0f}"] for m in metrics]
     report=f'''# What should next week's sales forecast optimize?
 
-For this fixed panel, **{best['model']} has the lowest normalized weekly absolute
+In the original five-method comparison on this fixed panel, **{best['model']} has the lowest normalized weekly absolute
 error ({best['macro_scaled_mae']:.3f})**. The total-sales comparison below shows
 whether a low-error forecast still systematically understates recorded sales.
 Neither criterion alone establishes an inventory decision or unmet demand.
@@ -158,6 +158,8 @@ Reproduce with `uv run atlas retail` from committed source.
 Data: Daqing Chen, Online Retail II, UCI (2012), CC BY 4.0;
 source and transformations are credited in the repository data documentation.
 '''
+    from .followup_forecasting import retail_followup
+    report += retail_followup(out, panel, predictions)
     (out/'REPORT.md').write_text(report)
     finish_run('retail',out,started,{'test_origins':['2011-01-03','2011-11-28'],'alpha':.1,'models':MODELS,'selection_end':'2010-12-31'})
 

@@ -85,3 +85,12 @@ Source/design review includes actual headers, annotation inventory, group mappin
 and extraction. Pre-run implementation review tests patient separation, within-
 training transforms, exclusions and post-beat lookahead. Results/publication
 reviews challenge generalization, class support and clinical overstatement.
+
+## 2026-11-10 — Optional follow-up amendment
+
+Original results were already inspected and published. Ethan authorized the
+optional suggestions: class precision/support, paired patient bootstrap and three additional patient-fold assignments.
+The [shared follow-up contract](../followups/DESIGN.md) fixes this extension's
+methods, seeds, denominators and limits before its new full runs. Original
+comparisons and numerical artifacts remain preserved; separately named
+follow-up outputs and report sections are explicitly exploratory.

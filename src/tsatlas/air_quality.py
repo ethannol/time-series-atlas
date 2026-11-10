@@ -136,7 +136,7 @@ def run():
     axes[1].bar(np.arange(3)+.24,c.peer_input_fraction_of_scheduled,width=.22,label='Peer inputs available (all hours)')
     axes[1].set_xticks(range(3),['6 h','24 h','72 h']);axes[1].set_ylim(0,1);axes[1].set_ylabel('Fraction of scheduled scope');axes[1].legend(fontsize=8)
     fig.suptitle('Outage nowcasting • one station removed at a time, March 2016–February 2017');fig.tight_layout();fig.savefig(out/'outage-warnings.png');plt.close(fig)
-    score_table=markdown_table(['Hours','Method','Balanced accuracy','Stations contributing','MAE (µg/m³)'],[[r['duration'],r['model'],f"{r['macro_balanced_accuracy']:.3f}" if r['macro_balanced_accuracy'] is not None else 'undefined',r['contributing_stations'],f"{r['macro_mae']:.1f}"] for r in primary])
+    score_table=markdown_table(['Hours','Method','Balanced accuracy','Stations contributing','Macro station MAE (µg/m³)'],[[r['duration'],r['model'],f"{r['macro_balanced_accuracy']:.3f}" if r['macro_balanced_accuracy'] is not None else 'undefined',r['contributing_stations'],f"{r['macro_mae']:.1f}"] for r in primary])
     def fmt(value):return f'{value:.3f}' if value is not None else 'undefined'
     rates_table=markdown_table(['Hours','Method','Pooled precision','Pooled recall','Pooled false-positive rate'],[[r['duration'],r['model'],fmt(r['pooled_precision']),fmt(r['pooled_recall']),fmt(r['pooled_false_positive_rate'])] for r in primary])
     coverage_table=markdown_table(['Hours','Eligible / scheduled blocks','Scoreable network / scheduled hours','Peer data available / scheduled hours'],[[r['duration'],f"{r['eligible_blocks']} / {r['scheduled_blocks']}",f"{r['scoreable_network_hours']} / {r['scheduled_hours']}",f"{r['peer_available_hours_all_scheduled']} / {r['scheduled_hours']}"] for r in coverage])
@@ -248,6 +248,8 @@ latency, health benefit, or robustness to correlated network failures is claimed
 Run `uv run atlas air-quality`. Data: Song Chen (2017), Beijing Multi-Site Air
 Quality, UCI, CC BY 4.0; input is the twelve full station files.
 '''
+    from .followup_context import air_context
+    report += air_context(out, events, predictions)
     (out/'REPORT.md').write_text(report)
     finish_run('air-quality',out,started,{'outage_durations':[6,24,72],'minimum_other_stations':3,'test_start':'2016-03-01','test_end':'2017-02-28','threshold_quantile':.9})
 

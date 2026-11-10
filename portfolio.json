@@ -46,6 +46,11 @@
       "source": "json_file",
       "path": "reports/results/ecg/metrics.json",
       "key": "primary.majority.macro_f1"
+    },
+    "electricity_effect": {
+      "source": "json_file",
+      "path": "reports/results/electricity/followup-context.json",
+      "key": "macro_mae_relative_change_percent"
     }
   },
   "headline": [
@@ -67,7 +72,7 @@
     }
   ],
   "finding": [
-    "In the fixed electricity panel, the shared model worsened forecasts for {{test.pooled_worse_customers:d}} customers. For three-year December targets, the trailing-decade CO₂ fit reduced MAE from {{co2_fixed:.3f}} to {{co2_recent:.3f}} ppm. These revised-data hindcasts change both the fitted starting level and growth; they do not isolate growth adaptation alone.",
+    "In the fixed electricity panel, the shared model worsened forecasts for {{test.pooled_worse_customers:d}} customers, increasing macro normalized error by {{electricity_effect:.2f}}% relative to separate regression. For three-year December targets, the trailing-decade CO₂ fit reduced MAE from {{co2_fixed:.3f}} to {{co2_recent:.3f}} ppm. These revised-data hindcasts change both the fitted starting level and growth; they do not isolate growth adaptation alone.",
     "An always-zero retail forecast won normalized absolute error while missing every recorded sale. TSB won raw-unit error. Metric weighting and the decision being supported changed the interpretation.",
     "Adaptive oil variance forecasts beat the fixed baseline on QLIKE while direction forecasts lost to prevalence on Brier. A secondary variance loss reversed the ranking. Same-hour air-quality peers outperformed local persistence under simulated outages, with scoring limited by observed truth.",
     "River high-day recall did not translate into equally high new-onset recall. Past weather added little at the longer date offset and brought more false-alert episodes; daily information assumptions limit warning claims.",
@@ -100,7 +105,7 @@
     },
     {
       "path": "reports/results/river-flow/flow-and-onsets.png",
-      "caption": "High-day and eligible-onset recall use different cohorts and weighting. False alerts and misses in the linked report qualify these daily date-offset comparisons."
+      "caption": "High-day and eligible-onset recall use different cohorts and weighting. Daily observations are assumed available the next morning; false alerts, missed rises and unscored days limit warning claims."
     },
     {
       "path": "reports/results/spectral/recovery-and-ambiguity.png",
@@ -129,6 +134,10 @@
     {
       "title": "Fresh dedicated study critiques and corrections",
       "path": "reviews/study-critiques-20261030/README.md"
+    },
+    {
+      "title": "Optional follow-ups: questions, critique and new evidence",
+      "path": "reviews/optional-followups-20261110/README.md"
     },
     {
       "title": "Full evidence and review matrix",

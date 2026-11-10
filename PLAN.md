@@ -1,5 +1,12 @@
 # Implementation plan
 
+2026-11-10 extension: Ethan authorized the optional presentation and analytical
+follow-ups. The [finite contract](studies/followups/DESIGN.md) and
+[extension completion checklist](reviews/optional-followups-20261110/README.md)
+govern this new work. Earlier completion statements below remain dated history.
+Implementation is ready for independent pre-run review; new full comparisons
+have not yet run at this checkpoint.
+
 Post-publication follow-up (2026-10-30): Ethan requested fresh dedicated critics
 for every investigation's implementation, findings and presentation. That review
 round and its corrections are tracked [separately](reviews/study-critiques-20261030/README.md)

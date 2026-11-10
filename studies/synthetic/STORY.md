@@ -89,3 +89,13 @@ that correction is recorded in its own story.
 
 [Dedicated critique](../../reviews/study-critiques-20261030/synthetic.md) ·
 [Resolution status](../../reviews/study-critiques-20261030/RESPONSE.md).
+
+## 2026-11-10 — Take the optional review suggestions further
+
+Ethan asked us to keep improving the collection, including the optional follow-ups
+left after the earlier corrections. For this study we planned overall detection counts, a fixed dependence/shift grid and pointwise simulation intervals.
+The original results were already known, so these are explicitly later questions.
+We declared their scope before new runs and sent the plan to independent critics.
+New findings have not yet been measured at this step.
+[Declared extension](../followups/DESIGN.md) ·
+[Review and current status](../../reviews/optional-followups-20261110/README.md).

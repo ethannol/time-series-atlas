@@ -84,3 +84,12 @@ This explicit public acquisition limitation does not block local exact reproduct
 Freeze after actual-file source/design reviews; implementation review precedes
 full test scoring. Later choices must be recorded as protocol deviations with
 whether results had already been inspected. Record the protocol commit.
+
+## 2026-11-10 — Optional follow-up amendment
+
+Original results were already inspected and published. Ethan authorized the
+optional suggestions: plain-language losses and complete per-market annual contribution tables.
+The [shared follow-up contract](../followups/DESIGN.md) fixes this extension's
+methods, seeds, denominators and limits before its new full runs. Original
+comparisons and numerical artifacts remain preserved; separately named
+follow-up outputs and report sections are explicitly exploratory.

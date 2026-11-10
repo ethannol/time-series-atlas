@@ -60,3 +60,12 @@ stockouts, lost sales, replacement products or a cost-optimal order quantity.
 Separate source/design, pre-run implementation, results, and publication reviews.
 Exact protocol commit is recorded by the run metadata. Source audit summaries
 may be inspected before fitting; no model comparison or 2011-based cohort choice.
+
+## 2026-11-10 — Optional follow-up amendment
+
+Original results were already inspected and published. Ethan authorized the
+optional suggestions: a trailing 52-week median, all-code influence diagnostics and the summed-bias explanation.
+The [shared follow-up contract](../followups/DESIGN.md) fixes this extension's
+methods, seeds, denominators and limits before its new full runs. Original
+comparisons and numerical artifacts remain preserved; separately named
+follow-up outputs and report sections are explicitly exploratory.

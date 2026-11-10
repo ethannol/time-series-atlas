@@ -183,7 +183,9 @@ def run():
     for ax in axes:ax.set_xticks(range(2),['Next daily target','Target three days later']);ax.set_ylim(0,1);ax.legend(fontsize=8)
     axes[0].set_ylabel('Macro gauge high-day recall');axes[1].set_ylabel('Pooled eligible-onset recall')
     axes[0].set_title('Recognizing high-flow days');axes[1].set_title('Warning before a new high-flow run')
-    fig.suptitle('Known-gauge daily forecasts • cutoffs fixed using 2000–2004 negatives');fig.tight_layout();fig.savefig(out/'flow-and-onsets.png');plt.close(fig)
+    fig.suptitle('Known-gauge daily forecasts • cutoffs fixed using 2000–2004 negatives')
+    fig.text(.5,.015,'Daily inputs assumed available next morning; unscored days, misses and false alerts limit warning claims.',ha='center',fontsize=8)
+    fig.tight_layout(rect=(0,.05,1,1));fig.savefig(out/'flow-and-onsets.png');plt.close(fig)
     def fmt(value):return f'{value:.3f}' if value is not None else 'undefined'
     primary_table=markdown_table(['Date offset','Method','Macro recall','Macro false-positive rate','Gauges'],[[r['horizon'],r['model'],fmt(r['macro_recall']),fmt(r['macro_false_positive_rate']),r['gauges']] for r in primary])
     event_table=markdown_table(['Date offset','Method','Alerted / eligible onsets','Misses','False-alert episodes'],[[r['horizon'],r['model'],f"{r['alerted_onsets']} / {r['eligible_onsets']}",r['missed_onsets'],r['false_alert_episodes']] for r in onset])
