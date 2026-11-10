@@ -5,7 +5,7 @@ follow-ups. The [finite contract](studies/followups/DESIGN.md) and
 [extension completion checklist](reviews/optional-followups-20261110/README.md)
 govern this new work. Earlier completion statements below remain dated history.
 All nine execution units completed from reviewed, committed source. Numerical,
-interpretation and presentation review is underway; publication remains pending.
+interpretation and presentation reviews passed; publication remains pending.
 
 Post-publication follow-up (2026-10-30): Ethan requested fresh dedicated critics
 for every investigation's implementation, findings and presentation. That review

@@ -23,8 +23,8 @@ declared before their runs; they do not become retroactive confirmatory results.
 - [x] Complete non-authoring implementation review and meaningful invariant checks.
 - [x] Execute from committed source; retain all attempted comparisons and failures.
 - [x] Verify every original numerical artifact remains byte-identical.
-- [ ] Complete independent numerical, interpretation and presentation reviews.
-- [ ] Update every story and the portfolio's claims to the actual findings.
+- [x] Complete independent numerical, interpretation and presentation reviews.
+- [x] Update every story and the portfolio's claims to the actual findings.
 - [ ] Follow final PR/main checks, deployment and live verification to completion.
 
 ## Reviews and chronological decisions
@@ -76,3 +76,27 @@ Reviewers then requested a prominent retail opening answer and explicit original
 five-method scope. Source `a90ceb1` implements that presentation repair; its
 [rerun comparison](../../reports/verification/optional-retail-presentation.json)
 shows only the report and run metadata changed. No comparison was retuned.
+
+## Independent results and presentation verdicts
+
+The [statistical](results-statistical.md), [data/implementation](results-data.md)
+and [general](results-general.md) critics accepted the generated evidence and
+reader-facing claims. They independently reconstructed new predictions/scores,
+patient assignments/bootstrap summaries and simulation denominators. The review
+records distinguish exhaustive arithmetic checks from bounded spectral peak
+reconstruction; no full independent model refit is claimed. All original numbers
+remain unchanged. The general critic inspected new/changed figures and every
+updated story, plus the portfolio and GitHub profile copy. Its accepted minor
+limit is overlapping fold labels in dense ECG support clusters; exact counts
+remain linked. Automated agreement is not independent human validation.
+
+The local portfolio build uses freshly fetched portfolio main in an isolated
+worktree, with an Atlas-only manifest fixture for this preflight. Strict number
+checks pass; production still builds the complete portfolio from its published
+main workflow. Ethan's existing portfolio checkout is untouched.
+
+Authorized integration scope is the Atlas implementation/results PR and the
+GitHub profile's Atlas-summary PR, followed by the Atlas audit-only documentation
+PR. Fresh live PR inventories in both repositories were empty before publication.
+No unrelated or draft PR is included; no portfolio source change is needed.
+CI, main revisions, live deployment and final audit remain separate completion gates.

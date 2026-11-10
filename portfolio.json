@@ -76,7 +76,7 @@
       "unit": "ppm"
     },
     {
-      "label": "ECG forest macro F1, four groups",
+      "label": "ECG forest macro F1, original assignment",
       "value": "ecg_forest",
       "fmt": ".3f"
     }
