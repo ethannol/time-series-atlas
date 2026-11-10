@@ -15,7 +15,7 @@ data availability across the entire schedule. None is observed operational uptim
 
 ![Outage performance and coverage](outage-warnings.png)
 
-| Hours | Method | Balanced accuracy | Stations contributing | MAE (µg/m³) |
+| Hours | Method | Balanced accuracy | Stations contributing | Macro station MAE (µg/m³) |
 | --- | --- | --- | --- | --- |
 | 6 | calendar | 0.500 | 12 | 85.3 |
 | 6 | network_median | 0.938 | 12 | 13.2 |
@@ -157,3 +157,15 @@ latency, health benefit, or robustness to correlated network failures is claimed
 [Predictions](predictions.csv.gz) · [Metrics](metrics.json) · [Run evidence](run.json).
 Run `uv run atlas air-quality`. Data: Song Chen (2017), Beijing Multi-Site Air
 Quality, UCI, CC BY 4.0; input is the twelve full station files.
+
+## Follow-up: what the baseline and event boundaries imply
+
+The calendar-median baseline issued 0 high-hour indications in these scheduled, eligible blocks. Its overall balanced accuracy of 0.5 reflects recognizing non-high hours while missing high hours. This does not show that all possible local warning methods fail. MAE elsewhere in this report is averaged equally over stations.
+
+| Outage hours | True high runs | Left boundary | Right boundary | Both boundaries |
+| --- | --- | --- | --- | --- |
+| 6 | 31 | 17 | 23 | 17 |
+| 24 | 67 | 15 | 6 | 0 |
+| 72 | 187 | 11 | 46 | 0 |
+
+Truth runs are counted once per duration, using one method’s copy of the shared truth. Left-censored means already high at the block start; right-censored means still high at the block end. These counts overlap and are not additional missed events. Delay remains conditional on detected, non-left-censored runs; natural missing observations still have unknown truth. [Saved counts](followup-censoring.json).

@@ -21,8 +21,8 @@ declared before their runs; they do not become retroactive confirmatory results.
 - [x] Implement detection grid, denominators and pointwise simulation intervals.
 - [x] Implement matched-band spectra and all declared robustness cells.
 - [x] Complete non-authoring implementation review and meaningful invariant checks.
-- [ ] Execute from committed source; retain all attempted comparisons and failures.
-- [ ] Verify every original numerical artifact remains byte-identical.
+- [x] Execute from committed source; retain all attempted comparisons and failures.
+- [x] Verify every original numerical artifact remains byte-identical.
 - [ ] Complete independent numerical, interpretation and presentation reviews.
 - [ ] Update every story and the portfolio's claims to the actual findings.
 - [ ] Follow final PR/main checks, deployment and live verification to completion.
@@ -53,3 +53,26 @@ thread environment caps before NumPy loads. Independent fresh-process probes
 verified both commands and the final repair. Apple Accelerate is controlled by
 its environment setting; it is not enumerated by threadpoolctl, so this is not
 a measurement of its internal thread count. No full follow-up run preceded this gate.
+
+## Executed findings, with original comparisons preserved
+
+| Investigation | What the follow-up adds | Interpretation boundary |
+| --- | --- | --- |
+| CO₂ | Anchoring cuts all-history three-year MAE from 6.964 to 2.361 ppm and recent-fit MAE from 1.119 to 0.860 ppm | Starting level matters; revised hindcasts and dependent targets are not causal evidence |
+| Electricity | Pooled macro normalized error rises 3.89%; aggregate error rises 2.12%; all customer peak scores are visible | Load concentration is different from attribution of aggregate forecast error |
+| Retail | Weekly median leads both losses, forecasts 18,002.5 of 33,858 units; excluding the dominant code changes the raw-unit winner | Error minimization does not identify an inventory policy; exact codes are not verified product identities |
+| Oil | Full annual tables expose concentration of the net EWMA gain and years that offset it | Signed contributions are within-market descriptions, not causal explanations or stable annual gains |
+| River | Figure and portfolio captions put assumed next-morning inputs beside misses, false alerts and missing truth | No new operational latency evidence |
+| Air | Calendar baseline issues no high-hour indications; event-boundary counts explain delay eligibility | Overlapping censor counts are not additional misses; natural missing truth stays unknown |
+| ECG | All three additional assignments complete; forest leads macro F1 in all four assignments, ranging 0.400–0.449; paired bootstrap contrast spans zero | Conditional patient-composition and whole-procedure sensitivity, not population guarantees or clinical validation |
+| Synthetic detection | All 3,200 streams retain early alarms, misses, both detection denominators and pointwise intervals | Original calibration stays frozen; survival conditioning can flatter detection |
+| Synthetic sampling | Common-band interpolation recovery becomes 79/100 versus 74/100; all 900 new realizations and 90 method cells retained | Common bands do not match bins; regular thinning stays analytically ambiguous |
+
+[Full execution](../../reports/verification/optional-execution.json) took 219 seconds
+with a process lifetime peak of 614 MiB. [Preservation evidence](../../reports/verification/optional-preservation.json)
+confirms all 49 original numerical artifacts unchanged and 59 new outputs.
+The full run used committed source `2446d4b1defbff7b5fd341171d9130381e279eb4`.
+Reviewers then requested a prominent retail opening answer and explicit original
+five-method scope. Source `a90ceb1` implements that presentation repair; its
+[rerun comparison](../../reports/verification/optional-retail-presentation.json)
+shows only the report and run metadata changed. No comparison was retuned.

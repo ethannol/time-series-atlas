@@ -106,3 +106,15 @@ We declared their scope before new runs and sent the plan to independent critics
 New findings have not yet been measured at this step.
 [Declared extension](../followups/DESIGN.md) ·
 [Review and current status](../../reviews/optional-followups-20261110/README.md).
+
+## 2026-11-10 — What the follow-up changed
+
+We made two quiet details visible. The calendar-median baseline never issued a
+high-pollution indication in the scored blocks, so its poor high-event recall is
+not proof that every local method fails. We also counted events already underway
+or still continuing at outage boundaries. Those overlapping counts explain which
+events can contribute to delay; they are not extra missed events. Missing natural
+truth still prevents a claim about recovery during every real outage.
+
+[Updated report](../../reports/results/air-quality/REPORT.md) ·
+[Follow-up contract and review trail](../../reviews/optional-followups-20261110/README.md).

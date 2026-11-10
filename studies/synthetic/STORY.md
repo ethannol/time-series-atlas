@@ -99,3 +99,15 @@ We declared their scope before new runs and sent the plan to independent critics
 New findings have not yet been measured at this step.
 [Declared extension](../followups/DESIGN.md) ·
 [Review and current status](../../reviews/optional-followups-20261110/README.md).
+
+## 2026-11-10 — What the follow-up changed
+
+We extended the detector stress test across a fixed grid of persistence and
+shift sizes, keeping its original calibration. Strong dependence increased early
+alarms, so good detection among streams still eligible at the change could hide
+many streams already lost to false alarms. We now show both denominators, misses
+and pointwise simulation intervals for every cell. The extra trials sharpen the
+failure mode without tuning the detector to the new grid.
+
+[Updated report](../../reports/results/synthetic/REPORT.md) ·
+[Follow-up contract and review trail](../../reviews/optional-followups-20261110/README.md).

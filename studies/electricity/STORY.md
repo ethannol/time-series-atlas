@@ -93,3 +93,15 @@ We declared their scope before new runs and sent the plan to independent critics
 New findings have not yet been measured at this step.
 [Declared extension](../followups/DESIGN.md) ·
 [Review and current status](../../reviews/optional-followups-20261110/README.md).
+
+## 2026-11-10 — What the follow-up changed
+
+We added magnitudes to the count of customers harmed by sharing coefficients.
+The pooled model increased macro normalized error by 3.89% and aggregate error
+by 2.12%. Two customers account for much of the signed normalized-error increase;
+a different customer dominates recorded load. Those are different questions,
+so we retained both summaries and every customer's high-load scores. No customer
+was removed to make pooling look better.
+
+[Updated report](../../reports/results/electricity/REPORT.md) ·
+[Follow-up contract and review trail](../../reviews/optional-followups-20261110/README.md).

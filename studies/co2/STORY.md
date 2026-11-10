@@ -88,3 +88,16 @@ We declared their scope before new runs and sent the plan to independent critics
 New findings have not yet been measured at this step.
 [Declared extension](../followups/DESIGN.md) ·
 [Review and current status](../../reviews/optional-followups-20261110/README.md).
+
+## 2026-11-10 — What the follow-up changed
+
+The critique asked whether the recent fit won partly because it started closer
+to the latest measurement. We tested two fixed origin-anchored alternatives on
+the same historical targets. Three-year error fell from 6.964 to 2.361 ppm for
+the all-history fit and from 1.119 to 0.860 ppm for the recent fit. Starting level
+mattered, and the recent slope still helped after that adjustment. Interval
+coverage did not automatically become reliable. This is a later exploratory
+comparison using revised data, not a causal explanation or a new external test.
+
+[Updated report](../../reports/results/co2/REPORT.md) ·
+[Follow-up contract and review trail](../../reviews/optional-followups-20261110/README.md).

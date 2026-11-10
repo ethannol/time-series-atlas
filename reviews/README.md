@@ -8,6 +8,14 @@ gates; their current state is explicit there. The
 [original critique](01-design-review.md) and [status history](HISTORY.md) remain
 unchanged historical records.
 
+## Optional follow-ups reopened on 2026-11-10
+
+Ethan authorized the optional comparisons after the seven required corrections.
+The [new review trail](optional-followups-20261110/README.md) records the finite
+exploratory contract, independent pre-run reviews, execution repair and new results.
+Earlier not-adopted dispositions remain dated history. The original numerical
+artifacts are preserved; the follow-up does not retroactively replace its design.
+
 ## Fresh dedicated study critiques after publication
 
 At Ethan's request, each investigation received a new independent agent reviewing

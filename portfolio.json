@@ -2,12 +2,12 @@
   "slug": "time-series-atlas",
   "title": "Time Series Atlas",
   "kind": "study",
-  "status": "Eight investigations executed and independently reviewed",
+  "status": "Eight investigations with reviewed exploratory follow-ups",
   "question": "Which time series methods answer useful questions once source conventions, information timing, and evaluation assumptions are made explicit?",
   "one_liner": "Question-led time series studies with visible critiques, verified corrections and reproducible evidence.",
   "aim": "Demonstrate analytical judgment through reproducible investigations and short process stories, with independent agent reviews before design, execution, and publication.",
   "scope": "Seven real-data investigations—CO₂, electricity, retail, oil, river flow, air quality and ECG—plus synthetic change-detection and sampling controls. Each includes a frozen design, retained results, figures, review evidence and a plain-language process story.",
-  "conclusion": "Useful answers depend on the question and evaluation: zero forecasts can win sparse-sales error while missing volume, high-day river recall can hide missed new rises, and high ECG accuracy can conceal rare-class failure.",
+  "conclusion": "New questions changed the answer: anchoring the CO₂ starting level improved forecasts, a retail median beat the original methods yet understated sales volume, and ECG scores varied across patient fold assignments.",
   "summary": {
     "question": "What changes when we challenge the question, measurements, and evaluation before trusting a time series result?",
     "techniques": [
@@ -51,6 +51,16 @@
       "source": "json_file",
       "path": "reports/results/electricity/followup-context.json",
       "key": "macro_mae_relative_change_percent"
+    },
+    "co2_recent_anchored": {
+      "source": "json_file",
+      "path": "reports/results/co2/followup-metrics.json",
+      "key": "test.linear_120months_anchored/36.mae"
+    },
+    "co2_fixed_anchored": {
+      "source": "json_file",
+      "path": "reports/results/co2/followup-metrics.json",
+      "key": "test.linear_expanding_anchored/36.mae"
     }
   },
   "headline": [
@@ -60,8 +70,8 @@
       "fmt": "d"
     },
     {
-      "label": "Three-year December CO₂ MAE, recent fit",
-      "value": "co2_recent",
+      "label": "Three-year December CO₂ MAE, anchored recent fit",
+      "value": "co2_recent_anchored",
       "fmt": ".3f",
       "unit": "ppm"
     },
@@ -72,11 +82,11 @@
     }
   ],
   "finding": [
-    "In the fixed electricity panel, the shared model worsened forecasts for {{test.pooled_worse_customers:d}} customers, increasing macro normalized error by {{electricity_effect:.2f}}% relative to separate regression. For three-year December targets, the trailing-decade CO₂ fit reduced MAE from {{co2_fixed:.3f}} to {{co2_recent:.3f}} ppm. These revised-data hindcasts change both the fitted starting level and growth; they do not isolate growth adaptation alone.",
-    "An always-zero retail forecast won normalized absolute error while missing every recorded sale. TSB won raw-unit error. Metric weighting and the decision being supported changed the interpretation.",
+    "In the fixed electricity panel, the shared model worsened forecasts for {{test.pooled_worse_customers:d}} customers, increasing macro normalized error by {{electricity_effect:.2f}}% relative to separate regression. In the exploratory CO₂ follow-up, anchoring the observed starting level reduced three-year December MAE from {{co2_fixed:.3f}} to {{co2_fixed_anchored:.3f}} ppm for the all-history fit and from {{co2_recent:.3f}} to {{co2_recent_anchored:.3f}} ppm for the recent fit. These are revised-data hindcasts, not causal attribution.",
+    "The original retail comparison favored zero on normalized error and TSB on raw-unit error. A later, explicitly exploratory weekly-median comparator beat both on their respective error measures, yet substantially underpredicted total recorded sales. Leaving out the dominant sales code changed the raw-unit winner. Lower forecast error alone does not establish an inventory policy.",
     "Adaptive oil variance forecasts beat the fixed baseline on QLIKE while direction forecasts lost to prevalence on Brier. A secondary variance loss reversed the ranking. Same-hour air-quality peers outperformed local persistence under simulated outages, with scoring limited by observed truth.",
     "River high-day recall did not translate into equally high new-onset recall. Past weather added little at the longer date offset and brought more false-alert episodes; daily information assumptions limit warning claims.",
-    "The ECG forest scored {{ecg_forest:.3f}} macro F1 versus the majority baseline’s {{ecg_majority:.3f}}, yet missed every fusion-group beat. Expert beat locations were supplied and people were kept apart during evaluation.",
+    "The original ECG forest scored {{ecg_forest:.3f}} macro F1 versus the majority baseline’s {{ecg_majority:.3f}}, yet missed every fusion-group beat. It led macro F1 in every additional patient assignment, while the patient-bootstrap difference from logistic regression crossed zero. These checks reuse the same people; they do not provide a population guarantee or clinical validation.",
     "Synthetic controls expose two different failures: persistent noise breaks frozen alert calibration, while regular thinning leaves equally strong frequency aliases. A clear peak is not proof of unique identification.",
     "The process story preserves initial design risks, later source discrepancies, actual code and copy defects, missed review findings, and verified corrections. Agent agreement is not independent human validation."
   ],
@@ -91,25 +101,25 @@
     },
     {
       "id": "analyst-choices",
-      "how": "Comparison designs were committed before fitting, with no model selection on final scores. Customer differences and sensitivity results remain visible."
+      "how": "Original designs were committed before fitting. Later exploratory comparisons were declared after seeing original outcomes and frozen before new runs. Every declared comparison is retained; no cohort or winning split is selected after results."
     }
   ],
   "figures": [
     {
-      "path": "reports/results/retail/weekly-sales.png",
-      "caption": "A zero sales forecast has the lowest normalized absolute error while missing all recorded volume. Raw-unit error gives a different ranking."
+      "path": "reports/results/retail/followup-median-comparison.png",
+      "caption": "The exploratory weekly-median comparator improves both error measures while substantially underpredicting total recorded sales. Forecast accuracy and inventory decisions remain different questions."
     },
     {
-      "path": "reports/results/ecg/people-and-classes.png",
-      "caption": "Class-specific recall and variation across held-out people expose failures hidden by pooled accuracy. Per-person denominators include only present classes."
+      "path": "reports/results/ecg/followup-split-sensitivity.png",
+      "caption": "The forest leads pooled macro F1 under every tested patient assignment, but its scores vary. Rare-class support differs across training and test folds; no best split is selected."
     },
     {
       "path": "reports/results/river-flow/flow-and-onsets.png",
       "caption": "High-day and eligible-onset recall use different cohorts and weighting. Daily observations are assumed available the next morning; false alerts, missed rises and unscored days limit warning claims."
     },
     {
-      "path": "reports/results/spectral/recovery-and-ambiguity.png",
-      "caption": "Frequency recovery and equal-power aliases answer different questions. The regular thinning control remains nonidentifiable under the declared search."
+      "path": "reports/results/spectral/followup-spectral-grid.png",
+      "caption": "Every declared noise, frequency and sampling setting remains visible. Recovery of the planted frequency does not remove regular-thinning alias ambiguity; common search bands still use different frequency grids."
     }
   ],
   "not_claimed": [

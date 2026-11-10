@@ -109,3 +109,14 @@ We declared their scope before new runs and sent the plan to independent critics
 New findings have not yet been measured at this step.
 [Declared extension](../followups/DESIGN.md) ·
 [Review and current status](../../reviews/optional-followups-20261110/README.md).
+
+## 2026-11-10 — What the follow-up changed
+
+We unpacked the average into every test year and explained the scores in plain
+language. Most of the net EWMA advantage came from 2020 for WTI and 2022 for Brent;
+some years offset those gains. Direction rankings also varied by year. The full
+period result remains, but it does not imply that the improvement was steady.
+We kept negative contributions, all years and the limits on source redistribution.
+
+[Updated report](../../reports/results/oil/REPORT.md) ·
+[Follow-up contract and review trail](../../reviews/optional-followups-20261110/README.md).

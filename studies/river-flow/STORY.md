@@ -114,3 +114,14 @@ We declared their scope before new runs and sent the plan to independent critics
 New findings have not yet been measured at this step.
 [Declared extension](../followups/DESIGN.md) ·
 [Review and current status](../../reviews/optional-followups-20261110/README.md).
+
+## 2026-11-10 — What the follow-up changed
+
+We put the operational assumptions directly on the figure and portfolio caption:
+daily inputs are assumed available the following morning, and high-day recall
+must be read beside missed rises, false alerts and unscored days. This improves
+how the existing result is presented; it does not supply a new latency experiment
+or change the numerical evidence.
+
+[Updated report](../../reports/results/river-flow/REPORT.md) ·
+[Follow-up contract and review trail](../../reviews/optional-followups-20261110/README.md).

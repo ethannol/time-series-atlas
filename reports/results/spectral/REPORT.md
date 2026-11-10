@@ -18,7 +18,7 @@ The experiment compares an index FFT that assumes one second between samples (co
 
 ![Recovery and ambiguity](recovery-and-ambiguity.png)
 
-Lomb–Scargle searches 0.01–0.45 Hz, whereas both FFT procedures select from all positive native bins (up to about 0.5 under their one-second spacing). Of the 26 irregular interpolation failures, 6 select peaks below 0.01 Hz, outside the Lomb–Scargle search. That is a descriptive audit of the original peaks, not an estimate of what a matched-band FFT would achieve. No matched-band comparison was run or substituted after seeing results. The spectral plots now show those low frequencies.
+Lomb–Scargle searches 0.01–0.45 Hz, whereas both FFT procedures select from all positive native bins (up to about 0.5 under their one-second spacing). Of the 26 irregular interpolation failures, 6 select peaks below 0.01 Hz, outside the Lomb–Scargle search. That is a descriptive audit of the original peaks, not an estimate of what a matched-band FFT would achieve. The original comparison did not match search bands; the new post-publication section below adds that comparison explicitly. The spectral plots show those low frequencies.
 
 Recovery means within 1/480 Hz of truth. Every-three-second sampling makes 0.17 Hz and 1/3 − 0.17 Hz observationally equivalent. Lomb–Scargle searches the entire alias family of every candidate; equal maxima select the lowest frequency. Even if another tie rule selected the true peak, it would not resolve that ambiguity. Ties refer to numerical grid equality, not a confidence interval. The FFT grids need not contain both equivalent frequencies: zero exact FFT ties do not certify identifiability. Lomb–Scargle’s zero median error is also a discrete-grid result: its grid contains the planted truth, while FFT bins differ. It does not mean noiseless or infinitely precise estimation.
 
@@ -47,3 +47,35 @@ The nearly equal paired powers under regular thinning express the sampling ambig
 These are the preselected first replicates, not favorable examples. The left panels show the first 60 seconds; the spectra use the full observation span. Each spectrum is scaled to its own maximum for display; power heights do not compare methods. The [sampling ledger](sampling.csv) retains all sample counts and spans. Noise is drawn at actual observation times; these results depend on the declared single sinusoid, noise, observation window and grid. They establish no universal ranking.
 
 [Design](../../../studies/spectral/DESIGN.md) · [Story](../../../studies/spectral/STORY.md) · [Inputs](inputs.csv.gz) · [Replicate results](replicates.csv.gz) · [Metrics](metrics.json) · [Run evidence](run.json). Run `uv run atlas spectral`.
+
+## Exploratory follow-up: common band and signal settings
+
+These comparisons were declared after seeing the original results. First, the two added FFT procedures select native peaks only within 0.01–0.45 Hz inclusive on the original realizations. The three original procedure results are retained. **A common search band does not align frequency bins or isolate timestamp handling:** spacing assumptions, interpolation and frequency grids still differ.
+
+| Sampling | Procedure | Recovered / trials | Fraction [95% Wilson] | Median absolute error (Hz) | Numerical ties / trials | Analytic ambiguity / trials |
+| --- | --- | --- | --- | --- | --- | --- |
+| regular | index_fft | 100 / 100 | 100.0% [96.3%, 100.0%] | 0.00083 | 0 | 0 |
+| regular | interpolated_fft | 100 / 100 | 100.0% [96.3%, 100.0%] | 0.00083 | 0 | 0 |
+| regular | lomb_scargle | 100 / 100 | 100.0% [96.3%, 100.0%] | 0.00000 | 0 | 0 |
+| irregular | index_fft | 0 / 100 | 0.0% [0.0%, 3.7%] | 0.10674 | 0 | 0 |
+| irregular | interpolated_fft | 74 / 100 | 74.0% [64.6%, 81.6%] | 0.00083 | 0 | 0 |
+| irregular | lomb_scargle | 100 / 100 | 100.0% [96.3%, 100.0%] | 0.00000 | 0 | 0 |
+| every_three_seconds | index_fft | 0 / 100 | 0.0% [0.0%, 3.7%] | 0.31750 | 0 | 100 |
+| every_three_seconds | interpolated_fft | 0 / 100 | 0.0% [0.0%, 3.7%] | 0.00682 | 0 | 100 |
+| every_three_seconds | lomb_scargle | 0 / 100 | 0.0% [0.0%, 3.7%] | 0.00667 | 100 | 100 |
+| regular | index_fft_common_band | 100 / 100 | 100.0% [96.3%, 100.0%] | 0.00083 | 0 | 0 |
+| regular | interpolated_fft_common_band | 100 / 100 | 100.0% [96.3%, 100.0%] | 0.00083 | 0 | 0 |
+| irregular | index_fft_common_band | 0 / 100 | 0.0% [0.0%, 3.7%] | 0.10543 | 0 | 0 |
+| irregular | interpolated_fft_common_band | 79 / 100 | 79.0% [70.0%, 85.8%] | 0.00083 | 0 | 0 |
+| every_three_seconds | index_fft_common_band | 0 / 100 | 0.0% [0.0%, 3.7%] | 0.13000 | 0 | 100 |
+| every_three_seconds | interpolated_fft_common_band | 0 / 100 | 0.0% [0.0%, 3.7%] | 0.00682 | 0 | 100 |
+
+The second comparison uses all 18 declared frequency/noise/sampling cells, 50 independent realizations per cell (900 total), and the same five procedures on each realization. The original 2,403-point Lomb–Scargle grid and 1/480 Hz recovery tolerance are unchanged; the new off-grid truths are not inserted. Phase, retention/jitter and noise are drawn in the declared order, with noise at actual observation times.
+
+![All fixed spectral grid cells](followup-spectral-grid.png)
+
+[Every cell with counts, errors and pointwise 95% Wilson intervals](followup-robustness-tables.md) is retained, including poor recovery. Intervals describe Monte Carlo variation of each procedure separately. The paired procedure outcomes are dependent, so these marginal intervals do not provide paired inference about a difference or simultaneous coverage.
+
+Regular three-second sampling retains analytic alias ambiguity at every tested frequency and noise level. Even when numerical maxima are not tied, or the lowest-frequency rule selects the planted truth, recovery does not demonstrate unique physical identification. Numerical tie counts and analytic ambiguity are therefore recorded separately. No universal method ranking follows.
+
+[Original-realization paired results](followup-matched-band-replicates.csv.gz) · [Matched-band summary](followup-matched-band-summary.csv) · [New actual-time inputs](followup-robustness-inputs.csv.gz) · [New paired results](followup-robustness-replicates.csv.gz) · [Every new cell](followup-robustness-summary.csv) · [Fixed grid, seeds and metrics](followup-metrics.json).

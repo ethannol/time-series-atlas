@@ -1,14 +1,14 @@
 {
   "baseline_commit": "1a0ec0180b857f7d98b092a8104a575657d53445",
-  "checked_commit": "1a0ec0180b857f7d98b092a8104a575657d53445",
-  "checked_at": "2026-11-10T19:04:47.606757+00:00",
+  "checked_commit": "a90ceb16236015edd92f06d67bcb7488c1436bf5",
+  "checked_at": "2026-11-10T19:22:52.067511+00:00",
   "original_outputs": [
     {
       "path": "reports/results/air-quality/REPORT.md",
       "kind": "presentation",
       "baseline_sha256": "9e713379e19f066dbb30c76f3be119823c675906a895155ad3575762601ca0fc",
-      "current_sha256": "9e713379e19f066dbb30c76f3be119823c675906a895155ad3575762601ca0fc",
-      "unchanged": true
+      "current_sha256": "1ff10283dad73e73a09fdf4f5152f1aafcfe6efd6da3a7621a1ef723f51218aa",
+      "unchanged": false
     },
     {
       "path": "reports/results/air-quality/available-hour-scores.csv",
@@ -77,8 +77,8 @@
       "path": "reports/results/co2/REPORT.md",
       "kind": "presentation",
       "baseline_sha256": "95e62b5cc255cc82b8d1b88d551abd1fbf6a033852fb63d5c9581c82500a1a48",
-      "current_sha256": "95e62b5cc255cc82b8d1b88d551abd1fbf6a033852fb63d5c9581c82500a1a48",
-      "unchanged": true
+      "current_sha256": "b0ac5949d3e3aff0c29ba942dedc041b105df9a133047802e35ea4eccf46c861",
+      "unchanged": false
     },
     {
       "path": "reports/results/co2/forecast-comparison.png",
@@ -119,8 +119,8 @@
       "path": "reports/results/ecg/REPORT.md",
       "kind": "presentation",
       "baseline_sha256": "de0e8ddfb3ab2161ea1a6e06153ca6494b3b8e042932fc7e83c63b46afeffdd6",
-      "current_sha256": "de0e8ddfb3ab2161ea1a6e06153ca6494b3b8e042932fc7e83c63b46afeffdd6",
-      "unchanged": true
+      "current_sha256": "22cba434dccd26065fca8fc5379251d5a2b52223718639dedfbe66026afdf242",
+      "unchanged": false
     },
     {
       "path": "reports/results/ecg/fold-scores.csv",
@@ -189,8 +189,8 @@
       "path": "reports/results/electricity/REPORT.md",
       "kind": "presentation",
       "baseline_sha256": "34ddc6041e119e23be8a2b31d60121e1fab1c57a11036ca4cf01d29a4fbadf1f",
-      "current_sha256": "34ddc6041e119e23be8a2b31d60121e1fab1c57a11036ca4cf01d29a4fbadf1f",
-      "unchanged": true
+      "current_sha256": "1d529b0df58406e683f6afd95683f1726124eddcecf9a1201f027408590a7172",
+      "unchanged": false
     },
     {
       "path": "reports/results/electricity/customer-comparison.csv.gz",
@@ -231,8 +231,8 @@
       "path": "reports/results/oil/REPORT.md",
       "kind": "presentation",
       "baseline_sha256": "916e0c357c718619d1c4c229b2a16f526295f7ca7c45fe2381234ab8b33a1255",
-      "current_sha256": "916e0c357c718619d1c4c229b2a16f526295f7ca7c45fe2381234ab8b33a1255",
-      "unchanged": true
+      "current_sha256": "9f414688cfea84d4e3d31c676dbe835bba7c0def94e86fcbf1777705bb614345",
+      "unchanged": false
     },
     {
       "path": "reports/results/oil/direction-gaps.csv",
@@ -294,8 +294,8 @@
       "path": "reports/results/retail/REPORT.md",
       "kind": "presentation",
       "baseline_sha256": "535a117683357460d5c82d9dce5a2221b44a47c3b9c6e78739a88ad14fc5fd50",
-      "current_sha256": "535a117683357460d5c82d9dce5a2221b44a47c3b9c6e78739a88ad14fc5fd50",
-      "unchanged": true
+      "current_sha256": "622f49f49fa247ad5173bcbfe0748e79267fbfb840377b70dd8fadcda91f1a25",
+      "unchanged": false
     },
     {
       "path": "reports/results/retail/metrics.json",
@@ -357,8 +357,8 @@
       "path": "reports/results/river-flow/flow-and-onsets.png",
       "kind": "presentation",
       "baseline_sha256": "99fa0bf0efcec997d9034a48568d9e20c667cd2e0f61fe0a8b8b6a82b001303a",
-      "current_sha256": "99fa0bf0efcec997d9034a48568d9e20c667cd2e0f61fe0a8b8b6a82b001303a",
-      "unchanged": true
+      "current_sha256": "d6eb0b7d63bd9306fdd652506fa69fd5b44be2b6afdf7ad231540529905ea10a",
+      "unchanged": false
     },
     {
       "path": "reports/results/river-flow/gauge-scores.csv",
@@ -406,8 +406,8 @@
       "path": "reports/results/spectral/REPORT.md",
       "kind": "presentation",
       "baseline_sha256": "bbcff43d53ad5c321c24a2f975254f8e11d75b649267a2f367e65ef339fc89d3",
-      "current_sha256": "bbcff43d53ad5c321c24a2f975254f8e11d75b649267a2f367e65ef339fc89d3",
-      "unchanged": true
+      "current_sha256": "8f8ed6aaf336a49d47fed8ec3f6f37900c40b5d2cb275e4c2253830717699b56",
+      "unchanged": false
     },
     {
       "path": "reports/results/spectral/example-spectra.csv.gz",
@@ -462,8 +462,8 @@
       "path": "reports/results/synthetic/REPORT.md",
       "kind": "presentation",
       "baseline_sha256": "ec3778a38a65578015cc44168de506c926b866d4e078cc4eb2c9d5e303a16476",
-      "current_sha256": "ec3778a38a65578015cc44168de506c926b866d4e078cc4eb2c9d5e303a16476",
-      "unchanged": true
+      "current_sha256": "06fea5db74148c968c7968a75f0213c061434d9f637a4f2067207856e3b702b0",
+      "unchanged": false
     },
     {
       "path": "reports/results/synthetic/detection-comparison.png",
@@ -489,6 +489,66 @@
   ],
   "original_numerical_count": 49,
   "numerical_changes": [],
-  "added_outputs": [],
+  "added_outputs": [
+    "reports/results/air-quality/followup-censoring.json",
+    "reports/results/co2/followup-calibration.csv",
+    "reports/results/co2/followup-metrics.json",
+    "reports/results/co2/followup-origin-anchoring.png",
+    "reports/results/co2/followup-origin-gaps.csv.gz",
+    "reports/results/co2/followup-predictions.csv.gz",
+    "reports/results/co2/followup-scores.csv",
+    "reports/results/ecg/followup-bootstrap-confusions.csv.gz",
+    "reports/results/ecg/followup-bootstrap-draws.csv.gz",
+    "reports/results/ecg/followup-bootstrap-replicates.csv.gz",
+    "reports/results/ecg/followup-bootstrap-summary.csv.gz",
+    "reports/results/ecg/followup-class-scores.csv.gz",
+    "reports/results/ecg/followup-fold-support.csv.gz",
+    "reports/results/ecg/followup-patient-confusions.csv.gz",
+    "reports/results/ecg/followup-repeat-20261110-mapping.json",
+    "reports/results/ecg/followup-repeat-20261110-metrics.json",
+    "reports/results/ecg/followup-repeat-20261110-model-audit.json",
+    "reports/results/ecg/followup-repeat-20261110-predictions.csv.gz",
+    "reports/results/ecg/followup-repeat-20261110-training-membership.csv.gz",
+    "reports/results/ecg/followup-repeat-20261111-mapping.json",
+    "reports/results/ecg/followup-repeat-20261111-metrics.json",
+    "reports/results/ecg/followup-repeat-20261111-model-audit.json",
+    "reports/results/ecg/followup-repeat-20261111-predictions.csv.gz",
+    "reports/results/ecg/followup-repeat-20261111-training-membership.csv.gz",
+    "reports/results/ecg/followup-repeat-20261112-mapping.json",
+    "reports/results/ecg/followup-repeat-20261112-metrics.json",
+    "reports/results/ecg/followup-repeat-20261112-model-audit.json",
+    "reports/results/ecg/followup-repeat-20261112-predictions.csv.gz",
+    "reports/results/ecg/followup-repeat-20261112-training-membership.csv.gz",
+    "reports/results/ecg/followup-scores.csv.gz",
+    "reports/results/ecg/followup-split-comparison.csv.gz",
+    "reports/results/ecg/followup-split-ranges.csv.gz",
+    "reports/results/ecg/followup-split-sensitivity.png",
+    "reports/results/ecg/followup-status.json",
+    "reports/results/electricity/followup-context.json",
+    "reports/results/electricity/followup-customer-context.csv",
+    "reports/results/electricity/followup-peak-scores.md",
+    "reports/results/oil/followup-year-contributions.csv",
+    "reports/results/retail/followup-bias-identity.csv",
+    "reports/results/retail/followup-leave-one-code-out.csv",
+    "reports/results/retail/followup-median-comparison.png",
+    "reports/results/retail/followup-metrics.json",
+    "reports/results/retail/followup-per-product.csv",
+    "reports/results/retail/followup-per-quarter.csv",
+    "reports/results/retail/followup-predictions.csv.gz",
+    "reports/results/retail/followup-volume-shares.csv",
+    "reports/results/spectral/followup-matched-band-replicates.csv.gz",
+    "reports/results/spectral/followup-matched-band-summary.csv",
+    "reports/results/spectral/followup-metrics.json",
+    "reports/results/spectral/followup-robustness-inputs.csv.gz",
+    "reports/results/spectral/followup-robustness-replicates.csv.gz",
+    "reports/results/spectral/followup-robustness-summary.csv",
+    "reports/results/spectral/followup-robustness-tables.md",
+    "reports/results/spectral/followup-spectral-grid.png",
+    "reports/results/synthetic/followup-detection-grid.png",
+    "reports/results/synthetic/followup-metrics.json",
+    "reports/results/synthetic/followup-original-summary.csv",
+    "reports/results/synthetic/followup-replicates.csv.gz",
+    "reports/results/synthetic/followup-summary.csv"
+  ],
   "ok": true
 }

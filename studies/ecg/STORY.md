@@ -105,3 +105,17 @@ We declared their scope before new runs and sent the plan to independent critics
 New findings have not yet been measured at this step.
 [Declared extension](../followups/DESIGN.md) ·
 [Review and current status](../../reviews/optional-followups-20261110/README.md).
+
+## 2026-11-10 — Challenge the apparent winner
+
+We resampled whole people from the saved predictions and reran the same fitting
+procedure under three additional patient assignments. All assignments completed;
+the forest stayed ahead in pooled four-class F1, but its scores ranged from
+0.400 to 0.449. The paired patient-bootstrap difference between forest and
+logistic regression crossed zero. These checks describe sensitivity to the people
+and procedure already studied; they do not establish a population guarantee.
+We retained every split, rare-class support, precision, recall and failed-attempt
+field instead of choosing the most flattering score.
+
+[Updated report](../../reports/results/ecg/REPORT.md) ·
+[Follow-up contract and review trail](../../reviews/optional-followups-20261110/README.md).

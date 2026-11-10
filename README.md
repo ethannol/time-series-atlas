@@ -27,6 +27,33 @@ oil forecasts reveal squared outcomes; river and air-quality averages need their
 coverage and subgroup denominators beside them. Earlier approval did not catch
 all of these qualifications. The original results and review history remain visible.
 
+## New questions changed the answers
+
+The [2026-11-10 exploratory follow-ups](reviews/optional-followups-20261110/README.md)
+were declared after the original results were known, then reviewed before running:
+
+- **CO₂:** anchoring the observed starting level reduced three-year MAE from
+  6.964 to 2.361 ppm for the all-history fit and from 1.119 to 0.860 ppm for the
+  recent fit. Starting level matters; the recent fit still leads after anchoring.
+- **Retail:** a historical weekly median beat every original method on both
+  error measures, yet forecast about 47% fewer units than were recorded. Leaving
+  out the dominant sales code changed the raw-unit winner. A lower error score
+  alone still does not establish an inventory policy.
+- **ECG:** the forest led pooled macro F1 under all four patient assignments,
+  with scores from 0.400 to 0.449. Patient-bootstrap percentiles for its paired
+  advantage over logistic regression crossed zero. These dependent checks reuse
+  the same people and do not establish a population guarantee.
+- **Synthetic controls:** matching spectral search bands raised irregular
+  interpolation-plus-FFT recovery from 74 to 79 of 100 original trials. A fixed
+  frequency/noise robustness grid keeps recovery separate from alias ambiguity. Detection grids show
+  how conditioning on surviving early alarms can flatter later detection.
+
+Electricity now shows effect sizes and every customer's high-load scores; oil
+shows every year's contribution and reversals; river and air-quality displays
+make availability and event boundaries explicit. Each study's story explains
+what changed, why, and what remains unknown. The recurring implementation review
+also caught and verified a repair to native-library thread control before runs.
+
 ## The investigations
 
 Every row has a frozen design, retained evidence and a chronological story.
@@ -34,13 +61,13 @@ Synthetic detection and sampling are two execution units within one investigatio
 
 | Investigation | Question and measured lesson | Results | Process |
 | --- | --- | --- | --- |
-| Atmospheric CO₂ | Does fitting recent history improve multiyear forecasts? A trailing-decade model reduced three-year December-target MAE from 6.964 to 1.119 ppm in the revised-data comparison; it changes both starting level and growth. | [Report](reports/results/co2/REPORT.md) | [Story](studies/co2/STORY.md) |
-| Electricity | Who gains from learning across customers? Sharing coefficients worsened forecasts for 21 of 24 selected customers. | [Report](reports/results/electricity/REPORT.md) | [Story](studies/electricity/STORY.md) |
-| Intermittent retail sales | What should next week's forecast optimize? Zero won normalized absolute error while missing every recorded sale; TSB won raw-unit MAE. | [Report](reports/results/retail/REPORT.md) | [Story](studies/retail/STORY.md) |
+| Atmospheric CO₂ | Does fitting recent history improve multiyear forecasts? Anchoring reduced three-year December-target MAE to 2.361 ppm for the all-history fit and 0.860 ppm for the recent fit; these are exploratory revised-data hindcasts. | [Report](reports/results/co2/REPORT.md) | [Story](studies/co2/STORY.md) |
+| Electricity | Who gains from learning across customers? Sharing coefficients worsened forecasts for 21 of 24 selected customers, increasing macro normalized error by 3.89%. | [Report](reports/results/electricity/REPORT.md) | [Story](studies/electricity/STORY.md) |
+| Intermittent retail sales | What should next week's forecast optimize? The exploratory weekly median beat all five original methods on both errors, yet substantially underpredicted sales volume. | [Report](reports/results/retail/REPORT.md) | [Story](studies/retail/STORY.md) |
 | Oil | Can volatility improve when direction does not? Adaptive variance beat fixed variance on QLIKE; direction lost to prevalence on Brier. The secondary variance loss favored the fixed baseline. | [Report](reports/results/oil/REPORT.md) | [Story](studies/oil/STORY.md) |
 | River flow | Does recognizing high water mean warning before a rise? Weather added little at the longer date offset; onset misses and false alerts qualified the high-day recall. | [Report](reports/results/river-flow/REPORT.md) | [Story](studies/river-flow/STORY.md) |
 | Air quality | Can peers preserve indications during a station outage? Same-hour network readings beat local persistence, but missing local truth restricted what could be scored. | [Report](reports/results/air-quality/REPORT.md) | [Story](studies/air-quality/STORY.md) |
-| ECG | Does annotated-beat recognition transfer to new people? The forest led macro F1 yet missed every F-group beat; overall accuracy hid rare-class failure. | [Report](reports/results/ecg/REPORT.md) | [Story](studies/ecg/STORY.md) |
+| ECG | Does annotated-beat recognition transfer to new people? The forest led macro F1 in all four assignments, but its patient-bootstrap advantage was uncertain; rare-class support and errors remain visible. | [Report](reports/results/ecg/REPORT.md) | [Story](studies/ecg/STORY.md) |
 | Synthetic controls | Can an apparently good detector or spectral peak be trusted? Persistent noise broke false-alert calibration; sampling ambiguity is evaluated separately from frequency recovery. | [Detection](reports/results/synthetic/REPORT.md) · [Sampling](reports/results/spectral/REPORT.md) | [Detection story](studies/synthetic/STORY.md) · [Sampling story](studies/spectral/STORY.md) |
 
 These are bounded comparisons, not universal method rankings. No realized savings,
@@ -103,9 +130,17 @@ with a process peak of 730 MiB on this machine, excluding installation and
 acquisition. The later dedicated-review refresh reran all nine units in the
 existing locked checkout: all 48 original numerical artifacts were byte-identical,
 six reports and three figures changed, and one labeled CO₂ diagnostic was added.
-There are now 69 retained outputs, excluding run metadata. The refresh passed
+That refresh retained 69 outputs, excluding run metadata, and passed
 41 tests; its [execution and comparison record](reports/verification/dedicated-review-regeneration.json)
 is separate from the original fresh-checkout reproduction. Runtime varies.
+The optional extension ran all nine units sequentially in 219 seconds with a
+process lifetime peak of 614 MiB. All 49 numerical artifacts from the corrected
+baseline stayed byte-identical, and 59 follow-up outputs were added (128 total,
+excluding run metadata). All 71 offline tests passed. These existing-checkout
+runs are recorded in [execution evidence](reports/verification/optional-execution.json)
+and the [preservation comparison](reports/verification/optional-preservation.json);
+they are distinct from the earlier fresh-checkout reproduction. A subsequent
+retail presentation-only rerun preserved all its numeric and figure outputs.
 Reproduction, test and publication records are indexed in the
 [completion evidence](reviews/completion/README.md). The original three-study
 [release record](reviews/first-release/README.md) remains historical evidence,
