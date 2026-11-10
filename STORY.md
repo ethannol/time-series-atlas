@@ -268,3 +268,17 @@ The lesson is practical: a correct computation can still leave the reader with
 an incomplete answer. Some implications were newly identified; other limitations
 were known but not prominent enough. Both deserve a visible correction and a
 record of when it happened. [Final review synthesis and evidence](reviews/study-critiques-20261030/README.md).
+
+## 2026-11-10 — Reopen the questions, then review before running
+
+Ethan asked to pursue the optional improvements. We declared a finite extension:
+anchor the CO₂ starting level, add a retail median baseline, test ECG sensitivity
+to patient assignments, and challenge the synthetic methods across fixed grids.
+The other studies gain effect sizes, annual context and clearer operational limits.
+These are exploratory follow-ups because the original outcomes were already known.
+
+Three independent critics reviewed the plan and implementation. They clarified
+what the comparisons can establish, and the data critic caught a CLI thread cap
+that missed a library loaded later. We fixed and independently verified it before
+the full analyses. Recurring review changed the work again; an earlier approval
+was not a reason to stop checking. [Contract and review trail](reviews/optional-followups-20261110/README.md).

@@ -1,6 +1,13 @@
 """Command-line entry points; no network access during study execution."""
 import argparse
 import json
+import os
+
+# Set process-launch-style caps before data imports NumPy. Accelerate is not
+# discoverable by threadpoolctl; its documented environment cap is still needed.
+for thread_variable in ['VECLIB_MAXIMUM_THREADS','OMP_NUM_THREADS','OPENBLAS_NUM_THREADS',
+                        'MKL_NUM_THREADS','BLIS_NUM_THREADS']:
+    os.environ[thread_variable]='1'
 from .data import fetch, intake, verify_snapshots
 
 
@@ -27,9 +34,11 @@ def main():
         from threadpoolctl import threadpool_limits
         import importlib
         studies=studies if args.command=='all' else [args.command]
+        # Libraries loaded after entering the context may miss its thread limit.
+        modules=[importlib.import_module('tsatlas.'+study.replace('-','_')) for study in studies]
         with threadpool_limits(limits=1):
-            for study in studies:
-                importlib.import_module('tsatlas.'+study.replace('-','_')).run()
+            for module in modules:
+                module.run()
     else:
         evidence=verify_snapshots()
         print('Present pinned analysis snapshots verified')

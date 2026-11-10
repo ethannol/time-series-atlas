@@ -157,3 +157,17 @@ The general critic checked reader-facing claims and acknowledged explicit option
 not-adopted dispositions. The statistical review checks the CO₂ diagnostic and
 new descriptive summaries. [Exact verdicts and status history](study-critiques-20261030/README.md).
 Publication CI and live deployment remain separately observable rollout checks.
+
+## 2026-11-10 — Reopen the questions, then review before running
+
+Ethan asked to pursue the optional improvements. We declared a finite extension:
+anchor the CO₂ starting level, add a retail median baseline, test ECG sensitivity
+to patient assignments, and challenge the synthetic methods across fixed grids.
+The other studies gain effect sizes, annual context and clearer operational limits.
+These are exploratory follow-ups because the original outcomes were already known.
+
+Three independent critics reviewed the plan and implementation. They clarified
+what the comparisons can establish, and the data critic caught a CLI thread cap
+that missed a library loaded later. We fixed and independently verified it before
+the full analyses. Recurring review changed the work again; an earlier approval
+was not a reason to stop checking. [Contract and review trail](optional-followups-20261110/README.md).
