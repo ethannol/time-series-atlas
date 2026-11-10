@@ -1,0 +1,73 @@
+{
+  "checked_at": "2026-11-10T19:29:17.224334+00:00",
+  "included": [
+    "ethannol/time-series-atlas#5",
+    "ethannol/ethannol#4"
+  ],
+  "excluded": [],
+  "atlas_pr": {
+    "baseRefName": "main",
+    "headRefOid": "b4b1295333c8678d3facfa2ff61145ece93142e7",
+    "isDraft": false,
+    "mergeCommit": {
+      "oid": "ed73587d99368c0a0c382a59612292c75de589d3"
+    },
+    "mergedAt": "2026-11-10T19:27:53Z",
+    "number": 5,
+    "state": "MERGED",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-10T19:27:18Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ethannol/time-series-atlas/actions/runs/42885333311/job/130072039066",
+        "name": "checks",
+        "startedAt": "2026-11-10T19:26:49Z",
+        "status": "COMPLETED",
+        "workflowName": "Offline checks"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-10T19:27:12Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/ethannol/time-series-atlas/actions/runs/42885323527/job/130072004385",
+        "name": "checks",
+        "startedAt": "2026-11-10T19:26:46Z",
+        "status": "COMPLETED",
+        "workflowName": "Offline checks"
+      }
+    ],
+    "url": "https://github.com/ethannol/time-series-atlas/pull/5"
+  },
+  "profile_pr": {
+    "baseRefName": "main",
+    "headRefOid": "3dd4ad14a50578fcd6882d8935babd60260f956d",
+    "isDraft": false,
+    "mergeCommit": {
+      "oid": "8c4d1bbd1daf5124680fa30855b7c1c23a08fec9"
+    },
+    "mergedAt": "2026-11-10T19:27:54Z",
+    "number": 4,
+    "state": "MERGED",
+    "statusCheckRollup": [],
+    "url": "https://github.com/ethannol/ethannol/pull/4"
+  },
+  "atlas_main_ci": {
+    "conclusion": "success",
+    "databaseId": 42885520814,
+    "headSha": "ed73587d99368c0a0c382a59612292c75de589d3",
+    "status": "completed",
+    "url": "https://github.com/ethannol/time-series-atlas/actions/runs/42885520814"
+  },
+  "pages": {
+    "conclusion": "success",
+    "databaseId": 42885532947,
+    "headSha": "058bd54604a1458ae8f724540bdd88133fe4674a",
+    "status": "completed",
+    "url": "https://github.com/ethannol/portfolio/actions/runs/42885532947"
+  },
+  "profile_workflows": {
+    "total_count": 0,
+    "workflows": []
+  }
+}

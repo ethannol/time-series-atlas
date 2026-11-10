@@ -297,3 +297,15 @@ reconstructed the evidence, and asked us to bring retail's changed answer to the
 top of the report. We revised the summaries and appended each study's story,
 instead of rewriting the earlier reasoning as if we had known the answers.
 [New findings and review trail](reviews/optional-followups-20261110/README.md).
+
+## 2026-11-10 — Verify the full extension in public
+
+The implementation and profile PRs merged with the expected revisions. Atlas
+checks and the portfolio deployment passed. Live checks found the new numbers,
+all nine reports, the exact displayed figures and the revised profile text. A
+separate general critic checked every extension obligation against that evidence.
+
+We publish its audit and the delivery record as a documentation-only follow-up,
+which receives the same checks and deployment verification. This keeps the
+analysis revision, reviewed content, deployed revision and later audit distinct.
+[Completion audit](reviews/optional-followups-20261110/completion-audit-general.md).

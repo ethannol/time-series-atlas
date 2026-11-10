@@ -5,7 +5,10 @@ follow-ups. The [finite contract](studies/followups/DESIGN.md) and
 [extension completion checklist](reviews/optional-followups-20261110/README.md)
 govern this new work. Earlier completion statements below remain dated history.
 All nine execution units completed from reviewed, committed source. Numerical,
-interpretation and presentation reviews passed; publication remains pending.
+interpretation and presentation reviews passed, and the updated collection and
+profile are published. The extension checklist links the independent completion
+audit and exact live checkpoint; audit-only documentation follows the same CI
+and deployment gates.
 
 Post-publication follow-up (2026-10-30): Ethan requested fresh dedicated critics
 for every investigation's implementation, findings and presentation. That review
